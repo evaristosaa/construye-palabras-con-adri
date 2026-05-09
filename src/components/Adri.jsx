@@ -1,0 +1,27 @@
+const labels = {
+  reader: "Leyendo",
+  builder: "Constructor",
+  detective: "Detective",
+  pointing: "Señalando",
+  audio: "Escuchando",
+  teacher: "Maestro",
+  celebrating: "Celebrando",
+  thinking: "Pensando",
+};
+
+export default function Adri({ variant = "reader", size = "large", bubble }) {
+  return (
+    <div className={`adri adri-${size} adri-${variant}`} aria-label={`Adri ${labels[variant] || ""}`}>
+      <div className="adri-frame">
+        <img src={`${import.meta.env.BASE_URL}assets/adri.png`} alt="Adri, personaje principal" />
+        <span className="adri-accessory hat" aria-hidden="true" />
+        <span className="adri-accessory lens" aria-hidden="true" />
+        <span className="adri-accessory headphones" aria-hidden="true" />
+        <span className="adri-accessory badge" aria-hidden="true">
+          B
+        </span>
+      </div>
+      {bubble && <div className="speech-bubble">{bubble}</div>}
+    </div>
+  );
+}
