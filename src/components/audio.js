@@ -9,9 +9,6 @@ export function getAvailableSpanishVoices() {
 
 function pickAdriVoice(preferredVoiceURI) {
   const voices = getVoices();
-  const savedVoice = voices.find((voice) => voice.voiceURI === preferredVoiceURI);
-  if (savedVoice) return savedVoice;
-
   const spanishVoices = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
   const preferredNames = [
     /pablo/i,
@@ -29,6 +26,7 @@ function pickAdriVoice(preferredVoiceURI) {
 
   return (
     spanishVoices.find((voice) => preferredNames.some((pattern) => pattern.test(voice.name))) ||
+    voices.find((voice) => voice.voiceURI === preferredVoiceURI && !avoidNames.test(voice.name)) ||
     spanishVoices.find((voice) => !avoidNames.test(voice.name)) ||
     spanishVoices[0] ||
     voices[0] ||
@@ -39,8 +37,8 @@ function pickAdriVoice(preferredVoiceURI) {
 function speakNow(text, preferredVoiceURI) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
-  utterance.rate = 0.94;
-  utterance.pitch = 1.38;
+  utterance.rate = 0.97;
+  utterance.pitch = 1.55;
   utterance.volume = 1;
   utterance.voice = pickAdriVoice(preferredVoiceURI);
   window.speechSynthesis.speak(utterance);
