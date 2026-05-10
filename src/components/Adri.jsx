@@ -12,10 +12,12 @@ const labels = {
 };
 
 export default function Adri({ variant = "reader", size = "large", bubble }) {
+  const image = size === "full" ? "adri-clean.png" : "adri.png";
+
   return (
     <div className={`adri adri-${size} adri-${variant}`} aria-label={`Adri ${labels[variant] || ""}`}>
       <div className="adri-frame">
-        <img src={`${import.meta.env.BASE_URL}assets/adri.png`} alt="Adri, personaje principal" />
+        <img src={`${import.meta.env.BASE_URL}assets/${image}`} alt="Adri, personaje principal" />
         <span className="adri-accessory hat" aria-hidden="true" />
         <span className="adri-accessory lens" aria-hidden="true" />
         <span className="adri-accessory headphones" aria-hidden="true" />

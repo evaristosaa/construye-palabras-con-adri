@@ -1131,6 +1131,185 @@ a {
   }
 }
 
+/* Portada con menu: Adri protagonista, titulo y botones sin elementos del mockup original. */
+.home-screen.comic-panel {
+  display: block;
+  height: calc(100dvh - 16px);
+  min-height: 0;
+  padding: clamp(10px, 2vw, 18px);
+  background:
+    radial-gradient(circle at 76% 16%, rgba(255, 230, 88, 0.9) 0 8%, transparent 9%),
+    linear-gradient(135deg, #22a9ee 0%, #8ee5ff 46%, #96df62 100%);
+  overflow: hidden;
+}
+
+.home-screen.comic-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-conic-gradient(from 0deg at 70% 30%, rgba(255, 255, 255, 0.12) 0 7deg, transparent 7deg 14deg),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14), transparent 45%);
+}
+
+.home-hero {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(300px, 1.05fr);
+  gap: clamp(14px, 3vw, 32px);
+  align-items: end;
+  height: 100%;
+  padding-top: 52px;
+}
+
+.home-character {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.adri-full {
+  align-self: stretch;
+  align-items: flex-end;
+}
+
+.adri-full .adri-frame {
+  width: min(430px, 40vw);
+  height: 100%;
+  max-height: calc(100dvh - 96px);
+  aspect-ratio: auto;
+  border-radius: 0;
+  overflow: visible;
+  filter: drop-shadow(9px 12px 0 rgba(0, 0, 0, 0.32));
+}
+
+.adri-full .adri-frame img {
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none;
+  transform-origin: center bottom;
+}
+
+.home-menu {
+  align-self: center;
+  display: grid;
+  gap: clamp(12px, 2.4vh, 20px);
+  max-width: 520px;
+  justify-self: center;
+}
+
+.home-menu .title-stack {
+  width: 100%;
+}
+
+.home-menu .title-stack p {
+  font-size: clamp(1.8rem, 5vw, 3.7rem);
+}
+
+.home-menu .title-stack h1 {
+  font-size: clamp(3rem, 8vw, 6.4rem);
+}
+
+.home-menu .title-stack span {
+  font-size: clamp(2rem, 5.8vw, 4.7rem);
+}
+
+.home-menu .home-actions {
+  gap: clamp(8px, 1.7vh, 14px);
+}
+
+.big-action.yellow {
+  color: #172033;
+  background: linear-gradient(#ffe986, #f2b51c);
+  text-shadow: 1px 2px 0 rgba(255, 255, 255, 0.45);
+}
+
+.home-screen .voice-guide {
+  left: clamp(10px, 2vw, 20px);
+  top: clamp(10px, 2vw, 20px);
+}
+
+@media (max-width: 780px) {
+  .home-screen.comic-panel {
+    height: calc(100dvh - 12px);
+    padding: 8px;
+  }
+
+  .home-hero {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 8px;
+    padding-top: 46px;
+  }
+
+  .adri-full .adri-frame {
+    width: min(330px, 44vw);
+    max-height: calc(100dvh - 76px);
+  }
+
+  .home-menu .big-action {
+    min-height: clamp(52px, 10vh, 72px);
+    font-size: clamp(1.05rem, 3.7vw, 1.65rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    align-items: end;
+    padding-top: 48px;
+  }
+
+  .home-character {
+    position: absolute;
+    left: -18px;
+    bottom: -8px;
+    width: 50%;
+    height: 72%;
+    opacity: 0.96;
+  }
+
+  .adri-full .adri-frame {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .home-menu {
+    width: 64%;
+    justify-self: end;
+    align-self: center;
+    gap: 8px;
+  }
+
+  .home-menu .title-stack p {
+    font-size: 1.35rem;
+  }
+
+  .home-menu .title-stack h1 {
+    font-size: 2.25rem;
+    -webkit-text-stroke: 2px #061525;
+  }
+
+  .home-menu .title-stack span {
+    font-size: 1.8rem;
+  }
+
+  .home-menu .home-actions {
+    gap: 7px;
+  }
+
+  .home-menu .big-action {
+    min-height: 48px;
+    padding: 6px 10px;
+    border-radius: 14px;
+    font-size: 0.98rem;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .adri-frame {
     animation: floaty 3s ease-in-out infinite;
