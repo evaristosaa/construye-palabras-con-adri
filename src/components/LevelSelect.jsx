@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Adri from "./Adri";
 import { modules } from "../data/learningData";
+import VoiceGuide from "./VoiceGuide";
 
 export default function LevelSelect({ progress }) {
   const isUnlocked = (module) =>
@@ -8,10 +9,14 @@ export default function LevelSelect({ progress }) {
 
   return (
     <section className="mission-screen comic-panel">
+      <VoiceGuide
+        text="Elige una misión. Puedes tocar vocales o cualquier letra para jugar."
+        enabled={progress.voice}
+        compact
+      />
       <Adri variant="reader" bubble="Elige tu misión" size="medium" />
       <div className="mission-map">
         <h2>Elige tu misión</h2>
-        <div className="map-path" aria-hidden="true" />
         {modules.map((module, index) => {
           const unlocked = isUnlocked(module);
           const completed = progress.completedLevels.includes(module.id);

@@ -1,9 +1,15 @@
 import Adri from "./Adri";
 import { rewards } from "../data/learningData";
+import VoiceGuide from "./VoiceGuide";
 
 export default function Collection({ progress, completedRewards }) {
   return (
     <section className="collection-screen comic-panel">
+      <VoiceGuide
+        text="Aquí ves tus construcciones. Cada acierto coloca nuevas piezas."
+        enabled={progress.voice}
+        compact
+      />
       <h2>Mis construcciones</h2>
       <div className="collection-grid">
         {rewards.map((reward) => {

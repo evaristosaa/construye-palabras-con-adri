@@ -1,10 +1,16 @@
 import Adri from "./Adri";
+import VoiceGuide from "./VoiceGuide";
 
 export default function ProgressProfile({ progress }) {
   const level = Math.max(1, Math.floor(progress.pieces / 15) + 1);
 
   return (
     <section className="profile-screen comic-panel">
+      <VoiceGuide
+        text="Este es tu progreso. Mira tus estrellas, piezas y niveles completados."
+        enabled={progress.voice}
+        compact
+      />
       <Adri variant="teacher" bubble="¡Cada palabra es una nueva aventura!" />
       <div className="profile-card">
         <div className="level-ring">

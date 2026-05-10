@@ -7,6 +7,8 @@ const labels = {
   teacher: "Maestro",
   celebrating: "Celebrando",
   thinking: "Pensando",
+  helmet: "Con casco constructor",
+  reward: "Desbloqueando premios",
 };
 
 export default function Adri({ variant = "reader", size = "large", bubble }) {

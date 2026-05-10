@@ -1,8 +1,8 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Adri from "./Adri";
 import { Brick, Drawing, Stars } from "./Blocks";
-import { levelB, positiveMessages } from "../data/learningData";
+import { levelsById, positiveMessages } from "../data/learningData";
 import { playPositive, speak } from "./audio";
 
 const brickColors = ["red", "yellow", "blue", "green", "purple"];
@@ -14,8 +14,12 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   const [selected, setSelected] = useState("");
   const [built, setBuilt] = useState([]);
   const [feedback, setFeedback] = useState("¡Sigue así!");
-  const level = levelId === "letra-b" ? levelB : levelB;
+  const level = levelsById[levelId] || levelsById.vocales;
   const game = level.games[gameIndex];
+
+  useEffect(() => {
+    speak(game.speak || game.prompt, progress.voice);
+  }, [game.id, game.prompt, game.speak, progress.voice]);
 
   const solvedCount = useMemo(
     () => level.games.filter((item) => progress.completedGames.includes(item.id)).length,
@@ -64,7 +68,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
       setGameIndex((current) => current + 1);
     } else {
       completeLevel(level.id);
-      navigate("/recompensa/letra-b");
+      navigate(`/recompensa/${level.id}`);
     }
   }
 
@@ -80,7 +84,11 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
           <p className="eyebrow">{level.subtitle}</p>
           <h2>{gameIndex + 1}. {game.title}</h2>
         </div>
-        <button className="round-button" onClick={() => speak(game.speak || game.prompt, progress.voice)}>
+        <button
+          className="round-button"
+          onClick={() => speak(game.speak || game.prompt, progress.voice)}
+          aria-label="Escuchar la instrucción"
+        >
           🔊
         </button>
       </div>
@@ -126,9 +134,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
 
           {game.type === "phrase" && (
             <div className="phrase-reader">
-              <p>
-                La <mark>bola</mark> bota.
-              </p>
+              <p>{game.phrase || game.prompt}</p>
               <button className="check-button" onClick={markPhraseRead}>
                 ✓
               </button>

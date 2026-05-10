@@ -15,7 +15,8 @@ function runGh(args, input) {
 }
 
 function runGhJson(args, input) {
-  return JSON.parse(runGh(args, input));
+  const output = runGh(args, input);
+  return output ? JSON.parse(output) : {};
 }
 
 function listFiles(dir) {

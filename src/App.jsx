@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import LevelSelect from "./components/LevelSelect";
 import GameScreen from "./components/GameScreen";
@@ -13,9 +13,11 @@ import { useProgress } from "./hooks/useProgress";
 export default function App() {
   const progressApi = useProgress();
   const { progress, updateSettings } = progressApi;
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
-    <PageShell progress={progress} updateSettings={updateSettings}>
+    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome} hideTopBar={isHome}>
       <Routes>
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/niveles" element={<LevelSelect progress={progress} />} />
@@ -37,7 +39,7 @@ export default function App() {
         <Route path="/progreso" element={<ProgressProfile progress={progress} />} />
         <Route
           path="/personajes"
-          element={<Characters unlockedCharacters={progressApi.unlockedCharacters} />}
+          element={<Characters unlockedCharacters={progressApi.unlockedCharacters} progress={progress} />}
         />
         <Route
           path="/ajustes"

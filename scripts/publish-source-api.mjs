@@ -17,7 +17,8 @@ function runGh(args, input) {
 function api(path, method = "GET", body = null) {
   const args = ["api", path, "--method", method];
   if (body) args.push("--input", "-");
-  return JSON.parse(runGh(args, body ? JSON.stringify(body) : undefined));
+  const output = runGh(args, body ? JSON.stringify(body) : undefined);
+  return output ? JSON.parse(output) : {};
 }
 
 function listFiles(dir) {

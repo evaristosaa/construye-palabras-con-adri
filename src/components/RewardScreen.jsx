@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import Adri from "./Adri";
 import { Stars } from "./Blocks";
+import VoiceGuide from "./VoiceGuide";
 
 export default function RewardScreen({ progress }) {
   return (
     <section className="reward-screen comic-panel">
-      <Adri variant="celebrating" bubble="¡Nivel superado!" />
+      <VoiceGuide
+        text="¡Nivel superado! Has ganado estrellas y piezas para tus construcciones."
+        enabled={progress.voice}
+        compact
+      />
+      <Adri variant="reward" bubble="¡Has desbloqueado premios!" />
       <div className="reward-card">
         <h2>¡Nivel superado!</h2>
         <Stars count={3} />

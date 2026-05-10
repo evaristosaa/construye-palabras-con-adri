@@ -33,10 +33,10 @@ export function BottomNav() {
   );
 }
 
-export function PageShell({ children, progress, updateSettings, hideNav = false }) {
+export function PageShell({ children, progress, updateSettings, hideNav = false, hideTopBar = false }) {
   return (
     <main className="app-shell">
-      <TopBar progress={progress} onSoundToggle={() => updateSettings({ sound: !progress.sound })} />
+      {!hideTopBar && <TopBar progress={progress} onSoundToggle={() => updateSettings({ sound: !progress.sound })} />}
       {children}
       {!hideNav && <BottomNav />}
     </main>

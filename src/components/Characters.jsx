@@ -1,9 +1,15 @@
 import Adri from "./Adri";
 import { characters } from "../data/learningData";
+import VoiceGuide from "./VoiceGuide";
 
-export default function Characters({ unlockedCharacters }) {
+export default function Characters({ unlockedCharacters, progress }) {
   return (
     <section className="characters-screen comic-panel">
+      <VoiceGuide
+        text="Esta es tu colección de Adri. Gana piezas para desbloquear más personajes."
+        enabled={progress.voice}
+        compact
+      />
       <h2>Mi colección de Adri</h2>
       <div className="character-grid">
         {characters.map((character) => {
