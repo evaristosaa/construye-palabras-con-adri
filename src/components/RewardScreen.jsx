@@ -9,6 +9,7 @@ export default function RewardScreen({ progress }) {
       <VoiceGuide
         text="¡Lo has conseguido! Ganaste estrellas y piezas. Con esas piezas hacemos construcciones nuevas."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <Adri variant="reward" bubble="¡Has desbloqueado premios!" />

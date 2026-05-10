@@ -8,6 +8,7 @@ export default function Home({ progress }) {
       <VoiceGuide
         text="Soy Adri. ¿Te animas a construir palabras conmigo? Toca jugar y empezamos juntos."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <div className="home-hero">

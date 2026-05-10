@@ -8,6 +8,7 @@ export default function Collection({ progress, completedRewards }) {
       <VoiceGuide
         text="Esta es tu zona de construcciones. Cada vez que aciertas, ganamos piezas para terminar casas, coches y torres."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <h2>Mis construcciones</h2>

@@ -9,6 +9,7 @@ export default function ProgressProfile({ progress }) {
       <VoiceGuide
         text="Aquí vemos cómo vamos. Estas son tus estrellas, tus piezas y las misiones que ya completaste conmigo."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <Adri variant="teacher" bubble="¡Cada palabra es una nueva aventura!" />

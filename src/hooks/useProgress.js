@@ -10,6 +10,7 @@ const initialProgress = {
   completedGames: [],
   sound: true,
   voice: true,
+  voiceURI: "",
   streak: 1,
   lastPlayed: null,
 };

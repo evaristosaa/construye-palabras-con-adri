@@ -12,6 +12,7 @@ export default function LevelSelect({ progress }) {
       <VoiceGuide
         text="Elige una misión. Primero puedes jugar con vocales. También puedes tocar una letra y yo te explico el juego paso a paso."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <Adri variant="reader" bubble="Elige tu misión" size="medium" />

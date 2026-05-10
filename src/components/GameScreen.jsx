@@ -18,8 +18,8 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   const game = level.games[gameIndex];
 
   useEffect(() => {
-    speak(game.speak || game.prompt, progress.voice);
-  }, [game.id, game.prompt, game.speak, progress.voice]);
+    speak(game.speak || game.prompt, progress.voice, progress.voiceURI);
+  }, [game.id, game.prompt, game.speak, progress.voice, progress.voiceURI]);
 
   const solvedCount = useMemo(
     () => level.games.filter((item) => progress.completedGames.includes(item.id)).length,
@@ -30,7 +30,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
     playPositive(progress.sound);
     const message = positiveMessages[Math.floor(Math.random() * positiveMessages.length)];
     setFeedback(message);
-    speak(message, progress.voice);
+    speak(message, progress.voice, progress.voiceURI);
     completeGame(gameId);
   }
 
@@ -42,7 +42,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
     } else {
       const hint = "Casi. Prueba otra vez. Yo te ayudo.";
       setFeedback(hint);
-      speak(hint, progress.voice);
+      speak(hint, progress.voice, progress.voiceURI);
     }
   }
 
@@ -55,7 +55,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
     } else if (!game.answer.startsWith(next.join(""))) {
       const hint = "Ese bloque no va ahí. Prueba otro, lo estás haciendo bien.";
       setFeedback(hint);
-      speak(hint, progress.voice);
+      speak(hint, progress.voice, progress.voiceURI);
       setBuilt([]);
     }
   }
@@ -91,7 +91,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
         </div>
         <button
           className="round-button"
-          onClick={() => speak(game.speak || game.prompt, progress.voice)}
+          onClick={() => speak(game.speak || game.prompt, progress.voice, progress.voiceURI)}
           aria-label="Escuchar la instrucción"
         >
           🔊

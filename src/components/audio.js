@@ -1,20 +1,70 @@
-export function speak(text, enabled = true) {
-  if (!enabled || !("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
+function getVoices() {
+  if (!("speechSynthesis" in window)) return [];
+  return window.speechSynthesis.getVoices();
+}
+
+export function getAvailableSpanishVoices() {
+  return getVoices().filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
+}
+
+function pickAdriVoice(preferredVoiceURI) {
+  const voices = getVoices();
+  const savedVoice = voices.find((voice) => voice.voiceURI === preferredVoiceURI);
+  if (savedVoice) return savedVoice;
+
+  const spanishVoices = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
+  const preferredNames = [
+    /pablo/i,
+    /alvaro|álvaro/i,
+    /jorge/i,
+    /diego/i,
+    /antonio/i,
+    /carlos/i,
+    /miguel/i,
+    /raul|raúl/i,
+    /google.*español/i,
+    /microsoft.*spanish/i,
+  ];
+  const avoidNames = /monica|mónica|helena|laura|sabina|paulina|elvira|female|mujer/i;
+
+  return (
+    spanishVoices.find((voice) => preferredNames.some((pattern) => pattern.test(voice.name))) ||
+    spanishVoices.find((voice) => !avoidNames.test(voice.name)) ||
+    spanishVoices[0] ||
+    voices[0] ||
+    null
+  );
+}
+
+function speakNow(text, preferredVoiceURI) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
-  utterance.rate = 0.9;
-  utterance.pitch = 1.28;
+  utterance.rate = 0.94;
+  utterance.pitch = 1.38;
   utterance.volume = 1;
-
-  const voices = window.speechSynthesis.getVoices();
-  const spanishVoices = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
-  utterance.voice =
-    spanishVoices.find((voice) => /españa|spain|natural|google|microsoft/i.test(voice.name)) ||
-    spanishVoices[0] ||
-    null;
-
+  utterance.voice = pickAdriVoice(preferredVoiceURI);
   window.speechSynthesis.speak(utterance);
+}
+
+export function speak(text, enabled = true, preferredVoiceURI = "") {
+  if (!enabled || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+
+  if (getVoices().length) {
+    speakNow(text, preferredVoiceURI);
+    return;
+  }
+
+  window.speechSynthesis.onvoiceschanged = () => {
+    window.speechSynthesis.onvoiceschanged = null;
+    speakNow(text, preferredVoiceURI);
+  };
+
+  window.setTimeout(() => {
+    if (!window.speechSynthesis.speaking) {
+      speakNow(text, preferredVoiceURI);
+    }
+  }, 250);
 }
 
 export function playPositive(enabled = true) {

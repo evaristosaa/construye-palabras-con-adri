@@ -8,6 +8,7 @@ export default function Characters({ unlockedCharacters, progress }) {
       <VoiceGuide
         text="Aquí están mis personajes. Si seguimos jugando, desbloqueamos más Adris para acompañarte."
         enabled={progress.voice}
+        voiceURI={progress.voiceURI}
         compact
       />
       <h2>Mi colección de Adri</h2>
