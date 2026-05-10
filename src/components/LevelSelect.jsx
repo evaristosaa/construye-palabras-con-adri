@@ -10,7 +10,7 @@ export default function LevelSelect({ progress }) {
   return (
     <section className="mission-screen comic-panel">
       <VoiceGuide
-        text="Elige una misión. Puedes tocar vocales o cualquier letra para jugar."
+        text="Elige una misión. Primero puedes jugar con vocales. También puedes tocar una letra y yo te explico el juego paso a paso."
         enabled={progress.voice}
         compact
       />

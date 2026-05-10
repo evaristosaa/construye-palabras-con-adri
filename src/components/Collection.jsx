@@ -6,7 +6,7 @@ export default function Collection({ progress, completedRewards }) {
   return (
     <section className="collection-screen comic-panel">
       <VoiceGuide
-        text="Aquí ves tus construcciones. Cada acierto coloca nuevas piezas."
+        text="Esta es tu zona de construcciones. Cada vez que aciertas, ganamos piezas para terminar casas, coches y torres."
         enabled={progress.voice}
         compact
       />

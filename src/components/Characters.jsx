@@ -6,7 +6,7 @@ export default function Characters({ unlockedCharacters, progress }) {
   return (
     <section className="characters-screen comic-panel">
       <VoiceGuide
-        text="Esta es tu colección de Adri. Gana piezas para desbloquear más personajes."
+        text="Aquí están mis personajes. Si seguimos jugando, desbloqueamos más Adris para acompañarte."
         enabled={progress.voice}
         compact
       />

@@ -7,7 +7,7 @@ export default function RewardScreen({ progress }) {
   return (
     <section className="reward-screen comic-panel">
       <VoiceGuide
-        text="¡Nivel superado! Has ganado estrellas y piezas para tus construcciones."
+        text="¡Lo has conseguido! Ganaste estrellas y piezas. Con esas piezas hacemos construcciones nuevas."
         enabled={progress.voice}
         compact
       />

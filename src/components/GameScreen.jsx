@@ -30,6 +30,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
     playPositive(progress.sound);
     const message = positiveMessages[Math.floor(Math.random() * positiveMessages.length)];
     setFeedback(message);
+    speak(message, progress.voice);
     completeGame(gameId);
   }
 
@@ -39,7 +40,9 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
       celebrate();
       setTimeout(() => nextGame(), 650);
     } else {
-      setFeedback("Casi, Adri. Mira la pista brillante.");
+      const hint = "Casi. Prueba otra vez. Yo te ayudo.";
+      setFeedback(hint);
+      speak(hint, progress.voice);
     }
   }
 
@@ -50,7 +53,9 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
       celebrate();
       setTimeout(() => nextGame(), 700);
     } else if (!game.answer.startsWith(next.join(""))) {
-      setFeedback("Prueba otro bloque. Te ayudo con una pista.");
+      const hint = "Ese bloque no va ahí. Prueba otro, lo estás haciendo bien.";
+      setFeedback(hint);
+      speak(hint, progress.voice);
       setBuilt([]);
     }
   }

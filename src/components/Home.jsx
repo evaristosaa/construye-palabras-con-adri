@@ -6,7 +6,7 @@ export default function Home({ progress }) {
   return (
     <section className="home-screen comic-panel">
       <VoiceGuide
-        text="Hola Adri. Elige un botón para empezar a leer, jugar o ver tus logros."
+        text="Soy Adri. ¿Te animas a construir palabras conmigo? Toca jugar y empezamos juntos."
         enabled={progress.voice}
         compact
       />

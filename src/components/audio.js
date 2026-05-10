@@ -3,8 +3,17 @@ export function speak(text, enabled = true) {
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
-  utterance.rate = 0.82;
-  utterance.pitch = 1.05;
+  utterance.rate = 0.9;
+  utterance.pitch = 1.28;
+  utterance.volume = 1;
+
+  const voices = window.speechSynthesis.getVoices();
+  const spanishVoices = voices.filter((voice) => voice.lang?.toLowerCase().startsWith("es"));
+  utterance.voice =
+    spanishVoices.find((voice) => /españa|spain|natural|google|microsoft/i.test(voice.name)) ||
+    spanishVoices[0] ||
+    null;
+
   window.speechSynthesis.speak(utterance);
 }
 

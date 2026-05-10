@@ -4,7 +4,7 @@ export default function Settings({ progress, updateSettings, resetProgress }) {
   return (
     <section className="settings-screen comic-panel">
       <VoiceGuide
-        text="En ajustes puedes activar sonidos, activar la voz o reiniciar el progreso."
+        text="Estos son los ajustes. Puedes poner o quitar sonidos, activar mi voz o reiniciar la aventura."
         enabled={progress.voice}
         compact
       />

@@ -7,7 +7,7 @@ export default function ProgressProfile({ progress }) {
   return (
     <section className="profile-screen comic-panel">
       <VoiceGuide
-        text="Este es tu progreso. Mira tus estrellas, piezas y niveles completados."
+        text="Aquí vemos cómo vamos. Estas son tus estrellas, tus piezas y las misiones que ya completaste conmigo."
         enabled={progress.voice}
         compact
       />
