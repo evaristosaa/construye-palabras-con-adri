@@ -4,7 +4,7 @@ import { join, relative, sep } from "node:path";
 
 const repo = "construye-palabras-con-adri";
 const branch = "main";
-const ignored = new Set(["node_modules", "dist", ".git"]);
+const ignored = new Set(["node_modules", "dist", ".git", "tmp"]);
 
 function runGh(args, input) {
   return execFileSync("gh", args, {
@@ -35,7 +35,9 @@ const ref = api(`/repos/${fullName}/git/ref/heads/${branch}`);
 const parentSha = ref.object.sha;
 const parentCommit = api(`/repos/${fullName}/git/commits/${parentSha}`);
 
-const tree = listFiles(".").map((file) => {
+const tree = [
+  { path: "tmp", mode: "040000", type: "tree", sha: null },
+  ...listFiles(".").map((file) => {
   const content = readFileSync(file).toString("base64");
   const blob = api(`/repos/${fullName}/git/blobs`, "POST", {
     content,
@@ -47,7 +49,8 @@ const tree = listFiles(".").map((file) => {
     type: "blob",
     sha: blob.sha,
   };
-});
+  }),
+];
 
 const newTree = api(`/repos/${fullName}/git/trees`, "POST", {
   base_tree: parentCommit.tree.sha,
