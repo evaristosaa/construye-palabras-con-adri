@@ -26,7 +26,6 @@ export function BottomNav() {
     <nav className="bottom-nav" aria-label="Navegación principal">
       <NavLink to="/niveles">Misiones</NavLink>
       <NavLink to="/coleccion">Construcciones</NavLink>
-      <NavLink to="/personajes">Adris</NavLink>
       <NavLink to="/progreso">Progreso</NavLink>
       <NavLink to="/ajustes">Ajustes</NavLink>
     </nav>

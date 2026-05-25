@@ -6,9 +6,8 @@ export default function Home({ progress }) {
   return (
     <section className="home-screen comic-panel">
       <VoiceGuide
-        text="Soy Adri. ¿Te animas a construir palabras conmigo? Toca jugar y empezamos juntos."
+        text="Soy Adri. Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos."
         enabled={progress.voice}
-        voiceURI={progress.voiceURI}
         compact
       />
       <div className="home-hero">
@@ -21,18 +20,18 @@ export default function Home({ progress }) {
             <h1>PALABRAS</h1>
             <span>con ADRI</span>
           </div>
-          <nav className="home-actions" aria-label="Menú inicial">
+          <nav className="home-actions" aria-label="Menu inicial">
             <Link className="big-action green" to="/niveles">
-              ▶ Jugar
-            </Link>
-            <Link className="big-action blue" to="/juego/vocales">
-              🔊 Vocales
+              Misiones
             </Link>
             <Link className="big-action yellow" to="/coleccion">
-              🧱 Construcciones
+              Construcciones
             </Link>
-            <Link className="big-action purple" to="/progreso">
-              ★ Mis logros
+            <Link className="big-action blue" to="/progreso">
+              Progreso
+            </Link>
+            <Link className="big-action purple" to="/ajustes">
+              Ajustes
             </Link>
           </nav>
         </div>

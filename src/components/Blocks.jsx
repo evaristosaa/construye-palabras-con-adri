@@ -24,6 +24,67 @@ export function Stars({ count = 0, total = 3 }) {
   );
 }
 
-export function Drawing({ type = "ball" }) {
-  return <div className={`drawing drawing-${type}`} aria-label={`Dibujo ${type}`} />;
+const drawings = {
+  baby: ["👶", "bebé"],
+  bag: ["🧳", "maleta"],
+  ball: ["⚽", "bola"],
+  bear: ["🐻", "oso"],
+  boot: ["🥾", "bota"],
+  bowl: ["🍲", "sopa"],
+  bull: ["🐂", "toro"],
+  chair: ["🪑", "silla"],
+  cloth: ["🧣", "tela"],
+  cloud: ["☁️", "nube"],
+  cup: ["☕", "taza"],
+  dad: ["👨", "papá"],
+  dice: ["🎲", "dado"],
+  domino: ["🁢", "dominó"],
+  donkey: ["🫏", "burro"],
+  duck: ["🦆", "pato"],
+  finger: ["☝️", "dedo"],
+  flower: ["🌷", "flor"],
+  frog: ["🐸", "sapo"],
+  giraffe: ["🦒", "jirafa"],
+  girl: ["👧", "niña"],
+  grape: ["🍇", "uva"],
+  heart: ["❤️", "familia"],
+  hill: ["⛰️", "monte"],
+  jug: ["🏺", "jarra"],
+  lemon: ["🍋", "limón"],
+  lens: ["🔍", "lupa"],
+  mom: ["👩", "mamá"],
+  monkey: ["🐒", "mono"],
+  moon: ["🌙", "luna"],
+  motorbike: ["🏍️", "moto"],
+  mouth: ["👄", "boca"],
+  mouse: ["🐭", "ratón"],
+  nest: ["🪺", "nido"],
+  piano: ["🎹", "piano"],
+  pineapple: ["🍍", "piña"],
+  pipe: ["🫧", "pipa"],
+  scissors: ["✂️", "tijera"],
+  smile: ["😄", "risa"],
+  sun: ["☀️", "sol"],
+  syringe: ["💉", "jeringa"],
+  table: ["🟫", "mesa"],
+  target: ["🎯", "diana"],
+  tomato: ["🍅", "tomate"],
+  watermelon: ["🍉", "sandía"],
+  wave: ["🌊", "ola"],
+  wheel: ["🛞", "rueda"],
+  wing: ["🪽", "ala"],
+  wizard: ["🧝", "duende"],
+  wool: ["🧶", "lana"],
+};
+
+export function Drawing({ type = "ball", hideLabel = false }) {
+  const [icon, label] = drawings[type] || ["🔹", type];
+  return (
+    <div className={`drawing drawing-${type}`} aria-label={`Dibujo ${label}`}>
+      <span className="drawing-icon" aria-hidden="true">
+        {icon}
+      </span>
+      {!hideLabel && <span className="drawing-label">{label}</span>}
+    </div>
+  );
 }

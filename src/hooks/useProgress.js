@@ -46,7 +46,7 @@ export function useProgress() {
       return {
         ...current,
         stars: current.stars + (alreadyCompleted ? 0 : stars),
-        pieces: current.pieces + pieces,
+        pieces: current.pieces + (alreadyCompleted ? 0 : pieces),
         completedGames: alreadyCompleted ? current.completedGames : [...current.completedGames, gameId],
         lastPlayed: new Date().toISOString(),
       };

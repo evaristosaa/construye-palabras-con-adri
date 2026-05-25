@@ -6,7 +6,6 @@ import RewardScreen from "./components/RewardScreen";
 import Collection from "./components/Collection";
 import ProgressProfile from "./components/ProgressProfile";
 import Settings from "./components/Settings";
-import Characters from "./components/Characters";
 import { PageShell } from "./components/Layout";
 import { useProgress } from "./hooks/useProgress";
 
@@ -37,10 +36,6 @@ export default function App() {
           element={<Collection progress={progress} completedRewards={progressApi.completedRewards} />}
         />
         <Route path="/progreso" element={<ProgressProfile progress={progress} />} />
-        <Route
-          path="/personajes"
-          element={<Characters unlockedCharacters={progressApi.unlockedCharacters} progress={progress} />}
-        />
         <Route
           path="/ajustes"
           element={

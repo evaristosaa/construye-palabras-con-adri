@@ -11,19 +11,26 @@ const labels = {
   reward: "Desbloqueando premios",
 };
 
+const variantImages = {
+  audio: "adri-audio.png",
+  builder: "adri-builder.png",
+  helmet: "adri-builder.png",
+  teacher: "adri-reader.png",
+  reader: "adri-reader.png",
+  celebrating: "adri-celebrating.png",
+  reward: "adri-celebrating.png",
+  detective: "adri-detective.png",
+  thinking: "adri-detective.png",
+  pointing: "adri-clean.png",
+};
+
 export default function Adri({ variant = "reader", size = "large", bubble }) {
-  const image = size === "full" ? "adri-clean.png" : "adri.png";
+  const image = size === "full" ? "adri-clean.png" : variantImages[variant] || "adri-clean.png";
 
   return (
     <div className={`adri adri-${size} adri-${variant}`} aria-label={`Adri ${labels[variant] || ""}`}>
       <div className="adri-frame">
         <img src={`${import.meta.env.BASE_URL}assets/${image}`} alt="Adri, personaje principal" />
-        <span className="adri-accessory hat" aria-hidden="true" />
-        <span className="adri-accessory lens" aria-hidden="true" />
-        <span className="adri-accessory headphones" aria-hidden="true" />
-        <span className="adri-accessory badge" aria-hidden="true">
-          B
-        </span>
       </div>
       {bubble && <div className="speech-bubble">{bubble}</div>}
     </div>

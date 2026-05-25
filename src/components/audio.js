@@ -34,53 +34,70 @@ function pickAdriVoice(preferredVoiceURI) {
   );
 }
 
-function speakNow(text, preferredVoiceURI) {
+function speakNow(text, preferredVoiceURI, { rate = 0.98, pitch = 1.45 } = {}) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
-  utterance.rate = 0.97;
-  utterance.pitch = 1.55;
+  utterance.rate = rate;
+  utterance.pitch = pitch;
   utterance.volume = 1;
   utterance.voice = pickAdriVoice(preferredVoiceURI);
   window.speechSynthesis.speak(utterance);
 }
 
-export function speak(text, enabled = true, preferredVoiceURI = "") {
+export function speak(text, enabled = true, preferredVoiceURI = "", options = {}) {
   if (!enabled || !("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
 
   if (getVoices().length) {
-    speakNow(text, preferredVoiceURI);
+    speakNow(text, preferredVoiceURI, options);
     return;
   }
 
   window.speechSynthesis.onvoiceschanged = () => {
     window.speechSynthesis.onvoiceschanged = null;
-    speakNow(text, preferredVoiceURI);
+    speakNow(text, preferredVoiceURI, options);
   };
 
   window.setTimeout(() => {
     if (!window.speechSynthesis.speaking) {
-      speakNow(text, preferredVoiceURI);
+      speakNow(text, preferredVoiceURI, options);
     }
   }, 250);
 }
 
-export function playPositive(enabled = true) {
+function playToneSequence(enabled, notes, type = "sine") {
   if (!enabled || !("AudioContext" in window || "webkitAudioContext" in window)) return;
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
   const context = new AudioCtx();
-  const notes = [523.25, 659.25, 783.99];
 
   notes.forEach((frequency, index) => {
     const oscillator = context.createOscillator();
     const gain = context.createGain();
     oscillator.frequency.value = frequency;
-    oscillator.type = "sine";
-    gain.gain.setValueAtTime(0.001, context.currentTime + index * 0.08);
-    gain.gain.exponentialRampToValueAtTime(0.12, context.currentTime + index * 0.08 + 0.02);
-    gain.gain.exponentialRampToValueAtTime(0.001, context.currentTime + index * 0.08 + 0.16);
+    oscillator.type = type;
+    gain.gain.setValueAtTime(0.001, context.currentTime + index * 0.09);
+    gain.gain.exponentialRampToValueAtTime(0.12, context.currentTime + index * 0.09 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.001, context.currentTime + index * 0.09 + 0.18);
     oscillator.connect(gain).connect(context.destination);
-    oscillator.start(context.currentTime + index * 0.08);
-    oscillator.stop(context.currentTime + index * 0.08 + 0.18);
+    oscillator.start(context.currentTime + index * 0.09);
+    oscillator.stop(context.currentTime + index * 0.09 + 0.2);
   });
+}
+
+export function playPositive(enabled = true) {
+  playToneSequence(enabled, [523.25, 659.25, 783.99], "sine");
+}
+
+export function playRetry(enabled = true) {
+  playToneSequence(enabled, [392, 330], "triangle");
+}
+
+export function speakResult(kind, voiceEnabled = true, soundEnabled = true, preferredVoiceURI = "") {
+  if (kind === "success") {
+    playPositive(soundEnabled);
+    speak("¡Bien!", voiceEnabled, preferredVoiceURI, { rate: 1.05, pitch: 1.6 });
+    return;
+  }
+  playRetry(soundEnabled);
+  speak("¡Repite!", voiceEnabled, preferredVoiceURI, { rate: 1.02, pitch: 1.45 });
 }

@@ -7,22 +7,26 @@ export default function RewardScreen({ progress }) {
   return (
     <section className="reward-screen comic-panel">
       <VoiceGuide
-        text="¡Lo has conseguido! Ganaste estrellas y piezas. Con esas piezas hacemos construcciones nuevas."
+        text="¡Nivel superado! Adri está celebrando porque has leído una misión completa."
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact
       />
-      <Adri variant="reward" bubble="¡Has desbloqueado premios!" />
+      <Adri variant="celebrating" size="side" bubble="¡Bien! ¡Misión superada!" />
       <div className="reward-card">
-        <h2>¡Nivel superado!</h2>
+        <h2>¡Misión superada!</h2>
         <Stars count={3} />
-        <p>Piezas +5</p>
+        <p>Una parte más para la Casa de las Palabras</p>
         <div className="mega-stars">★★★</div>
         <strong>Total: {progress.pieces} piezas</strong>
       </div>
       <div className="home-actions">
-        <Link className="big-action green" to="/niveles">Otra misión</Link>
-        <Link className="big-action blue" to="/coleccion">Ver construcción</Link>
+        <Link className="big-action green" to="/niveles">
+          Otra misión
+        </Link>
+        <Link className="big-action blue" to="/coleccion">
+          Ver construcción
+        </Link>
       </div>
     </section>
   );

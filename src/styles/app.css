@@ -151,7 +151,7 @@ a {
   bottom: 10px;
   z-index: 20;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
   width: min(920px, calc(100% - 20px));
   transform: translateX(-50%);
@@ -465,6 +465,10 @@ a {
 
 .brick-purple {
   background: linear-gradient(#d68cff, #8342bf);
+}
+
+.brick-orange {
+  background: linear-gradient(#ffbf4c, #f07c1b);
 }
 
 .home-actions {
@@ -1133,7 +1137,7 @@ a {
   }
 
   .bottom-nav {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 3px;
   }
 
@@ -1200,6 +1204,10 @@ a {
   justify-content: center;
   min-height: 0;
   overflow: hidden;
+}
+
+.home-character .badge {
+  display: none !important;
 }
 
 .adri-full {
@@ -1405,9 +1413,8 @@ body {
   padding: 0;
   border: 4px solid #0d1724;
   border-radius: 8px;
-  background-image: url("/construye-palabras-con-adri/assets/adri.png");
-  background-size: auto 250%;
-  background-position: 8% 50%;
+  background-size: cover;
+  background-position: center;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -1466,6 +1473,11 @@ body {
   border: 3px solid var(--ink);
   border-radius: 48% 48% 12px 12px;
   background: var(--yellow);
+}
+
+.adri-medium .hat {
+  top: -2%;
+  height: 9%;
 }
 
 .adri-reward .badge {
@@ -1885,5 +1897,977 @@ body {
   .collection-grid,
   .character-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mission-book {
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+  align-content: center;
+  padding-left: min(180px, 19vw);
+}
+
+.mission-book .mission-block {
+  align-content: center;
+  gap: 4px;
+  min-height: clamp(118px, 18vh, 156px);
+  padding: 14px 10px 12px;
+  text-decoration: none;
+}
+
+.mission-book .mission-block strong {
+  line-height: 0.9;
+}
+
+.mission-syllables,
+.mission-block em {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  color: inherit;
+  font-size: clamp(0.65rem, 1.45vw, 0.82rem);
+  font-style: normal;
+  font-weight: 900;
+  opacity: 0.95;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mission-block em {
+  opacity: 0.78;
+  text-transform: none;
+}
+
+.letter-scene,
+.workbook-box,
+.sentence-list {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  height: 100%;
+}
+
+.letter-scene {
+  grid-template-columns: minmax(112px, 0.48fr) 1fr;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.letter-scene p,
+.workbook-box p {
+  margin: 0;
+  font-size: clamp(1rem, 2.6vw, 1.45rem);
+  font-weight: 900;
+}
+
+.letter-hero {
+  display: grid;
+  place-items: center;
+  min-height: clamp(92px, 19vh, 150px);
+  border: 5px solid var(--ink);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.65), transparent 30%),
+    linear-gradient(145deg, #ffe77d, #ff9852);
+  color: #132033;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  font-weight: 1000;
+  letter-spacing: 0;
+  text-shadow: 3px 4px 0 rgba(255, 255, 255, 0.65);
+}
+
+.syllable-strip,
+.syllable-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+  gap: 8px;
+}
+
+.syllable-strip span {
+  display: grid;
+  place-items: center;
+  min-height: 40px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  font-size: clamp(1.05rem, 3vw, 1.55rem);
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.scene-start {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 58px;
+  height: 58px;
+  font-size: 1.85rem;
+}
+
+.letter-scene .drawing {
+  width: min(104px, 16vw);
+  height: min(82px, 13vh);
+}
+
+.workbook-box {
+  padding: clamp(10px, 2vw, 18px);
+  border: 4px solid #98bdd2;
+  border-radius: 12px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(90, 150, 190, 0.11) 31px 32px);
+}
+
+.workbook-box > strong {
+  justify-self: start;
+  min-width: 86px;
+  padding: 8px 18px;
+  border: 4px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  color: #c4221a;
+  font-size: clamp(1.7rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+}
+
+.syllable-chip {
+  min-height: clamp(52px, 9vh, 70px);
+  font-size: clamp(1.15rem, 4vw, 2rem);
+}
+
+.missing-word {
+  justify-self: center;
+  padding: 10px 24px;
+  border-bottom: 5px solid #ef9a2b;
+  color: #283244;
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 1000;
+  letter-spacing: 0;
+}
+
+.missing-game small {
+  justify-self: center;
+  color: #69717e;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sentence-list {
+  grid-template-columns: 1fr;
+}
+
+.sentence-option {
+  min-height: clamp(58px, 10vh, 84px);
+  padding: 10px 18px;
+  border: 4px solid var(--ink);
+  border-radius: 12px;
+  background: #fff;
+  color: #202838;
+  font-size: clamp(1.2rem, 3.8vw, 2.2rem);
+  font-weight: 950;
+  text-align: left;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sentence-option.is-selected,
+.sentence-option.is-correct {
+  background: #a6ed55;
+}
+
+.drawing {
+  display: grid;
+  place-items: end center;
+  isolation: isolate;
+}
+
+.drawing span {
+  z-index: 2;
+  max-width: 100%;
+  padding: 3px 10px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: white;
+  color: #202838;
+  font-size: 0.78rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.drawing-baby::before,
+.drawing-bag::before,
+.drawing-chair::before,
+.drawing-domino::before,
+.drawing-girl::before,
+.drawing-jug::before,
+.drawing-lemon::before,
+.drawing-piano::before,
+.drawing-pineapple::before,
+.drawing-syringe::before,
+.drawing-tomato::before,
+.drawing-wave::before,
+.drawing-wheel::before,
+.drawing-wizard::before {
+  content: "";
+  position: absolute;
+  inset: 18px 26px;
+  border: 4px solid var(--ink);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffe781, #56c7ff);
+}
+
+.drawing-girl::before,
+.drawing-baby::before {
+  border-radius: 50% 50% 22px 22px;
+  background: #ffc7a2;
+}
+
+.drawing-pineapple::before {
+  border-radius: 52% 52% 44% 44%;
+  background:
+    linear-gradient(45deg, transparent 47%, rgba(0, 0, 0, 0.18) 48% 52%, transparent 53%),
+    linear-gradient(-45deg, transparent 47%, rgba(0, 0, 0, 0.18) 48% 52%, transparent 53%),
+    #f6c54b;
+}
+
+.drawing-piano::before {
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(90deg, white 0 14px, #1d2330 15px 20px),
+    #fff;
+}
+
+.drawing-tomato::before {
+  border-radius: 50%;
+  background: #f25545;
+}
+
+.drawing-wave::before {
+  border-radius: 999px;
+  background: linear-gradient(180deg, #5ed5ff, #0b80c9);
+}
+
+.drawing-wheel::before {
+  border-radius: 50%;
+  background: radial-gradient(circle, white 0 22%, var(--ink) 23% 28%, #94a3b8 29%);
+}
+
+.drawing-wizard::before {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #62c2ff;
+}
+
+@media (max-width: 780px) {
+  .mission-book {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-left: 92px;
+  }
+
+  .letter-scene {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sentence-option {
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .mission-book {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 0;
+  }
+
+  .mission-book .mission-block {
+    min-height: clamp(94px, 15vh, 116px);
+  }
+
+  .mission-syllables,
+  .mission-block em {
+    display: none;
+  }
+
+  .letter-scene {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .letter-hero {
+    min-height: 86px;
+    font-size: 2.8rem;
+  }
+
+  .syllable-strip,
+  .syllable-board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .workbook-box {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .sentence-option {
+    padding: 8px 10px;
+    font-size: 1.05rem;
+  }
+}
+
+.home-screen {
+  background:
+    radial-gradient(circle at 76% 16%, rgba(255, 230, 88, 0.9) 0 8%, transparent 9%),
+    linear-gradient(135deg, #22a9ee, #8ee5ff 46%, #96df62) !important;
+  background-image:
+    radial-gradient(circle at 76% 16%, rgba(255, 230, 88, 0.9) 0 8%, transparent 9%),
+    linear-gradient(135deg, #22a9ee, #8ee5ff 46%, #96df62) !important;
+}
+
+.adri-side {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-self: stretch;
+  min-height: 0;
+}
+
+.adri-side .adri {
+  align-items: end;
+  justify-content: center;
+  height: 100%;
+  min-height: 0;
+}
+
+.adri-side .adri-frame,
+.adri-side .adri-side .adri-frame {
+  width: min(210px, 18vw);
+  height: min(330px, 42vh);
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.adri-side .adri-frame img {
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none;
+}
+
+.adri-side .speech-bubble {
+  max-width: 210px;
+  padding: 10px;
+  border-radius: 24px;
+  font-size: clamp(0.78rem, 1.55vw, 1rem);
+}
+
+.game-stage {
+  grid-template-columns: minmax(170px, 260px) 1fr;
+}
+
+.activity-card {
+  grid-template-rows: auto 1fr;
+}
+
+.drawing {
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  width: min(170px, 25vw);
+  height: min(132px, 20vh);
+  padding: 8px;
+  border: 4px solid var(--ink);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.drawing::before,
+.drawing::after {
+  content: none !important;
+}
+
+.drawing .drawing-icon {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  line-height: 1;
+  text-transform: none;
+}
+
+.drawing .drawing-label {
+  max-width: 100%;
+  padding: 3px 10px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: #fff7dc;
+  color: #202838;
+  font-size: 0.8rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.image-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 12px;
+  min-height: 0;
+}
+
+.image-option {
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  min-height: clamp(96px, 18vh, 132px);
+  padding: 10px;
+  border: 4px solid var(--ink);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.24);
+}
+
+.image-option .drawing {
+  width: min(118px, 18vw);
+  height: min(78px, 12vh);
+  box-shadow: none;
+}
+
+.image-option .drawing .drawing-icon {
+  font-size: clamp(2.7rem, 6vw, 4.6rem);
+}
+
+.image-option strong {
+  font-size: clamp(1rem, 2.8vw, 1.45rem);
+  font-weight: 1000;
+}
+
+.image-option.is-selected,
+.image-option.is-correct {
+  background: #a6ed55;
+}
+
+.final-challenge {
+  align-content: center;
+}
+
+.final-challenge p {
+  justify-self: center;
+  max-width: 520px;
+  padding: 10px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  text-align: center;
+}
+
+.mission-build {
+  position: relative;
+  width: min(190px, 18vw);
+  height: 118px;
+  justify-self: center;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: linear-gradient(#dcf5ff, #9ee575);
+  overflow: hidden;
+}
+
+.build-part {
+  position: absolute;
+  opacity: 0.18;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.build-part.built {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission-build .base {
+  left: 30px;
+  bottom: 18px;
+  width: 120px;
+  height: 18px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: #6bc247;
+}
+
+.mission-build .wall-left,
+.mission-build .wall-right {
+  bottom: 34px;
+  width: 54px;
+  height: 48px;
+  border: 3px solid var(--ink);
+  background: #ffdf65;
+}
+
+.mission-build .wall-left {
+  left: 40px;
+}
+
+.mission-build .wall-right {
+  left: 92px;
+}
+
+.mission-build .door {
+  left: 79px;
+  bottom: 34px;
+  width: 25px;
+  height: 36px;
+  border: 3px solid var(--ink);
+  border-radius: 10px 10px 0 0;
+  background: #9b572d;
+}
+
+.mission-build .window {
+  left: 114px;
+  bottom: 53px;
+  width: 24px;
+  height: 20px;
+  border: 3px solid var(--ink);
+  background: #6ed0ff;
+}
+
+.mission-build .roof {
+  left: 32px;
+  bottom: 78px;
+  width: 124px;
+  height: 42px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #ff5b3f;
+}
+
+.mission-build .chimney {
+  left: 118px;
+  bottom: 91px;
+  width: 18px;
+  height: 30px;
+  border: 3px solid var(--ink);
+  background: #8d4b34;
+}
+
+.mission-build .flag {
+  right: 16px;
+  top: 12px;
+  width: 36px;
+  height: 24px;
+  border-left: 5px solid var(--ink);
+  background: #39b7ff;
+}
+
+.construction-screen {
+  grid-template-columns: minmax(180px, 270px) 1fr;
+  align-items: center;
+}
+
+.construction-card {
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 18px;
+  border: 4px solid var(--ink);
+  border-radius: 12px;
+  background: #fff7dc;
+}
+
+.construction-card h2,
+.progress-card h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.big-construction {
+  position: relative;
+  width: min(520px, 58vw);
+  height: min(310px, 42vh);
+  border: 4px solid var(--ink);
+  border-radius: 18px;
+  background: linear-gradient(#dff7ff 0 62%, #87d66d 63%);
+  overflow: hidden;
+}
+
+.big-construction .part {
+  position: absolute;
+  opacity: 0.16;
+  filter: grayscale(0.8);
+}
+
+.big-construction .part.built {
+  opacity: 1;
+  filter: none;
+}
+
+.big-construction .ground {
+  left: 8%;
+  right: 8%;
+  bottom: 7%;
+  height: 24px;
+  border-radius: 999px;
+  background: #53aa3f;
+}
+
+.big-construction .base {
+  left: 27%;
+  bottom: 16%;
+  width: 46%;
+  height: 18%;
+  border: 4px solid var(--ink);
+  background: #ffd75c;
+}
+
+.big-construction .wall-left,
+.big-construction .wall-right {
+  bottom: 31%;
+  width: 23%;
+  height: 26%;
+  border: 4px solid var(--ink);
+  background: #ffe88a;
+}
+
+.big-construction .wall-left {
+  left: 27%;
+}
+
+.big-construction .wall-right {
+  left: 50%;
+}
+
+.big-construction .door {
+  left: 46%;
+  bottom: 16%;
+  width: 10%;
+  height: 30%;
+  border: 4px solid var(--ink);
+  border-radius: 18px 18px 0 0;
+  background: #955126;
+}
+
+.big-construction .window-one,
+.big-construction .window-two {
+  bottom: 40%;
+  width: 10%;
+  height: 12%;
+  border: 4px solid var(--ink);
+  background: #6bcfff;
+}
+
+.big-construction .window-one {
+  left: 33%;
+}
+
+.big-construction .window-two {
+  left: 59%;
+}
+
+.big-construction .roof {
+  left: 22%;
+  bottom: 56%;
+  width: 58%;
+  height: 28%;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #ef4b3f;
+}
+
+.big-construction .chimney {
+  left: 62%;
+  bottom: 72%;
+  width: 8%;
+  height: 18%;
+  border: 4px solid var(--ink);
+  background: #7f4634;
+}
+
+.big-construction .flag {
+  right: 12%;
+  top: 10%;
+  width: 62px;
+  height: 46px;
+  border-left: 6px solid var(--ink);
+  background: #2faef2;
+}
+
+.progress-card {
+  width: min(520px, 100%);
+}
+
+.mission-count {
+  display: grid;
+  justify-items: center;
+  padding: 12px 22px;
+  border: 4px solid var(--ink);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.mission-count strong {
+  font-size: clamp(3rem, 9vw, 5.8rem);
+  line-height: 0.9;
+  color: var(--blue);
+}
+
+.mission-count span {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.progress-big {
+  width: 100%;
+  flex: none;
+}
+
+@media (max-width: 780px) {
+  .game-stage,
+  .construction-screen,
+  .profile-screen,
+  .reward-screen {
+    grid-template-columns: minmax(100px, 0.32fr) 1fr;
+  }
+
+  .adri-side .adri-frame {
+    width: min(160px, 30vw);
+    height: min(250px, 38vh);
+  }
+
+  .adri-side .speech-bubble {
+    display: none;
+  }
+
+  .mission-build {
+    width: min(120px, 24vw);
+    height: 92px;
+  }
+
+  .image-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .big-construction {
+    width: min(430px, 62vw);
+  }
+}
+
+@media (max-width: 520px) {
+  .game-stage,
+  .construction-screen,
+  .profile-screen,
+  .reward-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .adri-side {
+    display: none;
+  }
+
+  .activity-card {
+    margin-left: 0 !important;
+  }
+
+  .drawing {
+    width: min(132px, 40vw);
+    height: min(104px, 18vh);
+  }
+
+  .image-option {
+    min-height: 118px;
+  }
+
+  .big-construction {
+    width: 100%;
+    height: min(250px, 34vh);
+  }
+}
+
+/* Character illustrations: each scene keeps Adri visible, full body and in role. */
+.game-companion {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-self: stretch;
+  min-height: 0;
+}
+
+.game-companion .adri-side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  align-items: center;
+  justify-content: end;
+}
+
+.construction-screen > .adri-side,
+.profile-screen > .adri-side,
+.reward-screen > .adri-side {
+  flex-direction: column;
+  justify-content: end;
+}
+
+.game-companion .adri-frame,
+.construction-screen > .adri-side .adri-frame,
+.profile-screen > .adri-side .adri-frame,
+.reward-screen > .adri-side .adri-frame,
+.mission-screen > .adri-side .adri-frame {
+  width: min(252px, 24vw);
+  height: min(460px, 58vh);
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.game-companion .adri-frame img,
+.construction-screen > .adri-side .adri-frame img,
+.profile-screen > .adri-side .adri-frame img,
+.reward-screen > .adri-side .adri-frame img,
+.mission-screen > .adri-side .adri-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none;
+}
+
+.game-companion .speech-bubble {
+  display: none;
+}
+
+.game-companion .adri-frame {
+  flex: none;
+  width: min(216px, 20vw);
+  height: min(306px, 42vh);
+}
+
+.game-companion .mission-build {
+  margin-top: -20px;
+  margin-bottom: -22px;
+  transform: scale(0.72);
+  transform-origin: center bottom;
+}
+
+.mission-screen > .adri-side {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  height: min(460px, 62vh);
+  align-items: end;
+  z-index: 1;
+}
+
+.mission-screen > .adri-side .speech-bubble {
+  display: none;
+}
+
+.mission-screen > .adri-side .adri-frame {
+  flex: none;
+  width: min(220px, 20vw);
+}
+
+.reward-screen > .adri-side .adri-frame {
+  width: min(286px, 27vw);
+  height: min(458px, 60vh);
+}
+
+.reward-screen > .adri-side .speech-bubble {
+  display: none;
+}
+
+.reward-screen .reward-card {
+  align-self: start;
+  margin-top: 4px;
+  padding: 16px;
+}
+
+.reward-screen .home-actions {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  z-index: 3;
+  display: flex;
+  width: min(650px, 64%);
+  gap: 12px;
+}
+
+.reward-screen .home-actions .big-action {
+  flex: 1;
+  min-height: 62px;
+}
+
+.construction-screen > .adri-side .adri-frame,
+.profile-screen > .adri-side .adri-frame {
+  width: min(268px, 27vw);
+  height: min(490px, 62vh);
+}
+
+@media (max-width: 780px) {
+  .game-companion .adri-frame,
+  .construction-screen > .adri-side .adri-frame,
+  .profile-screen > .adri-side .adri-frame,
+  .reward-screen > .adri-side .adri-frame,
+  .mission-screen > .adri-side .adri-frame {
+    width: min(174px, 31vw);
+    height: min(302px, 44vh);
+  }
+
+  .game-companion .speech-bubble,
+  .construction-screen > .adri-side .speech-bubble,
+  .profile-screen > .adri-side .speech-bubble,
+  .reward-screen > .adri-side .speech-bubble {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .game-companion {
+    position: absolute;
+    left: 4px;
+    bottom: 64px;
+    display: block;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .game-companion .adri-side,
+  .construction-screen > .adri-side,
+  .profile-screen > .adri-side,
+  .reward-screen > .adri-side,
+  .mission-screen > .adri-side {
+    display: flex;
+  }
+
+  .game-companion .adri-frame,
+  .construction-screen > .adri-side .adri-frame,
+  .profile-screen > .adri-side .adri-frame,
+  .reward-screen > .adri-side .adri-frame,
+  .mission-screen > .adri-side .adri-frame {
+    width: min(88px, 24vw);
+    height: min(160px, 25vh);
+  }
+
+  .game-companion .mission-build,
+  .game-companion .speech-bubble,
+  .construction-screen > .adri-side .speech-bubble,
+  .profile-screen > .adri-side .speech-bubble,
+  .reward-screen > .adri-side .speech-bubble,
+  .mission-screen > .adri-side .speech-bubble {
+    display: none;
+  }
+
+  .construction-screen > .adri-side,
+  .profile-screen > .adri-side,
+  .reward-screen > .adri-side {
+    position: absolute;
+    left: 4px;
+    bottom: 66px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .mission-screen > .adri-side {
+    left: 4px;
+    bottom: 10px;
+    height: auto;
   }
 }
