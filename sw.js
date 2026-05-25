@@ -1,8 +1,8 @@
-const CACHE_NAME = "adri-lee-v2";
+const CACHE_NAME = "adri-lee-v3";
 const STATIC_ASSETS = [
   "./",
   "./manifest.webmanifest",
-  "./assets/adri.png"
+  "./assets/adri-clean.png"
 ];
 
 self.addEventListener("install", (event) => {
