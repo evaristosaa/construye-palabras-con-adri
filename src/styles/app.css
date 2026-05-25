@@ -1597,6 +1597,34 @@ body {
   overflow: hidden;
 }
 
+.activity-card.activity-with-drawing {
+  grid-template-columns: minmax(108px, 152px) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: center;
+  align-content: stretch;
+  gap: 12px;
+}
+
+.activity-card.activity-with-drawing > .drawing {
+  grid-column: 1;
+  grid-row: 1;
+  width: min(132px, 12vw);
+  height: min(118px, 18vh);
+}
+
+.activity-card.activity-with-drawing > :not(.drawing) {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 0;
+}
+
+.build-workshop {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  min-height: 0;
+}
+
 .brick {
   min-height: clamp(56px, 10vh, 74px);
   padding: 20px 14px 10px;
@@ -1875,6 +1903,24 @@ body {
 
   .activity-card {
     margin-left: 0;
+  }
+
+  .activity-card.activity-with-drawing {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .activity-card.activity-with-drawing > .drawing {
+    grid-column: 1;
+    grid-row: 1;
+    width: 76px;
+    height: 62px;
+  }
+
+  .activity-card.activity-with-drawing > :not(.drawing) {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .game-stage > .adri {
@@ -2626,6 +2672,16 @@ body {
     grid-template-columns: minmax(100px, 0.32fr) 1fr;
   }
 
+  .game-stage .activity-card {
+    margin-left: 0;
+  }
+
+  .game-stage .brick {
+    padding-right: 6px;
+    padding-left: 6px;
+    font-size: clamp(1.05rem, 3.4vw, 1.65rem);
+  }
+
   .adri-side .adri-frame {
     width: min(160px, 30vw);
     height: min(250px, 38vh);
@@ -2820,12 +2876,18 @@ body {
 }
 
 @media (max-width: 520px) {
+  .game-stage {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 4px;
+    padding: 6px;
+  }
+
   .game-companion {
-    position: absolute;
-    left: 4px;
-    bottom: 64px;
-    display: block;
-    z-index: 3;
+    position: static;
+    display: flex;
+    align-items: end;
+    align-self: stretch;
+    justify-content: center;
     pointer-events: none;
   }
 
@@ -2844,6 +2906,11 @@ body {
   .mission-screen > .adri-side .adri-frame {
     width: min(88px, 24vw);
     height: min(160px, 25vh);
+  }
+
+  .game-companion .adri-frame {
+    width: 54px;
+    height: 118px;
   }
 
   .game-companion .mission-build,
@@ -2869,5 +2936,10 @@ body {
     left: 4px;
     bottom: 10px;
     height: auto;
+  }
+
+  .game-stage .activity-card {
+    grid-column: 2;
+    padding: 6px;
   }
 }

@@ -31,6 +31,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   const [feedback, setFeedback] = useState("¡Sigue así!");
   const level = levelsById[levelId] || levelsById.vocales;
   const game = level.games[gameIndex];
+  const hasSideDrawing = game.drawing && game.type !== "imageChoice";
 
   useEffect(() => {
     setSelected("");
@@ -149,7 +150,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
           <MissionBuild step={game.progressBuild || gameIndex + 1} />
         </aside>
 
-        <div className="activity-card">
+        <div className={`activity-card ${hasSideDrawing ? "activity-with-drawing" : ""}`}>
           {game.drawing && !["imageChoice"].includes(game.type) && <Drawing type={game.drawing} />}
 
           {game.type === "choice" && <div className="choice-grid">{game.options.map(renderOption)}</div>}
@@ -203,7 +204,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
           )}
 
           {game.type === "build" && (
-            <>
+            <div className="build-workshop">
               <div className="drop-zone" onDragOver={(event) => event.preventDefault()} onDrop={dropBlock}>
                 {built.length ? built.join("") : "Toca los bloques en orden"}
               </div>
@@ -219,7 +220,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
                   </Brick>
                 ))}
               </div>
-            </>
+            </div>
           )}
 
           {game.type === "finalChoice" && (
