@@ -303,8 +303,8 @@ function buildGames(lesson) {
       prompt: isVowels ? "Toca la vocal que escuchas" : `¿Dónde está la letra ${letter}?`,
       type: "choice",
       speak: isVowels
-        ? "Soy Adri. Escucha: A. Toca la vocal A."
-        : `Soy Adri. Mira bien y toca la letra ${letter}.`,
+        ? "Escucha: A. Toca la vocal A."
+        : `Mira bien y toca la letra ${letter}.`,
       options: letterOptions(lesson.focus, lesson.extraFocus, `${lesson.id}-letter`),
       answer: letter,
       character: "pointing",
@@ -451,6 +451,7 @@ export const constructionSteps = [
   "Bandera",
   "Camino",
   "Letrero",
+  "Bandera final",
 ];
 
 export const rewards = [

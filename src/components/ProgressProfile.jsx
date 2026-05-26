@@ -1,6 +1,8 @@
 import Adri from "./Adri";
 import VoiceGuide from "./VoiceGuide";
 import { totalMissions } from "../data/learningData";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
+import { progressGuide } from "../data/voiceScripts";
 
 export default function ProgressProfile({ progress }) {
   const completed = progress.completedLevels.length;
@@ -10,7 +12,8 @@ export default function ProgressProfile({ progress }) {
   return (
     <section className="profile-screen comic-panel">
       <VoiceGuide
-        text="Aquí vemos tu progreso. La parte más importante es cuántas misiones llevas completadas."
+        text={progressGuide}
+        audioKey={screenAudioKeys.progress}
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact

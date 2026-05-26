@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Adri from "./Adri";
 import { Brick, Drawing, Stars } from "./Blocks";
 import { levelsById, positiveMessages } from "../data/learningData";
+import { gameAudioKey } from "../data/adriAudioCatalog";
 import { speak, speakResult } from "./audio";
 
 const brickColors = ["red", "yellow", "blue", "green", "purple", "orange"];
@@ -37,7 +38,9 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
     setSelected("");
     setBuilt([]);
     setFeedback("¡Sigue así!");
-    speak(game.speak || game.prompt, progress.voice, progress.voiceURI);
+    speak(game.speak || game.prompt, progress.voice, progress.voiceURI, {
+      audioKey: gameAudioKey(game.id),
+    });
   }, [game.id, game.prompt, game.speak, progress.voice, progress.voiceURI]);
 
   const solvedCount = useMemo(
@@ -137,7 +140,11 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
         </div>
         <button
           className="round-button"
-          onClick={() => speak(game.speak || game.prompt, progress.voice, progress.voiceURI)}
+          onClick={() =>
+            speak(game.speak || game.prompt, progress.voice, progress.voiceURI, {
+              audioKey: gameAudioKey(game.id),
+            })
+          }
           aria-label="Escuchar la instrucción"
         >
           🔊

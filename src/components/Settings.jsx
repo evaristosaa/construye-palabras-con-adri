@@ -1,11 +1,14 @@
 import VoiceGuide from "./VoiceGuide";
 import { speak } from "./audio";
+import { settingsGuide, settingsVoiceSample } from "../data/voiceScripts";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
 
 export default function Settings({ progress, updateSettings, resetProgress }) {
   return (
     <section className="settings-screen comic-panel">
       <VoiceGuide
-        text="Estos son los ajustes. Puedes poner o quitar sonidos, activar mi voz o reiniciar la aventura."
+        text={settingsGuide}
+        audioKey={screenAudioKeys.settings}
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact
@@ -30,10 +33,9 @@ export default function Settings({ progress, updateSettings, resetProgress }) {
       <button
         className="test-voice-button"
         onClick={() =>
-          speak(
-            "Soy Adri. ¿Te animas a construir palabras conmigo? Vamos a jugar.",
-            progress.voice
-          )
+          speak(settingsVoiceSample, progress.voice, progress.voiceURI, {
+            audioKey: screenAudioKeys.settingsSample,
+          })
         }
       >
         🔊 Probar voz de Adri

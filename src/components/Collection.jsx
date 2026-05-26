@@ -1,21 +1,34 @@
 import Adri from "./Adri";
 import { constructionGoal, constructionSteps, totalMissions } from "../data/learningData";
 import VoiceGuide from "./VoiceGuide";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
+import { collectionGuide } from "../data/voiceScripts";
 
 function BigConstruction({ completedLevels = 0 }) {
-  const step = Math.min(constructionSteps.length, Math.round((completedLevels / totalMissions) * constructionSteps.length));
+  const step = Math.min(constructionSteps.length, completedLevels);
+  const built = (partStep) => `part ${step >= partStep ? "built" : ""}`;
   return (
     <div className="big-construction" aria-label={`Construcción completada ${step} de ${constructionSteps.length}`}>
-      <span className={`part ground ${step >= 1 ? "built" : ""}`} />
-      <span className={`part base ${step >= 2 ? "built" : ""}`} />
-      <span className={`part wall-left ${step >= 3 ? "built" : ""}`} />
-      <span className={`part wall-right ${step >= 4 ? "built" : ""}`} />
-      <span className={`part door ${step >= 5 ? "built" : ""}`} />
-      <span className={`part window-one ${step >= 6 ? "built" : ""}`} />
-      <span className={`part window-two ${step >= 7 ? "built" : ""}`} />
-      <span className={`part roof ${step >= 8 ? "built" : ""}`} />
-      <span className={`part chimney ${step >= 9 ? "built" : ""}`} />
-      <span className={`part flag ${step >= 10 ? "built" : ""}`} />
+      <span className={`${built(1)} plot`} />
+      <span className={`${built(2)} foundation`} />
+      <span className={`${built(3)} wall-low`} />
+      <span className={`${built(4)} wall-high`} />
+      <span className={`${built(5)} block-door`} />
+      <span className={`${built(6)} block-windows`}>
+        <i />
+        <i />
+      </span>
+      <span className={`${built(7)} roof-row`} />
+      <span className={`${built(8)} roof-cap`} />
+      <span className={`${built(9)} block-chimney`} />
+      <span className={`${built(10)} block-garden`}>
+        <i />
+        <i />
+        <i />
+      </span>
+      <span className={`${built(11)} block-flag`}>
+        <strong>ADRI</strong>
+      </span>
     </div>
   );
 }
@@ -27,7 +40,8 @@ export default function Collection({ progress }) {
   return (
     <section className="collection-screen comic-panel construction-screen">
       <VoiceGuide
-        text="Esta es nuestra construcción. Cada misión terminada coloca una parte nueva de la Casa de las Palabras."
+        text={collectionGuide}
+        audioKey={screenAudioKeys.collection}
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact
@@ -42,7 +56,7 @@ export default function Collection({ progress }) {
         <div className="piece-track" aria-label={`${Math.round(percent)} por ciento completado`}>
           <span style={{ width: `${percent}%` }} />
         </div>
-        <small>{progress.pieces}/{constructionGoal} piezas de juego acumuladas</small>
+        <small>{progress.pieces}/{constructionGoal} piezas colocadas</small>
       </div>
     </section>
   );

@@ -1,25 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { characters, rewards } from "../data/learningData";
+import { awardGameCompletion, awardLevelCompletion, defaultProgress, normalizeProgress } from "./progressModel";
 
 const STORAGE_KEY = "adri-reading-progress-v1";
-
-const initialProgress = {
-  stars: 0,
-  pieces: 0,
-  completedLevels: [],
-  completedGames: [],
-  sound: true,
-  voice: true,
-  streak: 1,
-  lastPlayed: null,
-};
 
 function readProgress() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? { ...initialProgress, ...JSON.parse(saved) } : initialProgress;
+    return saved ? normalizeProgress(JSON.parse(saved)) : defaultProgress;
   } catch {
-    return initialProgress;
+    return defaultProgress;
   }
 }
 
@@ -40,29 +30,12 @@ export function useProgress() {
     [progress.pieces]
   );
 
-  function completeGame(gameId, { pieces = 3, stars = 1 } = {}) {
-    setProgress((current) => {
-      const alreadyCompleted = current.completedGames.includes(gameId);
-      return {
-        ...current,
-        stars: current.stars + (alreadyCompleted ? 0 : stars),
-        pieces: current.pieces + (alreadyCompleted ? 0 : pieces),
-        completedGames: alreadyCompleted ? current.completedGames : [...current.completedGames, gameId],
-        lastPlayed: new Date().toISOString(),
-      };
-    });
+  function completeGame(gameId, { stars = 1 } = {}) {
+    setProgress((current) => awardGameCompletion(current, gameId, { stars }));
   }
 
   function completeLevel(levelId) {
-    setProgress((current) => ({
-      ...current,
-      completedLevels: current.completedLevels.includes(levelId)
-        ? current.completedLevels
-        : [...current.completedLevels, levelId],
-      stars: current.stars + 3,
-      pieces: current.pieces + 5,
-      lastPlayed: new Date().toISOString(),
-    }));
+    setProgress((current) => awardLevelCompletion(current, levelId));
   }
 
   function updateSettings(settings) {
@@ -70,7 +43,7 @@ export function useProgress() {
   }
 
   function resetProgress() {
-    setProgress(initialProgress);
+    setProgress(defaultProgress);
   }
 
   return {

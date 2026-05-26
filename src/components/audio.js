@@ -1,3 +1,8 @@
+import { resultAudioKeys } from "../data/adriAudioCatalog.js";
+import { retryFeedback, successFeedback } from "../data/voiceScripts.js";
+
+let activeRecording = null;
+
 function getVoices() {
   if (!("speechSynthesis" in window)) return [];
   return window.speechSynthesis.getVoices();
@@ -34,6 +39,10 @@ function pickAdriVoice(preferredVoiceURI) {
   );
 }
 
+export function getRecordedAudioSrc(audioKey, baseUrl = "/") {
+  return `${baseUrl}audio/adri/${audioKey}.mp3`;
+}
+
 function speakNow(text, preferredVoiceURI, { rate = 0.98, pitch = 1.45 } = {}) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
@@ -44,9 +53,19 @@ function speakNow(text, preferredVoiceURI, { rate = 0.98, pitch = 1.45 } = {}) {
   window.speechSynthesis.speak(utterance);
 }
 
-export function speak(text, enabled = true, preferredVoiceURI = "", options = {}) {
-  if (!enabled || !("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
+function cancelSpeech() {
+  if (activeRecording) {
+    activeRecording.pause();
+    activeRecording.currentTime = 0;
+    activeRecording = null;
+  }
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+function speakWithBrowser(text, preferredVoiceURI, options) {
+  if (!("speechSynthesis" in window)) return;
 
   if (getVoices().length) {
     speakNow(text, preferredVoiceURI, options);
@@ -63,6 +82,29 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
       speakNow(text, preferredVoiceURI, options);
     }
   }, 250);
+}
+
+export function speak(text, enabled = true, preferredVoiceURI = "", options = {}) {
+  if (!enabled) return;
+  cancelSpeech();
+
+  if (options.audioKey && "Audio" in window) {
+    const recording = new Audio(getRecordedAudioSrc(options.audioKey, import.meta.env.BASE_URL));
+    let fallbackPlayed = false;
+    const fallback = () => {
+      if (fallbackPlayed || activeRecording !== recording) return;
+      fallbackPlayed = true;
+      activeRecording = null;
+      speakWithBrowser(text, preferredVoiceURI, options);
+    };
+    recording.onerror = fallback;
+    activeRecording = recording;
+    const playing = recording.play();
+    if (playing?.catch) playing.catch(fallback);
+    return;
+  }
+
+  speakWithBrowser(text, preferredVoiceURI, options);
 }
 
 function playToneSequence(enabled, notes, type = "sine") {
@@ -95,9 +137,17 @@ export function playRetry(enabled = true) {
 export function speakResult(kind, voiceEnabled = true, soundEnabled = true, preferredVoiceURI = "") {
   if (kind === "success") {
     playPositive(soundEnabled);
-    speak("¡Bien!", voiceEnabled, preferredVoiceURI, { rate: 1.05, pitch: 1.6 });
+    speak(successFeedback, voiceEnabled, preferredVoiceURI, {
+      audioKey: resultAudioKeys.success,
+      rate: 1.05,
+      pitch: 1.6,
+    });
     return;
   }
   playRetry(soundEnabled);
-  speak("¡Repite!", voiceEnabled, preferredVoiceURI, { rate: 1.02, pitch: 1.45 });
+  speak(retryFeedback, voiceEnabled, preferredVoiceURI, {
+    audioKey: resultAudioKeys.retry,
+    rate: 1.02,
+    pitch: 1.45,
+  });
 }

@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import VoiceGuide from "./VoiceGuide";
 import Adri from "./Adri";
+import { homeGreeting } from "../data/voiceScripts";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
 
 export default function Home({ progress }) {
   return (
     <section className="home-screen comic-panel">
       <VoiceGuide
-        text="Soy Adri. Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos."
+        text={homeGreeting}
+        audioKey={screenAudioKeys.home}
         enabled={progress.voice}
         compact
       />

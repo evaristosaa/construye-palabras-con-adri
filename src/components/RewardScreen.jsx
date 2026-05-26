@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import Adri from "./Adri";
 import { Stars } from "./Blocks";
 import VoiceGuide from "./VoiceGuide";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
+import { rewardGuide } from "../data/voiceScripts";
 
 export default function RewardScreen({ progress }) {
   return (
     <section className="reward-screen comic-panel">
       <VoiceGuide
-        text="¡Nivel superado! Adri está celebrando porque has leído una misión completa."
+        text={rewardGuide}
+        audioKey={screenAudioKeys.reward}
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact

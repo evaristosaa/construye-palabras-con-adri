@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Adri from "./Adri";
 import { modules } from "../data/learningData";
+import { missionInstructions } from "../data/voiceScripts";
+import { screenAudioKeys } from "../data/adriAudioCatalog";
 import VoiceGuide from "./VoiceGuide";
 
 export default function LevelSelect({ progress }) {
@@ -10,7 +12,8 @@ export default function LevelSelect({ progress }) {
   return (
     <section className="mission-screen comic-panel">
       <VoiceGuide
-        text="Soy Adri. Elige una misión. Cada letra tiene juegos como los del libro: escuchar, rodear sílabas, completar palabras y leer frases."
+        text={missionInstructions}
+        audioKey={screenAudioKeys.missions}
         enabled={progress.voice}
         voiceURI={progress.voiceURI}
         compact
