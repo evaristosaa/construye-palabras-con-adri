@@ -1,11 +1,11 @@
 import Adri from "./Adri";
-import { constructionGoal, constructionSteps, totalMissions } from "../data/learningData";
+import { constructionGoal, constructionSteps, modules, totalMissions } from "../data/learningData";
 import VoiceGuide from "./VoiceGuide";
 import { screenAudioKeys } from "../data/adriAudioCatalog";
 import { collectionGuide } from "../data/voiceScripts";
 
 function BigConstruction({ completedLevels = 0 }) {
-  const step = Math.min(constructionSteps.length, completedLevels);
+  const step = Math.min(11, Math.ceil((completedLevels / constructionSteps.length) * 11));
   const built = (partStep) => `part ${step >= partStep ? "built" : ""}`;
   return (
     <div className="big-construction" aria-label={`Construcción completada ${step} de ${constructionSteps.length}`}>
@@ -50,8 +50,15 @@ export default function Collection({ progress }) {
       <div className="construction-card">
         <h2>Casa de las palabras</h2>
         <BigConstruction completedLevels={completed} />
+        <div className="alphabet-bricks" aria-label={`${completed} letras construidas`}>
+          {constructionSteps.map((letter, index) => (
+            <span key={letter} className={progress.completedLevels.includes(modules[index].id) ? "built" : ""}>
+              {letter}
+            </span>
+          ))}
+        </div>
         <p>
-          <strong>{completed}</strong> de <strong>{totalMissions}</strong> misiones completadas
+          <strong>{completed}</strong> de <strong>{totalMissions}</strong> letras construidas
         </p>
         <div className="piece-track" aria-label={`${Math.round(percent)} por ciento completado`}>
           <span style={{ width: `${percent}%` }} />

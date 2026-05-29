@@ -30,7 +30,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   const [selected, setSelected] = useState("");
   const [built, setBuilt] = useState([]);
   const [feedback, setFeedback] = useState("¡Sigue así!");
-  const level = levelsById[levelId] || levelsById.vocales;
+  const level = levelsById[levelId] || levelsById["letra-a"];
   const game = level.games[gameIndex];
   const hasSideDrawing = game.drawing && game.type !== "imageChoice";
 

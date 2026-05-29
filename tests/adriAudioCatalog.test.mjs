@@ -9,7 +9,7 @@ import {
 test("provides recorded lines for all screens, results and lesson games", () => {
   assert.equal(Object.keys(screenAudioKeys).length, 7);
   assert.deepEqual(Object.keys(resultAudioKeys).sort(), ["retry", "success"]);
-  assert.equal(voiceLines.length, 97);
+  assert.equal(voiceLines.length, 225);
 });
 
 test("uses stable unique keys and mp3 filenames for every recorded line", () => {

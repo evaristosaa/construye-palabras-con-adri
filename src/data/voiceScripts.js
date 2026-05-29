@@ -2,16 +2,16 @@ export const homeGreeting =
   "Soy Adri. ¿Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos.";
 
 export const missionInstructions =
-  "Elige una misión. Cada letra tiene juegos como los del libro: escuchar, buscar sílabas, completar palabras y leer frases.";
+  "Elige una letra del abecedario. La estrella con Ahora te recomienda por dónde seguir. Cada letra tiene juegos como los del libro.";
 
 export const settingsVoiceSample =
   "¿Te animas a construir palabras conmigo? Vamos a jugar.";
 
 export const collectionGuide =
-  "Esta es nuestra construcción. Cada misión terminada coloca una parte nueva de la Casa de las Palabras.";
+  "Esta es nuestra construcción. Cada letra terminada coloca un bloque nuevo en la Casa de las Palabras.";
 
 export const progressGuide =
-  "Aquí vemos tu progreso. La parte más importante es cuántas misiones llevas completadas.";
+  "Aquí vemos tu progreso. La parte más importante es cuántas letras del abecedario llevas completadas.";
 
 export const settingsGuide =
   "Estos son los ajustes. Puedes poner o quitar sonidos, activar mi voz o reiniciar la aventura.";

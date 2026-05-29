@@ -1,4 +1,5 @@
 export const defaultProgress = {
+  progressVersion: 2,
   stars: 0,
   pieces: 0,
   completedLevels: [],
@@ -13,13 +14,24 @@ function uniqueIds(values) {
   return [...new Set(Array.isArray(values) ? values : [])];
 }
 
+function migrateLegacyLevels(levels) {
+  return uniqueIds(levels).flatMap((levelId) => {
+    if (levelId === "vocales") return ["letra-a", "letra-e", "letra-i", "letra-o", "letra-u"];
+    if (levelId === "letra-n") return ["letra-n", "letra-enye"];
+    return [levelId];
+  }).filter((levelId, index, values) => values.indexOf(levelId) === index);
+}
+
 export function normalizeProgress(saved = {}) {
   const completedGames = uniqueIds(saved.completedGames);
-  const completedLevels = uniqueIds(saved.completedLevels);
+  const completedLevels = saved.progressVersion === 2
+    ? uniqueIds(saved.completedLevels)
+    : migrateLegacyLevels(saved.completedLevels);
 
   return {
     ...defaultProgress,
     ...saved,
+    progressVersion: 2,
     completedGames,
     completedLevels,
     pieces: completedGames.length,

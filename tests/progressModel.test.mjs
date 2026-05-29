@@ -33,3 +33,26 @@ test("completing a level never adds construction pieces and rewards stars once",
   assert.equal(replayed.pieces, 1);
   assert.equal(replayed.stars, 4);
 });
+
+test("migrates completed vowel and combined N missions to individual alphabet tiles", () => {
+  const migrated = normalizeProgress({
+    completedLevels: ["vocales", "letra-n", "letra-b"],
+    completedGames: ["vocales-letter", "letra-n-letter", "letra-b-letter"],
+  });
+
+  assert.deepEqual(migrated.completedLevels, [
+    "letra-a", "letra-e", "letra-i", "letra-o", "letra-u",
+    "letra-n", "letra-enye", "letra-b",
+  ]);
+  assert.equal(migrated.pieces, 3);
+  assert.deepEqual(migrated.completedGames, ["vocales-letter", "letra-n-letter", "letra-b-letter"]);
+});
+
+test("does not confuse a newly completed N mission with the old combined N and Ñ mission", () => {
+  const current = normalizeProgress({
+    progressVersion: 2,
+    completedLevels: ["letra-n"],
+  });
+
+  assert.deepEqual(current.completedLevels, ["letra-n"]);
+});

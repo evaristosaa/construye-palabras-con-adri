@@ -11,6 +11,10 @@ export function recordedText(text) {
   return text;
 }
 
+export function shouldReuseRecording(line, previousTexts) {
+  return previousTexts.get(line.key) === line.text;
+}
+
 export function buildLibraryRequest(voiceId, text) {
   return {
     text: `[habla con alegría y energía, a un ritmo un poco más rápido, manteniendo claridad] ${recordedText(text)}`,
@@ -59,6 +63,15 @@ async function exists(filepath) {
   }
 }
 
+async function existingTexts() {
+  try {
+    const manifest = JSON.parse(await readFile(path.join(outputDirectory, "manifest.json"), "utf8"));
+    return new Map((manifest.files || []).map((line) => [line.key, line.text]));
+  } catch {
+    return new Map();
+  }
+}
+
 async function generateLibrary() {
   const apiKey = process.env.INWORLD_API_KEY;
   if (!apiKey) throw new Error("No se encuentra INWORLD_API_KEY en el entorno de esta ejecucion.");
@@ -67,6 +80,7 @@ async function generateLibrary() {
   if (!publishedVoice.voiceId) throw new Error("No se encuentra la voz publicada de Adri.");
 
   const force = process.argv.includes("--force");
+  const previousTexts = await existingTexts();
   const manifest = {
     generatedAt: new Date().toISOString(),
     displayName: publishedVoice.displayName,
@@ -76,7 +90,7 @@ async function generateLibrary() {
   await mkdir(outputDirectory, { recursive: true });
   for (const [index, line] of voiceLines.entries()) {
     const target = path.join(outputDirectory, line.filename);
-    if (!force && await exists(target)) {
+    if (!force && shouldReuseRecording(line, previousTexts) && await exists(target)) {
       manifest.files.push({ ...line, status: "reused" });
       console.log(`[${index + 1}/${voiceLines.length}] Reutilizado ${line.filename}`);
       continue;
