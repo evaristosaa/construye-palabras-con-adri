@@ -69,13 +69,10 @@ try {
 }
 
 let parentSha = "";
-let baseTree = "";
 
 try {
   const ref = api(`/repos/${fullName}/git/ref/heads/${branch}`);
   parentSha = ref.object.sha;
-  const parentCommit = api(`/repos/${fullName}/git/commits/${parentSha}`);
-  baseTree = parentCommit.tree.sha;
 } catch {
   console.log(`La rama ${branch} se creara desde cero.`);
 }
@@ -94,11 +91,7 @@ const tree = listFiles(distDir).map((file) => {
   };
 });
 
-const treeBody = { tree };
-if (baseTree) {
-  treeBody.base_tree = baseTree;
-}
-const newTree = api(`/repos/${fullName}/git/trees`, "POST", treeBody);
+const newTree = api(`/repos/${fullName}/git/trees`, "POST", { tree });
 
 const commitBody = {
   message: "Deploy Construye palabras con Adri",
