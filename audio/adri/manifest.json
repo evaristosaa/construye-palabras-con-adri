@@ -1,1356 +1,1188 @@
-{
-  "generatedAt": "2026-05-27T19:24:41.951Z",
-  "displayName": "Adri - prueba",
-  "files": [
-    {
-      "key": "screen-home",
-      "filename": "screen-home.mp3",
-      "text": "Soy Adri. ¿Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos.",
-      "status": "reused"
-    },
-    {
-      "key": "screen-missions",
-      "filename": "screen-missions.mp3",
-      "text": "Elige una letra del abecedario. La estrella con Ahora te recomienda por dónde seguir. Cada letra tiene juegos como los del libro.",
-      "status": "generated"
-    },
-    {
-      "key": "screen-collection",
-      "filename": "screen-collection.mp3",
-      "text": "Esta es nuestra construcción. Cada letra terminada coloca un bloque nuevo en la Casa de las Palabras.",
-      "status": "generated"
-    },
-    {
-      "key": "screen-progress",
-      "filename": "screen-progress.mp3",
-      "text": "Aquí vemos tu progreso. La parte más importante es cuántas letras del abecedario llevas completadas.",
-      "status": "generated"
-    },
-    {
-      "key": "screen-settings",
-      "filename": "screen-settings.mp3",
-      "text": "Estos son los ajustes. Puedes poner o quitar sonidos, activar mi voz o reiniciar la aventura.",
-      "status": "reused"
-    },
-    {
-      "key": "screen-settings-sample",
-      "filename": "screen-settings-sample.mp3",
-      "text": "¿Te animas a construir palabras conmigo? Vamos a jugar.",
-      "status": "reused"
-    },
-    {
-      "key": "screen-reward",
-      "filename": "screen-reward.mp3",
-      "text": "¡Nivel superado! Adri está celebrando porque has leído una misión completa.",
-      "status": "reused"
-    },
-    {
-      "key": "result-success",
-      "filename": "result-success.mp3",
-      "text": "¡Bien!",
-      "status": "reused"
-    },
-    {
-      "key": "result-retry",
-      "filename": "result-retry.mp3",
-      "text": "¡Repite!",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-a-letter",
-      "filename": "game-letra-a-letter.mp3",
-      "text": "Mira bien y toca la letra A.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-sound-picture",
-      "filename": "game-letra-a-sound-picture.mp3",
-      "text": "Escucha: avión. Toca el dibujo de avión.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-syllable-hunt",
-      "filename": "game-letra-a-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba i y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-missing",
-      "filename": "game-letra-a-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de anillo y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-picture-word",
-      "filename": "game-letra-a-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es árbol.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-word",
-      "filename": "game-letra-a-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar árbol.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-sentence",
-      "filename": "game-letra-a-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El árbol es alto.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-a-final",
-      "filename": "game-letra-a-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Hace miel. Ahora toca la palabra abeja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-b-letter",
-      "filename": "game-letra-b-letter.mp3",
-      "text": "Mira bien y toca la letra B.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-sound-picture",
-      "filename": "game-letra-b-sound-picture.mp3",
-      "text": "Escucha: boca. Toca el dibujo de boca.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-syllable-hunt",
-      "filename": "game-letra-b-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba bi y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-missing",
-      "filename": "game-letra-b-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de bola y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-picture-word",
-      "filename": "game-letra-b-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es bota.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-word",
-      "filename": "game-letra-b-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar bota.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-sentence",
-      "filename": "game-letra-b-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La bola bota.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-b-final",
-      "filename": "game-letra-b-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Animal con orejas largas. Ahora toca la palabra burro.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-c-letter",
-      "filename": "game-letra-c-letter.mp3",
-      "text": "Mira bien y toca la letra C.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-sound-picture",
-      "filename": "game-letra-c-sound-picture.mp3",
-      "text": "Escucha: cuna. Toca el dibujo de cuna.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-syllable-hunt",
-      "filename": "game-letra-c-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba cu y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-missing",
-      "filename": "game-letra-c-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de coco y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-picture-word",
-      "filename": "game-letra-c-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es cebra.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-word",
-      "filename": "game-letra-c-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar cebra.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-sentence",
-      "filename": "game-letra-c-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La cebra corre.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-c-final",
-      "filename": "game-letra-c-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Vemos películas. Ahora toca la palabra cine.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-d-letter",
-      "filename": "game-letra-d-letter.mp3",
-      "text": "Mira bien y toca la letra D.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-sound-picture",
-      "filename": "game-letra-d-sound-picture.mp3",
-      "text": "Escucha: duende. Toca el dibujo de duende.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-syllable-hunt",
-      "filename": "game-letra-d-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba di y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-missing",
-      "filename": "game-letra-d-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de dedo y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-picture-word",
-      "filename": "game-letra-d-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es dominó.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-word",
-      "filename": "game-letra-d-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar dominó.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-sentence",
-      "filename": "game-letra-d-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: Dani da dados.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-d-final",
-      "filename": "game-letra-d-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Se apunta al centro. Ahora toca la palabra diana.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-e-letter",
-      "filename": "game-letra-e-letter.mp3",
-      "text": "Mira bien y toca la letra E.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-sound-picture",
-      "filename": "game-letra-e-sound-picture.mp3",
-      "text": "Escucha: escoba. Toca el dibujo de escoba.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-syllable-hunt",
-      "filename": "game-letra-e-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba i y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-missing",
-      "filename": "game-letra-e-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de estrella y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-picture-word",
-      "filename": "game-letra-e-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es espejo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-word",
-      "filename": "game-letra-e-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar espejo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-sentence",
-      "filename": "game-letra-e-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El elefante camina.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-e-final",
-      "filename": "game-letra-e-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Tiene púas. Ahora toca la palabra erizo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-letter",
-      "filename": "game-letra-f-letter.mp3",
-      "text": "Mira bien y toca la letra F.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-sound-picture",
-      "filename": "game-letra-f-sound-picture.mp3",
-      "text": "Escucha: foto. Toca el dibujo de foto.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-syllable-hunt",
-      "filename": "game-letra-f-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba fi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-missing",
-      "filename": "game-letra-f-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de faro y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-picture-word",
-      "filename": "game-letra-f-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es fresa.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-word",
-      "filename": "game-letra-f-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar fresa.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-sentence",
-      "filename": "game-letra-f-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La foca nada.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-f-final",
-      "filename": "game-letra-f-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Da calor. Ahora toca la palabra fuego.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-letter",
-      "filename": "game-letra-g-letter.mp3",
-      "text": "Mira bien y toca la letra G.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-sound-picture",
-      "filename": "game-letra-g-sound-picture.mp3",
-      "text": "Escucha: gusano. Toca el dibujo de gusano.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-syllable-hunt",
-      "filename": "game-letra-g-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba gu y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-missing",
-      "filename": "game-letra-g-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de goma y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-picture-word",
-      "filename": "game-letra-g-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es gelatina.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-word",
-      "filename": "game-letra-g-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar gelatina.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-sentence",
-      "filename": "game-letra-g-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El gato juega.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-g-final",
-      "filename": "game-letra-g-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Mira al sol. Ahora toca la palabra girasol.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-letter",
-      "filename": "game-letra-h-letter.mp3",
-      "text": "Mira bien y toca la letra H.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-sound-picture",
-      "filename": "game-letra-h-sound-picture.mp3",
-      "text": "Escucha: humo. Toca el dibujo de humo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-syllable-hunt",
-      "filename": "game-letra-h-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba hi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-missing",
-      "filename": "game-letra-h-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de hada y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-picture-word",
-      "filename": "game-letra-h-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es hilo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-word",
-      "filename": "game-letra-h-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar hilo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-sentence",
-      "filename": "game-letra-h-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El helado está frío.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-h-final",
-      "filename": "game-letra-h-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Cae del árbol. Ahora toca la palabra hoja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-letter",
-      "filename": "game-letra-i-letter.mp3",
-      "text": "Mira bien y toca la letra I.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-sound-picture",
-      "filename": "game-letra-i-sound-picture.mp3",
-      "text": "Escucha: iglesia. Toca el dibujo de iglesia.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-syllable-hunt",
-      "filename": "game-letra-i-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba e y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-missing",
-      "filename": "game-letra-i-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de imán y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-picture-word",
-      "filename": "game-letra-i-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es insecto.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-word",
-      "filename": "game-letra-i-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar insecto.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-sentence",
-      "filename": "game-letra-i-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La isla tiene agua.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-i-final",
-      "filename": "game-letra-i-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Casa de hielo. Ahora toca la palabra iglú.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-j-letter",
-      "filename": "game-letra-j-letter.mp3",
-      "text": "Mira bien y toca la letra J.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-sound-picture",
-      "filename": "game-letra-j-sound-picture.mp3",
-      "text": "Escucha: jeringa. Toca el dibujo de jeringa.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-syllable-hunt",
-      "filename": "game-letra-j-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ji y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-missing",
-      "filename": "game-letra-j-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de jarra y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-picture-word",
-      "filename": "game-letra-j-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es jardín.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-word",
-      "filename": "game-letra-j-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar jardín.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-j-sentence",
-      "filename": "game-letra-j-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La jirafa mira.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-j-final",
-      "filename": "game-letra-j-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Nombre de persona. Ahora toca la palabra Julia.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-letter",
-      "filename": "game-letra-k-letter.mp3",
-      "text": "Mira bien y toca la letra K.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-sound-picture",
-      "filename": "game-letra-k-sound-picture.mp3",
-      "text": "Escucha: karate. Toca el dibujo de karate.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-syllable-hunt",
-      "filename": "game-letra-k-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ki y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-missing",
-      "filename": "game-letra-k-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de koala y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-picture-word",
-      "filename": "game-letra-k-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es kilo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-word",
-      "filename": "game-letra-k-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar kilo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-sentence",
-      "filename": "game-letra-k-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El kiwi es verde.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-k-final",
-      "filename": "game-letra-k-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Navega en agua. Ahora toca la palabra kayak.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-l-letter",
-      "filename": "game-letra-l-letter.mp3",
-      "text": "Mira bien y toca la letra L.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-sound-picture",
-      "filename": "game-letra-l-sound-picture.mp3",
-      "text": "Escucha: lila. Toca el dibujo de lila.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-syllable-hunt",
-      "filename": "game-letra-l-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba li y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-missing",
-      "filename": "game-letra-l-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de lupa y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-picture-word",
-      "filename": "game-letra-l-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es limón.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-word",
-      "filename": "game-letra-l-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar limón.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-sentence",
-      "filename": "game-letra-l-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La luna sale.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-l-final",
-      "filename": "game-letra-l-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Es suave. Ahora toca la palabra lana.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-letter",
-      "filename": "game-letra-m-letter.mp3",
-      "text": "Mira bien y toca la letra M.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-sound-picture",
-      "filename": "game-letra-m-sound-picture.mp3",
-      "text": "Escucha: mono. Toca el dibujo de mono.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-syllable-hunt",
-      "filename": "game-letra-m-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba mi y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-missing",
-      "filename": "game-letra-m-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de mesa y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-picture-word",
-      "filename": "game-letra-m-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es maleta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-word",
-      "filename": "game-letra-m-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar maleta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-sentence",
-      "filename": "game-letra-m-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La mesa es mía.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-m-final",
-      "filename": "game-letra-m-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Tiene dos ruedas. Ahora toca la palabra moto.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-n-letter",
-      "filename": "game-letra-n-letter.mp3",
-      "text": "Mira bien y toca la letra N.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-n-sound-picture",
-      "filename": "game-letra-n-sound-picture.mp3",
-      "text": "Escucha: nota. Toca el dibujo de nota.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-n-syllable-hunt",
-      "filename": "game-letra-n-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ni y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-n-missing",
-      "filename": "game-letra-n-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de nido y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-n-picture-word",
-      "filename": "game-letra-n-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es nariz.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-n-word",
-      "filename": "game-letra-n-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar nariz.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-n-sentence",
-      "filename": "game-letra-n-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La nube sube.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-n-final",
-      "filename": "game-letra-n-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Fruta naranja. Ahora toca la palabra naranja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-letter",
-      "filename": "game-letra-enye-letter.mp3",
-      "text": "Mira bien y toca la letra Ñ.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-sound-picture",
-      "filename": "game-letra-enye-sound-picture.mp3",
-      "text": "Escucha: ñoqui. Toca el dibujo de ñoqui.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-syllable-hunt",
-      "filename": "game-letra-enye-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ñi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-missing",
-      "filename": "game-letra-enye-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de ñu y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-picture-word",
-      "filename": "game-letra-enye-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es niña.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-word",
-      "filename": "game-letra-enye-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar niña.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-sentence",
-      "filename": "game-letra-enye-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La niña mira la piña.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-enye-final",
-      "filename": "game-letra-enye-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Fruta con hojas. Ahora toca la palabra piña.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-letter",
-      "filename": "game-letra-o-letter.mp3",
-      "text": "Mira bien y toca la letra O.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-sound-picture",
-      "filename": "game-letra-o-sound-picture.mp3",
-      "text": "Escucha: ojo. Toca el dibujo de ojo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-syllable-hunt",
-      "filename": "game-letra-o-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba e y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-missing",
-      "filename": "game-letra-o-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de ola y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-picture-word",
-      "filename": "game-letra-o-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es oveja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-word",
-      "filename": "game-letra-o-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar oveja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-sentence",
-      "filename": "game-letra-o-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El oso mira.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-o-final",
-      "filename": "game-letra-o-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Sirve para escuchar. Ahora toca la palabra oreja.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-p-letter",
-      "filename": "game-letra-p-letter.mp3",
-      "text": "Mira bien y toca la letra P.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-sound-picture",
-      "filename": "game-letra-p-sound-picture.mp3",
-      "text": "Escucha: papá. Toca el dibujo de papá.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-syllable-hunt",
-      "filename": "game-letra-p-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba pi y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-missing",
-      "filename": "game-letra-p-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de pipa y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-picture-word",
-      "filename": "game-letra-p-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es piano.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-word",
-      "filename": "game-letra-p-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar piano.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-sentence",
-      "filename": "game-letra-p-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El piano suena.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-p-final",
-      "filename": "game-letra-p-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Fruta tropical. Ahora toca la palabra piña.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-q-letter",
-      "filename": "game-letra-q-letter.mp3",
-      "text": "Mira bien y toca la letra Q.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-sound-picture",
-      "filename": "game-letra-q-sound-picture.mp3",
-      "text": "Escucha: quince. Toca el dibujo de quince.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-syllable-hunt",
-      "filename": "game-letra-q-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba que y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-missing",
-      "filename": "game-letra-q-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de quiosco y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-picture-word",
-      "filename": "game-letra-q-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es paquete.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-word",
-      "filename": "game-letra-q-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar paquete.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-sentence",
-      "filename": "game-letra-q-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: Quico come queso.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-q-final",
-      "filename": "game-letra-q-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Sirve para jugar. Ahora toca la palabra raqueta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-r-letter",
-      "filename": "game-letra-r-letter.mp3",
-      "text": "Mira bien y toca la letra R.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-sound-picture",
-      "filename": "game-letra-r-sound-picture.mp3",
-      "text": "Escucha: risa. Toca el dibujo de risa.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-syllable-hunt",
-      "filename": "game-letra-r-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ri y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-missing",
-      "filename": "game-letra-r-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de rosa y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-picture-word",
-      "filename": "game-letra-r-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es rueda.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-word",
-      "filename": "game-letra-r-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar rueda.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-sentence",
-      "filename": "game-letra-r-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: Rita ríe.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-r-final",
-      "filename": "game-letra-r-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Animal pequeño. Ahora toca la palabra ratón.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-letter",
-      "filename": "game-letra-s-letter.mp3",
-      "text": "Mira bien y toca la letra S.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-sound-picture",
-      "filename": "game-letra-s-sound-picture.mp3",
-      "text": "Escucha: sapo. Toca el dibujo de sapo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-s-syllable-hunt",
-      "filename": "game-letra-s-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba si y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-missing",
-      "filename": "game-letra-s-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de sopa y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-picture-word",
-      "filename": "game-letra-s-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es silla.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-word",
-      "filename": "game-letra-s-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar silla.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-sentence",
-      "filename": "game-letra-s-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: Sale el sol.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-s-final",
-      "filename": "game-letra-s-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Fruta grande. Ahora toca la palabra sandía.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-letter",
-      "filename": "game-letra-t-letter.mp3",
-      "text": "Mira bien y toca la letra T.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-sound-picture",
-      "filename": "game-letra-t-sound-picture.mp3",
-      "text": "Escucha: toro. Toca el dibujo de toro.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-syllable-hunt",
-      "filename": "game-letra-t-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba ti y tócala.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-missing",
-      "filename": "game-letra-t-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de tela y toca la pieza que falta.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-picture-word",
-      "filename": "game-letra-t-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es tomate.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-word",
-      "filename": "game-letra-t-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar tomate.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-sentence",
-      "filename": "game-letra-t-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: Tito toma té.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-t-final",
-      "filename": "game-letra-t-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Sirve para cortar. Ahora toca la palabra tijera.",
-      "status": "reused"
-    },
-    {
-      "key": "game-letra-u-letter",
-      "filename": "game-letra-u-letter.mp3",
-      "text": "Mira bien y toca la letra U.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-sound-picture",
-      "filename": "game-letra-u-sound-picture.mp3",
-      "text": "Escucha: uno. Toca el dibujo de uno.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-syllable-hunt",
-      "filename": "game-letra-u-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba e y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-missing",
-      "filename": "game-letra-u-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de uña y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-picture-word",
-      "filename": "game-letra-u-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es unicornio.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-word",
-      "filename": "game-letra-u-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar unicornio.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-sentence",
-      "filename": "game-letra-u-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La uva es morada.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-u-final",
-      "filename": "game-letra-u-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Es una caja. Ahora toca la palabra urna.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-letter",
-      "filename": "game-letra-v-letter.mp3",
-      "text": "Mira bien y toca la letra V.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-sound-picture",
-      "filename": "game-letra-v-sound-picture.mp3",
-      "text": "Escucha: vaso. Toca el dibujo de vaso.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-syllable-hunt",
-      "filename": "game-letra-v-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba vi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-missing",
-      "filename": "game-letra-v-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de vela y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-picture-word",
-      "filename": "game-letra-v-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es violín.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-word",
-      "filename": "game-letra-v-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar violín.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-sentence",
-      "filename": "game-letra-v-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La vaca pasea.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-v-final",
-      "filename": "game-letra-v-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Tiene lava. Ahora toca la palabra volcán.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-letter",
-      "filename": "game-letra-w-letter.mp3",
-      "text": "Mira bien y toca la letra W.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-sound-picture",
-      "filename": "game-letra-w-sound-picture.mp3",
-      "text": "Escucha: windsurf. Toca el dibujo de windsurf.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-syllable-hunt",
-      "filename": "game-letra-w-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba wi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-missing",
-      "filename": "game-letra-w-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de web y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-picture-word",
-      "filename": "game-letra-w-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es waterpolo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-word",
-      "filename": "game-letra-w-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar waterpolo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-sentence",
-      "filename": "game-letra-w-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: La web se abre.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-w-final",
-      "filename": "game-letra-w-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Sirve para cocinar. Ahora toca la palabra wok.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-letter",
-      "filename": "game-letra-x-letter.mp3",
-      "text": "Mira bien y toca la letra X.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-sound-picture",
-      "filename": "game-letra-x-sound-picture.mp3",
-      "text": "Escucha: examen. Toca el dibujo de examen.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-syllable-hunt",
-      "filename": "game-letra-x-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba xi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-missing",
-      "filename": "game-letra-x-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de taxi y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-picture-word",
-      "filename": "game-letra-x-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es boxeo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-word",
-      "filename": "game-letra-x-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar boxeo.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-sentence",
-      "filename": "game-letra-x-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El taxi llega.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-x-final",
-      "filename": "game-letra-x-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Se puede leer. Ahora toca la palabra texto.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-letter",
-      "filename": "game-letra-y-letter.mp3",
-      "text": "Mira bien y toca la letra Y.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-sound-picture",
-      "filename": "game-letra-y-sound-picture.mp3",
-      "text": "Escucha: yema. Toca el dibujo de yema.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-syllable-hunt",
-      "filename": "game-letra-y-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba yi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-missing",
-      "filename": "game-letra-y-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de yate y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-picture-word",
-      "filename": "game-letra-y-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es yogur.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-word",
-      "filename": "game-letra-y-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar yogur.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-sentence",
-      "filename": "game-letra-y-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El yoyó sube.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-y-final",
-      "filename": "game-letra-y-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Corre por el campo. Ahora toca la palabra yegua.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-letter",
-      "filename": "game-letra-z-letter.mp3",
-      "text": "Mira bien y toca la letra Z.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-sound-picture",
-      "filename": "game-letra-z-sound-picture.mp3",
-      "text": "Escucha: zorro. Toca el dibujo de zorro.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-syllable-hunt",
-      "filename": "game-letra-z-syllable-hunt.mp3",
-      "text": "Como en el libro. Busca la sílaba zi y tócala.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-missing",
-      "filename": "game-letra-z-missing.mp3",
-      "text": "A esta palabra le falta una sílaba. Mira el dibujo de zumo y toca la pieza que falta.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-picture-word",
-      "filename": "game-letra-z-picture-word.mp3",
-      "text": "Mira el dibujo y toca su palabra. Es zanahoria.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-word",
-      "filename": "game-letra-z-word.mp3",
-      "text": "Ahora construimos una palabra más larga. Toca los bloques en orden para formar zanahoria.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-sentence",
-      "filename": "game-letra-z-sentence.mp3",
-      "text": "Mira el dibujo y escucha las frases. Toca la que corresponde: El zapato es azul.",
-      "status": "generated"
-    },
-    {
-      "key": "game-letra-z-final",
-      "filename": "game-letra-z-final.mp3",
-      "text": "Mini reto final. Escucha la pista: Nombre de la letra. Ahora toca la palabra zeta.",
-      "status": "generated"
-    }
-  ]
+﻿{
+    "generatedAt":  "2026-05-29T17:18:31.0765140Z",
+    "displayName":  "Adri - prueba",
+    "files":  [
+                  {
+                      "key":  "screen-home",
+                      "filename":  "screen-home.mp3",
+                      "text":  "Soy Adri. ¿Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "screen-collection",
+                      "filename":  "screen-collection.mp3",
+                      "text":  "Esta es nuestra construcción. Cada letra terminada coloca un bloque nuevo en la Casa de las Palabras.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "screen-progress",
+                      "filename":  "screen-progress.mp3",
+                      "text":  "Aquí vemos tu progreso. La parte más importante es cuántas letras del abecedario llevas completadas.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "screen-settings",
+                      "filename":  "screen-settings.mp3",
+                      "text":  "Estos son los ajustes. Puedes poner o quitar sonidos, activar mi voz o reiniciar la aventura.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "screen-settings-sample",
+                      "filename":  "screen-settings-sample.mp3",
+                      "text":  "¿Te animas a construir palabras conmigo? Vamos a jugar.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "screen-reward",
+                      "filename":  "screen-reward.mp3",
+                      "text":  "¡Nivel superado! Adri está celebrando porque has leído una misión completa.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "result-success",
+                      "filename":  "result-success.mp3",
+                      "text":  "¡Bien!",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "result-retry",
+                      "filename":  "result-retry.mp3",
+                      "text":  "¡Repite!",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-a-letter",
+                      "filename":  "game-letra-a-letter.mp3",
+                      "text":  "Mira bien y toca la letra A.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-sound-picture",
+                      "filename":  "game-letra-a-sound-picture.mp3",
+                      "text":  "Escucha: avión. Toca el dibujo de avión.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-missing",
+                      "filename":  "game-letra-a-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de anillo y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-picture-word",
+                      "filename":  "game-letra-a-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es árbol.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-word",
+                      "filename":  "game-letra-a-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar árbol.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-sentence",
+                      "filename":  "game-letra-a-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El árbol es alto.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-a-final",
+                      "filename":  "game-letra-a-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Hace miel. Ahora toca la palabra abeja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-b-letter",
+                      "filename":  "game-letra-b-letter.mp3",
+                      "text":  "Mira bien y toca la letra B.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-sound-picture",
+                      "filename":  "game-letra-b-sound-picture.mp3",
+                      "text":  "Escucha: boca. Toca el dibujo de boca.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-missing",
+                      "filename":  "game-letra-b-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de bola y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-picture-word",
+                      "filename":  "game-letra-b-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es bota.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-word",
+                      "filename":  "game-letra-b-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar bota.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-sentence",
+                      "filename":  "game-letra-b-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La bola bota.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-b-final",
+                      "filename":  "game-letra-b-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Animal con orejas largas. Ahora toca la palabra burro.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-c-letter",
+                      "filename":  "game-letra-c-letter.mp3",
+                      "text":  "Mira bien y toca la letra C.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-sound-picture",
+                      "filename":  "game-letra-c-sound-picture.mp3",
+                      "text":  "Escucha: cuna. Toca el dibujo de cuna.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-missing",
+                      "filename":  "game-letra-c-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de coco y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-picture-word",
+                      "filename":  "game-letra-c-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es cebra.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-word",
+                      "filename":  "game-letra-c-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar cebra.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-sentence",
+                      "filename":  "game-letra-c-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La cebra corre.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-c-final",
+                      "filename":  "game-letra-c-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Vemos películas. Ahora toca la palabra cine.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-d-letter",
+                      "filename":  "game-letra-d-letter.mp3",
+                      "text":  "Mira bien y toca la letra D.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-sound-picture",
+                      "filename":  "game-letra-d-sound-picture.mp3",
+                      "text":  "Escucha: duende. Toca el dibujo de duende.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-missing",
+                      "filename":  "game-letra-d-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de dedo y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-picture-word",
+                      "filename":  "game-letra-d-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es dominó.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-word",
+                      "filename":  "game-letra-d-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar dominó.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-sentence",
+                      "filename":  "game-letra-d-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: Dani da dados.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-d-final",
+                      "filename":  "game-letra-d-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Se apunta al centro. Ahora toca la palabra diana.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-e-letter",
+                      "filename":  "game-letra-e-letter.mp3",
+                      "text":  "Mira bien y toca la letra E.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-sound-picture",
+                      "filename":  "game-letra-e-sound-picture.mp3",
+                      "text":  "Escucha: escoba. Toca el dibujo de escoba.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-missing",
+                      "filename":  "game-letra-e-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de estrella y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-picture-word",
+                      "filename":  "game-letra-e-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es espejo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-word",
+                      "filename":  "game-letra-e-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar espejo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-sentence",
+                      "filename":  "game-letra-e-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El elefante camina.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-e-final",
+                      "filename":  "game-letra-e-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Tiene púas. Ahora toca la palabra erizo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-letter",
+                      "filename":  "game-letra-f-letter.mp3",
+                      "text":  "Mira bien y toca la letra F.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-sound-picture",
+                      "filename":  "game-letra-f-sound-picture.mp3",
+                      "text":  "Escucha: foto. Toca el dibujo de foto.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-missing",
+                      "filename":  "game-letra-f-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de faro y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-picture-word",
+                      "filename":  "game-letra-f-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es fresa.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-word",
+                      "filename":  "game-letra-f-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar fresa.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-sentence",
+                      "filename":  "game-letra-f-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La foca nada.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-f-final",
+                      "filename":  "game-letra-f-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Da calor. Ahora toca la palabra fuego.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-letter",
+                      "filename":  "game-letra-g-letter.mp3",
+                      "text":  "Mira bien y toca la letra G.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-sound-picture",
+                      "filename":  "game-letra-g-sound-picture.mp3",
+                      "text":  "Escucha: gusano. Toca el dibujo de gusano.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-missing",
+                      "filename":  "game-letra-g-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de goma y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-picture-word",
+                      "filename":  "game-letra-g-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es gelatina.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-word",
+                      "filename":  "game-letra-g-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar gelatina.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-sentence",
+                      "filename":  "game-letra-g-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El gato juega.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-g-final",
+                      "filename":  "game-letra-g-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Mira al sol. Ahora toca la palabra girasol.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-letter",
+                      "filename":  "game-letra-h-letter.mp3",
+                      "text":  "Mira bien y toca la letra H.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-sound-picture",
+                      "filename":  "game-letra-h-sound-picture.mp3",
+                      "text":  "Escucha: humo. Toca el dibujo de humo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-missing",
+                      "filename":  "game-letra-h-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de hada y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-picture-word",
+                      "filename":  "game-letra-h-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es hilo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-word",
+                      "filename":  "game-letra-h-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar hilo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-sentence",
+                      "filename":  "game-letra-h-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El helado está frío.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-h-final",
+                      "filename":  "game-letra-h-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Cae del árbol. Ahora toca la palabra hoja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-letter",
+                      "filename":  "game-letra-i-letter.mp3",
+                      "text":  "Mira bien y toca la letra I.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-sound-picture",
+                      "filename":  "game-letra-i-sound-picture.mp3",
+                      "text":  "Escucha: iglesia. Toca el dibujo de iglesia.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-missing",
+                      "filename":  "game-letra-i-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de imán y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-picture-word",
+                      "filename":  "game-letra-i-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es insecto.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-word",
+                      "filename":  "game-letra-i-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar insecto.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-sentence",
+                      "filename":  "game-letra-i-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La isla tiene agua.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-i-final",
+                      "filename":  "game-letra-i-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Casa de hielo. Ahora toca la palabra iglú.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-j-letter",
+                      "filename":  "game-letra-j-letter.mp3",
+                      "text":  "Mira bien y toca la letra J.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-j-sound-picture",
+                      "filename":  "game-letra-j-sound-picture.mp3",
+                      "text":  "Escucha: jeringa. Toca el dibujo de jeringa.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-j-missing",
+                      "filename":  "game-letra-j-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de jarra y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-j-picture-word",
+                      "filename":  "game-letra-j-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es jardín.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-j-word",
+                      "filename":  "game-letra-j-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar jardín.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-j-sentence",
+                      "filename":  "game-letra-j-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La jirafa mira.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-j-final",
+                      "filename":  "game-letra-j-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Nombre de persona. Ahora toca la palabra Julia.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-letter",
+                      "filename":  "game-letra-k-letter.mp3",
+                      "text":  "Mira bien y toca la letra K.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-sound-picture",
+                      "filename":  "game-letra-k-sound-picture.mp3",
+                      "text":  "Escucha: karate. Toca el dibujo de karate.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-missing",
+                      "filename":  "game-letra-k-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de koala y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-picture-word",
+                      "filename":  "game-letra-k-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es kilo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-word",
+                      "filename":  "game-letra-k-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar kilo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-sentence",
+                      "filename":  "game-letra-k-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El kiwi es verde.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-k-final",
+                      "filename":  "game-letra-k-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Navega en agua. Ahora toca la palabra kayak.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-l-letter",
+                      "filename":  "game-letra-l-letter.mp3",
+                      "text":  "Mira bien y toca la letra L.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-sound-picture",
+                      "filename":  "game-letra-l-sound-picture.mp3",
+                      "text":  "Escucha: lila. Toca el dibujo de lila.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-missing",
+                      "filename":  "game-letra-l-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de lupa y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-picture-word",
+                      "filename":  "game-letra-l-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es limón.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-word",
+                      "filename":  "game-letra-l-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar limón.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-sentence",
+                      "filename":  "game-letra-l-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La luna sale.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-l-final",
+                      "filename":  "game-letra-l-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Es suave. Ahora toca la palabra lana.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-letter",
+                      "filename":  "game-letra-m-letter.mp3",
+                      "text":  "Mira bien y toca la letra M.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-sound-picture",
+                      "filename":  "game-letra-m-sound-picture.mp3",
+                      "text":  "Escucha: mono. Toca el dibujo de mono.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-missing",
+                      "filename":  "game-letra-m-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de mesa y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-picture-word",
+                      "filename":  "game-letra-m-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es maleta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-word",
+                      "filename":  "game-letra-m-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar maleta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-sentence",
+                      "filename":  "game-letra-m-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La mesa es mía.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-m-final",
+                      "filename":  "game-letra-m-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Tiene dos ruedas. Ahora toca la palabra moto.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-n-letter",
+                      "filename":  "game-letra-n-letter.mp3",
+                      "text":  "Mira bien y toca la letra N.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-n-sound-picture",
+                      "filename":  "game-letra-n-sound-picture.mp3",
+                      "text":  "Escucha: nota. Toca el dibujo de nota.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-n-missing",
+                      "filename":  "game-letra-n-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de nido y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-n-picture-word",
+                      "filename":  "game-letra-n-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es nariz.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-n-word",
+                      "filename":  "game-letra-n-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar nariz.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-n-sentence",
+                      "filename":  "game-letra-n-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La nube sube.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-n-final",
+                      "filename":  "game-letra-n-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Fruta naranja. Ahora toca la palabra naranja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-letter",
+                      "filename":  "game-letra-enye-letter.mp3",
+                      "text":  "Mira bien y toca la letra Ñ.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-sound-picture",
+                      "filename":  "game-letra-enye-sound-picture.mp3",
+                      "text":  "Escucha: ñoqui. Toca el dibujo de ñoqui.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-missing",
+                      "filename":  "game-letra-enye-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de ñu y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-picture-word",
+                      "filename":  "game-letra-enye-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es niña.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-word",
+                      "filename":  "game-letra-enye-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar niña.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-sentence",
+                      "filename":  "game-letra-enye-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La niña mira la piña.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-enye-final",
+                      "filename":  "game-letra-enye-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Fruta con hojas. Ahora toca la palabra piña.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-letter",
+                      "filename":  "game-letra-o-letter.mp3",
+                      "text":  "Mira bien y toca la letra O.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-sound-picture",
+                      "filename":  "game-letra-o-sound-picture.mp3",
+                      "text":  "Escucha: ojo. Toca el dibujo de ojo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-missing",
+                      "filename":  "game-letra-o-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de ola y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-picture-word",
+                      "filename":  "game-letra-o-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es oveja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-word",
+                      "filename":  "game-letra-o-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar oveja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-sentence",
+                      "filename":  "game-letra-o-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El oso mira.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-o-final",
+                      "filename":  "game-letra-o-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Sirve para escuchar. Ahora toca la palabra oreja.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-p-letter",
+                      "filename":  "game-letra-p-letter.mp3",
+                      "text":  "Mira bien y toca la letra P.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-sound-picture",
+                      "filename":  "game-letra-p-sound-picture.mp3",
+                      "text":  "Escucha: papá. Toca el dibujo de papá.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-missing",
+                      "filename":  "game-letra-p-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de pipa y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-picture-word",
+                      "filename":  "game-letra-p-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es piano.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-word",
+                      "filename":  "game-letra-p-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar piano.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-sentence",
+                      "filename":  "game-letra-p-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El piano suena.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-p-final",
+                      "filename":  "game-letra-p-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Fruta tropical. Ahora toca la palabra piña.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-q-letter",
+                      "filename":  "game-letra-q-letter.mp3",
+                      "text":  "Mira bien y toca la letra Q.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-sound-picture",
+                      "filename":  "game-letra-q-sound-picture.mp3",
+                      "text":  "Escucha: quince. Toca el dibujo de quince.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-missing",
+                      "filename":  "game-letra-q-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de quiosco y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-picture-word",
+                      "filename":  "game-letra-q-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es paquete.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-word",
+                      "filename":  "game-letra-q-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar paquete.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-sentence",
+                      "filename":  "game-letra-q-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: Quico come queso.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-q-final",
+                      "filename":  "game-letra-q-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Sirve para jugar. Ahora toca la palabra raqueta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-r-letter",
+                      "filename":  "game-letra-r-letter.mp3",
+                      "text":  "Mira bien y toca la letra R.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-sound-picture",
+                      "filename":  "game-letra-r-sound-picture.mp3",
+                      "text":  "Escucha: risa. Toca el dibujo de risa.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-missing",
+                      "filename":  "game-letra-r-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de rosa y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-picture-word",
+                      "filename":  "game-letra-r-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es rueda.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-word",
+                      "filename":  "game-letra-r-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar rueda.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-sentence",
+                      "filename":  "game-letra-r-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: Rita ríe.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-r-final",
+                      "filename":  "game-letra-r-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Animal pequeño. Ahora toca la palabra ratón.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-letter",
+                      "filename":  "game-letra-s-letter.mp3",
+                      "text":  "Mira bien y toca la letra S.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-sound-picture",
+                      "filename":  "game-letra-s-sound-picture.mp3",
+                      "text":  "Escucha: sapo. Toca el dibujo de sapo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-s-missing",
+                      "filename":  "game-letra-s-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de sopa y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-picture-word",
+                      "filename":  "game-letra-s-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es silla.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-word",
+                      "filename":  "game-letra-s-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar silla.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-sentence",
+                      "filename":  "game-letra-s-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: Sale el sol.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-s-final",
+                      "filename":  "game-letra-s-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Fruta grande. Ahora toca la palabra sandía.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-letter",
+                      "filename":  "game-letra-t-letter.mp3",
+                      "text":  "Mira bien y toca la letra T.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-sound-picture",
+                      "filename":  "game-letra-t-sound-picture.mp3",
+                      "text":  "Escucha: toro. Toca el dibujo de toro.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-missing",
+                      "filename":  "game-letra-t-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de tela y toca la pieza que falta.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-picture-word",
+                      "filename":  "game-letra-t-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es tomate.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-word",
+                      "filename":  "game-letra-t-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar tomate.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-sentence",
+                      "filename":  "game-letra-t-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: Tito toma té.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-t-final",
+                      "filename":  "game-letra-t-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Sirve para cortar. Ahora toca la palabra tijera.",
+                      "status":  "reused"
+                  },
+                  {
+                      "key":  "game-letra-u-letter",
+                      "filename":  "game-letra-u-letter.mp3",
+                      "text":  "Mira bien y toca la letra U.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-sound-picture",
+                      "filename":  "game-letra-u-sound-picture.mp3",
+                      "text":  "Escucha: uno. Toca el dibujo de uno.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-missing",
+                      "filename":  "game-letra-u-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de uña y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-picture-word",
+                      "filename":  "game-letra-u-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es unicornio.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-word",
+                      "filename":  "game-letra-u-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar unicornio.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-sentence",
+                      "filename":  "game-letra-u-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La uva es morada.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-u-final",
+                      "filename":  "game-letra-u-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Es una caja. Ahora toca la palabra urna.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-letter",
+                      "filename":  "game-letra-v-letter.mp3",
+                      "text":  "Mira bien y toca la letra V.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-sound-picture",
+                      "filename":  "game-letra-v-sound-picture.mp3",
+                      "text":  "Escucha: vaso. Toca el dibujo de vaso.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-missing",
+                      "filename":  "game-letra-v-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de vela y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-picture-word",
+                      "filename":  "game-letra-v-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es violín.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-word",
+                      "filename":  "game-letra-v-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar violín.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-sentence",
+                      "filename":  "game-letra-v-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La vaca pasea.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-v-final",
+                      "filename":  "game-letra-v-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Tiene lava. Ahora toca la palabra volcán.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-letter",
+                      "filename":  "game-letra-w-letter.mp3",
+                      "text":  "Mira bien y toca la letra W.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-sound-picture",
+                      "filename":  "game-letra-w-sound-picture.mp3",
+                      "text":  "Escucha: windsurf. Toca el dibujo de windsurf.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-missing",
+                      "filename":  "game-letra-w-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de web y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-picture-word",
+                      "filename":  "game-letra-w-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es waterpolo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-word",
+                      "filename":  "game-letra-w-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar waterpolo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-sentence",
+                      "filename":  "game-letra-w-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: La web se abre.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-w-final",
+                      "filename":  "game-letra-w-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Sirve para cocinar. Ahora toca la palabra wok.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-letter",
+                      "filename":  "game-letra-x-letter.mp3",
+                      "text":  "Mira bien y toca la letra X.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-sound-picture",
+                      "filename":  "game-letra-x-sound-picture.mp3",
+                      "text":  "Escucha: examen. Toca el dibujo de examen.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-missing",
+                      "filename":  "game-letra-x-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de taxi y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-picture-word",
+                      "filename":  "game-letra-x-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es boxeo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-word",
+                      "filename":  "game-letra-x-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar boxeo.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-sentence",
+                      "filename":  "game-letra-x-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El taxi llega.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-x-final",
+                      "filename":  "game-letra-x-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Se puede leer. Ahora toca la palabra texto.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-letter",
+                      "filename":  "game-letra-y-letter.mp3",
+                      "text":  "Mira bien y toca la letra Y.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-sound-picture",
+                      "filename":  "game-letra-y-sound-picture.mp3",
+                      "text":  "Escucha: yema. Toca el dibujo de yema.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-missing",
+                      "filename":  "game-letra-y-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de yate y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-picture-word",
+                      "filename":  "game-letra-y-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es yogur.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-word",
+                      "filename":  "game-letra-y-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar yogur.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-sentence",
+                      "filename":  "game-letra-y-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El yoyó sube.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-y-final",
+                      "filename":  "game-letra-y-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Corre por el campo. Ahora toca la palabra yegua.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-letter",
+                      "filename":  "game-letra-z-letter.mp3",
+                      "text":  "Mira bien y toca la letra Z.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-sound-picture",
+                      "filename":  "game-letra-z-sound-picture.mp3",
+                      "text":  "Escucha: zorro. Toca el dibujo de zorro.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-missing",
+                      "filename":  "game-letra-z-missing.mp3",
+                      "text":  "A esta palabra le falta una sílaba. Mira el dibujo de zumo y toca la pieza que falta.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-picture-word",
+                      "filename":  "game-letra-z-picture-word.mp3",
+                      "text":  "Mira el dibujo y toca su palabra. Es zanahoria.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-word",
+                      "filename":  "game-letra-z-word.mp3",
+                      "text":  "Ahora construimos una palabra más larga. Toca los bloques en orden para formar zanahoria.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-sentence",
+                      "filename":  "game-letra-z-sentence.mp3",
+                      "text":  "Mira el dibujo y escucha las frases. Toca la que corresponde: El zapato es azul.",
+                      "status":  "generated"
+                  },
+                  {
+                      "key":  "game-letra-z-final",
+                      "filename":  "game-letra-z-final.mp3",
+                      "text":  "Mini reto final. Escucha la pista: Nombre de la letra. Ahora toca la palabra zeta.",
+                      "status":  "generated"
+                  }
+              ]
 }
