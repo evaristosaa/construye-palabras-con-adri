@@ -2,7 +2,7 @@ export const homeGreeting =
   "Soy Adri. ¿Te animas a construir palabras conmigo? Toca Misiones y empezamos juntos.";
 
 export const missionInstructions =
-  "Elige una letra del abecedario. La estrella con Ahora te recomienda por dónde seguir. Cada letra tiene juegos como los del libro.";
+  "Elige una letra del abecedario. La estrella con Ahora te recomienda por dónde seguir. Cada letra tiene juegos de escuchar, buscar y construir palabras.";
 
 export const settingsVoiceSample =
   "¿Te animas a construir palabras conmigo? Vamos a jugar.";

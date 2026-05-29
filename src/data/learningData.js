@@ -462,7 +462,7 @@ function buildGames(lesson) {
       title: "Rodea la sílaba",
       prompt: `Busca ${syllables[2] || syllables[0]}`,
       type: "syllableHunt",
-      speak: `Como en el libro. Busca la sílaba ${syllables[2] || syllables[0]} y tócala.`,
+      speak: `Busca la sílaba ${syllables[2] || syllables[0]} y tócala.`,
       options: ensureNotFirst(practiceSyllables.map((item) => item.toUpperCase()), (syllables[2] || syllables[0]).toUpperCase(), `${lesson.id}-hunt`),
       answer: (syllables[2] || syllables[0]).toUpperCase(),
       targetColor: lesson.color,

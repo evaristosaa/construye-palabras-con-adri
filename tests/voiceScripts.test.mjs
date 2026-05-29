@@ -14,3 +14,13 @@ test("Adri only introduces himself on the home screen", () => {
 
   gameScripts.forEach((script) => assert.doesNotMatch(script, /Soy Adri/i));
 });
+
+test("Adri instructions do not refer to the printed book", () => {
+  assert.doesNotMatch(missionInstructions, /libro/i);
+
+  const gameScripts = Object.values(levelsById).flatMap((level) =>
+    level.games.map((game) => game.speak)
+  );
+
+  gameScripts.forEach((script) => assert.doesNotMatch(script, /libro/i));
+});
