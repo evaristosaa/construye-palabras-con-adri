@@ -8,8 +8,8 @@ export default function Home({ progress }) {
   return (
     <section className="home-screen comic-panel primary-home" style={{"--home-world":`url("${worldAsset("lengua",import.meta.env.BASE_URL)}")`}}>
       <VoiceGuide
-        text={primaryVoiceTexts["primary-intro"]}
-        audioKey="primary-intro"
+        text={primaryVoiceTexts["home-welcome"]}
+        audioKey="home-welcome"
         enabled={progress.voice}
         compact
       />

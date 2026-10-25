@@ -59,4 +59,6 @@ node scripts/check-voice-assets.mjs
 
 ## Alcance
 
+La portada de Primaria usa `home-welcome.wav`, una bienvenida de 10,96 segundos que nombra a Adri, Juan y Cayetana e invita a aprender jugando. Se generó localmente con la misma referencia sintética de Construcciones. Misiones mantiene `primary-intro.wav` y su guía para elegir materia y misión. Son claves y archivos distintos; una prueba comprueba la separación y que el texto del manifiesto coincide con el de la app. El catálogo completo suma 275 audios. El WAV nuevo se comprobó a 24 kHz, con muestras finitas y sin silencio ni recorte digital.
+
 Que un modelo soporte español no garantiza un acento sevillano ni una edad vocal exacta. La instalación local elimina la dependencia de cuotas de la demo; la calidad, el acento y la inteligibilidad se tienen que valorar con una muestra. La referencia seleccionada es una voz sintética, no una grabación del niño real.

@@ -75,5 +75,6 @@ export const localVoiceFiles = Object.freeze({
   "primary-workshop": "primary-workshop.wav",
   "quest-lengua": "quest-lengua.wav",
   "quest-matematicas": "quest-matematicas.wav",
-  "quest-medio": "quest-medio.wav"
+  "quest-medio": "quest-medio.wav",
+  "home-welcome": "home-welcome.wav"
 });

@@ -4,6 +4,19 @@ import { readFileSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { getRecordedAudioSrc } from "../src/components/audio.js";
 import { voiceLines } from "../src/data/adriAudioCatalog.js";
+import { primaryVoiceTexts } from "../src/data/primaryVoiceLines.js";
+
+test("home welcomes all three friends with its own recording, separate from the mission guide", () => {
+  const home = getRecordedAudioSrc("home-welcome");
+  assert.notEqual(home, getRecordedAudioSrc("primary-intro"));
+  const manifest = JSON.parse(readFileSync(new URL("../public/audio/adri-local/manifest.json", import.meta.url), "utf8"));
+  const entry = manifest.files.find(line => line.key === "home-welcome");
+  assert.equal(entry?.text, primaryVoiceTexts["home-welcome"]);
+  assert.notEqual(entry.text, primaryVoiceTexts["primary-intro"]);
+  for (const name of ["Adri", "Juan", "Cayetana"]) assert.ok(entry.text.includes(name));
+  assert.ok(entry.durationSeconds > 3 && entry.durationSeconds < 25);
+  assert.equal(readFileSync(new URL(`../public${home}`, import.meta.url)).subarray(0, 4).toString(), "RIFF");
+});
 
 test("constructs GitHub Pages-safe paths for Adri recorded audio", () => {
   assert.equal(
