@@ -1,4 +1,4 @@
-const CACHE_NAME = "adri-lee-v3";
+const CACHE_NAME = "adri-primaria-v4";
 const STATIC_ASSETS = [
   "./",
   "./manifest.webmanifest",
@@ -14,7 +14,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => /^(adri-lee-|adri-primaria-)/.test(key) && key !== CACHE_NAME).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });

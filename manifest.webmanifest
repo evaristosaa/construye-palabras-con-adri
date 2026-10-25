@@ -1,7 +1,7 @@
 {
-  "name": "Construye palabras con Adri",
-  "short_name": "Adri Lee",
-  "description": "App educativa infantil para aprender a leer en español.",
+  "name": "Construye ideas con Adri · 1.º de Primaria",
+  "short_name": "Adri Primaria",
+  "description": "Lengua, Matemáticas y Conocimiento del Medio para 1.º de Primaria.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#8bd8ff",
