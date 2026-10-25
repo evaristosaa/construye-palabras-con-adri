@@ -540,6 +540,13 @@
       "filename": "quest-medio.wav",
       "durationSeconds": 4.64,
       "generationSeconds": 32.375
+    },
+    {
+      "key": "home-welcome",
+      "text": "¡Preparados para una aventura! Adri, Juan y Cayetana te esperan. Jugaremos con palabras, descubriremos números y resolveremos misterios. ¿Te apuntas? ¡Vamos a aprender jugando!",
+      "filename": "home-welcome.wav",
+      "durationSeconds": 10.96,
+      "generationSeconds": 85.36000000001513
     }
   ]
 }
