@@ -1,0 +1,125 @@
+/* One whole album: the small stickers are display items; each world is a large
+   touch target. Keep the full collection visible without paging or scrolling. */
+.sticker-album { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 18px; background: radial-gradient(circle at 95% 0,#fff0af 0,transparent 28%),#fffdf4; }
+.sticker-album > * { position: relative; }
+.album-heading { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.album-mascot { position: relative; display: block; flex-shrink: 0; width: 62px; height: 62px; border: 2px solid #e8ba46; border-radius: 50%; overflow: hidden; background: #fff0b3; }
+.album-mascot img { position: absolute; width: 180%; max-width: none; height: auto; left: -40%; top: -30%; }
+.album-heading h1 { margin: 0; font-size: clamp(1.5rem,3vw,2rem); line-height: 1.15; }
+.album-heading p { margin: 5px 0 0; font-size: .95rem; }
+.album-total { margin-left: auto; display: flex; align-items: center; gap: 8px; border-radius: 18px; background: #fff0b3; padding: 8px 12px; border: 2px solid #e8ba46; }
+.album-total > span { font-size: 1.8rem; }
+.album-total strong { font-size: 1.3rem; }
+.album-total small { font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.album-worlds { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); gap: 12px; }
+.album-world { --world:#0875b9; --world-bg:#e6f5ff; min-width: 0; min-height: 0; position: relative; border: 2px solid var(--world); border-bottom-width: 5px; border-radius: 20px; padding: 10px 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 6px; background: var(--world-bg); transition: transform .15s,box-shadow .15s; }
+.world-matematicas { --world:#a45206; --world-bg:#fff0d8; }
+.world-medio { --world:#28713b; --world-bg:#e9f7dc; }
+.world-taller { --world:#7651a3; --world-bg:#f1e8ff; }
+.world-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-shrink: 0; }
+.world-heading h2 { font-size: 1rem; line-height: 1.2; margin: 0; color: var(--world); }
+.world-heading a::after,.album-letters a::after { content:""; position: absolute; inset: 0; z-index: 1; border-radius: 16px; }
+.world-heading a:focus-visible { outline: none; }
+.album-world:has(a:focus-visible),.album-letters:has(a:focus-visible) { outline: 4px solid #112e44; outline-offset: 2px; }
+.world-heading a > span { margin-left: 6px; font-size: .8rem; }
+.world-count { font-size: .8rem; font-weight: 900; color: var(--world); white-space: nowrap; background: #ffffffc9; padding: 4px 7px; border-radius: 10px; }
+.album-stickers { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(8,minmax(0,1fr)); align-content: center; gap: 5px; }
+.album-sticker { position: relative; aspect-ratio: 1; min-width: 0; max-height: 70px; border-radius: 14px; border: 2px dashed #82939c; background: #ffffffb0; display: flex; align-items: center; justify-content: center; transform: rotate(-4deg); }
+.album-sticker:nth-child(even) { transform: rotate(4deg); }
+.album-sticker > span { font-size: clamp(1rem,3vw,2.5rem); line-height: 1; }
+.album-sticker.is-waiting > span { filter: saturate(.45); opacity: .65; }
+.album-sticker.is-earned { background: #fff6c9; border: 2px solid #bf8a1b; box-shadow: 0 3px 0 #bc8e29, inset 0 2px 0 white; }
+.album-sticker.is-growing { background: #fff6dd; border: 2px dashed #b07416; }
+.album-sticker.is-growing > span { opacity: .8; }
+.album-sticker b { position: absolute; right: -4px; top: -6px; color: #795000; background: #ffd755; border: 1px solid #a56f03; border-radius: 50%; font-size: .75rem; line-height: 18px; width: 18px; height: 18px; text-align: center; }
+.world-caption { margin: 0; font-size: .8rem; color: #365169; text-align: center; flex-shrink: 0; }
+.world-taller .album-stickers { grid-template-columns: repeat(6,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); align-items: center; justify-items: center; }
+.world-taller .album-sticker { width: 100%; max-width: 36px; max-height: 100%; }
+.world-taller .album-sticker > span { font-size: clamp(1rem,2.5vw,1.7rem); }
+.world-complete { background: radial-gradient(circle at 95% 5%,#fff5b4 0,transparent 48%),var(--world-bg); }
+.album-letters { position: relative; flex-shrink: 0; border: 2px solid #ac6b26; border-radius: 16px; padding: 8px 12px; background: #fff0dc; display: flex; align-items: center; gap: 18px; min-height: 62px; }
+.album-letters > div:first-child { flex-shrink: 0; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.album-letters h2 { margin: 0; font-size: 1rem; }
+.album-letters > div:first-child > span { font-size: .75rem; font-weight: 800; color: #744107; }
+.letter-stickers { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(27,minmax(0,1fr)); gap: 3px; }
+.letter-stickers > span { display: grid; place-items: center; background: #fffaf1; color: #645b51; border: 1px dashed #a8977e; border-radius: 5px; min-height: 26px; font-size: .8rem; font-weight: 800; }
+.letter-stickers > .is-earned { background: #ffdb6a; border: 1px solid #936509; color: #503002; box-shadow: 0 2px 0 #b78513; }
+.album-next { flex-shrink: 0; display: flex; gap: 12px; align-items: center; background: #086ba3; color: white; border: 2px solid #093e5f; border-bottom-width: 5px; border-radius: 16px; padding: 8px 14px; min-height: 56px; }
+.album-next > span:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.album-next strong { font-size: 1rem; }
+.album-next small { font-size: .8rem; }
+.next-sticker { background: #fff5c9; border: 2px dashed #a77c1d; border-radius: 10px; width: 38px; height: 38px; display: grid; place-items: center; font-size: 1.5rem; transform: rotate(-7deg); flex-shrink: 0; }
+.album-next > b { font-size: 1.5rem; }
+[data-reading-font="round"] .sticker-album { font-family: "Comic Sans MS", "Trebuchet MS", sans-serif; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .album-world:hover { transform: translateY(-2px); box-shadow: 0 4px 0 #102d4322; }
+  .album-world:hover .is-earned { animation: sticker-wiggle .45s ease-in-out; }
+  @keyframes sticker-wiggle { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(8deg) translateY(-3px); } }
+}
+@media (max-width: 760px) {
+  .sticker-album { padding: 12px; gap: 10px; }
+  .album-heading { gap: 8px; }
+  .album-mascot { width: 46px; height: 46px; }
+  .album-heading p { font-size: .8rem; }
+  .album-total { padding: 6px; gap: 4px; }
+  .album-total > span { font-size: 1.3rem; }
+  .album-total strong { font-size: 1rem; }
+  .album-worlds { gap: 8px; }
+  .album-world { padding: 8px; border-radius: 14px; gap: 6px; }
+  .world-heading h2 { font-size: .92rem; }
+  .world-heading a > span { display: none; }
+  .world-count { font-size: .7rem; padding: 3px 4px; }
+  .album-stickers { grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); align-items: center; justify-items: center; gap: 4px; }
+  .album-sticker { width: 100%; max-width: 44px; border-radius: 8px; }
+  .album-sticker > span { font-size: clamp(1rem,5vw,1.6rem); }
+  .album-sticker b { width: 12px; height: 12px; line-height: 12px; top: -4px; right: -3px; font-size: .55rem; }
+  .world-caption { font-size: .65rem; }
+  .world-taller .album-stickers { gap: 3px; }
+  .world-taller .album-sticker { border-width: 1px; border-radius: 5px; }
+  .world-taller .album-sticker > span { font-size: clamp(.8rem,3vw,1.25rem); }
+  .album-letters { padding: 7px 8px; gap: 8px; flex-direction: column; align-items: stretch; }
+  .album-letters > div:first-child { flex-direction: row; justify-content: space-between; }
+  .album-letters h2 { font-size: .85rem; }
+  .letter-stickers { grid-template-columns: repeat(14,minmax(0,1fr)); gap: 2px; }
+  .letter-stickers > span { min-height: 18px; font-size: .7rem; border-radius: 4px; }
+  .album-next { gap: 8px; padding: 7px 8px; min-height: 52px; }
+  .album-next strong { font-size: .85rem; }
+  .album-next small { font-size: .7rem; }
+  .next-sticker { width: 32px; height: 32px; font-size: 1.25rem; }
+}
+@media (max-height: 620px) {
+  .sticker-album { padding: 8px; gap: 6px; }
+  .album-mascot { height: 34px; width: 34px; }
+  .album-heading h1 { font-size: 1.3rem; }
+  .album-heading p { font-size: .7rem; margin-top: 2px; }
+  .album-total > span { display: none; }
+  .album-world { padding: 6px; gap: 3px; border-bottom-width: 3px; }
+  .album-stickers { gap: 3px; }
+  .world-caption { display: none; }
+  .album-letters { padding: 5px 6px; gap: 4px; }
+  .letter-stickers > span { min-height: 16px; }
+  .album-next { padding: 5px 8px; min-height: 48px; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .sticker-album { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 40px minmax(0,1fr) 56px; gap: 6px 10px; padding: 8px; }
+  .album-heading { grid-column: 1 / -1; }
+  .album-mascot { height: 32px; width: 32px; }
+  .album-heading p { display: none; }
+  .album-total { padding: 4px 8px; }
+  .album-worlds { grid-column: 1 / -1; grid-row: 2; grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: minmax(0,1fr); }
+  .album-world { justify-content: flex-start; }
+  .world-heading { flex-wrap: wrap; }
+  .world-heading h2 { font-size: .8rem; }
+  .album-stickers { flex: 0 1 auto; grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); margin: auto 0; }
+  .album-sticker > span { font-size: 1.2rem; }
+  .world-taller .album-stickers { grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(0,1fr)); }
+  .world-taller .album-sticker { max-width: 24px; }
+  .world-taller .album-sticker > span { font-size: .85rem; }
+  .album-letters { grid-column: 1; grid-row: 3; gap: 2px; padding: 4px 6px; }
+  .album-letters h2 { font-size: .75rem; }
+  .letter-stickers { grid-template-columns: repeat(14,minmax(0,1fr)); }
+  .letter-stickers > span { min-height: 13px; font-size: .65rem; }
+  .album-next { grid-column: 2; grid-row: 3; min-height: 44px; }
+  .album-next strong { font-size: .8rem; }
+  .album-next small { font-size: .65rem; }
+}

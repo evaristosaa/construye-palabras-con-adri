@@ -1,0 +1,62 @@
+.friend-adri {--friend-tint:#fff0bf;--friend-edge:#d6a144;}
+.primary-home .home-friends {position:relative;left:auto;bottom:auto;width:100%;height:100%;opacity:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;overflow:hidden;}
+.home-friends-illustration {display:block;width:100%;height:auto;max-height:calc(100% - 48px);object-fit:contain;filter:drop-shadow(3px 4px 2px #163c472b);}
+.home-friend-names {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:75%;gap:4px;text-align:center;}
+.home-friend-names span {justify-self:center;max-width:100%;border:2px solid #284c65;border-radius:12px;background:#fff8ed;padding:5px 8px;font-size:clamp(.8rem,1.4vw,1.1rem);font-weight:900;color:#173c54;}
+@media(max-width:520px) and (min-height:501px){
+  .primary-home .home-hero {grid-template-columns:1fr;grid-template-rows:minmax(110px,1fr) auto;gap:8px;padding:46px 6px 8px;align-items:center;}
+  .primary-home .home-friends {min-height:0;max-height:210px;align-self:stretch;gap:3px;}
+  .primary-home .home-friends-illustration {height:0;flex:1;min-height:0;width:100%;}
+  .primary-home .home-friend-names span {font-size:.8rem;padding:2px 8px;}
+  .primary-home .home-menu {width:100%;max-width:380px;justify-self:center;gap:6px;}
+  .primary-home .home-menu .primary-grade-label {padding:3px 10px;margin-bottom:2px;}
+  .primary-home .home-menu .title-stack p {font-size:1rem;}
+  .primary-home .home-menu .title-stack h1 {font-size:1.8rem;line-height:1;}
+  .primary-home .home-menu .title-stack span {font-size:1.2rem;line-height:1.1;}
+  .primary-home .home-actions {gap:6px;}
+  .primary-home .home-actions .big-action {min-height:44px;padding:5px 8px;}
+  .primary-home .primary-home-review {font-size:.75rem;padding:4px;}
+}
+@media(orientation:landscape) and (max-height:500px){
+  .primary-home .home-friends {padding-top:38px;}
+  .primary-home .home-friends {gap:4px;}
+  .home-friend-names span {font-size:.7rem;padding:2px 5px;}
+}
+.friend-juan {--friend-tint:#e1f3ff;--friend-edge:#57a2ce;}
+.friend-cayetana {--friend-tint:#f1e6ff;--friend-edge:#a889c6;}
+.friend-portrait {display:block;position:relative;min-width:0;min-height:0;overflow:hidden;background:var(--friend-tint);}
+.friend-portrait img {display:block;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.friend-avatar {position:relative;display:inline-block;overflow:hidden;flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--friend-tint);border:2px solid var(--friend-edge);vertical-align:middle;}
+.friend-avatar img {position:absolute;width:180%;max-width:none;height:auto;left:-40%;top:0;}
+.friend-team {display:flex;align-items:center;flex-shrink:0;padding:2px 0;}
+.friend-team .friend-avatar {width:36px;height:36px;border:2px solid white;box-shadow:0 2px 0 #113e5730;}
+.friend-team .friend-avatar + .friend-avatar {margin-left:-6px;}
+.screen-hub .friends-adventure {display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;text-align:center;}
+.friends-adventure > span:last-child {min-width:0;}
+.friends-adventure small {display:block;}
+.illustrated-story .friend-options button {gap:10px;padding:12px;}
+.illustrated-story .friend-options button > .friend-portrait {display:block;width:100%;height:auto;flex:1;min-height:0;max-height:340px;border-radius:18px;background:linear-gradient(150deg,#ffffff,var(--friend-tint));border:1px solid var(--friend-edge);box-shadow:none;}
+.illustrated-story .friend-options button > strong {flex-shrink:0;font-size:1.2rem;line-height:1.2;}
+.illustrated-story .story-icons .friend-avatar {width:54px;height:54px;}
+.screen-layout .primary-companion .companion-name {font-size:.9rem;line-height:1.3;padding-top:6px;color:#244b62;}
+.friend-avatar.quest-buddy {width:48px;height:44px;border-radius:13px;}
+.friend-avatar.math-stage-buddy {width:32px;height:26px;border-radius:9px;margin-right:8px;}
+@media(max-width:760px){
+  .friend-team .friend-avatar {width:30px;height:30px;}
+  .screen-hub .friends-adventure {gap:10px;padding:10px;}
+  .screen-hub .friends-adventure > span:last-child {font-size:1rem;}
+  .screen-hub .friends-adventure small {font-size:.7rem;line-height:1.3;}
+}
+@media(max-width:520px) and (min-height:501px){
+  .illustrated-story .friend-options button {flex-direction:row;padding:6px 12px;gap:14px;min-height:52px;}
+  .illustrated-story .friend-options button > .friend-portrait {flex:0 0 80px;width:80px;height:100%;max-height:96px;min-height:0;border-radius:12px;}
+  .illustrated-story .friend-options button > strong {font-size:1.15rem;}
+}
+@media(orientation:landscape) and (max-height:500px){
+  .friend-avatar.quest-buddy,.friend-avatar.math-stage-buddy {display:none;}
+  .screen-hub .friends-adventure {padding:5px 12px;gap:12px;min-height:44px;}
+  .friend-team .friend-avatar {width:28px;height:28px;}
+  .illustrated-story .friend-options button {padding:6px;gap:6px;}
+  .illustrated-story .friend-options button > .friend-portrait {width:100%;height:auto;max-height:none;flex:1;min-height:0;border-radius:12px;}
+  .illustrated-story .friend-options button > strong {font-size:.95rem;}
+}

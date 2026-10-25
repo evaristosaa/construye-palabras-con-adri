@@ -19,7 +19,7 @@ export default function RewardScreen({ progress }) {
       <div className="reward-card">
         <h2>¡Misión superada!</h2>
         <Stars count={3} />
-        <p>Una parte más para la Casa de las Palabras</p>
+        <p>Una misión más en tus logros</p>
         <div className="mega-stars">★★★</div>
         <strong>Total: {progress.pieces} piezas</strong>
       </div>
@@ -27,8 +27,8 @@ export default function RewardScreen({ progress }) {
         <Link className="big-action green" to="/niveles">
           Otra misión
         </Link>
-        <Link className="big-action blue" to="/coleccion">
-          Ver construcción
+        <Link className="big-action blue" to="/logros">
+          Ver mis logros
         </Link>
       </div>
     </section>

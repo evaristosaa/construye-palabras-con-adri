@@ -1,0 +1,545 @@
+{
+  "model": "C:\\Users\\sonia\\OneDrive\\Documentos\\New project\\.voice-cache\\models\\qwen-0.6b",
+  "referenceSha256": "3ec848bfe917e20afdbf06993932f322164cb6d6b90a77733b8ae30154fea847",
+  "files": [
+    {
+      "key": "screen-missions",
+      "text": "Elige una letra del abecedario. La estrella con Ahora te recomienda por dónde seguir. Cada letra tiene juegos de escuchar, buscar y construir palabras.",
+      "filename": "screen-missions.wav",
+      "durationSeconds": 8.72,
+      "generationSeconds": 73.23500000000058
+    },
+    {
+      "key": "game-letra-a-syllable-hunt",
+      "text": "Busca la sílaba i y tócala.",
+      "filename": "game-letra-a-syllable-hunt.wav",
+      "durationSeconds": 2.0,
+      "generationSeconds": 17.98399999999947
+    },
+    {
+      "key": "game-letra-b-syllable-hunt",
+      "text": "Busca la sílaba bi y tócala.",
+      "filename": "game-letra-b-syllable-hunt.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 28.73400000000038
+    },
+    {
+      "key": "game-letra-c-syllable-hunt",
+      "text": "Busca la sílaba cu y tócala.",
+      "filename": "game-letra-c-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 25.48400000000038
+    },
+    {
+      "key": "game-letra-d-syllable-hunt",
+      "text": "Busca la sílaba di y tócala.",
+      "filename": "game-letra-d-syllable-hunt.wav",
+      "durationSeconds": 2.48,
+      "generationSeconds": 25.89099999999962
+    },
+    {
+      "key": "game-letra-e-syllable-hunt",
+      "text": "Busca la sílaba i y tócala.",
+      "filename": "game-letra-e-syllable-hunt.wav",
+      "durationSeconds": 2.48,
+      "generationSeconds": 25.29700000000048
+    },
+    {
+      "key": "game-letra-f-syllable-hunt",
+      "text": "Busca la sílaba fi y tócala.",
+      "filename": "game-letra-f-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 23.92199999999957
+    },
+    {
+      "key": "game-letra-g-syllable-hunt",
+      "text": "Busca la sílaba gu y tócala.",
+      "filename": "game-letra-g-syllable-hunt.wav",
+      "durationSeconds": 2.08,
+      "generationSeconds": 22.23400000000038
+    },
+    {
+      "key": "game-letra-h-syllable-hunt",
+      "text": "Busca la sílaba hi y tócala.",
+      "filename": "game-letra-h-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 22.734999999999673
+    },
+    {
+      "key": "game-letra-i-syllable-hunt",
+      "text": "Busca la sílaba e y tócala.",
+      "filename": "game-letra-i-syllable-hunt.wav",
+      "durationSeconds": 2.08,
+      "generationSeconds": 23.40599999999995
+    },
+    {
+      "key": "game-letra-j-syllable-hunt",
+      "text": "Busca la sílaba ji y tócala.",
+      "filename": "game-letra-j-syllable-hunt.wav",
+      "durationSeconds": 2.88,
+      "generationSeconds": 28.01599999999962
+    },
+    {
+      "key": "game-letra-k-syllable-hunt",
+      "text": "Busca la sílaba ki y tócala.",
+      "filename": "game-letra-k-syllable-hunt.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 26.813000000000102
+    },
+    {
+      "key": "game-letra-l-syllable-hunt",
+      "text": "Busca la sílaba li y tócala.",
+      "filename": "game-letra-l-syllable-hunt.wav",
+      "durationSeconds": 2.24,
+      "generationSeconds": 24.10900000000038
+    },
+    {
+      "key": "game-letra-m-syllable-hunt",
+      "text": "Busca la sílaba mi y tócala.",
+      "filename": "game-letra-m-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 25.04699999999957
+    },
+    {
+      "key": "game-letra-n-syllable-hunt",
+      "text": "Busca la sílaba ni y tócala.",
+      "filename": "game-letra-n-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 25.311999999999898
+    },
+    {
+      "key": "game-letra-enye-syllable-hunt",
+      "text": "Busca la sílaba ñi y tócala.",
+      "filename": "game-letra-enye-syllable-hunt.wav",
+      "durationSeconds": 2.8,
+      "generationSeconds": 28.92200000000048
+    },
+    {
+      "key": "game-letra-o-syllable-hunt",
+      "text": "Busca la sílaba e y tócala.",
+      "filename": "game-letra-o-syllable-hunt.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 24.625
+    },
+    {
+      "key": "game-letra-p-syllable-hunt",
+      "text": "Busca la sílaba pi y tócala.",
+      "filename": "game-letra-p-syllable-hunt.wav",
+      "durationSeconds": 2.08,
+      "generationSeconds": 22.20299999999952
+    },
+    {
+      "key": "game-letra-q-syllable-hunt",
+      "text": "Busca la sílaba que y tócala.",
+      "filename": "game-letra-q-syllable-hunt.wav",
+      "durationSeconds": 1.76,
+      "generationSeconds": 19.625
+    },
+    {
+      "key": "game-letra-r-syllable-hunt",
+      "text": "Busca la sílaba ri y tócala.",
+      "filename": "game-letra-r-syllable-hunt.wav",
+      "durationSeconds": 2.72,
+      "generationSeconds": 27.625
+    },
+    {
+      "key": "game-letra-s-syllable-hunt",
+      "text": "Busca la sílaba si y tócala.",
+      "filename": "game-letra-s-syllable-hunt.wav",
+      "durationSeconds": 1.92,
+      "generationSeconds": 21.32800000000043
+    },
+    {
+      "key": "game-letra-t-syllable-hunt",
+      "text": "Busca la sílaba ti y tócala.",
+      "filename": "game-letra-t-syllable-hunt.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 25.45299999999952
+    },
+    {
+      "key": "game-letra-u-syllable-hunt",
+      "text": "Busca la sílaba e y tócala.",
+      "filename": "game-letra-u-syllable-hunt.wav",
+      "durationSeconds": 2.0,
+      "generationSeconds": 21.686999999999898
+    },
+    {
+      "key": "game-letra-v-syllable-hunt",
+      "text": "Busca la sílaba vi y tócala.",
+      "filename": "game-letra-v-syllable-hunt.wav",
+      "durationSeconds": 2.48,
+      "generationSeconds": 26.53099999999995
+    },
+    {
+      "key": "game-letra-w-syllable-hunt",
+      "text": "Busca la sílaba wi y tócala.",
+      "filename": "game-letra-w-syllable-hunt.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 26.45299999999952
+    },
+    {
+      "key": "game-letra-x-syllable-hunt",
+      "text": "Busca la sílaba xi y tócala.",
+      "filename": "game-letra-x-syllable-hunt.wav",
+      "durationSeconds": 3.12,
+      "generationSeconds": 31.782000000000153
+    },
+    {
+      "key": "game-letra-y-syllable-hunt",
+      "text": "Busca la sílaba yi y tócala.",
+      "filename": "game-letra-y-syllable-hunt.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 24.98400000000038
+    },
+    {
+      "key": "game-letra-z-syllable-hunt",
+      "text": "Busca la sílaba zi y tócala.",
+      "filename": "game-letra-z-syllable-hunt.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 24.375
+    },
+    {
+      "key": "primary-intro",
+      "text": "En primero aprendemos con palabras, números y descubrimientos. Elige una materia y una misión. Vamos paso a paso.",
+      "filename": "primary-intro.wav",
+      "durationSeconds": 7.44,
+      "generationSeconds": 76.81299999999987
+    },
+    {
+      "key": "primary-choice",
+      "text": "Lee la pregunta con calma y elige una respuesta. Si te equivocas, mira la pista y vuelve a intentarlo.",
+      "filename": "primary-choice.wav",
+      "durationSeconds": 6.96,
+      "generationSeconds": 60.0
+    },
+    {
+      "key": "primary-reading",
+      "text": "Lee el texto despacio. Después responde a la pregunta. Puedes volver a leerlo tantas veces como quieras.",
+      "filename": "primary-reading.wav",
+      "durationSeconds": 6.48,
+      "generationSeconds": 53.1400000000001
+    },
+    {
+      "key": "primary-order",
+      "text": "Toca las piezas en orden para construir la respuesta. Si quieres cambiar algo, toca deshacer.",
+      "filename": "primary-order.wav",
+      "durationSeconds": 5.68,
+      "generationSeconds": 46.468999999999824
+    },
+    {
+      "key": "primary-write",
+      "text": "Escribe tu respuesta y toca comprobar. Revisa las letras antes de terminar.",
+      "filename": "primary-write.wav",
+      "durationSeconds": 4.8,
+      "generationSeconds": 47.09400000000005
+    },
+    {
+      "key": "primary-math",
+      "text": "Lee y resuelve el reto. Puedes contar con los dedos, usar objetos o hacer un dibujo. Después elige tu respuesta.",
+      "filename": "primary-math.wav",
+      "durationSeconds": 7.76,
+      "generationSeconds": 65.2349999999999
+    },
+    {
+      "key": "primary-complete",
+      "text": "¡Misión terminada! Has aprendido algo nuevo. Descansa un poquito o elige otra misión para seguir descubriendo.",
+      "filename": "primary-complete.wav",
+      "durationSeconds": 6.64,
+      "generationSeconds": 65.60899999999992
+    },
+    {
+      "key": "idea-palabras",
+      "text": "Cada sílaba es un golpe de voz.",
+      "filename": "idea-palabras.wav",
+      "durationSeconds": 2.08,
+      "generationSeconds": 21.23399999999674
+    },
+    {
+      "key": "idea-frases",
+      "text": "Las palabras ordenadas forman una frase.",
+      "filename": "idea-frases.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 21.281000000002678
+    },
+    {
+      "key": "idea-comprendo",
+      "text": "Releer ayuda a encontrar la respuesta.",
+      "filename": "idea-comprendo.wav",
+      "durationSeconds": 2.64,
+      "generationSeconds": 21.264999999999418
+    },
+    {
+      "key": "idea-puntuacion",
+      "text": "Mayúscula al empezar, punto al terminar.",
+      "filename": "idea-puntuacion.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 23.203999999997905
+    },
+    {
+      "key": "idea-describo",
+      "text": "Describir es contar cómo es algo.",
+      "filename": "idea-describo.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 23.60899999999674
+    },
+    {
+      "key": "idea-grupos",
+      "text": "Lee juntas las dos consonantes.",
+      "filename": "idea-grupos.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 22.593999999997322
+    },
+    {
+      "key": "idea-cuentos",
+      "text": "Los cuentos tienen principio y final.",
+      "filename": "idea-cuentos.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 23.25
+    },
+    {
+      "key": "idea-cotidianos",
+      "text": "Leer también nos ayuda a organizarnos.",
+      "filename": "idea-cotidianos.wav",
+      "durationSeconds": 2.24,
+      "generationSeconds": 22.422000000005937
+    },
+    {
+      "key": "idea-numeros",
+      "text": "Cuenta cada objeto una sola vez.",
+      "filename": "idea-numeros.wav",
+      "durationSeconds": 2.16,
+      "generationSeconds": 20.656000000002678
+    },
+    {
+      "key": "idea-sumas",
+      "text": "Sumar es juntar cantidades.",
+      "filename": "idea-sumas.wav",
+      "durationSeconds": 2.0,
+      "generationSeconds": 19.593999999997322
+    },
+    {
+      "key": "idea-restas",
+      "text": "Restar es quitar una cantidad.",
+      "filename": "idea-restas.wav",
+      "durationSeconds": 1.84,
+      "generationSeconds": 17.23399999999674
+    },
+    {
+      "key": "idea-decenas",
+      "text": "Diez unidades forman una decena.",
+      "filename": "idea-decenas.wav",
+      "durationSeconds": 2.08,
+      "generationSeconds": 18.437000000005355
+    },
+    {
+      "key": "idea-calculo",
+      "text": "Llegar al diez ayuda a calcular.",
+      "filename": "idea-calculo.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 19.937999999994645
+    },
+    {
+      "key": "idea-problemas",
+      "text": "Primero piensa si juntas o quitas.",
+      "filename": "idea-problemas.wav",
+      "durationSeconds": 2.32,
+      "generationSeconds": 20.437000000005355
+    },
+    {
+      "key": "idea-formas",
+      "text": "Observa los lados y las formas.",
+      "filename": "idea-formas.wav",
+      "durationSeconds": 2.16,
+      "generationSeconds": 20.062999999994645
+    },
+    {
+      "key": "idea-vida",
+      "text": "Los números ayudan en la vida diaria.",
+      "filename": "idea-vida.wav",
+      "durationSeconds": 2.24,
+      "generationSeconds": 19.297000000005937
+    },
+    {
+      "key": "idea-cuerpo",
+      "text": "Los sentidos nos ayudan a conocer.",
+      "filename": "idea-cuerpo.wav",
+      "durationSeconds": 2.16,
+      "generationSeconds": 18.905999999988126
+    },
+    {
+      "key": "idea-habitos",
+      "text": "Nos cuidamos con pequeños hábitos diarios.",
+      "filename": "idea-habitos.wav",
+      "durationSeconds": 2.56,
+      "generationSeconds": 21.51600000000326
+    },
+    {
+      "key": "idea-convivo",
+      "text": "Escuchar y pedir ayuda nos acerca.",
+      "filename": "idea-convivo.wav",
+      "durationSeconds": 2.4,
+      "generationSeconds": 20.25
+    },
+    {
+      "key": "idea-animales",
+      "text": "Cada animal tiene sus propias necesidades.",
+      "filename": "idea-animales.wav",
+      "durationSeconds": 2.72,
+      "generationSeconds": 23.514999999999418
+    },
+    {
+      "key": "idea-plantas",
+      "text": "Las plantas necesitan agua, aire y luz.",
+      "filename": "idea-plantas.wav",
+      "durationSeconds": 3.12,
+      "generationSeconds": 26.625
+    },
+    {
+      "key": "idea-materiales",
+      "text": "Los materiales tienen propiedades diferentes.",
+      "filename": "idea-materiales.wav",
+      "durationSeconds": 2.64,
+      "generationSeconds": 22.406000000002678
+    },
+    {
+      "key": "idea-entorno",
+      "text": "Cuidar lo compartido ayuda a todos.",
+      "filename": "idea-entorno.wav",
+      "durationSeconds": 2.24,
+      "generationSeconds": 19.531999999991967
+    },
+    {
+      "key": "idea-tiempo",
+      "text": "Observar y comparar permite descubrir cambios.",
+      "filename": "idea-tiempo.wav",
+      "durationSeconds": 3.36,
+      "generationSeconds": 27.437000000005355
+    },
+    {
+      "key": "primary-quantity",
+      "text": "Pon o quita fichas para resolver el reto. Después comprueba.",
+      "filename": "primary-quantity.wav",
+      "durationSeconds": 3.6,
+      "generationSeconds": 29.671999999991385
+    },
+    {
+      "key": "primary-place",
+      "text": "Construye el número con decenas y unidades. Después comprueba.",
+      "filename": "primary-place.wav",
+      "durationSeconds": 4.72,
+      "generationSeconds": 35.312000000005355
+    },
+    {
+      "key": "primary-syllables",
+      "text": "Di la palabra despacio. Toca una palmada por cada sílaba.",
+      "filename": "primary-syllables.wav",
+      "durationSeconds": 3.92,
+      "generationSeconds": 30.125
+    },
+    {
+      "key": "primary-story",
+      "text": "Elige quién aparece, dónde está y qué sucede. Inventa tu cuento.",
+      "filename": "primary-story.wav",
+      "durationSeconds": 5.2,
+      "generationSeconds": 38.21899999999732
+    },
+    {
+      "key": "word-casa",
+      "text": "casa",
+      "filename": "word-casa.wav",
+      "durationSeconds": 0.4,
+      "generationSeconds": 7.703000000008615
+    },
+    {
+      "key": "word-sopa",
+      "text": "sopa",
+      "filename": "word-sopa.wav",
+      "durationSeconds": 0.64,
+      "generationSeconds": 8.281999999991967
+    },
+    {
+      "key": "word-pelota",
+      "text": "pelota",
+      "filename": "word-pelota.wav",
+      "durationSeconds": 0.56,
+      "generationSeconds": 7.797000000005937
+    },
+    {
+      "key": "word-tomate",
+      "text": "tomate",
+      "filename": "word-tomate.wav",
+      "durationSeconds": 0.56,
+      "generationSeconds": 7.562999999994645
+    },
+    {
+      "key": "word-camisa",
+      "text": "camisa",
+      "filename": "word-camisa.wav",
+      "durationSeconds": 0.64,
+      "generationSeconds": 8.656000000002678
+    },
+    {
+      "key": "word-zapato",
+      "text": "zapato",
+      "filename": "word-zapato.wav",
+      "durationSeconds": 0.72,
+      "generationSeconds": 9.264999999999418
+    },
+    {
+      "key": "math-workshop",
+      "text": "Vamos a jugar con las mates. Piensa, prueba y cuenta cómo lo has hecho.",
+      "filename": "math-workshop.wav",
+      "durationSeconds": 4.48,
+      "generationSeconds": 36.78100000000268
+    },
+    {
+      "key": "math-line",
+      "text": "Empieza en el número marcado. Da saltos de uno en uno y comprueba.",
+      "filename": "math-line.wav",
+      "durationSeconds": 5.04,
+      "generationSeconds": 38.812999999994645
+    },
+    {
+      "key": "math-split",
+      "text": "Reparte las fichas en dos grupos. Busca dos maneras diferentes.",
+      "filename": "math-split.wav",
+      "durationSeconds": 4.24,
+      "generationSeconds": 33.35900000001129
+    },
+    {
+      "key": "math-reflect",
+      "text": "¿Cómo lo has pensado? Cuéntaselo a alguien. Puedes usar objetos o dibujarlo.",
+      "filename": "math-reflect.wav",
+      "durationSeconds": 6.400041666666667,
+      "generationSeconds": 46.155999999988126
+    },
+    {
+      "key": "primary-workshop",
+      "text": "Mira, prueba y descubre. Después, cuenta cómo lo has hecho. Vamos paso a paso.",
+      "filename": "primary-workshop.wav",
+      "durationSeconds": 5.84,
+      "generationSeconds": 42.312999999994645
+    },
+    {
+      "key": "quest-lengua",
+      "text": "Ayuda al zorro a construir su biblioteca. Cada reto añade una parte.",
+      "filename": "quest-lengua.wav",
+      "durationSeconds": 4.48,
+      "generationSeconds": 32.73399999999674
+    },
+    {
+      "key": "quest-matematicas",
+      "text": "Ayuda al robot a construir su puente. Cada reto añade una parte.",
+      "filename": "quest-matematicas.wav",
+      "durationSeconds": 5.36,
+      "generationSeconds": 38.14100000000326
+    },
+    {
+      "key": "quest-medio",
+      "text": "Ayuda a la rana a crear su jardín. Cada reto añade una parte.",
+      "filename": "quest-medio.wav",
+      "durationSeconds": 4.64,
+      "generationSeconds": 32.375
+    }
+  ]
+}

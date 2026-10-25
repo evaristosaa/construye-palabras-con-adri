@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { characters, rewards } from "../data/learningData";
-import { awardGameCompletion, awardLevelCompletion, defaultProgress, normalizeProgress } from "./progressModel";
+import { awardGameWithMissionCompletion, awardLevelCompletion, awardPrimaryCompletion, recordPrimaryAttempt, defaultProgress, normalizeProgress } from "./progressModel";
+import { primaryMissions } from "../data/primaryData.js";
 
 const STORAGE_KEY = "adri-reading-progress-v1";
 
@@ -31,11 +32,19 @@ export function useProgress() {
   );
 
   function completeGame(gameId, { stars = 1 } = {}) {
-    setProgress((current) => awardGameCompletion(current, gameId, { stars }));
+    setProgress((current) => awardGameWithMissionCompletion(current, gameId, primaryMissions, { stars }));
   }
 
   function completeLevel(levelId) {
     setProgress((current) => awardLevelCompletion(current, levelId));
+  }
+
+  function completePrimaryMission(missionId, activityIds) {
+    setProgress(current => awardPrimaryCompletion(current, missionId, activityIds));
+  }
+
+  function attemptPrimaryActivity(activityId, correct, options) {
+    setProgress(current => recordPrimaryAttempt(current, activityId, correct, options));
   }
 
   function updateSettings(settings) {
@@ -52,6 +61,8 @@ export function useProgress() {
     completedRewards,
     completeGame,
     completeLevel,
+    completePrimaryMission,
+    attemptPrimaryActivity,
     updateSettings,
     resetProgress,
   };

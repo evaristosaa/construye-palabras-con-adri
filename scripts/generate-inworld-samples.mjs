@@ -3,12 +3,12 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const apiUrl = "https://api.inworld.ai/voices/v1/voices:design";
-const outputDirectory = path.resolve("tmp", "inworld-voice-samples");
+const outputDirectory = path.resolve(process.env.ADRI_VOICE_SAMPLES_DIR || "tmp/inworld-voice-samples");
 
 export function buildVoiceDesignRequest() {
   return {
     designPrompt:
-      "A cheerful Spanish-speaking boy, about eight years old, natural and warm, with clear pronunciation for early readers. Friendly, playful and encouraging.",
+      "A natural Spanish-speaking boy, about six years old, from Spain, speaking with a native Castilian Spanish accent. A believable young child's voice with a light, soft tone, relaxed conversational rhythm, gentle warmth and spontaneous, subtle expression. Clear pronunciation for early readers, with natural pauses. He sounds like a real child talking to a friend, never like an adult performing a cartoon character. Avoid exaggerated high pitch, squeaky delivery, theatrical enthusiasm, singing or a robotic cadence.",
     previewText:
       "Soy Adri. ¿Te animas a construir palabras conmigo? ¡Vamos a jugar!",
     langCode: "ES_ES",

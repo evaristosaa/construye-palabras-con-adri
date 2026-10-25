@@ -1,5 +1,6 @@
 import { resultAudioKeys } from "../data/adriAudioCatalog.js";
 import { retryFeedback, successFeedback } from "../data/voiceScripts.js";
+import { localVoiceFiles } from "../data/localVoiceFiles.js";
 
 let activeRecording = null;
 
@@ -40,6 +41,8 @@ function pickAdriVoice(preferredVoiceURI) {
 }
 
 export function getRecordedAudioSrc(audioKey, baseUrl = "/") {
+  if (localVoiceFiles[audioKey]) return `${baseUrl}audio/adri-local/${localVoiceFiles[audioKey]}`;
+  if (audioKey === "qwen-sevilla-preview") return `${baseUrl}audio/adri-qwen/preview.wav`;
   return `${baseUrl}audio/adri/${audioKey}.mp3`;
 }
 

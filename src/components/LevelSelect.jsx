@@ -21,6 +21,7 @@ export default function LevelSelect({ progress }) {
       <Adri variant="detective" bubble="Vamos letra a letra" size="side" />
       <div className="mission-map alphabet-board">
         <h2>Abecedario</h2>
+        <Link className="primary-text-link primary-review-back" to="/primaria">← Volver a 1.º de Primaria</Link>
         {modules.map((module) => {
           const completed = progress.completedLevels.includes(module.id);
           const isNext = module.id === recommendedId && !completed;

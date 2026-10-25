@@ -1,4 +1,5 @@
 import { levelsById } from "./learningData.js";
+import { primaryVoiceLines } from "./primaryVoiceLines.js";
 import {
   collectionGuide,
   homeGreeting,
@@ -13,7 +14,7 @@ import {
 
 export const screenAudioKeys = Object.freeze({
   home: "screen-home",
-  missions: "",
+  missions: "screen-missions",
   collection: "screen-collection",
   progress: "screen-progress",
   settings: "screen-settings",
@@ -27,7 +28,6 @@ export const resultAudioKeys = Object.freeze({
 });
 
 export function gameAudioKey(gameId) {
-  if (gameId.endsWith("-syllable-hunt")) return "";
   return `game-${gameId}`;
 }
 
@@ -37,6 +37,7 @@ function recordedLine(key, text) {
 
 const screenVoiceLines = [
   recordedLine(screenAudioKeys.home, homeGreeting),
+  recordedLine(screenAudioKeys.missions, missionInstructions),
   recordedLine(screenAudioKeys.collection, collectionGuide),
   recordedLine(screenAudioKeys.progress, progressGuide),
   recordedLine(screenAudioKeys.settings, settingsGuide),
@@ -58,4 +59,4 @@ const gameVoiceLines = Object.values(levelsById).flatMap((level) =>
     .filter(Boolean)
 );
 
-export const voiceLines = [...screenVoiceLines, ...resultVoiceLines, ...gameVoiceLines];
+export const voiceLines = [...screenVoiceLines, ...resultVoiceLines, ...gameVoiceLines, ...primaryVoiceLines];
