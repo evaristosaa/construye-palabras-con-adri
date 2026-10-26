@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { classmates } from "../data/classmates.js";
 import { blankSnackSession, cleanSnackSession, changeSnackPlate, checkSnackStep, snackHint, snackStory, snackCare, snackItems, snackStages, snackId, snackRewardId } from "../data/snackAdventure.js";
-import { snackInstructions } from "../data/snackAdventure.js";
+import { snackInstructions, resumeSnackAfterStory } from "../data/snackAdventure.js";
 import { FriendAvatar } from "./Classmates";
 import { SnackIcon, PicnicScene } from "./SnackArt";
 import NarrationButton from "./NarrationButton";
@@ -14,12 +14,15 @@ export default function SnackAdventure({ progress, completeGame, attemptPrimaryA
   const [message, setMessage] = useState("");
   const [narrating, setNarrating] = useState(false);
   const [storyIndex,setStoryIndex]=useState(0);
+  const [showStory,setShowStory]=useState(true);
   const heading = useRef(null), locked = useRef(false);
-  const stage = snackStages[session.stage], story = session.stage<3 ? snackStory[storyIndex] : null;
+  const stage = snackStages[session.stage], story = showStory ? snackStory[storyIndex] : null;
   const solved = session.solved.includes(stage);
   useEffect(() => { saveSnackSession(session); }, [session, saveSnackSession]);
-  useEffect(() => { heading.current?.focus({ preventScroll: true }); setMessage(""); setNarrating(false); locked.current = false; }, [stage]);
+  useEffect(() => { heading.current?.focus({ preventScroll: true }); setMessage(""); setNarrating(false); locked.current = false; }, [stage,showStory]);
   function change(update) { setMessage(""); setSession(current => ({ ...current, ...update })); }
+  function finishStory() { setSession(current=>resumeSnackAfterStory(current)); setShowStory(false); }
+  function replay() { setSession(blankSnackSession()); setStoryIndex(0); setShowStory(true); }
   function next() { change({ stage: Math.min(6, session.stage + 1) }); }
   function help() {
     const level = Math.min(3, (session.help[stage] || 0) + 1);
@@ -50,7 +53,7 @@ export default function SnackAdventure({ progress, completeGame, attemptPrimaryA
     <div className="snack-main comic-panel">
       {story ? <>
         <PicnicScene scene={story.scene}/>
-        <div className="snack-story-copy"><p className="eyebrow">Nuestro cuento</p><h1 ref={heading} tabIndex={-1}>Una merienda en el parque</h1><p className={`snack-read-text ${narrating?"is-narrating":""}`}>{story.text}</p><SnackStoryPlayer progress={progress} onSentence={setStoryIndex} onPlaying={setNarrating} onFinish={()=>change({stage:3})} onListen={()=>setSession(current=>({...current,listened:true}))}/></div>
+        <div className="snack-story-copy"><p className="eyebrow">Nuestro cuento</p><h1 ref={heading} tabIndex={-1}>Una merienda en el parque</h1><p className={`snack-read-text ${narrating?"is-narrating":""}`}>{story.text}</p><SnackStoryPlayer progress={progress} onSentence={setStoryIndex} onPlaying={setNarrating} onFinish={finishStory} onListen={()=>setSession(current=>({...current,listened:true}))}/></div>
       </> : stage === "final" ? <>
         <PicnicScene scene="picnic" complete/>
         <div className="snack-finish-copy"><p className="eyebrow">Lo hemos hecho juntos</p><h1 ref={heading} tabIndex={-1}>{titles.final}</h1><p>Leímos la nota, repartimos y preparamos la mesa.</p><NarrationButton audioKey={cueKey} text={cueText} progress={progress} label="Escuchar"/><p className="snack-offscreen">Ahora puedes repartir una merienda con alguien de casa.</p></div>
@@ -63,7 +66,7 @@ export default function SnackAdventure({ progress, completeGame, attemptPrimaryA
       </>}
     </div>
     <footer className="snack-footer">
-      {story ? <button className="primary-main-button" onClick={()=>change({stage:3})}>¡Empezar a jugar! →</button> : stage === "final" ? <><button className="primary-secondary-button" onClick={()=>setSession(blankSnackSession())}>Volver a jugar</button><Link className="primary-main-button" to="/">Terminar por hoy</Link></> : <><button className="primary-secondary-button snack-hint-button" disabled={solved} onClick={help}>💡 Una pista</button>{solved?<button className="primary-main-button" onClick={next}>{stage==="cuidado"?"Ver la merienda →":"Seguir →"}</button>:<button className="primary-main-button" disabled={stage==="cesta"?!session.basket.length:stage==="reparto"?!session.plates.some(Boolean):session.order.length!==3} onClick={check}>Comprobar</button>}</>}
+      {story ? <button className="primary-main-button" onClick={finishStory}>Ir a los retos →</button> : stage === "final" ? <><button className="primary-secondary-button" onClick={replay}>Volver a jugar</button><Link className="primary-main-button" to="/">Terminar por hoy</Link></> : <><button className="primary-secondary-button snack-hint-button" disabled={solved} onClick={help}>💡 Una pista</button>{solved?<button className="primary-main-button" onClick={next}>{stage==="cuidado"?"Ver la merienda →":"Seguir →"}</button>:<button className="primary-main-button" disabled={stage==="cesta"?!session.basket.length:stage==="reparto"?!session.plates.some(Boolean):session.order.length!==3} onClick={check}>Comprobar</button>}</>}
     </footer>
   </section>;
 }

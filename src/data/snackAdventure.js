@@ -55,6 +55,11 @@ export function changeSnackPlate(plates, index, delta) {
   if (delta < 0 && plates[index] === 0 || delta > 0 && plates.reduce((a,b)=>a+b,0) === 6) return plates;
   return plates.map((n,i) => i === index ? n + delta : n);
 }
+export function resumeSnackAfterStory(raw) {
+  const saved = cleanSnackSession(raw);
+  if (saved.solved.length === snackStepIds.length) return { ...blankSnackSession(), stage: 3, listened: saved.listened };
+  return { ...saved, stage: Math.max(3, saved.stage) };
+}
 export function snackHint(step, level, session) {
   const hints = {
     cesta: ["Vuelve a mirar la nota: dice qué llevar y cuánto.", "Cuenta las manzanas y busca el agua. Toca lo que sobra para quitarlo.", "Por ejemplo, si una nota pidiera un plátano, pondríamos un plátano. Ahora mira nuestra nota."],

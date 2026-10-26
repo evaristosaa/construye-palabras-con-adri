@@ -2,6 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {blankSnackSession,cleanSnackSession,checkSnackStep,changeSnackPlate,snackRewardId,snackStepIds,snackHint,snackVoiceLines} from '../src/data/snackAdventure.js';
 import {normalizeProgress,awardGameCompletion} from '../src/hooks/progressModel.js';
+import {resumeSnackAfterStory} from '../src/data/snackAdventure.js';
+
+test('after the entry story, resume the saved challenge and its work, or replay a completed adventure',()=>{
+ const initial=blankSnackSession();assert.equal(resumeSnackAfterStory(initial).stage,3);assert.equal(initial.stage,0);
+ const saved={...initial,stage:4,basket:['apple','apple','water'],solved:['cesta'],plates:[2,1,0],help:{reparto:2}};
+ const resumed=resumeSnackAfterStory(saved);
+ assert.equal(resumed.stage,4);assert.deepEqual(resumed.plates,[2,1,0]);assert.deepEqual(resumed.solved,['cesta']);assert.equal(resumed.help.reparto,2);
+ const completed={...saved,stage:6,plates:[2,2,2],order:['wash','table','eat'],solved:[...snackStepIds]};
+ assert.deepEqual(resumeSnackAfterStory(completed),{...blankSnackSession(),stage:3});
+ assert.equal(completed.stage,6);assert.deepEqual(completed.solved,snackStepIds);
+});
 
 test('the shared project requires the exact note, fair sharing and the meaningful order',()=>{
  const s=blankSnackSession();s.basket=['water','apple','apple'];s.plates=[2,2,2];s.order=['wash','table','eat'];
