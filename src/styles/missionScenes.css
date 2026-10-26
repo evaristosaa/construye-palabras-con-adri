@@ -4,10 +4,10 @@
 .screen-layout .primary-companion {background:linear-gradient(#f8fcffdd,#f8fcfff0),var(--mission-world) center/cover;border-color:var(--subject);border-radius:20px;}
 .screen-layout .primary-companion .construction-scene {border-radius:16px;}
 .mission-stage {display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;background:var(--mission-world) center/cover;border-color:var(--subject);border-radius:24px;padding:12px;gap:10px;}
-.mission-scenery {position:relative;flex:1 1 150px;min-height:100px;max-height:250px;display:flex;align-items:flex-start;justify-content:space-between;overflow:hidden;}
+.mission-scenery {position:relative;flex:1 1 150px;min-height:0;max-height:250px;display:flex;align-items:flex-start;justify-content:space-between;overflow:hidden;}
 .mission-scenery>span {align-self:flex-start;background:#fff6d8ed;border:2px solid #9a712c;border-radius:16px;padding:8px 14px;color:#60491e;font-size:clamp(.9rem,1.5vw,1.2rem);font-weight:900;max-width:50%;box-shadow:0 3px 0 #694c2230;}
 .mission-scenery>img {height:100%;max-height:250px;width:55%;object-fit:contain;object-position:center bottom;align-self:flex-end;filter:drop-shadow(0 3px 2px #203a3a40);}
-.screen-layout .primary-exercise.mission-task-card {flex:0 1 auto;width:100%;min-height:0;background:#fffdf4f5;border:2px solid #d7bb80;border-radius:22px;padding:clamp(14px,2.3vh,24px);gap:12px;box-shadow:0 5px 0 #223f4b30;}
+.screen-layout .primary-exercise.mission-task-card {flex:0 0 auto;width:100%;min-height:0;background:#fffdf4f5;border:2px solid #d7bb80;border-radius:22px;padding:clamp(14px,2.3vh,24px);gap:12px;box-shadow:0 5px 0 #223f4b30;}
 .mission-task-card .primary-answer {background:#fff5d9;border-color:#d5b979;box-shadow:0 3px 0 #80673d20;}
 .mission-task-card .primary-answer:nth-child(even) {background:#e7f5ec;border-color:#87b49c;}
 .mission-task-card .primary-answer.is-correct {background:#d4f3cc;border-color:#237739;}
