@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { offlinePackagePlugin } from "./scripts/build-offline-package.mjs";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), offlinePackagePlugin()],
   server: {
     watch: {
       // Reiniciar Vite tras conectar un lote de audios nuevos para actualizar su índice público.

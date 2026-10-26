@@ -6,6 +6,7 @@ export const defaultProgress = {
   completedGames: [],
   primaryCompletedLevels: [],
   primaryAttempts: {},
+  adventures: {},
   sound: true,
   voice: true,
   streak: 1,
@@ -38,6 +39,7 @@ export function normalizeProgress(saved = {}) {
     completedLevels,
     primaryCompletedLevels: uniqueIds(saved.primaryCompletedLevels),
     primaryAttempts: saved.primaryAttempts && typeof saved.primaryAttempts === "object" && !Array.isArray(saved.primaryAttempts) ? saved.primaryAttempts : {},
+    adventures: saved.adventures && typeof saved.adventures === "object" && !Array.isArray(saved.adventures) ? saved.adventures : {},
     pieces: completedGames.length,
   };
 }

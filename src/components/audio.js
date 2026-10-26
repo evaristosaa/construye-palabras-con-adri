@@ -67,6 +67,10 @@ function cancelSpeech() {
   }
 }
 
+export function stopSpeaking(recording) {
+  if (!recording || activeRecording === recording) cancelSpeech();
+}
+
 function speakWithBrowser(text, preferredVoiceURI, options) {
   if (!("speechSynthesis" in window)) return;
 
@@ -98,22 +102,32 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
       if (fallbackPlayed || activeRecording !== recording) return;
       fallbackPlayed = true;
       activeRecording = null;
+      options.onPlaybackChange?.("error");
+      if (options.recordingOnly) return;
       speakWithBrowser(text, preferredVoiceURI, options);
     };
     recording.onerror = fallback;
+    recording.onplaying = () => options.onPlaybackChange?.("playing");
+    recording.onpause = () => options.onPlaybackChange?.("paused");
+    recording.onended = () => {
+      if (activeRecording === recording) activeRecording = null;
+      options.onPlaybackChange?.("ended");
+    };
     activeRecording = recording;
     const playing = recording.play();
     if (playing?.catch) playing.catch(error => {
       // A browser autoplay restriction needs a tap, not a different synthetic voice.
       if (error?.name === "NotAllowedError") {
         if (activeRecording === recording) activeRecording = null;
+        options.onPlaybackChange?.("blocked");
         return;
       }
       fallback();
     });
-    return;
+    return recording;
   }
 
+  if (options.recordingOnly) { options.onPlaybackChange?.("error"); return; }
   speakWithBrowser(text, preferredVoiceURI, options);
 }
 

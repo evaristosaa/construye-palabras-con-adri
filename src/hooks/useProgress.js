@@ -1,24 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { characters, rewards } from "../data/learningData";
 import { awardGameWithMissionCompletion, awardLevelCompletion, awardPrimaryCompletion, recordPrimaryAttempt, defaultProgress, normalizeProgress } from "./progressModel";
 import { primaryMissions } from "../data/primaryData.js";
-
-const STORAGE_KEY = "adri-reading-progress-v1";
+import { snackId, cleanSnackSession } from "../data/snackAdventure.js";
+import { loadStoredProgress, saveStoredProgress, clearStoredProgress, validateProgressSnapshot } from "../storage/progressStorage.js";
 
 function readProgress() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? normalizeProgress(JSON.parse(saved)) : defaultProgress;
+    return loadStoredProgress(localStorage);
   } catch {
-    return defaultProgress;
+    return { progress: normalizeProgress(defaultProgress), issue: "El navegador no permite guardar. Puedes exportar una copia desde Familia." };
   }
 }
 
 export function useProgress() {
-  const [progress, setProgress] = useState(readProgress);
+  const [initial] = useState(readProgress);
+  const [progress, setProgress] = useState(initial.progress);
+  const [storageIssue, setStorageIssue] = useState(initial.issue || "");
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    try { const result = saveStoredProgress(localStorage, progress); if (!result.ok) setStorageIssue(result.issue); }
+    catch { setStorageIssue("El navegador no permite guardar. Exporta una copia desde Familia."); }
   }, [progress]);
 
   const unlockedCharacters = useMemo(
@@ -52,8 +54,18 @@ export function useProgress() {
   }
 
   function resetProgress() {
-    setProgress(defaultProgress);
+    let issue="";
+    try { clearStoredProgress(localStorage); } catch { issue="El navegador no permite borrar los datos guardados. El reinicio solo afecta a esta sesión."; }
+    setProgress(normalizeProgress(defaultProgress));
+    setStorageIssue(issue);
   }
+
+  const saveSnackSession = useCallback(session => {
+    const cleaned = cleanSnackSession(session);
+    setProgress(current => JSON.stringify(current.adventures?.[snackId]) === JSON.stringify(cleaned) ? current : ({ ...current, adventures: { ...current.adventures, [snackId]: cleaned } }));
+  }, []);
+
+  function restoreProgress(snapshot) { setProgress(validateProgressSnapshot(snapshot)); setStorageIssue(""); }
 
   return {
     progress,
@@ -65,5 +77,8 @@ export function useProgress() {
     attemptPrimaryActivity,
     updateSettings,
     resetProgress,
+    restoreProgress,
+    saveSnackSession,
+    storageIssue,
   };
 }

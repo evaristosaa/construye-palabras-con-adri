@@ -109,6 +109,14 @@ Opción con GitHub Actions:
 2. Sube el proyecto a GitHub.
 3. Configura Pages para publicar la carpeta generada por tu flujo de build.
 
-## Nota visual
+## Plan y primera aventura
+
+El [plan de mejoras](docs/plan-mejoras-primaria.md) deriva de la [revisión de aplicaciones educativas](docs/revision-apps-primaria-2026-10-26.md). La primera entrega incluye **La merienda de Adri, Juan y Cayetana**, accesible desde Inicio: un minicuento narrado, lectura de una nota, reparto de cantidades y una secuencia de higiene.
+
+La partida continúa después de recargar. Familia → Datos permite exportar y recuperar una copia del progreso. En producción, Familia → Sin conexión descarga Inicio y La merienda; el resto de materias necesita conexión. Las actualizaciones esperan a que se cierre la app o se apliquen explícitamente desde Familia.
+
+Verificación: `node --test tests/*.test.mjs`, `npm run build` y `node scripts/check-voice-assets.mjs URL_DE_LA_APP`. El build genera el manifiesto de recursos offline con sus tamaños y huellas; no se deben editar manualmente los archivos de `dist`.
+
+## Recursos visuales
 
 Las imágenes proporcionadas se usan como inspiración y como activo local de Adri. Las variantes del personaje se construyen con el mismo retrato y accesorios visuales generados con CSS para mantener una app ligera y estática.

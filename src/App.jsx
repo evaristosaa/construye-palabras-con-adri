@@ -10,6 +10,7 @@ import PrimaryGame, { PrimaryAdventure } from "./components/PrimaryGame";
 import StoryStudio from "./components/StoryStudio";
 import MathWorkshop from "./components/MathWorkshop";
 import SubjectWorkshop from "./components/SubjectWorkshop";
+import SnackAdventure from "./components/SnackAdventure";
 import { PageShell } from "./components/Layout";
 import { useProgress } from "./hooks/useProgress";
 
@@ -18,7 +19,7 @@ export default function App() {
   const { progress, updateSettings } = progressApi;
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || ["/primaria/aventura", "/primaria/crea", "/primaria/mates"].includes(location.pathname);
+  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda"].includes(location.pathname);
   const isPrimaryHub = location.pathname === "/primaria";
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
@@ -27,6 +28,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
+        <Route path="/primaria/merienda" element={<SnackAdventure progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity} saveSnackSession={progressApi.saveSnackSession}/>} />
         <Route path="/primaria/crea" element={<StoryStudio progress={progress}/>} />
         <Route path="/primaria/taller/:subjectId" element={<SubjectWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />
         <Route path="/primaria/mates" element={<MathWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />
@@ -54,6 +56,8 @@ export default function App() {
               progress={progress}
               updateSettings={updateSettings}
               resetProgress={progressApi.resetProgress}
+              restoreProgress={progressApi.restoreProgress}
+              storageIssue={progressApi.storageIssue}
             />
           }
         />

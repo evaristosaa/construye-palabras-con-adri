@@ -21,8 +21,9 @@ export default function PrimaryHub({ progress }) {
   return <section className={`primary-hub comic-panel screen-hub ${subject ? `subject-${subject.id}` : ""}`}>
     <header className="screen-heading"><div><p className="eyebrow">1.º de Primaria</p><h1>{subject ? `${subject.icon} ${subject.title}` : "¿A qué jugamos?"}</h1></div><VoiceGuide text={project?project.voice:primaryVoiceTexts["primary-intro"]} audioKey={project?project.audioKey:"primary-intro"} enabled={progress.voice} compact /></header>
     {!subject ? <>
-      <Link to="/primaria/aventura" className="primary-main-button adventure-start friends-adventure" aria-label="Jugar con Adri, Juan y Cayetana. Tres retos, uno de cada materia"><FriendTeam/><span>▶ Jugar con amigos<small>3 retos · uno de cada materia</small></span></Link>
+      <Link to="/primaria/merienda" className="primary-main-button adventure-start friends-adventure" aria-label="Preparar la merienda con Adri, Juan y Cayetana"><FriendTeam/><span>▶ La merienda<small>Cuento y tres retos</small></span></Link>
       <nav className="subject-picker world-picker" aria-label="Asignaturas">{primarySubjects.map(item => <button className={`subject-choice world-choice subject-${item.id}`} key={item.id} onClick={() => setParams({ materia: item.id })}><WorldArt subject={item.id}/><span className="world-choice-copy"><strong>{item.title}</strong><small>{learningWorlds[item.id].title}</small></span><b aria-hidden="true">→</b></button>)}</nav>
+      <Link className="primary-text-link mixed-practice-link" to="/primaria/aventura">Retos de las tres materias →</Link>
     </> : <>
       <div className="subject-back-row"><button className="primary-text-link subject-back" onClick={() => setParams({})}>← Materias</button><Link className="primary-text-link story-link" to={subject.id === "matematicas" ? "/primaria/mates" : `/primaria/taller/${subject.id}`}>🎲 Juegos variados</Link></div>
       <article className="mission-preview illustrated-mission" key={mission.id}>

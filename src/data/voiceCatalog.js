@@ -4,8 +4,10 @@ import { wordVoiceLines } from "./primaryPlayDesign.js";
 import { mathWorkshopVoices } from "./mathWorkshop.js";
 import { subjectWorkshopVoices } from "./subjectWorkshop.js";
 import { constructionVoices } from "./missionStories.js";
+import { snackVoiceLines } from "./snackAdventure.js";
 
 export const voiceCatalog = Object.freeze([
   ...voiceLines, ...lessonVoiceLines, ...wordVoiceLines,
   ...mathWorkshopVoices, ...subjectWorkshopVoices, ...constructionVoices,
+  ...snackVoiceLines,
 ]);

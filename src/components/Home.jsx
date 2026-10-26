@@ -26,8 +26,8 @@ export default function Home({ progress }) {
             <span>con ADRI</span>
           </div>
           <nav className="home-actions" aria-label="Menu inicial">
-            <Link className="big-action green" to="/primaria">
-              Misiones de Primaria
+            <Link className="big-action green" to="/primaria/merienda">
+              ¡Vamos a jugar!
             </Link>
             <Link className="big-action yellow" to="/logros">
               Mis logros
@@ -36,7 +36,7 @@ export default function Home({ progress }) {
               Familia
             </Link>
           </nav>
-          <Link className="primary-home-review" to="/niveles">También puedo repasar el abecedario →</Link>
+          <div className="home-review-links"><Link className="primary-home-review" to="/primaria">Elegir materia</Link><Link className="primary-home-review" to="/niveles">Abecedario →</Link></div>
         </div>
       </div>
     </section>

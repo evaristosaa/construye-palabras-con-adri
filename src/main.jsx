@@ -6,6 +6,7 @@ import "./styles/app.css";
 import "./styles/primary.css";
 import "./styles/learningWorlds.css";
 import "./styles/classmates.css";
+import "./styles/snackAdventure.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +18,6 @@ createRoot(document.getElementById("root")).render(
 
 if ("serviceWorker" in navigator && import.meta.env.PROD) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js?v=3`).catch(() => {});
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, { updateViaCache: "none" }).catch(() => {});
   });
 }

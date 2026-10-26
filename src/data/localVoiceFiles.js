@@ -273,5 +273,12 @@ export const localVoiceFiles = Object.freeze({
   "primary-workshop": "adri-v1-primary-workshop.wav",
   "quest-lengua": "adri-v1-quest-lengua.wav",
   "quest-matematicas": "adri-v1-quest-matematicas.wav",
-  "quest-medio": "adri-v1-quest-medio.wav"
+  "quest-medio": "adri-v1-quest-medio.wav",
+  "snack-story-1": "adri-v1-snack-story-1.wav",
+  "snack-story-2": "adri-v1-snack-story-2.wav",
+  "snack-story-3": "adri-v1-snack-story-3.wav",
+  "snack-cesta": "adri-v1-snack-cesta.wav",
+  "snack-reparto": "adri-v1-snack-reparto.wav",
+  "snack-cuidado": "adri-v1-snack-cuidado.wav",
+  "snack-final": "adri-v1-snack-final.wav"
 });
