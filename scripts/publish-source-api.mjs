@@ -4,7 +4,7 @@ import { join, relative, sep } from "node:path";
 
 const repo = "construye-palabras-con-adri";
 const branch = "main";
-const ignored = new Set(["node_modules", "dist", ".git", "tmp"]);
+const ignored = new Set(["node_modules", "dist", ".git", "tmp", ".venv-voice", ".voice-cache", "__pycache__"]);
 
 function runGh(args, input) {
   return execFileSync("gh", args, {
@@ -23,7 +23,7 @@ function api(path, method = "GET", body = null) {
 
 function listFiles(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    if (ignored.has(entry.name)) return [];
+    if (ignored.has(entry.name) || entry.name === ".env" || entry.name.startsWith(".env.")) return [];
     const fullPath = join(dir, entry.name);
     return entry.isDirectory() ? listFiles(fullPath) : [fullPath];
   });

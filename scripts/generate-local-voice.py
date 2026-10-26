@@ -48,6 +48,8 @@ try:
     previous = json.loads(manifest_path.read_text(encoding="utf-8"))
 except FileNotFoundError:
     previous = {}
+if previous.get("voiceProfile") == "adri-approved-v1":
+    raise SystemExit("The app uses the approved real-reference voice. Use generate-approved-voice.py; do not replace it with the legacy synthetic reference.")
 if previous.get("model") == args.model and previous.get("referenceSha256") == fingerprint:
     completed = {line["key"]: line for line in previous.get("files", [])}
 else:

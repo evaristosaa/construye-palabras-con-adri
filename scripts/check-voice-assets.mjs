@@ -1,13 +1,7 @@
-import { voiceLines as coreVoiceLines } from '../src/data/adriAudioCatalog.js';
-import { lessonVoiceLines } from '../src/data/primaryLessonSupport.js';
-import { wordVoiceLines } from '../src/data/primaryPlayDesign.js';
-import { mathWorkshopVoices } from '../src/data/mathWorkshop.js';
-import { subjectWorkshopVoices } from '../src/data/subjectWorkshop.js';
-import { constructionVoices } from '../src/data/missionStories.js';
+import { voiceCatalog as voiceLines } from '../src/data/voiceCatalog.js';
 import { getRecordedAudioSrc } from '../src/components/audio.js';
 
 const base = process.argv[2] || 'http://127.0.0.1:5173/construye-palabras-con-adri/';
-const voiceLines = [...coreVoiceLines,...lessonVoiceLines,...wordVoiceLines,...mathWorkshopVoices,...subjectWorkshopVoices,...constructionVoices];
 let cursor = 0;
 const failures = [];
 async function worker() {

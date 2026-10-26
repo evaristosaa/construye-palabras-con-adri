@@ -1,5 +1,7 @@
 # Voz local de Adri
 
+Estado actual, 26 de octubre de 2026: las 275 locuciones locales utilizan la referencia real aprobada y el perfil `adri-approved-v1`. La intro mantiene la misma toma y el mismo ritmo aceptados. Ver [proceso completo y comprobaciones](voz-adri-completa.md). Las comparaciones y comandos del generador anterior que siguen se conservan como histórico; ese generador bloquea la sustitución del perfil aprobado.
+
 Comparación revisada el 20 de octubre de 2026. El 21 de octubre se seleccionó como voz preferida la grabación **sintética de Inworld de Construcciones**, en lugar de la prueba de Qwen. Se conservan las grabaciones originales de esa voz y se usa la de Construcciones como referencia para completar instrucciones sin audio.
 
 | Alternativa | Ventaja para esta app | Límite práctico |
@@ -37,7 +39,7 @@ Completar el catálogo: se conservan los MP3 originales cuyo texto coincide y lo
 .\.venv-voice\Scripts\python.exe scripts/generate-local-voice.py --all
 ```
 
-La referencia es `public/audio/adri/screen-collection.mp3` y su transcripción está en `reference.json` de esa carpeta. Los archivos nuevos se escriben en `public/audio/adri-local/`, separados de los originales. El generador actualiza `src/data/localVoiceFiles.js` con las frases completadas para que la app las reproduzca. La portada y Probar voz usan otra vez sus MP3 originales de Inworld.
+La referencia es `public/audio/adri/screen-collection.mp3` y su transcripción está en `reference.json` de esa carpeta. Los archivos nuevos se escriben en `public/audio/adri-local/`, separados de los originales. El generador actualiza `src/data/localVoiceFiles.js` con las frases completadas para que la app las reproduzca. Probar voz conserva su MP3 original de Inworld; la intro actual de la portada se detalla más abajo.
 
 ## Prueba realizada
 
@@ -57,8 +59,10 @@ Para comprobar las rutas con el servidor local arrancado:
 node scripts/check-voice-assets.mjs
 ```
 
-## Alcance
+## Alcance actual
 
-La portada de Primaria usa `home-welcome.wav`, una bienvenida de 10,96 segundos que nombra a Adri, Juan y Cayetana e invita a aprender jugando. Se generó localmente con la misma referencia sintética de Construcciones. Misiones mantiene `primary-intro.wav` y su guía para elegir materia y misión. Son claves y archivos distintos; una prueba comprueba la separación y que el texto del manifiesto coincide con el de la app. El catálogo completo suma 275 audios. El WAV nuevo se comprobó a 24 kHz, con muestras finitas y sin silencio ni recorte digital.
+Las 275 entradas de `src/data/voiceCatalog.js` tienen su grabación con la voz aprobada. Las rutas usan archivos `adri-v1-*.wav`; `home-welcome` reutiliza sin alteraciones el audio de la intro aceptada, mientras que Misiones tiene una locución independiente. Las grabaciones anteriores se conservan para recuperación. La referencia original y su transcripción permanecen fuera de los recursos públicos.
 
-Que un modelo soporte español no garantiza un acento sevillano ni una edad vocal exacta. La instalación local elimina la dependencia de cuotas de la demo; la calidad, el acento y la inteligibilidad se tienen que valorar con una muestra. La referencia seleccionada es una voz sintética, no una grabación del niño real.
+Se han comprobado 275 respuestas HTTP de audio, 69 pruebas de la app, 23 pruebas de validación del texto y la compilación de producción. La compilación para GitHub Pages incluye las mismas 275 grabaciones del catálogo local.
+
+La valoración del tono y del ritmo procede de la muestra aprobada por el usuario. Las transcripciones automáticas comprueban contenido y objetivos de enseñanza; no certifican por sí solas naturalidad o acento en cada frase.

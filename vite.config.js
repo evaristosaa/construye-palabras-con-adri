@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     watch: {
-      ignored: ["**/.venv-voice/**", "**/.voice-cache/**"],
+      // Reiniciar Vite tras conectar un lote de audios nuevos para actualizar su índice público.
+      ignored: ["**/.venv-voice/**", "**/.voice-cache/**", "**/public/audio/**", "**/tmp/**"],
     },
   },
   // Cambia este valor a "/" si no despliegas en GitHub Pages.

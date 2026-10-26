@@ -92,7 +92,7 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
   cancelSpeech();
 
   if (options.audioKey && "Audio" in window) {
-    const recording = new Audio(getRecordedAudioSrc(options.audioKey, import.meta.env.BASE_URL));
+    const recording = new Audio(getRecordedAudioSrc(options.audioKey, import.meta.env?.BASE_URL || "/"));
     let fallbackPlayed = false;
     const fallback = () => {
       if (fallbackPlayed || activeRecording !== recording) return;
@@ -103,7 +103,14 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
     recording.onerror = fallback;
     activeRecording = recording;
     const playing = recording.play();
-    if (playing?.catch) playing.catch(fallback);
+    if (playing?.catch) playing.catch(error => {
+      // A browser autoplay restriction needs a tap, not a different synthetic voice.
+      if (error?.name === "NotAllowedError") {
+        if (activeRecording === recording) activeRecording = null;
+        return;
+      }
+      fallback();
+    });
     return;
   }
 

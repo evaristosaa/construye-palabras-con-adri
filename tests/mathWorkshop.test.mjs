@@ -49,7 +49,7 @@ test('recommendation moves cyclically, revisits unresolved mistakes and replays 
  assert.equal(nextWorkshopSession(progress,10),0);assert.equal(nextWorkshopSession(progress,20),0);
 });
 
-test('new workshop guidance retains the chosen synthetic reference and matching local recordings',()=>{
+test('workshop guidance uses the selected Adri voice and matching local recordings',()=>{
  const manifest=JSON.parse(readFileSync(new URL('../public/audio/adri-local/manifest.json',import.meta.url),'utf8'));
  for(const line of mathWorkshopVoices){const entry=manifest.files.find(f=>f.key===line.key);assert.equal(entry?.text,line.text,line.key);assert.equal(entry.filename,localVoiceFiles[line.key]);assert.ok(statSync(new URL(`../public/audio/adri-local/${entry.filename}`,import.meta.url)).size>1000);}
 });

@@ -1,5 +1,5 @@
 export const primaryVoiceTexts = Object.freeze({
-  "home-welcome": "¡Preparados para una aventura! Adri, Juan y Cayetana te esperan. Jugaremos con palabras, descubriremos números y resolveremos misterios. ¿Te apuntas? ¡Vamos a aprender jugando!",
+  "home-welcome": "¡Vamos a jugar! Soy Adri. Con Juan y Cayetana descubriremos palabras, números y un montón de sorpresas. ¿Te apuntas?",
   "primary-intro": "En primero aprendemos con palabras, números y descubrimientos. Elige una materia y una misión. Vamos paso a paso.",
   "primary-choice": "Lee la pregunta con calma y elige una respuesta. Si te equivocas, mira la pista y vuelve a intentarlo.",
   "primary-reading": "Lee el texto despacio. Después responde a la pregunta. Puedes volver a leerlo tantas veces como quieras.",
