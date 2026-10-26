@@ -67,3 +67,11 @@ Las comprobaciones y decisiones de cada entrega se anotan aquí. El análisis de
 - La medición por habilidades y apoyos en diferentes fechas queda para T18–T21. Los apoyos de este piloto se conservan en su partida; no constituyen una evaluación del aprendizaje.
 
 Siguiente bloque: T11–T17, empezando por el segundo cuento piloto y la separación entre escuchar texto y pedir ayuda. Las observaciones reales de Adri servirán para ajustar el piloto antes de multiplicar contenidos.
+
+### Ajustes tras probar la primera entrega
+
+- Portada «¡Aventuras con Adri, Juan y Cayetana!». Se recupera Misiones como entrada principal y Abecedario utiliza el mismo botón grande que el resto.
+- El enlace de salida del cuento es un botón «Menú»; se elimina Atrás entre fragmentos del cuento.
+- El cuento reproduce seguidas las tres grabaciones aprobadas, cambia de escena y pasa al primer reto al terminar. Se puede pausar, continuar o empezar a jugar directamente. Si el navegador bloquea el arranque automático, un único toque inicia la narración completa.
+- El parque utiliza el jardín ilustrado existente con manta y cesta de picnic; se incluye ese fondo en el paquete sin conexión.
+- Comprobados pausa y continuación durante el segundo fragmento, avance automático a la cesta y botones visibles en móvil de 320×568. Se mantienen las 282 grabaciones anteriores sin regenerarlas.

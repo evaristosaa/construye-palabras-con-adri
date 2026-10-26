@@ -13,7 +13,7 @@ export function offlinePackagePlugin() {
       const assetNames = (await readdir(resolve(outDir, 'assets'))).filter(name => /\.(js|css)$/.test(name));
       const corePaths = ['index.html', 'manifest.webmanifest', 'assets/adri.png', 'assets/worlds/reading-village.jpg', ...assetNames.map(name => `assets/${name}`),
         'assets/characters/amigos-comic-unificado-v1.png', 'audio/adri-local/' + localVoiceFiles['home-welcome']];
-      const packPaths = ['assets/adri-clean.png', 'assets/characters/juan-comic-v1.png', 'assets/characters/cayetana-comic-v2.png',
+      const packPaths = ['assets/worlds/discovery-garden.jpg', 'assets/adri-clean.png', 'assets/characters/juan-comic-v1.png', 'assets/characters/cayetana-comic-v2.png',
         ...[...snackVoiceLines.map(line => line.key), 'result-success', 'result-retry'].map(key => {
           if (!localVoiceFiles[key]) throw new Error(`Falta la voz aprobada: ${key}`);
           return 'audio/adri-local/' + localVoiceFiles[key];
