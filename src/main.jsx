@@ -7,6 +7,7 @@ import "./styles/primary.css";
 import "./styles/learningWorlds.css";
 import "./styles/classmates.css";
 import "./styles/snackAdventure.css";
+import "./styles/missionScenes.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

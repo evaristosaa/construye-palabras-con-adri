@@ -1,0 +1,65 @@
+/* Illustrated space around an opaque, readable play surface. All controls keep
+   their original handlers and responsive layouts inside the task card. */
+.screen-layout .primary-game-heading {background:linear-gradient(115deg,var(--subject-light),#fff4cd);border-color:var(--subject);}
+.screen-layout .primary-companion {background:linear-gradient(#f8fcffdd,#f8fcfff0),var(--mission-world) center/cover;border-color:var(--subject);border-radius:20px;}
+.screen-layout .primary-companion .construction-scene {border-radius:16px;}
+.mission-stage {display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;background:var(--mission-world) center/cover;border-color:var(--subject);border-radius:24px;padding:12px;gap:10px;}
+.mission-scenery {position:relative;flex:1 1 150px;min-height:100px;max-height:250px;display:flex;align-items:flex-start;justify-content:space-between;overflow:hidden;}
+.mission-scenery>span {align-self:flex-start;background:#fff6d8ed;border:2px solid #9a712c;border-radius:16px;padding:8px 14px;color:#60491e;font-size:clamp(.9rem,1.5vw,1.2rem);font-weight:900;max-width:50%;box-shadow:0 3px 0 #694c2230;}
+.mission-scenery>img {height:100%;max-height:250px;width:55%;object-fit:contain;object-position:center bottom;align-self:flex-end;filter:drop-shadow(0 3px 2px #203a3a40);}
+.screen-layout .primary-exercise.mission-task-card {flex:0 1 auto;width:100%;min-height:0;background:#fffdf4f5;border:2px solid #d7bb80;border-radius:22px;padding:clamp(14px,2.3vh,24px);gap:12px;box-shadow:0 5px 0 #223f4b30;}
+.mission-task-card .primary-answer {background:#fff5d9;border-color:#d5b979;box-shadow:0 3px 0 #80673d20;}
+.mission-task-card .primary-answer:nth-child(even) {background:#e7f5ec;border-color:#87b49c;}
+.mission-task-card .primary-answer.is-correct {background:#d4f3cc;border-color:#237739;}
+.mission-task-card .primary-answer.is-retry {background:#ffe5bf;border-color:#a95c13;}
+.mission-task-card .primary-help-button {background:#e5f4ff;}
+.mission-task-card .primary-exercise-top {padding-bottom:6px;border-bottom:2px dashed #d5c498;}
+.mission-task-card .syllable-word {font-size:2.15rem;}
+.syllable-picture {font-size:2.8rem;line-height:1.1;}
+.mission-task-card .clap-button {max-width:440px;min-height:140px;background:linear-gradient(#ffeaa6,#ffc55f);box-shadow:0 5px 0 #8d5b0020;}
+.mission-task-card .clap-button>span {font-size:3.8rem;}
+.clap-beats {display:flex;gap:7px;justify-content:center;align-items:center;min-height:28px;}
+.clap-beats>span:not(.clap-prompt) {display:grid;place-items:center;background:#ffdf83;border:2px solid #b78727;width:30px;height:30px;border-radius:50%;font-size:1.05rem;}
+.clap-prompt {font-size:.85rem;font-weight:800;color:#805e25;}
+.mission-task-card .clap-count {margin:0;}
+.screen-layout .primary-exercise.mission-task-card h1 {font-size:clamp(1.2rem,2.7vh,1.8rem);}
+.mission-task-card h1:focus {outline:none;}
+.screen-layout.keyboard-open .mission-scenery {display:none;}
+.screen-layout.keyboard-open .primary-exercise.mission-task-card {flex:1;}
+@media(max-width:800px) {
+  .mission-stage {padding:8px;gap:7px;border-radius:19px;}
+  .mission-scenery {min-height:60px;flex-basis:90px;max-height:150px;}
+  .mission-scenery>span {font-size:.75rem;padding:5px 8px;}
+  .screen-layout .primary-exercise.mission-task-card {padding:12px;gap:9px;border-radius:16px;}
+  .mission-task-card .clap-button {min-height:100px;}
+  .mission-task-card .clap-button>span {font-size:2.8rem;}
+  .syllable-picture {font-size:2rem;}
+}
+@media(max-height:620px) and (orientation:portrait) {
+  .mission-scenery {min-height:44px;max-height:70px;flex-basis:60px;}
+  .mission-stage:has(.primary-reading-step) .mission-scenery,.mission-stage:has(.place-game) .mission-scenery,.mission-stage:has(.has-twenty) .mission-scenery {display:none;}
+  .mission-stage:has(.primary-reading-step) .mission-task-card,.mission-stage:has(.place-game) .mission-task-card,.mission-stage:has(.has-twenty) .mission-task-card {flex:1;}
+  .activity-choice .mission-scenery {min-height:32px;flex-basis:44px;}
+  .activity-choice .mission-scenery>span {font-size:.65rem;line-height:1.1;padding:4px 7px;}
+  .mission-task-card .clap-button {min-height:84px;}
+  .mission-task-card .clap-button>span {font-size:2.5rem;}
+  .screen-layout .primary-exercise.mission-task-card {gap:7px;padding:10px;}
+  .screen-layout .primary-exercise.mission-task-card:has(.syllable-game) {gap:5px;padding:8px;}
+  .mission-task-card .syllable-game {gap:4px;}
+  .mission-task-card .syllable-word {font-size:1.75rem;}
+}
+@media(orientation:landscape) and (max-height:500px) {
+  .mission-stage {padding:6px;gap:0;border-radius:16px;}
+  .mission-scenery {display:none;}
+  .screen-layout .primary-exercise.mission-task-card {flex:1;padding:8px 12px;gap:6px 16px;}
+  .mission-task-card .clap-button {min-height:65px;max-width:300px;}
+  .mission-task-card .clap-button>span {font-size:2rem;}
+  .mission-task-card .clap-beats {min-height:22px;gap:4px;}
+  .mission-task-card .clap-beats>span:not(.clap-prompt) {width:24px;height:24px;font-size:.8rem;}
+  .mission-task-card .syllable-game {gap:4px;}
+  .mission-task-card .syllable-word {font-size:1.5rem;}
+  .syllable-picture {font-size:1.7rem;}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+  .mission-task-card .clap-button:hover {background:linear-gradient(#fff0bf,#ffd176);}
+}

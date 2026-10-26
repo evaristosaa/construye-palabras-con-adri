@@ -6,6 +6,7 @@ import CountingBoard from "./CountingBoard";
 import PictureSort from "./PictureSort";
 import ReadingSupport from "./ReadingSupport";
 import PrimaryReflection from "./PrimaryReflection";
+import {worldAsset,worldFor} from "../data/learningWorlds.js";
 
 import { choicePictures } from "../data/choicePictures.js";
 import {ConstructionScene,ConstructionButton,ConstructionDialog} from "./Construction";
@@ -120,11 +121,13 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
 
   if (finished) return <PrimaryReflection mission={mission} activity={activity} progress={progress} invitation={beyondScreen[activity.topic]} nextMission={!mission.adventure&&nextMission?.id!==mission.id?nextMission:null} project={project} constructionCount={constructionWins.length}/>;
 
-  return <section className={`primary-game narrative-game subject-${subject.id} ${mission.workshop?'is-workshop':''}`}>
+  return <section className={`primary-game narrative-game subject-${subject.id} ${mission.workshop?'is-workshop':''}`} style={{'--mission-world':`url("${worldAsset(subject.id,import.meta.env.BASE_URL)}")`}}>
     <header inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-game-heading comic-panel"><Link className="primary-text-link" to={mission.returnTo || (mission.adventure ? "/primaria" : `/primaria?materia=${mission.subject}`)}>← {mission.adventure ? "Salir del juego" : subject.title}</Link><p>{activity.workshopPhase || mission.title}</p><ConstructionButton project={project} count={constructionWins.length} total={mission.activities.length} buttonRef={constructionButton} onClick={()=>setShowConstruction(true)}/><progress max={mission.activities.length} value={index + (solved ? 1 : 0)} aria-label="Avance de la misión" /></header>
     <div inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-play-layout">
       <aside className="primary-companion comic-panel"><ConstructionScene project={project} count={constructionWins.length} total={mission.activities.length}/><FriendCompanion name={friend.name} variant={solved ? "celebrating" : subject.id === "medio" ? "detective" : "reader"}/><strong className="companion-name">{friend.name} te acompaña</strong><p>{project.task}</p><span>{constructionWins.length} de {mission.activities.length} retos de esta obra</span></aside>
-      <div className="primary-exercise comic-panel">
+      <div className={`mission-stage comic-panel activity-${activity.type}`}>
+        <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><img src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.png`} alt="" draggable="false"/></div>
+      <div className="primary-exercise mission-task-card">
         <div className="primary-exercise-top"><FriendAvatar name={friend.name} className="quest-buddy"/><p className="eyebrow">{subject.icon} {subject.title}</p><div className="primary-tool-buttons">{subject.id === "matematicas" && !["quantity","place-value"].includes(activity.type) && <button ref={boardButton} className="primary-help-button" onClick={() => setShowBoard(true)}>Fichas</button>}<button ref={readingButton} className="primary-help-button" onClick={() => setShowReading(true)} aria-label="Leer paso a paso">Aa</button><button className="primary-help-button" onClick={() => { setFeedback(activity.hint); }} aria-label="Ver una pista">💡</button><button className="primary-help-button" onClick={() => speak(primaryVoiceTexts[audioKey], progress.voice, progress.voiceURI, { audioKey })} aria-label="Escuchar ayuda">🔊</button></div></div>
         {activity.passage && reading ? <div className="primary-reading-step"><h1 ref={heading} tabIndex={-1}>Lee con calma</h1><div className="primary-reading"><p>{activity.passage}</p></div><button className="primary-main-button" onClick={() => { setReading(false); }}>Ya lo he leído →</button></div> : <>
         {activity.passage && <button className="primary-text-link" onClick={() => setReading(true)}>📖 Volver al texto</button>}
@@ -138,6 +141,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
         {activity.type === "order" && <div className="primary-builder"><div className="primary-answer-zone" aria-live="polite">{pieces.length ? assembledPrimaryAnswer(activity, pieces) : "Toca las piezas; toca otra vez para quitar"}</div><div className="primary-word-pieces">{activity.pieces.map((piece, pieceIndex) => <button key={pieceIndex} disabled={solved} aria-pressed={pieces.includes(pieceIndex)} onClick={() => { setPieces(current => current.includes(pieceIndex) ? current.filter(i=>i!==pieceIndex) : [...current, pieceIndex]); setFeedback(""); }}>{piece}</button>)}</div><div className="primary-actions"><button className="primary-secondary-button" disabled={solved || !pieces.length} onClick={() => { setPieces(current => current.slice(0, -1)); setFeedback(""); }}>Deshacer</button><button className="primary-main-button" disabled={solved || pieces.length !== activity.pieces.length} onClick={() => submit(assembledPrimaryAnswer(activity, pieces))}>Comprobar</button></div></div>}
         {activity.type === "write" && <form className="primary-write" onSubmit={event => { event.preventDefault(); if (entry.trim()) submit(entry); }}><label htmlFor="primary-response">Tu respuesta</label><input id="primary-response" value={entry} onChange={event => { setEntry(event.target.value); setFeedback(""); }} disabled={solved} autoComplete="off" autoCorrect="off" spellCheck={false} maxLength={60} /><button className="primary-main-button" disabled={solved || !entry.trim()} type="submit">Comprobar</button></form>}
         </>}
+      </div>
       </div>
     </div>
     {showConstruction&&<ConstructionDialog project={project} count={constructionWins.length} total={mission.activities.length} progress={progress} onClose={()=>setShowConstruction(false)}/>}
