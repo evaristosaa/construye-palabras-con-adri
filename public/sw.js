@@ -31,20 +31,25 @@ async function verifiedResponse(item) {
   if (bytes.byteLength !== item.bytes || hash !== item.sha256) throw Error('Descarga incompleta. Vuelve a intentarlo con conexión.');
   return response;
 }
-async function completeStatus(data) {
+function selectedPack(data,id='merienda'){
+  if(!data.packs){if(id!=='merienda')throw Error('Paquete no disponible');return data;}
+  const pack=data.packs[id];if(!pack)throw Error('Paquete no disponible');return {...pack,core:data.core,version:data.version};
+}
+function packMarker(id){return id==='merienda'?markerURL:markerURL+'-'+id;}
+async function completeStatus(data,id='merienda') {
   const core = await caches.open(CORE), pack = await caches.open(PACK);
-  if (!(await pack.match(markerURL))) return false;
+  if (!(await pack.match(packMarker(id)))) return false;
   for (const item of data.core) if (!(await core.match(resourceURL(item.url)))) return false;
   for (const item of data.resources) if (!(await pack.match(resourceURL(item.url)))) return false;
   return true;
 }
-async function downloadPack(port) {
+async function downloadPack(port,id='merienda') {
   if (downloading) throw Error('Ya hay una descarga en curso. Espera a que termine.');
   downloading = true;
   try {
-    const data = await manifest();
+    const data = selectedPack(await manifest(),id);
     const pack = await caches.open(PACK), core = await caches.open(CORE);
-    await pack.delete(markerURL);
+    await pack.delete(packMarker(id));
     await caches.delete(STAGING);
     const staging = await caches.open(STAGING);
     let done = 0;
@@ -55,8 +60,8 @@ async function downloadPack(port) {
     }
     for (const item of data.core) await core.put(resourceURL(item.url), await staging.match(resourceURL(item.url)));
     for (const item of data.resources) await pack.put(resourceURL(item.url), await staging.match(resourceURL(item.url)));
-    await pack.put(markerURL, new Response(RELEASE));
-    return {ready:await completeStatus(data), version:RELEASE, label:data.label, bytes:data.bytes};
+    await pack.put(packMarker(id), new Response(RELEASE));
+    return {ready:await completeStatus(data,id), version:RELEASE, label:data.label, bytes:data.bytes};
   } finally { downloading = false; await caches.delete(STAGING); }
 }
 async function rangeResponse(request, response) {
@@ -89,8 +94,8 @@ self.addEventListener('message', event => {
   const port = event.ports[0];
   event.waitUntil((async()=>{
     try {
-      if (event.data?.type === 'DOWNLOAD_PACK') port?.postMessage({type:'done',...await downloadPack(port)});
-      if (event.data?.type === 'GET_STATUS') { const data = await manifest(); port?.postMessage({type:'done', ready:await completeStatus(data),version:RELEASE,label:data.label,bytes:data.bytes}); }
+      if (event.data?.type === 'DOWNLOAD_PACK') port?.postMessage({type:'done',...await downloadPack(port,event.data.packId||'merienda')});
+      if (event.data?.type === 'GET_STATUS') { const all=await manifest(), id=event.data.packId||'merienda', data=selectedPack(all,id); port?.postMessage({type:'done',ready:await completeStatus(data,id),version:RELEASE,label:data.label,bytes:data.bytes,packs:Object.entries(all.packs||{merienda:all}).map(([id,p])=>({id,label:p.label,bytes:p.bytes}))}); }
       if (event.data?.type === 'ACTIVATE_UPDATE') {
         const windows = (await self.clients.matchAll({type:'window',includeUncontrolled:true})).filter(client=>client.url.startsWith(scope));
         // Client.url can retain an earlier hash after SPA navigation.

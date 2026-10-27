@@ -1,3 +1,4 @@
+import {recordLearningEvent} from "../data/learningSkills.js";
 export const defaultProgress = {
   progressVersion: 2,
   stars: 0,
@@ -7,6 +8,7 @@ export const defaultProgress = {
   primaryCompletedLevels: [],
   primaryAttempts: {},
   adventures: {},
+  learningEvents: [],
   sound: true,
   voice: true,
   streak: 1,
@@ -40,6 +42,7 @@ export function normalizeProgress(saved = {}) {
     primaryCompletedLevels: uniqueIds(saved.primaryCompletedLevels),
     primaryAttempts: saved.primaryAttempts && typeof saved.primaryAttempts === "object" && !Array.isArray(saved.primaryAttempts) ? saved.primaryAttempts : {},
     adventures: saved.adventures && typeof saved.adventures === "object" && !Array.isArray(saved.adventures) ? saved.adventures : {},
+    learningEvents: Array.isArray(saved.learningEvents) ? saved.learningEvents.slice(-1500) : [],
     pieces: completedGames.length,
   };
 }
@@ -89,7 +92,7 @@ export function awardPrimaryCompletion(current, missionId, activityIds) {
   };
 }
 
-export function recordPrimaryAttempt(current, activityId, correct, { now = new Date(), variantKey = "original" } = {}) {
+export function recordPrimaryAttempt(current, activityId, correct, { now = new Date(), variantKey = "original", supported = false } = {}) {
   const progress = normalizeProgress(current);
   const previous = progress.primaryAttempts[activityId] || { attempts: 0, mistakes: 0 };
   const previousDay = previous.lastCorrectAt ? new Date(previous.lastCorrectAt).toDateString() : null;
@@ -99,7 +102,7 @@ export function recordPrimaryAttempt(current, activityId, correct, { now = new D
   // Calendar days, not 24-hour durations, so local DST changes do not shift review days.
   due.setDate(due.getDate() + (correct ? [1,1,3,7][reviewStage] : 1));
   due.setHours(0,0,0,0);
-  return { ...progress, primaryAttempts: { ...progress.primaryAttempts,
+  return { ...progress, learningEvents:recordLearningEvent(progress.learningEvents,activityId,correct,{now,variantKey,supported}), primaryAttempts: { ...progress.primaryAttempts,
     [activityId]: { ...previous, attempts: previous.attempts + 1, mistakes: previous.mistakes + (correct ? 0 : 1), correctStreak: correct ? (previous.correctStreak || 0) + 1 : 0,
       successes:(previous.successes ?? Math.max(0,previous.attempts-previous.mistakes)) + (correct ? 1 : 0),
       lastAttemptAt:new Date(now).toISOString(), lastCorrectAt:correct ? new Date(now).toISOString() : previous.lastCorrectAt || null,

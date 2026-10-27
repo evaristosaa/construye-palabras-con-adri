@@ -13,10 +13,10 @@ export function SnackIcon({ kind, className = "" }) {
 
 export function PicnicScene({ scene = "friends", complete = false }) {
   return <div className={`snack-world scene-${scene} ${complete ? "is-ready" : ""}`} aria-hidden="true">
-    <img className="snack-garden" src={`${import.meta.env.BASE_URL}assets/worlds/discovery-garden.jpg`} alt="" draggable="false"/>
+    <img className="snack-garden" src={`${import.meta.env.BASE_URL}assets/worlds/discovery-garden.webp`} alt="" draggable="false"/>
     <div className="snack-picnic-blanket"/><div className="snack-picnic-basket"><SnackIcon kind="apple"/><SnackIcon kind="water"/></div>
     <svg className="snack-park" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice"><rect width="800" height="360" fill="#dff5ff"/><circle cx="686" cy="68" r="38" fill="#ffdc75"/><path d="M0 258Q180 166 360 257T800 232V360H0Z" fill="#b7df8a"/><path d="M0 304Q192 224 450 307T800 294V360H0Z" fill="#84c78a"/><path d="M79 267V135m-20 49 20 26 21-29" stroke="#a47a4a" strokeWidth="18" strokeLinecap="round"/><circle cx="79" cy="125" r="65" fill="#75bd8c"/><circle cx="38" cy="150" r="39" fill="#8dce96"/><path d="M559 325 488 259h173l88 66Z" fill="#ffcba9"/><path d="M549 275h121m-105 15h125m-108 16h122" stroke="#fff6e1" strokeWidth="8"/><path d="m50 320 3-8m-16 7 7-3m679 18 6-12" stroke="#367756" strokeWidth="5"/></svg>
-    {scene === "note" ? <div className="snack-illustrated-note"><strong>La merienda</strong><div><SnackIcon kind="apple"/><SnackIcon kind="apple"/><SnackIcon kind="water"/></div><span>Para compartir</span></div> : <img className="snack-friends" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.png`} alt="" draggable="false"/>}
+    {scene === "note" ? <div className="snack-illustrated-note"><strong>La merienda</strong><div><SnackIcon kind="apple"/><SnackIcon kind="apple"/><SnackIcon kind="water"/></div><span>Para compartir</span></div> : <img className="snack-friends" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt="" draggable="false"/>}
     {complete && <div className="snack-feast">{[0,1,2].map(i=><span className="tiny-plate" key={i}><SnackIcon kind="piece"/><SnackIcon kind="piece"/></span>)}</div>}
   </div>;
 }

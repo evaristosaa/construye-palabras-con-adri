@@ -1,3 +1,4 @@
+import {distributionVoiceFiles} from "../data/distributionVoiceFiles.js";
 import { resultAudioKeys } from "../data/adriAudioCatalog.js";
 import { retryFeedback, successFeedback } from "../data/voiceScripts.js";
 import { localVoiceFiles } from "../data/localVoiceFiles.js";
@@ -41,6 +42,7 @@ function pickAdriVoice(preferredVoiceURI) {
 }
 
 export function getRecordedAudioSrc(audioKey, baseUrl = "/") {
+  if(distributionVoiceFiles[audioKey])return `${baseUrl}audio/adri-distribution/${distributionVoiceFiles[audioKey]}`;
   if (localVoiceFiles[audioKey]) return `${baseUrl}audio/adri-local/${localVoiceFiles[audioKey]}`;
   if (audioKey === "qwen-sevilla-preview") return `${baseUrl}audio/adri-qwen/preview.wav`;
   return `${baseUrl}audio/adri/${audioKey}.mp3`;

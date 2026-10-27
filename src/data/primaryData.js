@@ -1,3 +1,4 @@
+import {skillsForActivity} from "./learningSkills.js";
 import { extendPrimaryActivity } from "./primaryExtensions.js";
 // A guided practice selection for year 1, not a complete school curriculum.
 export const primarySubjects = [
@@ -228,7 +229,7 @@ export const primaryMissions = Object.entries({ lengua, matematicas, medio }).fl
   units.map((entry, unitIndex) => {
     const id = `primaria-${subject}-${entry.id}`;
     return { ...entry, id, subject, stage: unitIndex < 3 ? 0 : unitIndex < 6 ? 1 : 2, number: unitIndex + 1,
-      activities: entry.activities.map((raw, index) => { const activity = extendPrimaryActivity(raw, entry.id, index); return ({ ...activity, id: `${id}-${index + 1}`,
+      activities: entry.activities.map((raw, index) => { const activity = extendPrimaryActivity(raw, entry.id, index); return ({ ...activity, id: `${id}-${index + 1}`, skills:skillsForActivity(`${id}-${index + 1}`),
         ...(activity.options ? { options: mixed(activity.options, `${id}-${index}`) } : {}),
         ...(activity.pieces ? { pieces: mixed(activity.pieces, `${id}-${index}`) } : {}),
       }); }),

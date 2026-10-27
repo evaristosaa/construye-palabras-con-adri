@@ -12,20 +12,20 @@ const labels = {
 };
 
 const variantImages = {
-  audio: "adri-audio.png",
-  builder: "adri-builder.png",
-  helmet: "adri-builder.png",
-  teacher: "adri-reader.png",
-  reader: "adri-reader.png",
-  celebrating: "adri-celebrating.png",
-  reward: "adri-celebrating.png",
-  detective: "adri-detective.png",
-  thinking: "adri-detective.png",
-  pointing: "adri-clean.png",
+  audio: "adri-audio.webp",
+  builder: "adri-builder.webp",
+  helmet: "adri-builder.webp",
+  teacher: "adri-reader.webp",
+  reader: "adri-reader.webp",
+  celebrating: "adri-celebrating.webp",
+  reward: "adri-celebrating.webp",
+  detective: "adri-detective.webp",
+  thinking: "adri-detective.webp",
+  pointing: "adri-clean.webp",
 };
 
 export default function Adri({ variant = "reader", size = "large", bubble }) {
-  const image = size === "full" ? "adri-clean.png" : variantImages[variant] || "adri-clean.png";
+  const image = size === "full" ? "adri-clean.webp" : variantImages[variant] || "adri-clean.webp";
 
   return (
     <div className={`adri adri-${size} adri-${variant}`} aria-label={`Adri ${labels[variant] || ""}`}>

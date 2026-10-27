@@ -1,3 +1,4 @@
+import {selectSkillPractice} from "./learningSkills.js";
 import { primaryMissions, primarySubjects } from "./primaryData.js";
 
 export function needsPrimaryPractice(attempt) {
@@ -12,7 +13,7 @@ export function presentPrimaryActivity(activity, progress) {
   const successes = attempt?.successes ?? Math.max(0, (attempt?.attempts || 0) - (attempt?.mistakes || 0));
   const variant = successes % 2 ? activity.variants[0] : null;
   // Pick once per mounted game. Wrong answers never change the presented question.
-  const presented = variant ? { id:activity.id, topic:activity.topic, idea:activity.idea, ideaAudioKey:activity.ideaAudioKey, variants:activity.variants, ...variant, variantKey:"alternate" } : { ...activity, variantKey:"original" };
+  const presented = variant ? { id:activity.id, skills:activity.skills, topic:activity.topic, idea:activity.idea, ideaAudioKey:activity.ideaAudioKey, variants:activity.variants, ...variant, variantKey:"alternate" } : { ...activity, variantKey:"original" };
   if (presented.options) {
     const offset = (activity.id.length + successes) % presented.options.length;
     presented.options = [...presented.options.slice(offset), ...presented.options.slice(0, offset)];
@@ -30,7 +31,7 @@ export function buildPrimaryAdventure(progress, now = new Date()) {
     const due = activities.filter(a => isReviewDue(progress.primaryAttempts?.[a.id],now)).sort((a,b) => Date.parse(progress.primaryAttempts[a.id].reviewDue)-Date.parse(progress.primaryAttempts[b.id].reviewDue))[0];
     const next = activities.find(a => !progress.completedGames.includes(a.id));
     const leastRecent = [...activities].sort((a,b) => (Date.parse(progress.primaryAttempts?.[a.id]?.lastAttemptAt)||0)-(Date.parse(progress.primaryAttempts?.[b.id]?.lastAttemptAt)||0))[0];
-    const activity = review || due || next || leastRecent;
+    const activity = review || due || selectSkillPractice(activities,progress,now) || next || leastRecent;
     return { ...presentPrimaryActivity(activity,progress), subject: subject.id, practice: Boolean(review || due) };
   });
 }

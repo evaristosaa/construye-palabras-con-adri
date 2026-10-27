@@ -122,3 +122,13 @@ Verificación: `node --test tests/*.test.mjs`, `npm run build` y `node scripts/c
 ## Recursos visuales
 
 Las imágenes proporcionadas se usan como inspiración y como activo local de Adri. Las variantes del personaje se construyen con el mismo retrato y accesorios visuales generados con CSS para mantener una app ligera y estática.
+
+
+### Nuevos talleres y continuidad
+
+- Matemáticas → Juegos variados → **Figuras · Camino · Tienda**: tocar, girar, programar y pagar con varias soluciones; partida y semilla guardadas.
+- Misiones → **Mi álbum y diario**: cómic de tres viñetas, dibujo, observación con fecha/tiempo y grabación voluntaria local. Copia del álbum con sus archivos, independiente de la copia de progreso.
+- Familia → **Aprendizaje**: práctica por habilidades y apoyos, sin notas ni diagnósticos. **Sin conexión** permite elegir Merienda, Lengua y cuentos, Matemáticas o Medio.
+- La voz aprobada conserva sus WAV originales y usa copias MP3 ligeras al reproducir. Ilustraciones WebP; huellas y duraciones en los manifiestos de distribución.
+
+Plan actualizado: [tareas](docs/plan-mejoras-primaria.md). [Decisiones sobre sincronización, app nativa y reconocimiento oral](docs/decisiones-tecnicas-2026-10-27.md). La observación familiar con Adri y el ensayo de habla infantil requieren uso real; no se sustituyen por pruebas automáticas.

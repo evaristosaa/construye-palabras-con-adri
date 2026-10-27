@@ -15,7 +15,7 @@ export default function Home({ progress }) {
       />
       <div className="home-hero">
         <div className="home-character home-friends" aria-label="Adri, Juan y Cayetana">
-          <img className="home-friends-illustration" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.png`} alt="" draggable="false" />
+          <img className="home-friends-illustration" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt="" draggable="false" />
           <div className="home-friend-names">{classmates.map(friend => <span key={friend.id}>{friend.name}</span>)}</div>
         </div>
         <div className="home-menu">

@@ -4,6 +4,7 @@ import { offlinePackagePlugin } from "./scripts/build-offline-package.mjs";
 
 export default defineConfig({
   plugins: [react(), offlinePackagePlugin()],
+  build: {rollupOptions:{output:{manualChunks:{vendor:["react","react-dom","react-router-dom"]}}}},
   server: {
     watch: {
       // Reiniciar Vite tras conectar un lote de audios nuevos para actualizar su índice público.

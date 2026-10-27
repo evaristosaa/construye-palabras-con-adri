@@ -1,9 +1,10 @@
+import {useSessionState} from "../storage/sessionDrafts.js";
 import {useState} from 'react';
 import {patternSymbols,patternAnswer,placePatternPiece,removePatternPiece} from '../data/patternBuilder.js';
 
 function symbolFor(id){return patternSymbols.find(s=>s.id===id);}
 export default function PatternBuilder({activity,onAnswer}){
- const[pieces,setPieces]=useState(()=>Array(activity.slots).fill(null));
+ const[pieces,setPieces]=useSessionState(`pattern:${activity.id}`,()=>Array(activity.slots).fill(null));
  const count=pieces.filter(Boolean).length;
  return <div className="pattern-builder"><div className="pattern-example" style={{'--pattern-unit':activity.unit.length}} aria-label="El patrón empieza así">{activity.given.map((id,i)=><span className={`pattern-piece shape-${id}`} key={i} aria-label={symbolFor(id).label}>{symbolFor(id).glyph}</span>)}</div>
   <div className="pattern-slots" aria-label="Tu continuación">{Array.from({length:activity.slots},(_,i)=>pieces[i]?<button className={`pattern-piece shape-${pieces[i]}`} key={i} onClick={()=>setPieces(old=>removePatternPiece(old,i))} aria-label={`Quitar pieza ${i+1}: ${symbolFor(pieces[i]).label}`}>{symbolFor(pieces[i]).glyph}</button>:<span key={i} className="pattern-empty">?</span>)}</div>

@@ -1,3 +1,5 @@
+import ExplorationLab from "./components/ExplorationLab";
+import CreativeJournal from "./components/CreativeJournal";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import LevelSelect from "./components/LevelSelect";
@@ -21,7 +23,7 @@ export default function App() {
   const { progress, updateSettings } = progressApi;
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || location.pathname.startsWith('/primaria/cuentos') || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda"].includes(location.pathname);
+  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || location.pathname.startsWith('/primaria/cuentos') || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda", "/primaria/explora", "/primaria/album"].includes(location.pathname);
   const isPrimaryHub = location.pathname === "/primaria";
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
@@ -31,6 +33,8 @@ export default function App() {
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
         <Route path="/primaria/merienda" element={<SnackAdventure progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity} saveSnackSession={progressApi.saveSnackSession}/>} />
+        <Route path="/primaria/explora" element={<ExplorationLab progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>}/>
+        <Route path="/primaria/album" element={<CreativeJournal progress={progress}/>}/>
         <Route path="/primaria/crea" element={<StoryStudio progress={progress}/>} />
         <Route path="/primaria/cuentos" element={<StoryLibrary/>}/>
         <Route path="/primaria/cuentos/semilla" element={<SeedStory progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>}/>

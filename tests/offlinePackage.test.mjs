@@ -53,3 +53,14 @@ test('updates cannot interrupt a game or another open tab',async()=>{
   vm.runInContext(`self.clients.matchAll=async()=>[{url:'${scope}'},{url:'${scope}'}]`,f.context);
   assert.equal((await message(scope+'#/ajustes',true)).type,'error');
 });
+
+test('download markers are independent for each subject and corrupted resources invalidate only their own package',async()=>{
+ const f=fixture();f.data.packs={merienda:{label:'Merienda',resources:f.data.resources,bytes:32},matematicas:{label:'Mates',resources:[{...f.data.resources[0],url:'audio/math.wav'}],bytes:32}};
+ assert.equal((await vm.runInContext("downloadPack(null,'matematicas')",f.context)).ready,true);
+ assert.equal(await vm.runInContext("manifest().then(d=>completeStatus(selectedPack(d,'merienda'),'merienda'))",f.context),false);
+ assert.equal((await vm.runInContext("downloadPack(null,'merienda')",f.context)).ready,true);
+ await f.cacheFor('adri-primaria-pack-test').delete(scope+'audio/math.wav');
+ assert.equal(await vm.runInContext("manifest().then(d=>completeStatus(selectedPack(d,'matematicas'),'matematicas'))",f.context),false);
+ assert.equal(await vm.runInContext("manifest().then(d=>completeStatus(selectedPack(d,'merienda'),'merienda'))",f.context),true);
+ assert.throws(()=>vm.runInContext("selectedPack({packs:{}},'unknown')",f.context),/disponible/);
+});

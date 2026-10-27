@@ -1,20 +1,21 @@
+import {useSessionState} from "../storage/sessionDrafts.js";
 import { useState } from "react";
 import { speak, playClap } from "./audio.js";
 import { localVoiceFiles } from "../data/localVoiceFiles.js";
 
 export function QuantityGame({activity,solved,onSubmit}) {
   const initial=()=>Array.from({length:activity.capacity},(_,i)=>i<activity.initial);
-  const [tokens,setTokens]=useState(initial);
+  const [tokens,setTokens]=useSessionState(`tokens:${activity.id}:${activity.variantKey}`,initial);
   const count=tokens.filter(Boolean).length;
   return <div className="quantity-game"><p className="manipulative-caption">Pon o quita fichas para resolverlo.</p><div className={`quantity-frame ${activity.capacity===20?'has-twenty':''}`} role="group" aria-label="Fichas para resolver el reto">{tokens.map((active,i)=><button key={i} className={`${active?'has-token':''} ${i<activity.initial?'initial-token':'added-token'}`} disabled={solved} aria-pressed={active} aria-label={`${active?'Quitar':'Poner'} ficha ${i+1}`} onClick={()=>setTokens(values=>values.map((v,index)=>index===i?!v:v))}><span aria-hidden="true"/></button>)}</div><p className="quantity-count" role="status" aria-live="polite">{count} {count===1?'ficha':'fichas'}</p><div className="manipulative-actions"><button className="primary-secondary-button" disabled={solved} onClick={()=>setTokens(initial())}>Reiniciar</button><button className="primary-main-button" disabled={solved} onClick={()=>onSubmit(String(count))}>Comprobar</button></div></div>;
 }
 export function PlaceValueGame({activity,solved,onSubmit}) {
-  const [tens,setTens]=useState(0),[units,setUnits]=useState(0);
+  const [tens,setTens]=useSessionState(`tens:${activity.id}:${activity.variantKey}`,0),[units,setUnits]=useSessionState(`units:${activity.id}:${activity.variantKey}`,0);
   function column(label,value,update,kind){return <section className="place-column"><h2>{label}</h2><div className={`place-pieces ${kind}`} aria-hidden="true">{Array.from({length:value},(_,i)=><span key={i}/>)}</div><div className="place-controls"><button className="primary-secondary-button" disabled={solved||value===0} onClick={()=>update(v=>v-1)} aria-label={`Quitar ${kind==='tens'?'decena':'unidad'}`}>−</button><output aria-label={`Número de ${label.toLowerCase()}`}>{value}</output><button className="primary-secondary-button" disabled={solved||value===9} onClick={()=>update(v=>v+1)} aria-label={`Añadir ${kind==='tens'?'decena':'unidad'}`}>+</button></div></section>;}
   return <div className="place-game"><div className="place-columns">{column('Decenas',tens,setTens,'tens')}{column('Unidades',units,setUnits,'units')}</div><p className="quantity-count" role="status" aria-live="polite">{tens} decenas y {units} unidades = <strong>{tens*10+units}</strong></p><button className="primary-main-button" disabled={solved} onClick={()=>onSubmit(String(tens*10+units))}>Comprobar</button></div>;
 }
 export function SyllableGame({activity,solved,onSubmit,progress}) {
-  const [claps,setClaps]=useState(0);
+  const [claps,setClaps]=useSessionState(`claps:${activity.id}:${activity.variantKey}`,0);
   const picture={casa:'🏠',pelota:'⚽',camisa:'👕',sopa:'🍲',tomate:'🍅',zapato:'👟'}[activity.word];
   return <div className="syllable-game"><div className="syllable-word-row">{picture&&<span className="syllable-picture" aria-hidden="true">{picture}</span>}<strong className="syllable-word">{activity.word}</strong><button className="primary-help-button" disabled={!progress.voice || !localVoiceFiles[activity.wordAudioKey]} aria-label="Escuchar la palabra" onClick={()=>speak(activity.word,progress.voice,progress.voiceURI,{audioKey:activity.wordAudioKey})}>🔊</button></div><button className="clap-button" disabled={solved||claps===6} onClick={()=>{playClap(progress.sound);setClaps(v=>v+1);}} aria-label="Dar una palmada"><span aria-hidden="true">👏</span><small>Toca una vez por sílaba</small></button><div className="clap-beats" aria-hidden="true">{claps?Array.from({length:claps},(_,i)=><span key={i}>👏</span>):<span className="clap-prompt">¡Marca tu ritmo!</span>}</div><p className="clap-count" role="status" aria-live="polite">{claps} {claps===1?'palmada':'palmadas'}</p><div className="manipulative-actions"><button className="primary-secondary-button" disabled={solved||claps===0} onClick={()=>setClaps(v=>v-1)}>Quitar una</button><button className="primary-main-button" disabled={solved||claps===0} onClick={()=>onSubmit(String(claps))}>Comprobar</button></div></div>;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-function askWorker(worker, type, onProgress) {
+function askWorker(worker, type, onProgress,packId='merienda') {
   return new Promise((resolve,reject)=>{
     const channel = new MessageChannel();
     let timer;
@@ -11,10 +11,11 @@ function askWorker(worker, type, onProgress) {
       if(data.type==='progress') onProgress?.(data);
       else { close(); if(data.type==='error') reject(Error(data.message)); else resolve(data); }
     };
-    arm(); worker.postMessage({type,fromFamily:type==='ACTIVATE_UPDATE'},[channel.port2]);
+    arm(); worker.postMessage({type,packId,fromFamily:type==='ACTIVATE_UPDATE'},[channel.port2]);
   });
 }
 export default function OfflinePackPanel() {
+  const [packId,setPackId]=useState('merienda');
   const [state,setState]=useState({loading:true}), [busy,setBusy]=useState(false), [message,setMessage]=useState('');
   const mounted=useRef(true);
   useEffect(()=>{
@@ -25,19 +26,19 @@ export default function OfflinePackPanel() {
       try {
         registration=await navigator.serviceWorker.ready;
         if(registration.waiting) { if(mounted.current)setState({update:true}); return; }
-        const status=await askWorker(registration.active,'GET_STATUS');
+        const status=await askWorker(registration.active,'GET_STATUS',null,packId);
         if(mounted.current)setState(status);
       } catch(error) { if(mounted.current){setState({});setMessage(error.message);} }
     }
     refresh();
     return ()=>{mounted.current=false;};
-  },[]);
+  },[packId]);
   async function download() {
     setBusy(true);setMessage('Preparando la descarga…');
     try {
       const registration=await navigator.serviceWorker.ready;
       if(registration.waiting) {setState({update:true});setMessage('Actualiza antes de descargar esta versión.');return;}
-      const status=await askWorker(registration.active,'DOWNLOAD_PACK',data=>setMessage(`Descargando ${data.done} de ${data.total} recursos…`));
+      const status=await askWorker(registration.active,'DOWNLOAD_PACK',data=>setMessage(`Descargando ${data.done} de ${data.total} recursos…`),packId);
       setState(status);setMessage(status.ready?'¡Lista para jugar sin conexión!':'La descarga no está completa. Vuelve a intentarlo.');
     } catch(error) {setMessage(error.message);} finally {setBusy(false);}
   }
@@ -52,7 +53,7 @@ export default function OfflinePackPanel() {
       catch(error) {navigator.serviceWorker.removeEventListener('controllerchange',reload);throw error;}
     } catch(error) {setMessage(error.message);} finally {setBusy(false);}
   }
-  return <div className="offline-panel"><h2>Jugar sin conexión</h2><p>Descarga Inicio y <strong>La merienda</strong>, con sus dibujos y la voz de Adri.</p><p className="family-note">Las demás actividades necesitan conexión. El navegador puede liberar descargas si falta espacio; comprueba aquí antes de salir.</p>
+  return <div className="offline-panel"><h2>Jugar sin conexión</h2><label className="offline-select">Elige qué descargar<select value={packId} disabled={busy} onChange={e=>{setPackId(e.target.value);setState({loading:true});setMessage('');}}>{[['merienda','Inicio y La merienda'],['lengua','Lengua y cuentos'],['matematicas','Matemáticas y juegos'],['medio','Conocimiento del Medio']].map(([id,label])=><option value={id} key={id}>{label}</option>)}</select></label><p className="family-note">Cada paquete incluye sus dibujos y la voz aprobada. Los otros paquetes necesitan descargarse por separado. El navegador puede liberar descargas si falta espacio; comprueba aquí antes de salir.</p>
     {state.unavailable ? <p>La descarga está disponible en la app publicada.</p> : state.loading ? <p role="status">Comprobando la descarga…</p> : state.update ? <button className="primary-main-button" disabled={busy} onClick={update}>Actualizar desde Familia</button> : <button className="primary-main-button" disabled={busy} onClick={download}>{busy?'Descargando…':state.ready?'Comprobar y descargar de nuevo':'Descargar para jugar'}{state.bytes?` · ${(state.bytes/1048576).toFixed(1)} MB`:''}</button>}
     <p role="status" className="family-note">{message || (state.ready?'✓ Paquete completo y disponible en este navegador.':'')}</p>
   </div>;

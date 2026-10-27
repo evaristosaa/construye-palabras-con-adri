@@ -1,3 +1,4 @@
+import {collectSessionDrafts,replaceSessionDrafts} from "../storage/sessionArchive.js";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { characters, rewards } from "../data/learningData";
 import { awardGameWithMissionCompletion, awardLevelCompletion, awardPrimaryCompletion, recordPrimaryAttempt, defaultProgress, normalizeProgress } from "./progressModel";
@@ -17,6 +18,7 @@ export function useProgress() {
   const [initial] = useState(readProgress);
   const [progress, setProgress] = useState(initial.progress);
   const [storageIssue, setStorageIssue] = useState(initial.issue || "");
+  useEffect(()=>{const warn=()=>setStorageIssue('No se ha podido guardar la partida en este navegador. Exporta una copia desde Familia antes de cerrar.');window.addEventListener('adri-draft-error',warn);return()=>window.removeEventListener('adri-draft-error',warn);},[]);
 
   useEffect(() => {
     try { const result = saveStoredProgress(localStorage, progress); if (!result.ok) setStorageIssue(result.issue); }
@@ -65,7 +67,13 @@ export function useProgress() {
     setProgress(current => JSON.stringify(current.adventures?.[snackId]) === JSON.stringify(cleaned) ? current : ({ ...current, adventures: { ...current.adventures, [snackId]: cleaned } }));
   }, []);
 
-  function restoreProgress(snapshot) { setProgress(validateProgressSnapshot(snapshot)); setStorageIssue(""); }
+  function restoreProgress(snapshot,sessions={}) {
+    const clean=validateProgressSnapshot(snapshot),previous=collectSessionDrafts(localStorage);
+    replaceSessionDrafts(localStorage,sessions);
+    const result=saveStoredProgress(localStorage,clean);
+    if(!result.ok){replaceSessionDrafts(localStorage,previous);throw Error(result.issue);}
+    setProgress(clean);setStorageIssue("");
+  }
 
   return {
     progress,

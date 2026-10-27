@@ -18,20 +18,20 @@ test("home welcomes all three friends with its own recording, separate from the 
   assert.notEqual(entry.text, primaryVoiceTexts["primary-intro"]);
   for (const name of ["Adri", "Juan", "Cayetana"]) assert.ok(entry.text.includes(name));
   assert.ok(entry.durationSeconds > 3 && entry.durationSeconds < 25);
-  assert.equal(readFileSync(new URL(`../public${home}`, import.meta.url)).subarray(0, 4).toString(), "RIFF");
+  assert.equal(readFileSync(new URL(`../public${home}`, import.meta.url)).subarray(0, 3).toString(), "ID3");
 });
 
 test("constructs GitHub Pages-safe paths for Adri recorded audio", () => {
   assert.equal(
     getRecordedAudioSrc("game-letra-a-letter", "/construye-palabras-con-adri/"),
-    "/construye-palabras-con-adri/audio/adri-local/adri-v1-game-letra-a-letter.wav"
+    "/construye-palabras-con-adri/audio/adri-distribution/adri-v1-game-letra-a-letter.mp3"
   );
 });
 
 test("home and settings use the approved voice while original assets remain recoverable", () => {
   const base = "/construye-palabras-con-adri/";
-  assert.equal(getRecordedAudioSrc("screen-home", base), `${base}audio/adri-local/adri-v1-screen-home.wav`);
-  assert.equal(getRecordedAudioSrc("screen-settings-sample", base), `${base}audio/adri-local/adri-v1-screen-settings-sample.wav`);
+  assert.equal(getRecordedAudioSrc("screen-home", base), `${base}audio/adri-distribution/adri-v1-screen-home.mp3`);
+  assert.equal(getRecordedAudioSrc("screen-settings-sample", base), `${base}audio/adri-distribution/adri-v1-screen-settings-sample.mp3`);
   for (const key of ["screen-home", "screen-settings-sample"])
     assert.ok(statSync(new URL(`../public/audio/adri/${key}.mp3`, import.meta.url)).size > 44);
 });
@@ -58,8 +58,8 @@ test("every catalog recording uses the approved Adri profile and matches its ver
     assert.equal(entry.referenceOrigin,"user-approved-local-reference",line.key);
     assert.ok(["pass","approved-home","pass-second-asr","phonetic-equivalent"].includes(entry.verification),line.key);
     const source=getRecordedAudioSrc(line.key);
-    assert.equal(source,`/audio/adri-local/${entry.filename}`,line.key);
-    const bytes=readFileSync(new URL(`../public${source}`,import.meta.url));
+    assert.equal(source,`/audio/adri-distribution/${entry.filename.replace(/\.wav$/,'.mp3')}`,line.key);
+    const bytes=readFileSync(new URL(`../public/audio/adri-local/${entry.filename}`,import.meta.url));
     assert.equal(createHash("sha256").update(bytes).digest("hex"),entry.sha256,line.key);
     assert.equal("referenceText" in entry,false,line.key);
     assert.equal("referenceSha256" in entry,false,line.key);

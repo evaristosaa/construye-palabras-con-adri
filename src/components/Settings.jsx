@@ -1,3 +1,4 @@
+import SkillSummary from "./SkillSummary";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { primaryMissions } from "../data/primaryData.js";
@@ -13,13 +14,14 @@ export default function Settings({ progress, updateSettings, resetProgress, rest
   const [page,setPage]=useState(0);
   const [reviewIndex,setReviewIndex]=useState(0);
   const [confirmReset,setConfirmReset]=useState(false);
-  const tabs=['Lectura','Sonido','Repaso','Datos','Sin conexión'];
+  const tabs=['Lectura','Sonido','Repaso','Datos','Sin conexión','Aprendizaje'];
   const reviews=primaryMissions.flatMap(m=>m.activities.filter(a=>needsPrimaryPractice(progress.primaryAttempts?.[a.id])||isReviewDue(progress.primaryAttempts?.[a.id])).map(a=>({...a,mission:m})));
   const review=reviews[Math.min(reviewIndex,Math.max(0,reviews.length-1))];
   const last=review && progress.primaryAttempts[review.id];
   return <section className="comic-panel family-screen"><header className="screen-heading"><div><p className="eyebrow">Para acompañar a Adri</p><h1>Familia</h1></div><VoiceGuide text={settingsGuide} audioKey={screenAudioKeys.settings} enabled={progress.voice} compact auto={false}/></header>
     <nav className="family-tabs" aria-label="Opciones de familia">{tabs.map((tab,i)=><button key={tab} aria-pressed={page===i} onClick={()=>{setPage(i);setConfirmReset(false);}}>{tab}</button>)}</nav>
     <div className="family-content">
+    {page===5 && <SkillSummary progress={progress}/>}
     {page===4 && <OfflinePackPanel/>}
     {page===0 && <><h2>Leer a su ritmo</h2><label className="family-setting">Tipo de letra<select value={progress.readingFont || 'print'} onChange={e=>updateSettings({readingFont:e.target.value})}><option value="print">Imprenta</option><option value="round">Redonda</option></select></label><label className="family-setting">Tamaño<select value={progress.readingSize || 'normal'} onChange={e=>updateSettings({readingSize:e.target.value})}><option value="normal">Normal</option><option value="large">Grande</option></select></label><label className="family-setting">Mostrar pista al empezar<input type="checkbox" checked={!!progress.readingGuidance} onChange={e=>updateSettings({readingGuidance:e.target.checked})}/></label><p className="family-note">El botón Aa divide el texto en pasos. Se mantienen las mayúsculas cuando se practican.</p></>}
     {page===1 && <><h2>La voz de Adri</h2><label className="family-setting">Sonidos positivos<input type="checkbox" checked={progress.sound} onChange={e=>updateSettings({sound:e.target.checked})}/></label><label className="family-setting">Ayudas habladas<input type="checkbox" checked={progress.voice} onChange={e=>updateSettings({voice:e.target.checked})}/></label><button className="primary-main-button" onClick={()=>speak(settingsVoiceSample,progress.voice,progress.voiceURI,{audioKey:screenAudioKeys.settingsSample})}>🔊 Probar voz</button></>}

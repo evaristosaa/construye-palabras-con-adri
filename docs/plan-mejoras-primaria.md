@@ -1,4 +1,4 @@
-# Plan de tareas · Construye ideas con Adri
+# Plan de tareas · Aventuras con Adri, Juan y Cayetana
 
 Origen: [análisis del 26 de octubre de 2026](revision-apps-primaria-2026-10-26.md).
 
@@ -24,31 +24,31 @@ Criterios de aceptación: todos los objetos se pueden poner y quitar mediante to
 - [ ] T11. Segundo cuento piloto «La semilla de Cayetana» implementado. Pendiente observar ambos cuentos con Adri antes de ampliar a ocho–doce.
 - [x] T12. Separar escuchar el texto y escuchar la ayuda en las actividades de lectura existentes.
 - [x] T13. Incorporar el puente del diez y un constructor de patrones.
-- [ ] T14. Incorporar composición de figuras y el camino de flechas de Juan, con alternativa al arrastre.
-- [ ] T15. Incorporar la tienda con monedas y varias soluciones correctas.
-- [ ] T16. Preparar variantes matemáticas acotadas con semilla estable; verificar dibujos, solución, pistas y explicación.
-- [ ] T17. Optimizar imágenes y audio de distribución conservando los originales; medir tamaño y calidad antes/después.
+- [x] T14. Incorporar composición de figuras y el camino de flechas de Juan, con alternativa al arrastre.
+- [x] T15. Incorporar la tienda con monedas y varias soluciones correctas.
+- [x] T16. Preparar variantes matemáticas acotadas con semilla estable; verificar dibujos, solución, pistas y explicación.
+- [x] T17. Optimizar imágenes y audio de distribución conservando los originales; medir tamaño y calidad antes/después.
 
 ## Entrega 3 · Adaptación y continuidad del aprendizaje
 
-- [ ] T18. Etiquetar habilidades y prerrequisitos en el contenido existente.
-- [ ] T19. Registrar apoyos y resolución independiente, separando esa evidencia de los premios.
-- [ ] T20. Seleccionar práctica por habilidad, ejemplos diferentes y fechas distintas, manteniendo elección libre.
-- [ ] T21. Mostrar en Familia un resumen comprensible de lo practicado y de los apoyos útiles, sin notas ni diagnósticos.
-- [ ] T22. Ampliar paquetes offline por materia y recuperación de sesiones a los recorridos existentes.
+- [x] T18. Etiquetar habilidades y prerrequisitos en el contenido existente.
+- [x] T19. Registrar apoyos y resolución independiente, separando esa evidencia de los premios.
+- [x] T20. Seleccionar práctica por habilidad, ejemplos diferentes y fechas distintas, manteniendo elección libre.
+- [x] T21. Mostrar en Familia un resumen comprensible de lo practicado y de los apoyos útiles, sin notas ni diagnósticos.
+- [x] T22. Ampliar paquetes offline por materia y recuperación de sesiones a los recorridos existentes.
 
 ## Entrega 4 · Crear, observar y compartir el juego
 
-- [ ] T23. Guardar los cuentos creados; añadir un cómic editable de tres viñetas y dibujo propio.
-- [ ] T24. Incorporar un diario de observación de plantas y tiempo con fechas y comparación de registros.
-- [ ] T25. Incorporar turnos cooperativos en el mismo dispositivo y nuevas expresiones coherentes de los personajes.
-- [ ] T26. Permitir una narración grabada voluntariamente, con escucha y borrado locales.
+- [x] T23. Guardar los cuentos creados; añadir un cómic editable de tres viñetas y dibujo propio.
+- [x] T24. Incorporar un diario de observación de plantas y tiempo con fechas y comparación de registros.
+- [x] T25. Incorporar turnos cooperativos en el mismo dispositivo y nuevas expresiones coherentes de los personajes.
+- [x] T26. Permitir una narración grabada voluntariamente, con escucha y borrado locales.
 
 ## Ampliaciones condicionadas a una necesidad real
 
-- [ ] T27. Evaluar sincronización privada entre dispositivos si la familia la necesita; requiere servicio e identidad adicionales.
-- [ ] T28. Evaluar distribución Android/iOS con un contenedor nativo después de comprobar la PWA.
-- [ ] T29. Ensayar reconocimiento oral con habla infantil y acento local antes de utilizarlo como evaluación. No bloquea las entregas anteriores.
+- [x] T27. Evaluación técnica terminada: mantener copias transportables; no activar sincronización remota sin necesidad confirmada. Véanse las decisiones técnicas.
+- [x] T28. Evaluación técnica terminada: mantener la PWA; requisitos y criterio para un contenedor nativo documentados. No se declara publicado un APK/IPA.
+- [ ] T29. Evaluación técnica terminada y reconocimiento automático descartado para puntuar. Pendiente el ensayo con habla infantil real y acento local; no se sustituye por voces sintéticas ni se da por realizado. No bloquea las entregas anteriores.
 
 ## Seguimiento
 
@@ -89,3 +89,17 @@ Siguiente bloque pendiente: T14–T17. La observación de los dos cuentos con Ad
 - Corrección de reentrada: el cuento se presenta en cada visita a La merienda, también con una partida guardada. Al terminar se recupera el reto pendiente con sus objetos y ayudas. Si la aventura ya estaba resuelta, empieza una nueva vuelta después del cuento, sin repetir premios. Verificados una salida con una manzana en la cesta, el cuento automático al volver y la recuperación de esa manzana al acabar; 83 pruebas de la app superadas.
 - Rediseño visual de los retos: escenario ilustrado por asignatura, los tres amigos en la escena, tarjeta cálida para jugar y botones de respuesta con color. El reto de sílabas incluye dibujo literal de la palabra, un botón de palmadas mayor y marcas de las palmadas dadas, sin mostrar cuántas se necesitan. Revisadas las siete mecánicas en 320×568 y 667×375, además de escritorio de 1280×800. La lectura, las decenas, el teclado y los tableros de veinte fichas ceden espacio decorativo a sus controles en pantallas pequeñas.
 - Ajuste de altura en escritorio de 1280×720: la tarjeta conserva el espacio de su contenido y la escena ilustrada se reduce primero. Verificados los siete tipos de reto y los casos de lectura, opciones largas y veinte fichas, sin botones recortados por el contenedor.
+
+
+### Entregas 2–4 · Implementación restante · 27/10/2026
+
+- T14–T16: mosaico de cuatro triángulos girables con silueta, camino programable de Juan y tienda de Cayetana con monedas de uno/dos euros. Todas las acciones usan toques y tienen deshacer. Las plantillas usan una semilla guardada; aceptar una solución distinta no multiplica premios. Se verifican 200 semillas, límites del tablero y varios pagos válidos.
+- T17: distribución MP3 derivada de los mismos 309 WAV aprobados, sin modificar tono, velocidad ni maestros. Audio: 88.593.762 → 15.550.860 bytes (82,4 % menos). Las 14 ilustraciones existentes procesadas pasan de 15.016.387 a 2.188.680 bytes (85,4 % menos); la nueva hoja de gestos se distribuye también en WebP. Cada audio comprimido conserva la huella del maestro y tiene su propia huella verificable. Diferencia máxima de duración: 0,00192 segundos. Medición reproducible en `distribution-measurements.json` y script `optimize-distribution.py`.
+- T18–T21: las 144 actividades tienen habilidad y prerrequisitos. Los nuevos intentos distinguen respuesta con/sin pista; los registros históricos no se inventan. La recomendación libre considera ejemplos no usados, días diferentes y prerrequisitos, conservando la prioridad de repasos pendientes. Familia → Aprendizaje muestra intentos, apoyos, fechas y ejemplos; las estrellas no se usan para inferir dominio. El registro se limita a 1.500 eventos recientes y viaja en la copia de progreso.
+- T22: paquetes independientes de Merienda, Lengua (incluido Abecedario y cuentos), Matemáticas y Medio, con tamaño, descarga verificable y marca de completitud propia. La actualización sigue siendo explícita desde Familia. Se guardan presentación, posición y trabajo de misiones y talleres, además de la aventura original; los juegos nuevos conservan semilla y piezas.
+- T23–T24: los cuentos creados se pueden guardar y continuar como tres viñetas editables. Álbum local en IndexedDB con dibujos propios, observaciones de plantas/tiempo, fechas, medida opcional y comparación. Exportación/importación separada del progreso, incluyendo grabaciones; validación previa e importación en una única transacción. Guardado explícito, aviso de cambios y confirmación antes de borrar o sustituir obras coincidentes.
+- T25: turnos compartidos en misiones y juegos nuevos sin crear perfiles diferentes. Nueve gestos de cómic coherentes (observar, proponer y celebrar para cada amigo), guardados como una hoja ilustrada nueva. Movimiento reducido respetado. Prompt y procedencia en `personajes-gestos-2026-10-27.md`.
+- T26: grabación voluntaria de hasta un minuto, escucha, sustitución y borrado locales. El micrófono se solicita al pulsar y se libera al terminar o salir. Las partidas en curso también se incluyen en la copia de progreso, y la sustitución se valida antes de aplicarse. Los archivos no se envían; se guardan con la obra y pueden incluirse en la copia que decida exportar la familia. Compatibilidad y permiso fallidos conservan el resto del taller.
+- T27–T29: decisiones y límites en `decisiones-tecnicas-2026-10-27.md`. La PWA conserva distribución en Pages; no se añaden cuentas ni evaluación oral automática. La observación de los cuentos con Adri (T11), el ensayo oral infantil (T29) y la prueba física voluntaria de micrófono siguen pendientes de uso real. No se presentan como pruebas superadas.
+
+Validación técnica: 99 pruebas automatizadas superadas; compilación de producción sin advertencias de tamaño de bloque; recorridos táctiles en 320×568, 667×375 y escritorio. Comprobados camino ejecutado, pago combinado, mosaico girado, cómic guardado y recuperado, observación/dibujo y controles visibles. Los cuatro paquetes se descargaron; con el servidor de producción detenido, se recargó la aplicación, se reprodujo el cuento de Cayetana y se resolvieron el mosaico y una misión de Medio.

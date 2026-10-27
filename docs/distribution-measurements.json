@@ -1,0 +1,100 @@
+{
+  "audio": {
+    "files": 309,
+    "before": 88593762,
+    "after": 15550860,
+    "maximumDurationDifferenceSeconds": 0.0019166666666663446
+  },
+  "images": [
+    {
+      "original": "assets/adri-audio.png",
+      "distribution": "assets/adri-audio.webp",
+      "before": 1044523,
+      "after": 108252
+    },
+    {
+      "original": "assets/adri-builder.png",
+      "distribution": "assets/adri-builder.webp",
+      "before": 1190272,
+      "after": 111446
+    },
+    {
+      "original": "assets/adri-celebrating.png",
+      "distribution": "assets/adri-celebrating.webp",
+      "before": 935957,
+      "after": 98460
+    },
+    {
+      "original": "assets/adri-clean.png",
+      "distribution": "assets/adri-clean.webp",
+      "before": 1107831,
+      "after": 120822
+    },
+    {
+      "original": "assets/adri-detective.png",
+      "distribution": "assets/adri-detective.webp",
+      "before": 1058998,
+      "after": 96064
+    },
+    {
+      "original": "assets/adri-reader.png",
+      "distribution": "assets/adri-reader.webp",
+      "before": 1051647,
+      "after": 115256
+    },
+    {
+      "original": "assets/adri.png",
+      "distribution": "assets/adri.webp",
+      "before": 501923,
+      "after": 245144
+    },
+    {
+      "original": "assets/characters/amigos-comic-unificado-v1.png",
+      "distribution": "assets/characters/amigos-comic-unificado-v1.webp",
+      "before": 2292178,
+      "after": 266286
+    },
+    {
+      "original": "assets/characters/amigos-expresiones-v1.png",
+      "distribution": "assets/characters/amigos-expresiones-v1.webp",
+      "before": 2222264,
+      "after": 465276
+    },
+    {
+      "original": "assets/characters/cayetana-comic-v1.png",
+      "distribution": "assets/characters/cayetana-comic-v1.webp",
+      "before": 1862267,
+      "after": 177594
+    },
+    {
+      "original": "assets/characters/cayetana-comic-v2.png",
+      "distribution": "assets/characters/cayetana-comic-v2.webp",
+      "before": 1858881,
+      "after": 163224
+    },
+    {
+      "original": "assets/characters/juan-comic-v1.png",
+      "distribution": "assets/characters/juan-comic-v1.webp",
+      "before": 1179604,
+      "after": 132098
+    },
+    {
+      "original": "assets/worlds/discovery-garden.jpg",
+      "distribution": "assets/worlds/discovery-garden.webp",
+      "before": 314979,
+      "after": 190054
+    },
+    {
+      "original": "assets/worlds/number-island.jpg",
+      "distribution": "assets/worlds/number-island.webp",
+      "before": 291227,
+      "after": 170524
+    },
+    {
+      "original": "assets/worlds/reading-village.jpg",
+      "distribution": "assets/worlds/reading-village.webp",
+      "before": 326100,
+      "after": 193456
+    }
+  ]
+}

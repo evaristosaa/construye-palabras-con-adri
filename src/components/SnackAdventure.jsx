@@ -32,7 +32,7 @@ export default function SnackAdventure({ progress, completeGame, attemptPrimaryA
   function check() {
     if (locked.current || solved) return;
     const correct = checkSnackStep(stage, session);
-    attemptPrimaryActivity(snackRewardId(stage), correct, { variantKey: snackId });
+    attemptPrimaryActivity(snackRewardId(stage), correct, { variantKey: snackId, supported: !!session.help?.[stage] });
     if (correct) {
       locked.current = true;
       setSession(current => ({ ...current, solved: [...new Set([...current.solved, stage])] }));

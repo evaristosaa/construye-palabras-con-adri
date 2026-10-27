@@ -1,6 +1,7 @@
+import {useSessionState,readSession,writeSession,clearSession} from "../storage/sessionDrafts.js";
 import { useEffect, useRef, useState } from "react";
 import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
-import {FriendCompanion,FriendAvatar} from "./Classmates";
+import {FriendCompanion,FriendAvatar,FriendReaction} from "./Classmates";
 import {classmateAt} from "../data/classmates.js";
 import CountingBoard from "./CountingBoard";
 import PictureSort from "./PictureSort";
@@ -28,32 +29,36 @@ export default function PrimaryGame(props) {
 }
 function PreparedMission({mission,...props}) {
   const [params] = useSearchParams();
-  const [prepared] = useState(()=>({...preparePrimaryMission(mission,props.progress),startIndex:mission.activities.findIndex(a=>a.id===params.get("reto"))}));
-  return <MissionPlayer mission={prepared} {...props} />;
+  const draftKey=`prepared:${mission.id}:${params.get("reto")||""}`;
+  const [prepared] = useState(()=>readSession(draftKey,{...preparePrimaryMission(mission,props.progress),startIndex:mission.activities.findIndex(a=>a.id===params.get("reto"))}));
+  useEffect(()=>{writeSession(draftKey,prepared);},[draftKey,prepared]);
+  return <MissionPlayer key={draftKey} draftKey={draftKey} mission={prepared} {...props} />;
 }
 
 export function PrimaryAdventure(props) {
-  const [mission] = useState(() => ({ id: "aventura", title: "Juego con Adri", adventure: true, activities: buildPrimaryAdventure(props.progress) }));
-  return <MissionPlayer mission={mission} {...props} />;
+  const [mission] = useSessionState("prepared:aventura",() => ({ id: "aventura", title: "Juego con Adri", adventure: true, activities: buildPrimaryAdventure(props.progress) }));
+  return <MissionPlayer draftKey="prepared:aventura" mission={mission} {...props} />;
 }
 
-export function MissionPlayer({ mission, progress, completeGame, completePrimaryMission, attemptPrimaryActivity }) {
-  const [index, setIndex] = useState(() => {
+export function MissionPlayer({ mission, progress, completeGame, completePrimaryMission, attemptPrimaryActivity, draftKey }) {
+  const sessionKey=draftKey||`mission:${mission.id}`;
+  const savedState=(name,initial)=>useSessionState(`${sessionKey}:${name}`,initial);
+  const [index, setIndex] = savedState("index",() => {
     if (mission.adventure) return 0;
     if (mission.startIndex >= 0) return mission.startIndex;
     const next = mission.activities.findIndex(activity => !progress.completedGames.includes(activity.id));
     return next < 0 ? 0 : next;
   });
-  const [selected, setSelected] = useState("");
-  const [pieces, setPieces] = useState([]);
-  const [entry, setEntry] = useState("");
+  const [selected, setSelected] = savedState("selected","");
+  const [pieces, setPieces] = savedState("pieces",[]);
+  const [entry, setEntry] = savedState("entry","");
   const [feedback, setFeedback] = useState("");
   const [solved, setSolved] = useState(false);
   const [finished, setFinished] = useState(false);
   const [constructionWins,setConstructionWins]=useState(()=>initialConstructionWins(mission.activities,progress.completedGames,mission.adventure));
   const [showConstruction,setShowConstruction]=useState(false);
   const constructionButton=useRef(null),constructionWasOpen=useRef(false);
-  const [reading, setReading] = useState(true);
+  const [reading, setReading] = savedState("reading",true);
   const [showBoard, setShowBoard] = useState(false);
   const [showReading,setShowReading] = useState(false);
   const readingButton = useRef(null);
@@ -64,6 +69,9 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
   const feedbackButton = useRef(null);
   const feedbackWasOpen = useRef(false);
   const locked = useRef(false);
+  const supported=useRef(readSession(`${sessionKey}:support:${index}`,!!progress.readingGuidance));
+  useEffect(()=>{writeSession(`${sessionKey}:support:${index}`,supported.current);},[index,feedback,showBoard,showReading]);
+  const [cooperative,setCooperative]=savedState("cooperative",false);
   const heading = useRef(null);
   const activity = mission.activities[index];
   const friend=classmateAt(index);
@@ -85,7 +93,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
   }, [showBoard]);
   useEffect(()=>{if(readingWasOpen.current && !showReading) readingButton.current?.focus(); readingWasOpen.current=showReading;},[showReading]);
   useEffect(()=>{if(constructionWasOpen.current&&!showConstruction)constructionButton.current?.focus({preventScroll:true});constructionWasOpen.current=showConstruction;},[showConstruction]);
-  useEffect(()=>{if(progress.readingGuidance) setFeedback(activity.hint);},[activity.id]);
+  useEffect(()=>{if(progress.readingGuidance){supported.current=true;setFeedback(activity.hint);}},[activity.id]);
   useEffect(() => {
     const key = finished ? "primary-complete" : audioKey;
     speak(primaryVoiceTexts[key], progress.voice, progress.voiceURI, { audioKey: key });
@@ -95,7 +103,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
     if (locked.current) return;
     const correct = isPrimaryAnswerCorrect(activity, value);
     setSelected(value);
-    attemptPrimaryActivity(activity.id, correct, {variantKey:activity.variantKey});
+    attemptPrimaryActivity(activity.id, correct, {variantKey:activity.variantKey,supported:supported.current});
     if (correct) {
       locked.current = true;
       setSolved(true);
@@ -104,7 +112,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
       completeGame(activity.id);
       speakResult("success", progress.voice, progress.sound, progress.voiceURI);
     } else {
-      setFeedback(activity.hint);
+      supported.current=true;setFeedback(activity.hint);
       speakResult("retry", progress.voice, progress.sound, progress.voiceURI);
     }
   }
@@ -112,9 +120,13 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
     if (!locked.current) return;
     if (index === mission.activities.length - 1) {
       if (!mission.adventure) completePrimaryMission(mission.id, mission.activities.map(item => item.id));
+      for(const name of ["index","selected","pieces","entry","reading"])clearSession(`${sessionKey}:${name}`);
+      if(draftKey)clearSession(draftKey);
+      for(const a of mission.activities)for(const key of ["tokens","claps","tens","units"])clearSession(`${key}:${a.id}:${a.variantKey}`);
       setFinished(true);
       return;
     }
+    supported.current=!!progress.readingGuidance;
     locked.current = false;
     setIndex(current => current + 1);
     setSelected(""); setPieces([]); setEntry(""); setFeedback(""); setSolved(false); setReading(true); setTokens(Array(20).fill(false));
@@ -123,17 +135,17 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
   if (finished) return <PrimaryReflection mission={mission} activity={activity} progress={progress} invitation={beyondScreen[activity.topic]} nextMission={!mission.adventure&&nextMission?.id!==mission.id?nextMission:null} project={project} constructionCount={constructionWins.length}/>;
 
   return <section className={`primary-game narrative-game subject-${subject.id} ${mission.workshop?'is-workshop':''}`} style={{'--mission-world':`url("${worldAsset(subject.id,import.meta.env.BASE_URL)}")`}}>
-    <header inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-game-heading comic-panel"><Link className="primary-text-link" to={mission.returnTo || (mission.adventure ? "/primaria" : `/primaria?materia=${mission.subject}`)}>← {mission.adventure ? "Salir del juego" : subject.title}</Link><p>{activity.workshopPhase || mission.title}</p><ConstructionButton project={project} count={constructionWins.length} total={mission.activities.length} buttonRef={constructionButton} onClick={()=>setShowConstruction(true)}/><progress max={mission.activities.length} value={index + (solved ? 1 : 0)} aria-label="Avance de la misión" /></header>
+    <header inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-game-heading comic-panel"><Link className="primary-text-link" to={mission.returnTo || (mission.adventure ? "/primaria" : `/primaria?materia=${mission.subject}`)}><span className="mission-long-label">← {mission.adventure ? "Salir del juego" : subject.title}</span><span className="mission-short-label">← {mission.adventure ? "Menú" : subject.id==="medio"?"Medio":subject.title}</span></Link><p>{activity.workshopPhase || mission.title}</p><button className="primary-secondary-button coop-toggle" aria-pressed={cooperative} onClick={()=>setCooperative(v=>!v)}>🤝 Turnos</button><ConstructionButton project={project} count={constructionWins.length} total={mission.activities.length} buttonRef={constructionButton} onClick={()=>setShowConstruction(true)}/><progress max={mission.activities.length} value={index + (solved ? 1 : 0)} aria-label="Avance de la misión" /></header>
     <div inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-play-layout">
       <aside className="primary-companion comic-panel"><ConstructionScene project={project} count={constructionWins.length} total={mission.activities.length}/><FriendCompanion name={friend.name} variant={solved ? "celebrating" : subject.id === "medio" ? "detective" : "reader"}/><strong className="companion-name">{friend.name} te acompaña</strong><p>{project.task}</p><span>{constructionWins.length} de {mission.activities.length} retos de esta obra</span></aside>
       <div className={`mission-stage comic-panel activity-${activity.type}`}>
-        <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><img src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.png`} alt="" draggable="false"/></div>
+        <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><img src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt="" draggable="false"/></div>
       <div className="primary-exercise mission-task-card">
-        <div className="primary-exercise-top"><FriendAvatar name={friend.name} className="quest-buddy"/><p className="eyebrow">{subject.icon} {subject.title}</p><div className="primary-tool-buttons">{subject.id === "matematicas" && !["quantity","place-value"].includes(activity.type) && <button ref={boardButton} className="primary-help-button" onClick={() => setShowBoard(true)}>Fichas</button>}<button ref={readingButton} className="primary-help-button" onClick={() => setShowReading(true)} aria-label="Leer paso a paso">Aa</button><button className="primary-help-button" onClick={() => { setFeedback(activity.hint); }} aria-label="Ver una pista">💡</button><button className="primary-help-button" onClick={() => speak(primaryVoiceTexts[audioKey], progress.voice, progress.voiceURI, { audioKey })} aria-label="Escuchar ayuda">🔊</button></div></div>
+        <div className="primary-exercise-top"><FriendAvatar name={friend.name} className="quest-buddy"/><p className="eyebrow">{subject.icon} {subject.title}</p><div className="primary-tool-buttons">{subject.id === "matematicas" && !["quantity","place-value"].includes(activity.type) && <button ref={boardButton} className="primary-help-button" onClick={() => (supported.current=true,setShowBoard(true))}>Fichas</button>}<button ref={readingButton} className="primary-help-button" onClick={() => (supported.current=true,setShowReading(true))} aria-label="Leer paso a paso">Aa</button><button className="primary-help-button" onClick={() => { supported.current=true;setFeedback(activity.hint); }} aria-label="Ver una pista">💡</button><button className="primary-help-button" onClick={() => speak(primaryVoiceTexts[audioKey], progress.voice, progress.voiceURI, { audioKey })} aria-label="Escuchar ayuda">🔊</button></div></div>
         {activity.passage && reading ? <PrimaryReadingPanel key={activity.passage} activity={activity} progress={progress} heading={heading} onContinue={()=>setReading(false)}/> : <>
         {activity.passage && <button className="primary-text-link" onClick={() => setReading(true)}>📖 Volver al texto</button>}
         {activity.visual && <div className="primary-visual" aria-label="Apoyo visual para contar">{activity.visual}</div>}
-        <h1 ref={heading} tabIndex={-1}>{activity.question}</h1>
+        {cooperative&&<p className="cooperative-cue">🤝 Turno de {friend.name}: una persona propone y otra coloca. Al terminar, cambiad.</p>}<h1 ref={heading} tabIndex={-1}>{activity.question}</h1>
         {activity.type === "quantity" && <QuantityGame key={activity.id} activity={activity} solved={solved} onSubmit={submit}/>}
         {activity.type === "place-value" && <PlaceValueGame key={activity.id} activity={activity} solved={solved} onSubmit={submit}/>}
         {activity.type === "syllables" && <SyllableGame key={activity.id} activity={activity} solved={solved} onSubmit={submit} progress={progress}/>}
@@ -148,6 +160,6 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
     {showConstruction&&<ConstructionDialog project={project} count={constructionWins.length} total={mission.activities.length} progress={progress} onClose={()=>setShowConstruction(false)}/>}
     {showReading && <ReadingSupport activity={activity} onClose={()=>setShowReading(false)} />}
     {showBoard && <CountingBoard question={activity.question} tokens={tokens} setTokens={setTokens} onClose={() => setShowBoard(false)} />}
-    {feedback && <div className="primary-feedback-shade"><div className={`primary-feedback-dialog ${solved ? "is-success" : ""}`} role="dialog" aria-modal="true" aria-labelledby="primary-feedback-title" onKeyDown={event => { if (event.key === "Tab") { const buttons=[...event.currentTarget.querySelectorAll("button")], first=buttons[0], last=buttons.at(-1); if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();} } if (event.key === "Escape" && !solved) setFeedback(""); }}>{solved?<div className="world-celebration construction-celebration" aria-hidden="true"><ConstructionScene project={project} count={constructionWins.length} total={mission.activities.length} decorative/><span>🌟</span><i>✦</i><i>✦</i><i>✦</i></div>:<span className="feedback-symbol" aria-hidden="true">💡</span>}<h2 id="primary-feedback-title">{solved ? constructionWins.length===mission.activities.length ? "¡Obra terminada!" : "¡Tu obra crece!" : "Una pista"}</h2>{!solved && progress.readingGuidance && !selected && <p className="guided-question"><strong>{activity.question}</strong></p>}<p>{solved ? activity.explanation : feedback}</p>{solved && localVoiceFiles[activity.ideaAudioKey] && <button className="primary-secondary-button" onClick={()=>speak(activity.idea,progress.voice,progress.voiceURI,{audioKey:activity.ideaAudioKey})}>🔊 Escuchar consejo</button>}<button ref={feedbackButton} className="primary-main-button" onClick={solved ? next : () => { setFeedback(""); heading.current?.focus(); }}>{solved ? index === mission.activities.length - 1 ? mission.adventure ? "Terminar juego ★" : "Terminar misión ★" : "Siguiente reto →" : "Volver al reto"}</button></div></div>}
+    {feedback && <div className="primary-feedback-shade"><div className={`primary-feedback-dialog ${solved ? "is-success" : ""}`} role="dialog" aria-modal="true" aria-labelledby="primary-feedback-title" onKeyDown={event => { if (event.key === "Tab") { const buttons=[...event.currentTarget.querySelectorAll("button")], first=buttons[0], last=buttons.at(-1); if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();} } if (event.key === "Escape" && !solved) setFeedback(""); }}>{solved?<div className="world-celebration construction-celebration" aria-hidden="true"><ConstructionScene project={project} count={constructionWins.length} total={mission.activities.length} decorative/><span>🌟</span><i>✦</i><i>✦</i><i>✦</i></div>:<FriendReaction name={friend.name} emotion="idea"/>}<h2 id="primary-feedback-title">{solved ? constructionWins.length===mission.activities.length ? "¡Obra terminada!" : "¡Tu obra crece!" : "Una pista"}</h2>{!solved && progress.readingGuidance && !selected && <p className="guided-question"><strong>{activity.question}</strong></p>}<p>{solved ? activity.explanation : feedback}</p>{solved && localVoiceFiles[activity.ideaAudioKey] && <button className="primary-secondary-button" onClick={()=>speak(activity.idea,progress.voice,progress.voiceURI,{audioKey:activity.ideaAudioKey})}>🔊 Escuchar consejo</button>}<button ref={feedbackButton} className="primary-main-button" onClick={solved ? next : () => { setFeedback(""); heading.current?.focus(); }}>{solved ? index === mission.activities.length - 1 ? mission.adventure ? "Terminar juego ★" : "Terminar misión ★" : "Siguiente reto →" : "Volver al reto"}</button></div></div>}
   </section>;
 }

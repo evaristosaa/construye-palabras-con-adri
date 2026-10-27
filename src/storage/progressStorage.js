@@ -1,3 +1,4 @@
+import {validateSessionArchive} from "./sessionArchive.js";
 import { defaultProgress, normalizeProgress } from "../hooks/progressModel.js";
 export const progressStorageKey = "adri-reading-progress-v1";
 export const progressBackupKey = `${progressStorageKey}:backup`;
@@ -27,6 +28,10 @@ export function validateProgressSnapshot(value) {
       if (!record(attempt)) throw new Error("Un intento guardado no es válido.");
       for (const field of ["attempts", "mistakes", "correctStreak", "successes", "reviewStage"]) if (attempt[field] !== undefined && (!Number.isSafeInteger(attempt[field]) || attempt[field] < 0)) throw new Error("Los intentos contienen un contador no válido.");
     }
+  }
+  if(value.learningEvents!==undefined){
+    if(!Array.isArray(value.learningEvents)||value.learningEvents.length>1500)throw new Error("El registro de aprendizaje no es válido.");
+    for(const event of value.learningEvents)if(!record(event)||typeof event.activityId!=="string"||event.activityId.length>150||typeof event.correct!=="boolean"||typeof event.supported!=="boolean"||typeof event.variantKey!=="string"||event.variantKey.length>100||!Number.isFinite(Date.parse(event.at)))throw new Error("Una observación de práctica no es válida.");
   }
   if (value.adventures !== undefined && !record(value.adventures)) throw new Error("Las aventuras guardadas no son válidas.");
   return normalizeProgress(value);
@@ -59,15 +64,16 @@ export function saveStoredProgress(storage, progress) {
 export function clearStoredProgress(storage) {
   let failure;
   for (const key of [progressStorageKey,progressBackupKey]) { try { storage.removeItem(key); } catch(error) { failure=error; } }
+  if(Number.isInteger(storage.length)){const keys=[];for(let i=0;i<storage.length;i++){const key=storage.key(i);if(key?.startsWith('adri-session-v1:'))keys.push(key);}for(const key of keys){try{storage.removeItem(key);}catch(error){failure=error;}}}
   if(failure) throw failure;
 }
-export function exportProgressBackup(progress, now = new Date()) {
-  return JSON.stringify({ format: "adri-progress-backup", version: 1, exportedAt: now.toISOString(), progress: validateProgressSnapshot(progress) }, null, 2);
+export function exportProgressBackup(progress, now = new Date(), sessions) {
+  return JSON.stringify({ format: "adri-progress-backup", version: 1, exportedAt: now.toISOString(), progress: validateProgressSnapshot(progress), ...(sessions?{sessions:validateSessionArchive(sessions)}:{}) }, null, 2);
 }
 export function importProgressBackup(text) {
   if (typeof text !== "string" || text.length > limit) throw new Error("El archivo es demasiado grande.");
   let backup;
   try { backup = JSON.parse(text); } catch { throw new Error("El archivo no contiene una copia JSON válida."); }
   if (!record(backup) || backup.format !== "adri-progress-backup" || backup.version !== 1) throw new Error("Elige una copia de progreso de esta app.");
-  return { progress: validateProgressSnapshot(backup.progress), exportedAt: typeof backup.exportedAt === "string" ? backup.exportedAt : "" };
+  return { progress: validateProgressSnapshot(backup.progress), sessions:validateSessionArchive(backup.sessions||{}), exportedAt: typeof backup.exportedAt === "string" ? backup.exportedAt : "" };
 }
