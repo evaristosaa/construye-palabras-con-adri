@@ -18,14 +18,13 @@ export default function PrimaryHub({ progress }) {
   const mission = missions[index];
   const project=subject&&constructionFor(subject.id,mission.activities[0].topic);
   const count = mission?.activities.filter(activity => progress.completedGames.includes(activity.id)).length || 0;
-  return <section className={`primary-hub comic-panel screen-hub ${subject ? `subject-${subject.id}` : ""}`}>
-    <header className="screen-heading"><div><p className="eyebrow">1.º de Primaria</p><h1>{subject ? `${subject.icon} ${subject.title}` : "¿A qué jugamos?"}</h1></div><VoiceGuide text={project?project.voice:primaryVoiceTexts["primary-intro"]} audioKey={project?project.audioKey:"primary-intro"} enabled={progress.voice} compact /></header>
+  return <section className={`primary-hub comic-panel screen-hub ${subject ? `subject-${subject.id}` : "is-overview"}`}>
+    <header className="screen-heading"><div><p className="eyebrow">1.º de Primaria</p><h1>{subject ? `${subject.icon} ${subject.title}` : "Elige tu misión"}</h1></div><VoiceGuide text={project?project.voice:primaryVoiceTexts["primary-intro"]} audioKey={project?project.audioKey:"primary-intro"} enabled={progress.voice} compact /></header>
     {!subject ? <>
-      <Link to="/primaria/merienda" className="primary-main-button adventure-start friends-adventure" aria-label="Preparar la merienda con Adri, Juan y Cayetana"><FriendTeam/><span>▶ La merienda<small>Cuento y tres retos</small></span></Link>
       <nav className="subject-picker world-picker" aria-label="Asignaturas">{primarySubjects.map(item => <button className={`subject-choice world-choice subject-${item.id}`} key={item.id} onClick={() => setParams({ materia: item.id })}><WorldArt subject={item.id}/><span className="world-choice-copy"><strong>{item.title}</strong><small>{learningWorlds[item.id].title}</small></span><b aria-hidden="true">→</b></button>)}</nav>
-      <div className="hub-extras"><Link className="primary-secondary-button" to="/primaria/aventura">Retos de las tres materias →</Link><Link className="primary-secondary-button" to="/primaria/album">🎨 Mi álbum y diario</Link></div>
+      <Link className="primary-main-button club-entry" to="/primaria/club"><FriendTeam/><span><strong>El club de los tres →</strong><small>Cuentos, juegos y creaciones</small></span></Link>
     </> : <>
-      <div className="subject-back-row"><button className="primary-secondary-button" onClick={() => setParams({})}>← Materias</button><Link className="primary-main-button story-link" to={subject.id === "matematicas" ? "/primaria/mates" : `/primaria/taller/${subject.id}`}>🎲 Juegos variados</Link></div>
+      <div className="subject-back-row"><button className="primary-secondary-button" onClick={() => setParams({})}>← Materias</button></div>
       <article className="mission-preview illustrated-mission" key={mission.id}>
         <p className="eyebrow">Misión {mission.number} de {missions.length} · {primaryStages[mission.stage]}</p>
         <WorldArt subject={subject.id} className="mission-scene"/>

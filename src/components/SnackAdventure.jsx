@@ -49,7 +49,7 @@ export default function SnackAdventure({ progress, completeGame, attemptPrimaryA
   const cueText = story?.text || snackInstructions[stage];
   const cueKey = story?.audioKey || `snack-${stage}`;
   return <section className={`snack-screen stage-${stage} ${solved ? "step-solved" : ""}`}>
-    <header className="snack-header"><Link to="/" className="primary-secondary-button snack-menu-button">⌂ Menú</Link><span>La merienda</span><div className="snack-step-dots" aria-label={`${session.solved.length} de 3 retos resueltos`}>{[0,1,2].map(i=><b key={i} className={i<session.solved.length?"is-done":""}>{i<session.solved.length?"★":"○"}</b>)}</div></header>
+    <header className="snack-header"><Link to="/primaria/club?zona=cuentos" className="primary-secondary-button snack-menu-button">← Cuentos</Link><span>La merienda</span><div className="snack-step-dots" aria-label={`${session.solved.length} de 3 retos resueltos`}>{[0,1,2].map(i=><b key={i} className={i<session.solved.length?"is-done":""}>{i<session.solved.length?"★":"○"}</b>)}</div></header>
     <div className="snack-main comic-panel">
       {story ? <>
         <PicnicScene scene={story.scene}/>

@@ -1,3 +1,4 @@
+import ClubHub from "./components/ClubHub";
 import ExplorationLab from "./components/ExplorationLab";
 import CreativeJournal from "./components/CreativeJournal";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
@@ -13,7 +14,6 @@ import StoryStudio from "./components/StoryStudio";
 import MathWorkshop from "./components/MathWorkshop";
 import SubjectWorkshop from "./components/SubjectWorkshop";
 import SnackAdventure from "./components/SnackAdventure";
-import StoryLibrary from "./components/StoryLibrary";
 import SeedStory from "./components/SeedStory";
 import { PageShell } from "./components/Layout";
 import { useProgress } from "./hooks/useProgress";
@@ -26,10 +26,11 @@ export default function App() {
   const isAlphabetGame=location.pathname.startsWith("/juego/");
   const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || location.pathname.startsWith('/primaria/cuentos') || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda", "/primaria/explora", "/primaria/album"].includes(location.pathname);
   const isPrimaryHub = location.pathname === "/primaria";
+  const isClub=location.pathname === "/primaria/club";
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
   return (
-    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame || isAlphabetGame} hideTopBar={isHome || isPrimaryGame || isAlphabetGame} screenLayout={isAlphabetGame || isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isAlphabetGame || isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
+    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame || isAlphabetGame} hideTopBar={isClub || isHome || isPrimaryGame || isAlphabetGame} screenLayout={isClub || isAlphabetGame || isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isAlphabetGame || isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
       <Routes>
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
@@ -37,7 +38,8 @@ export default function App() {
         <Route path="/primaria/explora" element={<ExplorationLab progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>}/>
         <Route path="/primaria/album" element={<CreativeJournal progress={progress}/>}/>
         <Route path="/primaria/crea" element={<StoryStudio progress={progress}/>} />
-        <Route path="/primaria/cuentos" element={<StoryLibrary/>}/>
+        <Route path="/primaria/club" element={<ClubHub progress={progress}/>}/>
+        <Route path="/primaria/cuentos" element={<Navigate to="/primaria/club?zona=cuentos" replace/>}/>
         <Route path="/primaria/cuentos/semilla" element={<SeedStory progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>}/>
         <Route path="/primaria/taller/:subjectId" element={<SubjectWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />
         <Route path="/primaria/mates" element={<MathWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />

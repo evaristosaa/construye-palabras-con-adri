@@ -1,0 +1,8 @@
+import {Link,useSearchParams} from 'react-router-dom';
+import {clubSections,clubSectionFor} from '../data/clubNavigation.js';
+import {worldAsset} from '../data/learningWorlds.js';
+import VoiceGuide from './VoiceGuide';
+export default function ClubHub({progress}){
+  const [params,setParams]=useSearchParams(),section=clubSectionFor(params.get('zona'));
+  return <section className="club-hub comic-panel"><header className="club-heading"><Link className="primary-secondary-button" to="/primaria">← Misiones</Link><h1>El club de los tres</h1><VoiceGuide text="Mira, prueba y descubre. Después, cuenta cómo lo has hecho. Vamos paso a paso." audioKey="primary-workshop" enabled={progress.voice} compact auto={false}/></header><nav className="club-sections" aria-label="Qué hacemos en el club">{clubSections.map(item=><button key={item.id} className="primary-secondary-button" aria-pressed={section.id===item.id} onClick={()=>setParams({zona:item.id})}><span aria-hidden="true">{item.icon}</span>{item.title}</button>)}</nav><nav key={section.id} className={`club-cards club-${section.id}`} aria-label={section.title}>{section.cards.map(card=><Link key={card.id} to={card.to} className={`club-card club-subject-${card.subject}`}><span className="club-card-picture" aria-hidden="true"><img src={worldAsset(card.subject,import.meta.env.BASE_URL)} alt=""/><img className="club-friends" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt=""/><b>{card.icon}</b></span><span className="club-card-copy"><strong>{card.title}</strong><small>{card.description}</small></span></Link>)}</nav></section>;
+}

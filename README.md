@@ -132,3 +132,13 @@ Las imágenes proporcionadas se usan como inspiración y como activo local de Ad
 - La voz aprobada conserva sus WAV originales y usa copias MP3 ligeras al reproducir. Ilustraciones WebP; huellas y duraciones en los manifiestos de distribución.
 
 Plan actualizado: [tareas](docs/plan-mejoras-primaria.md). [Decisiones sobre sincronización, app nativa y reconocimiento oral](docs/decisiones-tecnicas-2026-10-27.md). La observación familiar con Adri y el ensayo de habla infantil requieren uso real; no se sustituyen por pruebas automáticas.
+
+### Navegación simplificada
+
+**Misiones** → Lengua, Matemáticas o Medio, con sus misiones habituales. **El club de los tres** concentra los contenidos complementarios:
+
+- Cuentos: La merienda y La semilla de Cayetana.
+- Juegos: palabras, números, mi mundo y el reto de las tres materias.
+- Crear: inventar cuentos, cómics, dibujos y diario en el álbum.
+
+Los accesos anteriores de las partidas se mantienen. `/primaria/cuentos` abre el apartado Cuentos del club.
