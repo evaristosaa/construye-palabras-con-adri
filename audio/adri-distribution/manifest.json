@@ -1,0 +1,3097 @@
+{
+  "version": 1,
+  "voiceProfile": "adri-approved-v1",
+  "encoding": "MP3 VBR q3, mono 24 kHz; no tempo or pitch transformation",
+  "files": [
+    {
+      "key": "screen-home",
+      "filename": "adri-v1-screen-home.mp3",
+      "sourceFilename": "adri-v1-screen-home.wav",
+      "sourceSha256": "d142b7126bf4a66cac0b9d8a32ad93b67bb115a38c1b5ad35db5a6fdd16aca80",
+      "sha256": "fc87f7eb87b314bc63bd09d7e75ebaa169ae70961de6865444c534b2b0fe433e",
+      "bytes": 73484,
+      "sourceBytes": 435784,
+      "durationSeconds": 9.077208333333333
+    },
+    {
+      "key": "screen-missions",
+      "filename": "adri-v1-screen-missions.mp3",
+      "sourceFilename": "adri-v1-screen-missions.wav",
+      "sourceSha256": "4d2b4265f414551bfe1716a3287ad61d4b003016f932e23f3ec23321996d55de",
+      "sha256": "cb03ed1f9324b7cc4248b29f4258c6a87b6c4e750c42db8e4652da17dd7da853",
+      "bytes": 101948,
+      "sourceBytes": 568724,
+      "durationSeconds": 11.846791666666666
+    },
+    {
+      "key": "screen-collection",
+      "filename": "adri-v1-screen-collection.mp3",
+      "sourceFilename": "adri-v1-screen-collection.wav",
+      "sourceSha256": "6aa500197a7b65bac352a8564a8a16e3fee0f5ba6bf2d762f9563fb730e6ee24",
+      "sha256": "adb45f2bc90153c31e3b459933615314cb2ae06e9c1837e2bf7335887be00036",
+      "bytes": 71276,
+      "sourceBytes": 377162,
+      "durationSeconds": 7.855916666666666
+    },
+    {
+      "key": "screen-progress",
+      "filename": "adri-v1-screen-progress.mp3",
+      "sourceFilename": "adri-v1-screen-progress.wav",
+      "sourceSha256": "889a9c38b4fb16ba3885b3d6dff6f22a692adf24624c957839c5a0f501d97fcd",
+      "sha256": "4a89e9f4c31a94512f8f728e8f49891a5f5701398992bf9dfb694cc330728075",
+      "bytes": 64124,
+      "sourceBytes": 348196,
+      "durationSeconds": 7.252458333333333
+    },
+    {
+      "key": "screen-settings",
+      "filename": "adri-v1-screen-settings.mp3",
+      "sourceFilename": "adri-v1-screen-settings.wav",
+      "sourceSha256": "4053649d8923341cd28dcbc0521a25c72530815a7653814f3d3965bbbf94443d",
+      "sha256": "7ca87053fdd18306cccd5238d7b16e785a15e1845bc64c3d08a3b2076ddc4a25",
+      "bytes": 67700,
+      "sourceBytes": 381940,
+      "durationSeconds": 7.9554583333333335
+    },
+    {
+      "key": "screen-settings-sample",
+      "filename": "adri-v1-screen-settings-sample.mp3",
+      "sourceFilename": "adri-v1-screen-settings-sample.wav",
+      "sourceSha256": "13dc0f9404ee3588a032ada3c367c60d99c9271a6dc4979b06b6dd3c02fc2d3e",
+      "sha256": "283fcb8a6307239f3a58f88b8041751328b14cf560d1043ad44d3823794e4d5d",
+      "bytes": 45692,
+      "sourceBytes": 261296,
+      "durationSeconds": 5.442041666666666
+    },
+    {
+      "key": "screen-reward",
+      "filename": "adri-v1-screen-reward.mp3",
+      "sourceFilename": "adri-v1-screen-reward.wav",
+      "sourceSha256": "83bf045e66ed79b4b6a4e4012090de40de145514faaffbcb3aa18cfea844e0dc",
+      "sha256": "06eef9ad0d0e82c4f3887cb85559c27588b455e54c5b551fef0b66488ab0c50e",
+      "bytes": 52052,
+      "sourceBytes": 284584,
+      "durationSeconds": 5.927208333333334
+    },
+    {
+      "key": "result-success",
+      "filename": "adri-v1-result-success.mp3",
+      "sourceFilename": "adri-v1-result-success.wav",
+      "sourceSha256": "a6013a688dde328cb923f405e11c933558a534a74cfecf3e4ae0b4e0120adaa4",
+      "sha256": "6e94cf018a9a38f74b5b77186f8a1c6b07a4c4b1b48ec0d0495220e20ca8612d",
+      "bytes": 9692,
+      "sourceBytes": 46492,
+      "durationSeconds": 0.9669583333333334
+    },
+    {
+      "key": "result-retry",
+      "filename": "adri-v1-result-retry.mp3",
+      "sourceFilename": "adri-v1-result-retry.wav",
+      "sourceSha256": "0c9aa73a2e0351a3c83a4ada4d30aec04cea6ea1d15a56e4b6aa3f0bf60d1c3e",
+      "sha256": "6388156fc3ef54d0e1c086c1cdfc5e83d4f477e6b91c618db1102080e3410b05",
+      "bytes": 19988,
+      "sourceBytes": 123338,
+      "durationSeconds": 2.5679166666666666
+    },
+    {
+      "key": "game-letra-a-letter",
+      "filename": "adri-v1-game-letra-a-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-letter.wav",
+      "sourceSha256": "3c82e1281f991c11014e315fbbf44fb104e44d03c4e64a9a09e38763a1e1adde",
+      "sha256": "77d1bb49d0ddd7df36c1fa926aa8d53a8499e3b51dfac70c09c665d5b8f6e018",
+      "bytes": 35324,
+      "sourceBytes": 205032,
+      "durationSeconds": 4.269875
+    },
+    {
+      "key": "game-letra-a-sound-picture",
+      "filename": "adri-v1-game-letra-a-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-sound-picture.wav",
+      "sourceSha256": "36eb0ae67ffa64ccee019f02dc5321c1ac6f230cf3e3e6f25b18ab2cc901242d",
+      "sha256": "77f52c55831a4fce0f4e8cfb951b66d06ea8b7b2595a8d65fac7761e03663a9e",
+      "bytes": 34556,
+      "sourceBytes": 209972,
+      "durationSeconds": 4.372791666666667
+    },
+    {
+      "key": "game-letra-a-syllable-hunt",
+      "filename": "adri-v1-game-letra-a-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-syllable-hunt.wav",
+      "sourceSha256": "ff5885aadcec6726b552074e5a60c10abfd14fa02505ec3a3c1b473a39411dad",
+      "sha256": "4a55f0ff6f34e6cfa0f68830b7da95ab26c33bc6a19ff2171a50ad52c9486bfb",
+      "bytes": 51692,
+      "sourceBytes": 343466,
+      "durationSeconds": 7.153958333333334
+    },
+    {
+      "key": "game-letra-a-missing",
+      "filename": "adri-v1-game-letra-a-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-missing.wav",
+      "sourceSha256": "6da5f2fbca429ff8aadb60b17e1d1200d905fde123197fab9a070e5f6c0431f9",
+      "sha256": "6f80a93ab1cca588f2e955e135298311d13dc75746c0e3ee428df68d23e63e15",
+      "bytes": 72260,
+      "sourceBytes": 394836,
+      "durationSeconds": 8.224125
+    },
+    {
+      "key": "game-letra-a-picture-word",
+      "filename": "adri-v1-game-letra-a-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-picture-word.wav",
+      "sourceSha256": "87c1f602544375d2884e70932c0a2bb6a6de5c42c204ee1311025db117b34db2",
+      "sha256": "f6679c3e81bab28aba8d395f0ca288374a3879adf54056492466c53a08fc06c3",
+      "bytes": 38372,
+      "sourceBytes": 227624,
+      "durationSeconds": 4.740541666666667
+    },
+    {
+      "key": "game-letra-a-word",
+      "filename": "adri-v1-game-letra-a-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-word.wav",
+      "sourceSha256": "707cf1a35878df0cefe0381e1d344d76f580f930d08ff3db8e7adf4d7e85d96f",
+      "sha256": "bfa589384b4aa25eb1113a13cac1d73c6febb239971f8135c5ae5071758be2dd",
+      "bytes": 69092,
+      "sourceBytes": 398614,
+      "durationSeconds": 8.302833333333334
+    },
+    {
+      "key": "game-letra-a-sentence",
+      "filename": "adri-v1-game-letra-a-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-sentence.wav",
+      "sourceSha256": "6114fb833ce778f2f8207305f24ee719d516cf2ac1ab82251a32baa3cde43037",
+      "sha256": "ca4aee2a8a5dcd192c0a645fdfd5bf8e418bd88e4cc07e46fa3f3bdad42803bb",
+      "bytes": 61700,
+      "sourceBytes": 343378,
+      "durationSeconds": 7.153958333333334
+    },
+    {
+      "key": "game-letra-a-final",
+      "filename": "adri-v1-game-letra-a-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-a-final.wav",
+      "sourceSha256": "38c58d3c3a67c6fcd927627f892ef805d731e8b1ae410c84737993ea51bfe52c",
+      "sha256": "2f8b097e4e63df05288e3475bda3b845d1b94ecda3fa6971a11a6a2c7a455f97",
+      "bytes": 62948,
+      "sourceBytes": 348634,
+      "durationSeconds": 7.261583333333333
+    },
+    {
+      "key": "game-letra-b-letter",
+      "filename": "adri-v1-game-letra-b-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-letter.wav",
+      "sourceSha256": "705ad9e36314f827eedc94289b30d1d88b75e3b7bb3af49fda99dafa260fd14b",
+      "sha256": "546cc3e8bb39581c0117ae719e76e4569d1f66f739c1b24eb7249d53b716a898",
+      "bytes": 26804,
+      "sourceBytes": 147426,
+      "durationSeconds": 3.06975
+    },
+    {
+      "key": "game-letra-b-sound-picture",
+      "filename": "adri-v1-game-letra-b-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-sound-picture.wav",
+      "sourceSha256": "0fa1b4645211952708577afc1cb213c7ff13a5e9566e7efdcc90b777691f3ec3",
+      "sha256": "1d2f8087384aaf037496200479ecfe89a41f2d468f968a953fa6505afbb8a46a",
+      "bytes": 31244,
+      "sourceBytes": 172298,
+      "durationSeconds": 3.5879166666666666
+    },
+    {
+      "key": "game-letra-b-syllable-hunt",
+      "filename": "adri-v1-game-letra-b-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-syllable-hunt.wav",
+      "sourceSha256": "3912e16f4adf0a645a42d900860ffb5b3d05bf25f8f540e2628ed66b29959530",
+      "sha256": "72e1b4ec25fce8b2ce9cd3fa2294942a308284ac7f600acee6807cde3b8d89d9",
+      "bytes": 32180,
+      "sourceBytes": 191116,
+      "durationSeconds": 3.9799583333333333
+    },
+    {
+      "key": "game-letra-b-missing",
+      "filename": "adri-v1-game-letra-b-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-missing.wav",
+      "sourceSha256": "751a38183646205dd68374b6caea8723e261f75124e24f973ba8049cf43010ea",
+      "sha256": "88b019bd79a06aaaa73932046a43f61725095cf148c9e6df41d851372d4de0bc",
+      "bytes": 64604,
+      "sourceBytes": 367326,
+      "durationSeconds": 7.651
+    },
+    {
+      "key": "game-letra-b-picture-word",
+      "filename": "adri-v1-game-letra-b-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-picture-word.wav",
+      "sourceSha256": "b8fec8285fa9cb344c6027bae23aade44d001d40a4de14131a2af0ac719bfe7c",
+      "sha256": "1b416a6108d3a7a7473ff2d1affb177166ae3588eb2a3fb766ac9d0541bcd65a",
+      "bytes": 40988,
+      "sourceBytes": 235980,
+      "durationSeconds": 4.914625
+    },
+    {
+      "key": "game-letra-b-word",
+      "filename": "adri-v1-game-letra-b-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-word.wav",
+      "sourceSha256": "e87e929fde130c5b91202e30cfa171ffea24a1655c799b68a503469dbfe439f4",
+      "sha256": "a48185ecd4dbeb5cd9ee9448de17e6fba17878a36ad1c9013191db3f262a116e",
+      "bytes": 55964,
+      "sourceBytes": 314054,
+      "durationSeconds": 6.541166666666666
+    },
+    {
+      "key": "game-letra-b-sentence",
+      "filename": "adri-v1-game-letra-b-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-sentence.wav",
+      "sourceSha256": "bfd281d01a0333eead352ab86a1ecdbfd49c58a30f46a0a63b504717c2a4ca43",
+      "sha256": "ab3e5b10f8d8399216b2db5508d9b14ddb75216aca89af0dc603f1fcb57cbda4",
+      "bytes": 63308,
+      "sourceBytes": 361402,
+      "durationSeconds": 7.527583333333333
+    },
+    {
+      "key": "game-letra-b-final",
+      "filename": "adri-v1-game-letra-b-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-b-final.wav",
+      "sourceSha256": "aade2c003900ed2746c77974d7b0b8d2134a734f2285b0ec528031d3e65801b9",
+      "sha256": "9e52fb1cb4a0d674e53841e97dfa9a12189241f8679ff8e64a8b6f7a11c00a96",
+      "bytes": 70796,
+      "sourceBytes": 394062,
+      "durationSeconds": 8.208
+    },
+    {
+      "key": "game-letra-c-letter",
+      "filename": "adri-v1-game-letra-c-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-letter.wav",
+      "sourceSha256": "a3c1e946dcdbd197efe1892b56dfeff31d62192b5077d07315f9972e4f120331",
+      "sha256": "f01feddc42419c5cc7f87d5242c9b0c14c2fc2405cb975a3f4c7bf2383b4ab62",
+      "bytes": 64340,
+      "sourceBytes": 417568,
+      "durationSeconds": 8.697708333333333
+    },
+    {
+      "key": "game-letra-c-sound-picture",
+      "filename": "adri-v1-game-letra-c-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-sound-picture.wav",
+      "sourceSha256": "5fe2148d04501e7196119a1c31fc2d7eaa8669c801f45fb8d73d1a1bc835d2f3",
+      "sha256": "d8591549ff7a6fc7d81c1627905bf04dbad182e08fcb4086962e457e4637e707",
+      "bytes": 22700,
+      "sourceBytes": 120112,
+      "durationSeconds": 2.5007083333333333
+    },
+    {
+      "key": "game-letra-c-syllable-hunt",
+      "filename": "adri-v1-game-letra-c-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-syllable-hunt.wav",
+      "sourceSha256": "ea6433147e7bf6fb6b709ea55aefd4aef5eec8edadf915c82e5f1daccfafd98b",
+      "sha256": "7a3709cf62173485721ec667c9d28454a8aff4e15b2b897d47249c11740775b9",
+      "bytes": 66380,
+      "sourceBytes": 440892,
+      "durationSeconds": 9.183625
+    },
+    {
+      "key": "game-letra-c-missing",
+      "filename": "adri-v1-game-letra-c-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-missing.wav",
+      "sourceSha256": "f85763059e85d793ef07c8894e5a3ce8ffe6ae07a3b0f6211923b9999376ae5d",
+      "sha256": "3abbcd77c1d6022b4953e3c204476609b7a2501cb2bd8ca18fd20b261dbdc461",
+      "bytes": 73412,
+      "sourceBytes": 403834,
+      "durationSeconds": 8.411583333333333
+    },
+    {
+      "key": "game-letra-c-picture-word",
+      "filename": "adri-v1-game-letra-c-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-picture-word.wav",
+      "sourceSha256": "8e1bda12c4565f838ed08711bba6fb483787b3538bf382ec7de5e30a38063cb7",
+      "sha256": "d33198f41347f4784e0c6be58854e9390e6c19dc642695c38e4fbb64e4a76bf9",
+      "bytes": 34292,
+      "sourceBytes": 197348,
+      "durationSeconds": 4.109791666666666
+    },
+    {
+      "key": "game-letra-c-word",
+      "filename": "adri-v1-game-letra-c-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-word.wav",
+      "sourceSha256": "c347e4ea73a704d818e2e53fa32f26e16ca1f4562bb99c50ebf4053adb615d98",
+      "sha256": "465e3c7aa259494847ab647aa94362b0db9556be99188c5f1e600daec5349328",
+      "bytes": 59564,
+      "sourceBytes": 341256,
+      "durationSeconds": 7.107875
+    },
+    {
+      "key": "game-letra-c-sentence",
+      "filename": "adri-v1-game-letra-c-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-sentence.wav",
+      "sourceSha256": "bfd4aa87b240f52ec51d81237766cb14ad090718b6522730f4eb0a385482c6b3",
+      "sha256": "c5b3583a83600280f5440004888afd9142f88ab976dc609560fe85f3a5d871af",
+      "bytes": 58340,
+      "sourceBytes": 324438,
+      "durationSeconds": 6.7575
+    },
+    {
+      "key": "game-letra-c-final",
+      "filename": "adri-v1-game-letra-c-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-c-final.wav",
+      "sourceSha256": "83105f599c7503b755d471b691a4f5cd4b67dc2fd2cc2b75b0fdbfac032e46a5",
+      "sha256": "d75bd32f075ba400fd8eea02d1fa8f52ef05ce3a450becf539e81197aac10392",
+      "bytes": 66836,
+      "sourceBytes": 385926,
+      "durationSeconds": 8.0385
+    },
+    {
+      "key": "game-letra-d-letter",
+      "filename": "adri-v1-game-letra-d-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-letter.wav",
+      "sourceSha256": "0f16738a62600f0e5015a5a81202cc38b69ca787758705dac9634e1ff626b5dc",
+      "sha256": "ea6e3139c37dc9fd25877aa3d4930189d2de3621cd80cdda373baf1bb3af12c0",
+      "bytes": 32204,
+      "sourceBytes": 173784,
+      "durationSeconds": 3.618875
+    },
+    {
+      "key": "game-letra-d-sound-picture",
+      "filename": "adri-v1-game-letra-d-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-sound-picture.wav",
+      "sourceSha256": "6674d1b947b60c75dbe0c0339497250a4d0a08def97b9c71ec994635ef4cbfbc",
+      "sha256": "9f682bb8e053cc40324f9e13694293d209c44640a613792aa4eea2b04e6b93de",
+      "bytes": 39812,
+      "sourceBytes": 232710,
+      "durationSeconds": 4.8465
+    },
+    {
+      "key": "game-letra-d-syllable-hunt",
+      "filename": "adri-v1-game-letra-d-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-syllable-hunt.wav",
+      "sourceSha256": "f8e6b61a32f82af952952384f34c91a8f9d0a25bf1b924db90128c447e6f28e1",
+      "sha256": "546f5b2ac88205dd1376fcd5216567a5cd00b532766d4fc62f4dc2a26f15a513",
+      "bytes": 33908,
+      "sourceBytes": 182260,
+      "durationSeconds": 3.7954583333333334
+    },
+    {
+      "key": "game-letra-d-missing",
+      "filename": "adri-v1-game-letra-d-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-missing.wav",
+      "sourceSha256": "f5795a8eda9bc3625b4e3421823e36d545acd498ef3990878b6f7cc1a73ef9dc",
+      "sha256": "67fa90fd02c9246d527f499c5f995b1726bbd271cc9b0f44ebfa9145b43e1cc4",
+      "bytes": 71756,
+      "sourceBytes": 398268,
+      "durationSeconds": 8.295625
+    },
+    {
+      "key": "game-letra-d-picture-word",
+      "filename": "adri-v1-game-letra-d-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-picture-word.wav",
+      "sourceSha256": "57b490de9f9cc40ed3ecf844981345f4487c2269e4bb6f352c0b80b89e69e8ae",
+      "sha256": "2448806ea975d1c062224535dd905a6a66a238e797505b321e19ea9f4bc48f66",
+      "bytes": 38732,
+      "sourceBytes": 217272,
+      "durationSeconds": 4.524875
+    },
+    {
+      "key": "game-letra-d-word",
+      "filename": "adri-v1-game-letra-d-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-word.wav",
+      "sourceSha256": "48ce8d53ae5e07aae1ba0ea04684ff771da2fd25e30ba4b615bb93f9f2412570",
+      "sha256": "34cc0f13599759d7c70f24a5b7304a114bc05e02f2fe4f00d63bb3ae02216878",
+      "bytes": 61388,
+      "sourceBytes": 358010,
+      "durationSeconds": 7.456916666666666
+    },
+    {
+      "key": "game-letra-d-sentence",
+      "filename": "adri-v1-game-letra-d-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-sentence.wav",
+      "sourceSha256": "fa54163d4db71a7fe25c7dd2c7aed681ea5fd123aff2038b273aacd4231e7b41",
+      "sha256": "68407228a5933122db0ca83aff96e96fc55db567e7ee472cd246af2c7be5bf4e",
+      "bytes": 66836,
+      "sourceBytes": 374104,
+      "durationSeconds": 7.792208333333333
+    },
+    {
+      "key": "game-letra-d-final",
+      "filename": "adri-v1-game-letra-d-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-d-final.wav",
+      "sourceSha256": "a5c67dabd15231c6a5c506d4f7cc9cb1ffbf178df3fd41a1a4bb7ca2ff8e642f",
+      "sha256": "a2d00846302803f59b5b54bbbc6e2b6f3707ec5c5d028ec632d7ebbe94ed9484",
+      "bytes": 62372,
+      "sourceBytes": 344468,
+      "durationSeconds": 7.174791666666667
+    },
+    {
+      "key": "game-letra-e-letter",
+      "filename": "adri-v1-game-letra-e-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-letter.wav",
+      "sourceSha256": "291a43102ef096b91ad061669c861ce85a04b1ba0a2b90cd2d220beb9750d772",
+      "sha256": "41cfd257d580b43030514fcabd77fe0624a07e4f78b30c14771c5dfa16733457",
+      "bytes": 29636,
+      "sourceBytes": 160242,
+      "durationSeconds": 3.3379583333333334
+    },
+    {
+      "key": "game-letra-e-sound-picture",
+      "filename": "adri-v1-game-letra-e-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-sound-picture.wav",
+      "sourceSha256": "a487db65cac10a7e8d46eec6ff61f31240d47664faec0a43d7e54799e32df6f6",
+      "sha256": "b9c80d56b5c6098128add07a806983f08ffaec454c41adffa488bfba446314f7",
+      "bytes": 28772,
+      "sourceBytes": 154232,
+      "durationSeconds": 3.2115416666666667
+    },
+    {
+      "key": "game-letra-e-syllable-hunt",
+      "filename": "adri-v1-game-letra-e-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-syllable-hunt.wav",
+      "sourceSha256": "ff5885aadcec6726b552074e5a60c10abfd14fa02505ec3a3c1b473a39411dad",
+      "sha256": "4a55f0ff6f34e6cfa0f68830b7da95ab26c33bc6a19ff2171a50ad52c9486bfb",
+      "bytes": 51692,
+      "sourceBytes": 343466,
+      "durationSeconds": 7.153958333333334
+    },
+    {
+      "key": "game-letra-e-missing",
+      "filename": "adri-v1-game-letra-e-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-missing.wav",
+      "sourceSha256": "fa5d326198c1d2681181be04a8499cc8f114705423bfe60b9a4f8117515345b4",
+      "sha256": "4e75301b320022fa84eb88f498f673d1ea8b2a93a29db5c8af3917e09a5c38b3",
+      "bytes": 62948,
+      "sourceBytes": 343648,
+      "durationSeconds": 7.157708333333333
+    },
+    {
+      "key": "game-letra-e-picture-word",
+      "filename": "adri-v1-game-letra-e-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-picture-word.wav",
+      "sourceSha256": "b187b850fba4178be1cbc62e51533facb5e413ee94d15a80adfd0fc37252c374",
+      "sha256": "3432bf4471a6e67828e16b91665c371c62c1292039386709b112d7eb90afba0a",
+      "bytes": 73700,
+      "sourceBytes": 492626,
+      "durationSeconds": 10.261416666666667
+    },
+    {
+      "key": "game-letra-e-word",
+      "filename": "adri-v1-game-letra-e-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-word.wav",
+      "sourceSha256": "54366f8252cd93b21a9e213f35d94041baa8b7c0452d7b304bbefb372603bba5",
+      "sha256": "d7bc91f25e789379eccb2b269b32526f1c9944adeda8ddca4746492a35bf9589",
+      "bytes": 56180,
+      "sourceBytes": 324550,
+      "durationSeconds": 6.759833333333333
+    },
+    {
+      "key": "game-letra-e-sentence",
+      "filename": "adri-v1-game-letra-e-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-sentence.wav",
+      "sourceSha256": "6e78cad2eca22a1f4605ef13ee66b5cec41a9b8dd69eec41011507b639c7ed5b",
+      "sha256": "c288a699e1cb40cbd37c61d8c8ea2a08e719d0e753582636e98fc6d820aad286",
+      "bytes": 58604,
+      "sourceBytes": 324502,
+      "durationSeconds": 6.7588333333333335
+    },
+    {
+      "key": "game-letra-e-final",
+      "filename": "adri-v1-game-letra-e-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-e-final.wav",
+      "sourceSha256": "db31724e0866b17782212ac64bb9d47d87eefe9103887baf0631208a710791cf",
+      "sha256": "8141ee7621a6ab0d73f0c56af07ef4868700210dda1891a44884757f26648ac9",
+      "bytes": 66068,
+      "sourceBytes": 368690,
+      "durationSeconds": 7.679416666666667
+    },
+    {
+      "key": "game-letra-f-letter",
+      "filename": "adri-v1-game-letra-f-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-letter.wav",
+      "sourceSha256": "4ded162c55c64091ddc10bc1904eb3feb044d5f1d33cb491a70f6f494a96ea52",
+      "sha256": "98b132fb1ebbc6b26d298b39751d7945875d97a548faa6f857bc75bb7aba981f",
+      "bytes": 37148,
+      "sourceBytes": 225734,
+      "durationSeconds": 4.7011666666666665
+    },
+    {
+      "key": "game-letra-f-sound-picture",
+      "filename": "adri-v1-game-letra-f-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-sound-picture.wav",
+      "sourceSha256": "d533284944c67349cd0389168914c7ff68a05c22f5537065f336924868b47c2d",
+      "sha256": "96cc9306875c4240ed2aed2bb9de0a093f14596670f8d5332f08f4856e4ef8b5",
+      "bytes": 35468,
+      "sourceBytes": 197936,
+      "durationSeconds": 4.122041666666667
+    },
+    {
+      "key": "game-letra-f-syllable-hunt",
+      "filename": "adri-v1-game-letra-f-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-syllable-hunt.wav",
+      "sourceSha256": "c643eafce1d4414c2a823ee9682b057cb7a6ddb41cf18ba0286125b2c98f3944",
+      "sha256": "572662e8858ad33d7109c12dc9d2ac89eec1e2904c718ffc4578384bb5b3f2e4",
+      "bytes": 24284,
+      "sourceBytes": 126134,
+      "durationSeconds": 2.6261666666666668
+    },
+    {
+      "key": "game-letra-f-missing",
+      "filename": "adri-v1-game-letra-f-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-missing.wav",
+      "sourceSha256": "d598594a09de10167588447ad36a80ed09a22da275210dc8debfb52fff206773",
+      "sha256": "66770ebf5c25dd0a73004d3fd497386bb38aa41db64054070206edbcc0da48d9",
+      "bytes": 78428,
+      "sourceBytes": 436070,
+      "durationSeconds": 9.083166666666667
+    },
+    {
+      "key": "game-letra-f-picture-word",
+      "filename": "adri-v1-game-letra-f-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-picture-word.wav",
+      "sourceSha256": "9d2b3e5a52db5239dd193d1d77847092351897f9a6194570dc2a5247ae784465",
+      "sha256": "a7a49dfbb946cee18b73b878a8b6ed98ac20bd8f3a46e5d5163630654cbb9d53",
+      "bytes": 74444,
+      "sourceBytes": 516882,
+      "durationSeconds": 10.76675
+    },
+    {
+      "key": "game-letra-f-word",
+      "filename": "adri-v1-game-letra-f-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-word.wav",
+      "sourceSha256": "1c7352c86cfd094f250a0d8882fb54e533b3f1d0a28f24e3df72db1727b9b570",
+      "sha256": "b68b773d8e5d952026b1191feb371c561f85c2e7b4891ddeb24eac0d58daa089",
+      "bytes": 60404,
+      "sourceBytes": 343594,
+      "durationSeconds": 7.156583333333334
+    },
+    {
+      "key": "game-letra-f-sentence",
+      "filename": "adri-v1-game-letra-f-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-sentence.wav",
+      "sourceSha256": "e9031a1afdbebdd0713ded5a7923d69fc7d1bd544fcfbbcf92dad474d75fb250",
+      "sha256": "278f6592e7299c646cd594ce97c3f7aa3760f813ffaaaa6032138b9cfdde8ca7",
+      "bytes": 58508,
+      "sourceBytes": 326880,
+      "durationSeconds": 6.808375
+    },
+    {
+      "key": "game-letra-f-final",
+      "filename": "adri-v1-game-letra-f-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-f-final.wav",
+      "sourceSha256": "919bcf9fcd09fc29bef455693ba36578d5d1ad5adf63a13e2386ea8059394521",
+      "sha256": "0e7f1e1d42321df400f403a6aa98c29f41ed24f732fc6ebeb6feaa31efff9f46",
+      "bytes": 55748,
+      "sourceBytes": 304144,
+      "durationSeconds": 6.334708333333333
+    },
+    {
+      "key": "game-letra-g-letter",
+      "filename": "adri-v1-game-letra-g-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-letter.wav",
+      "sourceSha256": "42e0011a37a2708d4bf80a7a860b31955d574bcf2243cea703e3621783024dca",
+      "sha256": "5e1554326f7a9359cc40bb90adca525ac4346b8fd80be82859080ae748f540bc",
+      "bytes": 34796,
+      "sourceBytes": 202144,
+      "durationSeconds": 4.209708333333333
+    },
+    {
+      "key": "game-letra-g-sound-picture",
+      "filename": "adri-v1-game-letra-g-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-sound-picture.wav",
+      "sourceSha256": "b3011fcf5870095e302a5ba4754dd3817ce751239ee5d3c1d6eaeed7ba418a8c",
+      "sha256": "018f165e30ef613ee4f27ad5722a5954c2aa3d520387a854539103c83c7339bc",
+      "bytes": 32924,
+      "sourceBytes": 194168,
+      "durationSeconds": 4.043541666666667
+    },
+    {
+      "key": "game-letra-g-syllable-hunt",
+      "filename": "adri-v1-game-letra-g-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-syllable-hunt.wav",
+      "sourceSha256": "25b9ca5995efb0cec71395d96de14fb5604059da935b8b0cc6cf32e1c73c049c",
+      "sha256": "2af1301481b24754d2a3a1ea5b73d30e2ce59d586090ff9b6514e4896691a9b4",
+      "bytes": 25100,
+      "sourceBytes": 129726,
+      "durationSeconds": 2.701
+    },
+    {
+      "key": "game-letra-g-missing",
+      "filename": "adri-v1-game-letra-g-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-missing.wav",
+      "sourceSha256": "6cec2df89839d4edc28dbb64f7f30a60b39cc5bd766f18b2d176a6bb72f97ed3",
+      "sha256": "4456a9176dbf345d0998a8f498874acf425cebba30e3082646377116106761dc",
+      "bytes": 79940,
+      "sourceBytes": 454788,
+      "durationSeconds": 9.473125
+    },
+    {
+      "key": "game-letra-g-picture-word",
+      "filename": "adri-v1-game-letra-g-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-picture-word.wav",
+      "sourceSha256": "e8beec311bc2e219a161b283f964bc32facd16caa5ae0fd8c1e403f19ad3a54d",
+      "sha256": "41f2663fbf39da33102ef4100f623936b88f944e7b01a1b3f0bd67c9a163558a",
+      "bytes": 46724,
+      "sourceBytes": 273106,
+      "durationSeconds": 5.689958333333333
+    },
+    {
+      "key": "game-letra-g-word",
+      "filename": "adri-v1-game-letra-g-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-word.wav",
+      "sourceSha256": "bbca8cf335f14977da3987c7eb2958bcbd5c701d73e3279c313991cfcdb4f760",
+      "sha256": "6881d9997435f54c69022a40fb06da932b6d905d13b37b0133c9ae48d5b5f26c",
+      "bytes": 72140,
+      "sourceBytes": 432900,
+      "durationSeconds": 9.017125
+    },
+    {
+      "key": "game-letra-g-sentence",
+      "filename": "adri-v1-game-letra-g-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-sentence.wav",
+      "sourceSha256": "7ab6def4bb7b762e151b532d2e68b825d5e63ce3a31887ebf3d8324559a64263",
+      "sha256": "fdfcbf207050ff421ef29214c5fdeffbb537af549ff8205db0d800a4e8fbc940",
+      "bytes": 56996,
+      "sourceBytes": 313808,
+      "durationSeconds": 6.536041666666667
+    },
+    {
+      "key": "game-letra-g-final",
+      "filename": "adri-v1-game-letra-g-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-g-final.wav",
+      "sourceSha256": "08a66c964de16b129f7fcffd2aedec27f586130eed157704957142a2aceabd42",
+      "sha256": "84109ed442bad094e918bf73d045922d8965734d1905e7e42fdb243d965b2855",
+      "bytes": 59756,
+      "sourceBytes": 340894,
+      "durationSeconds": 7.100333333333333
+    },
+    {
+      "key": "game-letra-h-letter",
+      "filename": "adri-v1-game-letra-h-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-letter.wav",
+      "sourceSha256": "f4080f25f494ac08e7e1c35624568fe6207eecb79a5ecf4fdb983e7f5c40e282",
+      "sha256": "0fe0e0ff5a099cb53290f95499e5989f531d6bcf00006cfad3246b356a13e056",
+      "bytes": 40748,
+      "sourceBytes": 250774,
+      "durationSeconds": 5.222833333333333
+    },
+    {
+      "key": "game-letra-h-sound-picture",
+      "filename": "adri-v1-game-letra-h-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-sound-picture.wav",
+      "sourceSha256": "47684ae19bed801ea8b03578a7b1c45c0c4a6522e203c52084eb0a3160a0ef27",
+      "sha256": "704f89a5438033aeeeb990ae5ed901eb776b52272c0a96d9403e91ee9a605e3c",
+      "bytes": 35924,
+      "sourceBytes": 216278,
+      "durationSeconds": 4.504166666666666
+    },
+    {
+      "key": "game-letra-h-syllable-hunt",
+      "filename": "adri-v1-game-letra-h-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-syllable-hunt.wav",
+      "sourceSha256": "13146ce73757278a0218032e3270b0df9c8582e9102fdf18f59e7f102856f34a",
+      "sha256": "78a14557e55849ffe6d3eeb4555904939ef9d6fb6dc428b3d9c2b4f99cc7ad14",
+      "bytes": 27164,
+      "sourceBytes": 140196,
+      "durationSeconds": 2.919125
+    },
+    {
+      "key": "game-letra-h-missing",
+      "filename": "adri-v1-game-letra-h-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-missing.wav",
+      "sourceSha256": "89fa7a021fd0cac253e75c410507ab2c25faad717835092e43537c7ebff073a5",
+      "sha256": "06df630b5ea37363f2bcf60111f5c74c6ceaba58a874fdeed834e7d92abaad27",
+      "bytes": 72428,
+      "sourceBytes": 398658,
+      "durationSeconds": 8.30375
+    },
+    {
+      "key": "game-letra-h-picture-word",
+      "filename": "adri-v1-game-letra-h-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-picture-word.wav",
+      "sourceSha256": "7ab4b44a7f204cbcf810ab4edca0acf120bdeeee3bfcdeaf2d62cd6a9eaa0db8",
+      "sha256": "15dce888bd90e1ded17dabdf43c66557395bd37559a7f5d90cf0dd49c7cec622",
+      "bytes": 38012,
+      "sourceBytes": 217828,
+      "durationSeconds": 4.537958333333333
+    },
+    {
+      "key": "game-letra-h-word",
+      "filename": "adri-v1-game-letra-h-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-word.wav",
+      "sourceSha256": "7b822cec4812a89eadffeda23742abf270aa11056e2f35d6b1a77263472d3f7a",
+      "sha256": "f7eec24223d8e57b12c9a36338a7e1a04afce0905d297ae85ce9a81de7984630",
+      "bytes": 54116,
+      "sourceBytes": 300626,
+      "durationSeconds": 6.261416666666666
+    },
+    {
+      "key": "game-letra-h-sentence",
+      "filename": "adri-v1-game-letra-h-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-sentence.wav",
+      "sourceSha256": "d2cc28561b7559d9a9a07654bb82fd7ef0213ba0d1b5316c26778970aaff5a98",
+      "sha256": "7e95431db5d39534937bd65227d2be695bc8d4a032e6e8c42edf090117587627",
+      "bytes": 69764,
+      "sourceBytes": 391062,
+      "durationSeconds": 8.1455
+    },
+    {
+      "key": "game-letra-h-final",
+      "filename": "adri-v1-game-letra-h-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-h-final.wav",
+      "sourceSha256": "6893d43728f5e95b654b811ada5c29fede884e9e5e3d4960f5ab56acf0ab6327",
+      "sha256": "a945e542ac9ed4545beebca198b2109f5218d37c1993d7a282817fb46c57ea85",
+      "bytes": 58700,
+      "sourceBytes": 322560,
+      "durationSeconds": 6.718375
+    },
+    {
+      "key": "game-letra-i-letter",
+      "filename": "adri-v1-game-letra-i-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-letter.wav",
+      "sourceSha256": "2830efdafbeac1692c93a7e53b2038545a237a1f051177f13c94fa128870481d",
+      "sha256": "f6f8e68b2082713bd08ff2f1d31b35ec999c9bf1a840dde13c04207acac61dad",
+      "bytes": 29900,
+      "sourceBytes": 159628,
+      "durationSeconds": 3.323958333333333
+    },
+    {
+      "key": "game-letra-i-sound-picture",
+      "filename": "adri-v1-game-letra-i-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-sound-picture.wav",
+      "sourceSha256": "4ee171a27b0a399ff1227bd32543f7788252bfd57efbb32a0cb5e188b91738c7",
+      "sha256": "1f337de1c934c46be2cb6ed855577e031a97da0a2a4b9003911a3561c10e440b",
+      "bytes": 67844,
+      "sourceBytes": 432162,
+      "durationSeconds": 9.001958333333333
+    },
+    {
+      "key": "game-letra-i-syllable-hunt",
+      "filename": "adri-v1-game-letra-i-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-syllable-hunt.wav",
+      "sourceSha256": "33b795d448b9d55ad720d0fe667194d357a9237702abb64c6a5863fd9d7f20b7",
+      "sha256": "bd6d25196aaac49ac59aa0c9f403e952036957feefd1037440abe7c78fc0d288",
+      "bytes": 28076,
+      "sourceBytes": 153422,
+      "durationSeconds": 3.1946666666666665
+    },
+    {
+      "key": "game-letra-i-missing",
+      "filename": "adri-v1-game-letra-i-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-missing.wav",
+      "sourceSha256": "e97a11bb90346de3a9d774da8db2eb56f03c1464b35b29dd168798239e34c64a",
+      "sha256": "f5ca4423e5d6b37b842adbb01a842d29b525ee524044421ecb3d4c7892150beb",
+      "bytes": 71612,
+      "sourceBytes": 398404,
+      "durationSeconds": 8.298458333333333
+    },
+    {
+      "key": "game-letra-i-picture-word",
+      "filename": "adri-v1-game-letra-i-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-picture-word.wav",
+      "sourceSha256": "f4430e2244de331357cdfd6c950285ac93bfe232d5a531b18254630594889b36",
+      "sha256": "76cf04cea0ba64da72cdd3f598f13d03b744a983747e7dc7d319c83ef1987d35",
+      "bytes": 41204,
+      "sourceBytes": 235452,
+      "durationSeconds": 4.903625
+    },
+    {
+      "key": "game-letra-i-word",
+      "filename": "adri-v1-game-letra-i-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-word.wav",
+      "sourceSha256": "3e92a2252b5ba34568ce7fb9f864eceb0327d65f932ac054fa6942348fe4ba34",
+      "sha256": "ed5038d4da68fd00d0f32a85ba8603cab3740e65a269af32cc1640efe0d2fd0f",
+      "bytes": 57980,
+      "sourceBytes": 315448,
+      "durationSeconds": 6.570208333333333
+    },
+    {
+      "key": "game-letra-i-sentence",
+      "filename": "adri-v1-game-letra-i-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-sentence.wav",
+      "sourceSha256": "30272661c76a914e499f27d28cdc2d7540a5f427045715cb79a99b9293d9b9af",
+      "sha256": "db951b1004cf0cb177ef73b422a333011e487fcbcde4dd6ea6955aa480686fb1",
+      "bytes": 60524,
+      "sourceBytes": 341212,
+      "durationSeconds": 7.106958333333333
+    },
+    {
+      "key": "game-letra-i-final",
+      "filename": "adri-v1-game-letra-i-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-i-final.wav",
+      "sourceSha256": "4f904464db20be47c2a599dedc0ca6125956ebc380ac317e2bae8453404efcac",
+      "sha256": "429f063215b2feb0fdc1ce42e403cc6726c9cc8f676bca3cc9af7cff1273e355",
+      "bytes": 59324,
+      "sourceBytes": 332958,
+      "durationSeconds": 6.935
+    },
+    {
+      "key": "game-letra-j-letter",
+      "filename": "adri-v1-game-letra-j-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-letter.wav",
+      "sourceSha256": "756e6e3ccd0ab62717024cd491780a284540ea8174ebb1ad72f68ec2c803b884",
+      "sha256": "c5e5224fb1fea7bce10aaaaf6fe2eddc7aeed0e912f6229d032d5f98ccc1ede9",
+      "bytes": 32084,
+      "sourceBytes": 170804,
+      "durationSeconds": 3.556791666666667
+    },
+    {
+      "key": "game-letra-j-sound-picture",
+      "filename": "adri-v1-game-letra-j-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-sound-picture.wav",
+      "sourceSha256": "a9529cbaf42469f42acb40e59fcc21effe596ba5743df78d96c1f0f85a7c45b1",
+      "sha256": "8259acb43abfa8bd508711b820827365c38761ebab644be4732555eb73e8a765",
+      "bytes": 35060,
+      "sourceBytes": 198670,
+      "durationSeconds": 4.137333333333333
+    },
+    {
+      "key": "game-letra-j-syllable-hunt",
+      "filename": "adri-v1-game-letra-j-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-syllable-hunt.wav",
+      "sourceSha256": "4105c12543be745441c91ecb928e967b043bba2323a0ed7ced7981a90fa91d79",
+      "sha256": "96a5ea862aeea40d36d6f74fb746abfb08bd31108f8663e36d857c59c6096899",
+      "bytes": 57524,
+      "sourceBytes": 359122,
+      "durationSeconds": 7.480083333333333
+    },
+    {
+      "key": "game-letra-j-missing",
+      "filename": "adri-v1-game-letra-j-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-missing.wav",
+      "sourceSha256": "737d8d722648ac3c5ca3d1a54ab81abf29195c27826fa6d2f1b3629eddd974de",
+      "sha256": "fffca909b28a46b173197b3ff83dfd72ed97d2908a2b815a3bc4cc5a1083c7d2",
+      "bytes": 86252,
+      "sourceBytes": 487912,
+      "durationSeconds": 10.163208333333333
+    },
+    {
+      "key": "game-letra-j-picture-word",
+      "filename": "adri-v1-game-letra-j-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-picture-word.wav",
+      "sourceSha256": "734b0e1a66001e680ad90d1d9ee8333f94537f153e1e282a519e173e1246f545",
+      "sha256": "daf0dca1b64547ed1570a54ef6c353d3df4b7ce7375359857a44367dfde99678",
+      "bytes": 48860,
+      "sourceBytes": 305306,
+      "durationSeconds": 6.3589166666666666
+    },
+    {
+      "key": "game-letra-j-word",
+      "filename": "adri-v1-game-letra-j-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-word.wav",
+      "sourceSha256": "109258eaa0f7b92693bf367a8f0b92cb05434e3e28be28f55eaac1fe5f872d50",
+      "sha256": "923a639132a10a41a0708fa62ee7b4fd6e02367b69af10572a4232dc1b775efd",
+      "bytes": 59084,
+      "sourceBytes": 342618,
+      "durationSeconds": 7.13625
+    },
+    {
+      "key": "game-letra-j-sentence",
+      "filename": "adri-v1-game-letra-j-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-sentence.wav",
+      "sourceSha256": "85f65cc13f46521fe8e301f344ec731f8264dcd7b3adcac80408609f0cc86ce5",
+      "sha256": "7b4bc824101a916a126132165e36c61159781ea35929aac8290c2567ae8c6f31",
+      "bytes": 60524,
+      "sourceBytes": 346634,
+      "durationSeconds": 7.219916666666666
+    },
+    {
+      "key": "game-letra-j-final",
+      "filename": "adri-v1-game-letra-j-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-j-final.wav",
+      "sourceSha256": "d2b9f5387fbfe091524d6efee5e2046df8dd1f023cd665c79a8979ae2a03e745",
+      "sha256": "bcee90015ba2a9911c28b4a8a40e9ad802326f9bec4d82a4000f7b6765aa03e6",
+      "bytes": 63524,
+      "sourceBytes": 350952,
+      "durationSeconds": 7.309875
+    },
+    {
+      "key": "game-letra-k-letter",
+      "filename": "adri-v1-game-letra-k-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-letter.wav",
+      "sourceSha256": "bbc0e04f0a15c9ca8a5fa9bb6b72f9c68550098e3a90cbd9cd009ab0006b9f13",
+      "sha256": "d31531909dc1a0293b620d91cb66f030543bdb254edec579eb884d9721948235",
+      "bytes": 27980,
+      "sourceBytes": 146340,
+      "durationSeconds": 3.047125
+    },
+    {
+      "key": "game-letra-k-sound-picture",
+      "filename": "adri-v1-game-letra-k-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-sound-picture.wav",
+      "sourceSha256": "1dfbeb7ba69851df4574e601f4c8e3b8a831552865a6f0336f87792bd3e558a2",
+      "sha256": "54c4d6e0282de2e5a5dffa9dd2548958d0f274b512d3c799a6194ca33866464a",
+      "bytes": 32948,
+      "sourceBytes": 171938,
+      "durationSeconds": 3.580416666666667
+    },
+    {
+      "key": "game-letra-k-syllable-hunt",
+      "filename": "adri-v1-game-letra-k-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-syllable-hunt.wav",
+      "sourceSha256": "484ad40ac0c3264ea6a2f3d71d473cec00b117016290fa1d918b46d62df83e29",
+      "sha256": "dcb0a9b451f9172bcd7b17570923c97d9728438a7035a9af9e13e4586ef6c269",
+      "bytes": 35996,
+      "sourceBytes": 223536,
+      "durationSeconds": 4.655375
+    },
+    {
+      "key": "game-letra-k-missing",
+      "filename": "adri-v1-game-letra-k-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-missing.wav",
+      "sourceSha256": "8126cef5eadd82bdbc4801f08d3e95e292a2b35a790257cb8347e7e2fda06326",
+      "sha256": "9f6261fc3f25cf3cd810232f24e22bbfc397e9d32107ebfed82958dff724db89",
+      "bytes": 61340,
+      "sourceBytes": 351204,
+      "durationSeconds": 7.315125
+    },
+    {
+      "key": "game-letra-k-picture-word",
+      "filename": "adri-v1-game-letra-k-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-picture-word.wav",
+      "sourceSha256": "2f80b2697ec7fbd9847e6f0d27a0f2cb640b855aeee5a562751c3655a1beb08d",
+      "sha256": "9208ace0ed641746f058073e8414c5c2cf41d02d16e344b37c54dfb79e5d52f6",
+      "bytes": 29876,
+      "sourceBytes": 173198,
+      "durationSeconds": 3.6066666666666665
+    },
+    {
+      "key": "game-letra-k-word",
+      "filename": "adri-v1-game-letra-k-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-word.wav",
+      "sourceSha256": "e8196470c43abbf924d5748dbe0ac60bc816251bc311c63d0dae3ab56bad63e9",
+      "sha256": "f27a9ba19289396bbc9eec18173443a1db22b6e25b7854c145c886d3c7466696",
+      "bytes": 52484,
+      "sourceBytes": 286320,
+      "durationSeconds": 5.963375
+    },
+    {
+      "key": "game-letra-k-sentence",
+      "filename": "adri-v1-game-letra-k-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-sentence.wav",
+      "sourceSha256": "ba80f2fb447f32a0f650be02c4135a29dbadc0a9de79692eb1fe15e766db624a",
+      "sha256": "e760164e792f8dcc7314d137544672d5e830aaa28dc90df3331a8e18100a0481",
+      "bytes": 54812,
+      "sourceBytes": 312332,
+      "durationSeconds": 6.505958333333333
+    },
+    {
+      "key": "game-letra-k-final",
+      "filename": "adri-v1-game-letra-k-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-k-final.wav",
+      "sourceSha256": "ee80a6c8eaa463fc3a0a6871352d788d7b2102bc173cdcd4930a90585b0c1c39",
+      "sha256": "71a802865607d54376cbba82d3d23390b7551b41798ccb9fb6d4bf72a8251edc",
+      "bytes": 68660,
+      "sourceBytes": 377726,
+      "durationSeconds": 7.867666666666667
+    },
+    {
+      "key": "game-letra-l-letter",
+      "filename": "adri-v1-game-letra-l-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-letter.wav",
+      "sourceSha256": "4399e9d1885c4f3ae279dc9f9673328db14b2cfc260d729e87ed33f0f9f27b76",
+      "sha256": "1d4bf715aff59d587d3fe3df21c729e6739dc37a621d8dcc884b0d7158b3812d",
+      "bytes": 37316,
+      "sourceBytes": 209664,
+      "durationSeconds": 4.366375
+    },
+    {
+      "key": "game-letra-l-sound-picture",
+      "filename": "adri-v1-game-letra-l-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-sound-picture.wav",
+      "sourceSha256": "e2f75e57706cdbb2a0400362138198695f4bdfac8d969c23eb4c066535fcccc7",
+      "sha256": "b335d2ff7aa7b0ea402c9ede81442d1a9a798be7e177d58edc010f08ac7a0499",
+      "bytes": 34604,
+      "sourceBytes": 198530,
+      "durationSeconds": 4.134416666666667
+    },
+    {
+      "key": "game-letra-l-syllable-hunt",
+      "filename": "adri-v1-game-letra-l-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-syllable-hunt.wav",
+      "sourceSha256": "650fb426f20b2eef3dd7f87f484150b5bce40e79509c17327c87284d8593cfd9",
+      "sha256": "74e7eea77acf1d270be3e19bd40c61ec868eeba19b1e2a2ebbcecc9a99b3b6ff",
+      "bytes": 39404,
+      "sourceBytes": 240694,
+      "durationSeconds": 5.012833333333333
+    },
+    {
+      "key": "game-letra-l-missing",
+      "filename": "adri-v1-game-letra-l-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-missing.wav",
+      "sourceSha256": "a9618226001d45422735819720aed15903e19f5598c0316fce12a04856f1853f",
+      "sha256": "e12ab2e515fb83d3ef754d01c15b0b704c0446929ee366500849c1babd90b127",
+      "bytes": 73388,
+      "sourceBytes": 398858,
+      "durationSeconds": 8.307916666666667
+    },
+    {
+      "key": "game-letra-l-picture-word",
+      "filename": "adri-v1-game-letra-l-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-picture-word.wav",
+      "sourceSha256": "3a8d54f7434350b5dfb4913c79a61fceb1c01bd98213cccb3c53cc983a7a7146",
+      "sha256": "d7967f51625277c765a0aa13531223d8dd07ab54b6268654d6a297ad3f0a5d87",
+      "bytes": 46484,
+      "sourceBytes": 284752,
+      "durationSeconds": 5.9307083333333335
+    },
+    {
+      "key": "game-letra-l-word",
+      "filename": "adri-v1-game-letra-l-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-word.wav",
+      "sourceSha256": "8f64452fa086bd3182b1b3720f5467d88ece8c41e39fbbfd74dd38f4215e784a",
+      "sha256": "c6a607a429926d626ac55c58054121495f586a69088aa3aaa2f9e993bbfa39c8",
+      "bytes": 54788,
+      "sourceBytes": 301674,
+      "durationSeconds": 6.28325
+    },
+    {
+      "key": "game-letra-l-sentence",
+      "filename": "adri-v1-game-letra-l-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-sentence.wav",
+      "sourceSha256": "c0280d9d04398703a0979fd8d5bb43a4b76a6aa8e34e646504c908a2324394a0",
+      "sha256": "0fc1bde18d9a2bcb6c64e52aede6b76c67248bcfae45d24a21b3258978bad7f3",
+      "bytes": 54068,
+      "sourceBytes": 300044,
+      "durationSeconds": 6.249291666666666
+    },
+    {
+      "key": "game-letra-l-final",
+      "filename": "adri-v1-game-letra-l-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-l-final.wav",
+      "sourceSha256": "7426ba3c694923495dfb1f10a4bc0bffec1a31e6a80ee7cfd5703d2c259b6cc1",
+      "sha256": "bd0b75713f6d0092e30855970de51cd3808e4bae7bc70a424e6857dcb278b7a7",
+      "bytes": 65444,
+      "sourceBytes": 358318,
+      "durationSeconds": 7.463333333333333
+    },
+    {
+      "key": "game-letra-m-letter",
+      "filename": "adri-v1-game-letra-m-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-letter.wav",
+      "sourceSha256": "772e008e2f181fc9d4cb0d6341673ab20ad31468cdf9c241b684a8a4fefaf6ff",
+      "sha256": "9ee5baa4b71a3ee3a16a4e97eb8a4109b2a803a0b1df07393f10a3c31721eeaa",
+      "bytes": 27740,
+      "sourceBytes": 150058,
+      "durationSeconds": 3.1245833333333333
+    },
+    {
+      "key": "game-letra-m-sound-picture",
+      "filename": "adri-v1-game-letra-m-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-sound-picture.wav",
+      "sourceSha256": "e83704f602b6bbaa48d2e76e18df7ffdace0b6b64b9f3f382d1b694c5bc59b49",
+      "sha256": "affd7ea584cc5e5db3830d0c9755e4f64d31fb8582c3233901df502ffe27f6a0",
+      "bytes": 30692,
+      "sourceBytes": 172068,
+      "durationSeconds": 3.583125
+    },
+    {
+      "key": "game-letra-m-syllable-hunt",
+      "filename": "adri-v1-game-letra-m-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-syllable-hunt.wav",
+      "sourceSha256": "69fc041c06b6b5fd0ab64083af38c9ae2428a6bc0e4bdb0db148afd43b266afa",
+      "sha256": "6d8b50134bebd47918b0b98cd4a8177c441a5b0bfa18c9ce36b7b6eecd91375e",
+      "bytes": 49412,
+      "sourceBytes": 309180,
+      "durationSeconds": 6.439625
+    },
+    {
+      "key": "game-letra-m-missing",
+      "filename": "adri-v1-game-letra-m-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-missing.wav",
+      "sourceSha256": "331a2fb432b9bdac3296c73f42779743b1a76fac3bdd6291064d93b17d7571e5",
+      "sha256": "0dad7efde2d4dc407d76e241c651eabada8a175a071fb908ea6acb1eb9cb1119",
+      "bytes": 57356,
+      "sourceBytes": 304038,
+      "durationSeconds": 6.3325
+    },
+    {
+      "key": "game-letra-m-picture-word",
+      "filename": "adri-v1-game-letra-m-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-picture-word.wav",
+      "sourceSha256": "b3c61bc8bfd4bfceccda14ecb245229a2ffc59d836e25fad985616f3bcae5c41",
+      "sha256": "5e85780d86866e8bc057c263f5e993d3dd5a5a3fedca0cfefa69f853c8e32f48",
+      "bytes": 43868,
+      "sourceBytes": 254226,
+      "durationSeconds": 5.29475
+    },
+    {
+      "key": "game-letra-m-word",
+      "filename": "adri-v1-game-letra-m-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-word.wav",
+      "sourceSha256": "fea8bf2b8a1ae3251faeb3d34f5944c253da76c9840f60b5fd98ba7806ec7e8f",
+      "sha256": "e13b832f0855e678d1bf9ae457dba3d879ad08b6a3f0d83815b66069d2762d3d",
+      "bytes": 60236,
+      "sourceBytes": 343024,
+      "durationSeconds": 7.144708333333333
+    },
+    {
+      "key": "game-letra-m-sentence",
+      "filename": "adri-v1-game-letra-m-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-sentence.wav",
+      "sourceSha256": "b1a79876142be13864873d1eae66847c2abbe7a4c69976dade133cbd2e846eed",
+      "sha256": "84f05223bf084f4eaf2cfbc6246268ddce56cef9d8734def68e4f5a220969426",
+      "bytes": 64868,
+      "sourceBytes": 375274,
+      "durationSeconds": 7.816583333333333
+    },
+    {
+      "key": "game-letra-m-final",
+      "filename": "adri-v1-game-letra-m-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-m-final.wav",
+      "sourceSha256": "14270d7b8e1091c8b34c113b34dee8f00c70c8bad5f6c48c07c64251a6a6ce2e",
+      "sha256": "59a859649fb53332fba4e15586f89774043004b786cbd7488e9ff844f2b45edf",
+      "bytes": 68684,
+      "sourceBytes": 396342,
+      "durationSeconds": 8.2555
+    },
+    {
+      "key": "game-letra-n-letter",
+      "filename": "adri-v1-game-letra-n-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-letter.wav",
+      "sourceSha256": "574538a26ff7b7d41e65fc93cba914f788f21e6bb44619354ea859c448cf782b",
+      "sha256": "712969f95e4594418fca6104544e4b941d376648a970ccce37c2e2a89a014760",
+      "bytes": 32828,
+      "sourceBytes": 178800,
+      "durationSeconds": 3.723375
+    },
+    {
+      "key": "game-letra-n-sound-picture",
+      "filename": "adri-v1-game-letra-n-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-sound-picture.wav",
+      "sourceSha256": "36b81076780af2d76a95d8f89f5b2a5526bb93a954fdd2d84c22fe207067859b",
+      "sha256": "6badb54e873be3b44ea0d5c810864125d327a17cf924e59eee44f9a842d2ba7a",
+      "bytes": 34220,
+      "sourceBytes": 191346,
+      "durationSeconds": 3.9859583333333335
+    },
+    {
+      "key": "game-letra-n-syllable-hunt",
+      "filename": "adri-v1-game-letra-n-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-syllable-hunt.wav",
+      "sourceSha256": "6271c3d2faaf815088ebcdbba1607ac3caf38400afa4a11c655927310e38ca74",
+      "sha256": "673c4b3a31f4f2ffd9909bef521fdf2778164d904cf361741b7933060123d23c",
+      "bytes": 31724,
+      "sourceBytes": 196076,
+      "durationSeconds": 4.083291666666667
+    },
+    {
+      "key": "game-letra-n-missing",
+      "filename": "adri-v1-game-letra-n-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-missing.wav",
+      "sourceSha256": "e300c9743ebab511c50661b42fbeabd5ae70cd24beea7a4ee00db20965cfa811",
+      "sha256": "50935b9ca73ee0956e5a040896aad5c8d3b9271aad1e49be8f158c7f2a4ebe8b",
+      "bytes": 79124,
+      "sourceBytes": 447960,
+      "durationSeconds": 9.330875
+    },
+    {
+      "key": "game-letra-n-picture-word",
+      "filename": "adri-v1-game-letra-n-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-picture-word.wav",
+      "sourceSha256": "9a4744a01f4a868bc4bd6df023b6355e354cb5638a15a286dde39c9b86786b01",
+      "sha256": "88a82f97635995f8714d7bf6d11f9662d50306325a65a85e4da5729a1ea4415e",
+      "bytes": 44732,
+      "sourceBytes": 255692,
+      "durationSeconds": 5.325291666666667
+    },
+    {
+      "key": "game-letra-n-word",
+      "filename": "adri-v1-game-letra-n-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-word.wav",
+      "sourceSha256": "914f1870fee8da34ebbc8c5e2388282e7f142cd2e8b3aa5494bd48268d1731bf",
+      "sha256": "26c54a1fafed398673360107c726cf28f47c538000d3ca4d46b01b18b5a6e365",
+      "bytes": 59156,
+      "sourceBytes": 338386,
+      "durationSeconds": 7.0480833333333335
+    },
+    {
+      "key": "game-letra-n-sentence",
+      "filename": "adri-v1-game-letra-n-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-sentence.wav",
+      "sourceSha256": "d4aaf93512e1389fe9e7215908ebda57d6d675e51c1f791e5650ee5d797e394a",
+      "sha256": "e9d378f139daab2a8f791c46e70b7bc4f0c88d229bf9d0ab59d7e559a39ca8bb",
+      "bytes": 54116,
+      "sourceBytes": 298830,
+      "durationSeconds": 6.224
+    },
+    {
+      "key": "game-letra-n-final",
+      "filename": "adri-v1-game-letra-n-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-n-final.wav",
+      "sourceSha256": "04b8aa3061a863ea8e81bfdb1e495080108de04bca7fcbf44ddd7f2530ef68f7",
+      "sha256": "0819d9b2942a1fb2fdfd74b05bb923a695700637ed01b56b9aa3d66cfa9a8192",
+      "bytes": 62516,
+      "sourceBytes": 322398,
+      "durationSeconds": 6.715
+    },
+    {
+      "key": "game-letra-enye-letter",
+      "filename": "adri-v1-game-letra-enye-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-letter.wav",
+      "sourceSha256": "e793b314002f8d09f93ffeba896963d517f689597b502b884c185d47df423715",
+      "sha256": "0a48ba8464d9becc3f471add0363a89c358309ff5199484968787ec58cb672da",
+      "bytes": 35084,
+      "sourceBytes": 202896,
+      "durationSeconds": 4.225958333333334
+    },
+    {
+      "key": "game-letra-enye-sound-picture",
+      "filename": "adri-v1-game-letra-enye-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-sound-picture.wav",
+      "sourceSha256": "6168a5f1b3bc1dffe4d17fc68b14110ee96a395d3b05b8ab31e085878604ab0a",
+      "sha256": "8deee27d9c0f9decad513cebe8570bb2a77ec91fff1d16d89815594405a69a71",
+      "bytes": 31124,
+      "sourceBytes": 177398,
+      "durationSeconds": 3.694166666666667
+    },
+    {
+      "key": "game-letra-enye-syllable-hunt",
+      "filename": "adri-v1-game-letra-enye-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-syllable-hunt.wav",
+      "sourceSha256": "35fb3ce7f3b61f6ab428766fdfec83aa57a6066f3f8fc8a640047ac6e7978abe",
+      "sha256": "630e5998e8448ec3848473aa961dfdaf9505337860fc23fe67663fa58a9db254",
+      "bytes": 39764,
+      "sourceBytes": 223358,
+      "durationSeconds": 4.651666666666666
+    },
+    {
+      "key": "game-letra-enye-missing",
+      "filename": "adri-v1-game-letra-enye-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-missing.wav",
+      "sourceSha256": "3f6d387a5b13a8374fc67613b184658c0ca87117ff63c3dbaa111f0802a67a1a",
+      "sha256": "0f411d34a416766e04a890926171544b6808d85214c9f9c1e9b0e802418a920f",
+      "bytes": 71780,
+      "sourceBytes": 388862,
+      "durationSeconds": 8.099666666666666
+    },
+    {
+      "key": "game-letra-enye-picture-word",
+      "filename": "adri-v1-game-letra-enye-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-picture-word.wav",
+      "sourceSha256": "a9f20a1e84ae48573aa718c63331fb31b70653a6ebafa4133efcb12c606101d5",
+      "sha256": "f502afe9009d4de834b788a64f0f40e7a00ab70974e6d7de02e0f18d184d5fee",
+      "bytes": 38420,
+      "sourceBytes": 227346,
+      "durationSeconds": 4.73475
+    },
+    {
+      "key": "game-letra-enye-word",
+      "filename": "adri-v1-game-letra-enye-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-word.wav",
+      "sourceSha256": "57a8e6f80e8e0bf6bb057b9b3e2a664c47ba1ed078df625d8bf28c899e775d6c",
+      "sha256": "8181c71d9636210dfbed6ddbee82ce09e8e12e032f4c24825556c7b7738177e2",
+      "bytes": 67220,
+      "sourceBytes": 368866,
+      "durationSeconds": 7.683083333333333
+    },
+    {
+      "key": "game-letra-enye-sentence",
+      "filename": "adri-v1-game-letra-enye-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-sentence.wav",
+      "sourceSha256": "281629cada719605fdec5e0dfabf1bdb3b8221d38a6be08e8f0a3ea1150ab7c7",
+      "sha256": "be3914d3a2fa87a18862003cf379e83e8cf12897ffc46e9a5a378cf0d752c1fa",
+      "bytes": 71924,
+      "sourceBytes": 412680,
+      "durationSeconds": 8.595875
+    },
+    {
+      "key": "game-letra-enye-final",
+      "filename": "adri-v1-game-letra-enye-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-enye-final.wav",
+      "sourceSha256": "1b1dfe0dea83cfd706ddcd1d8436b5eb8ef2be111bbbb54162bb3379a895e92d",
+      "sha256": "f2ec0fd95cef4c8b2499d889bcc33489b3984c27a72522d891e7ef312fa157f5",
+      "bytes": 60404,
+      "sourceBytes": 323972,
+      "durationSeconds": 6.747791666666667
+    },
+    {
+      "key": "game-letra-o-letter",
+      "filename": "adri-v1-game-letra-o-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-letter.wav",
+      "sourceSha256": "96e47f83b3617ed875d96683ede24a73c20ebfa7f626860f0a9428b1b3ca4650",
+      "sha256": "9ff2f37b76fbb0833a6930f2d6f733e8261a7c16064d1166be8144dbb9f81ce2",
+      "bytes": 37388,
+      "sourceBytes": 209954,
+      "durationSeconds": 4.372416666666667
+    },
+    {
+      "key": "game-letra-o-sound-picture",
+      "filename": "adri-v1-game-letra-o-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-sound-picture.wav",
+      "sourceSha256": "1fd1d52e7562fffaf7a2640871d52dc9263f9101c0f50b5297bde962a9d1b60a",
+      "sha256": "6c53bf2e3d4155d45ea650eeb80484e08a186e3cfaa2a23cfd987e899f01c402",
+      "bytes": 28052,
+      "sourceBytes": 161642,
+      "durationSeconds": 3.3659166666666667
+    },
+    {
+      "key": "game-letra-o-syllable-hunt",
+      "filename": "adri-v1-game-letra-o-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-syllable-hunt.wav",
+      "sourceSha256": "33b795d448b9d55ad720d0fe667194d357a9237702abb64c6a5863fd9d7f20b7",
+      "sha256": "bd6d25196aaac49ac59aa0c9f403e952036957feefd1037440abe7c78fc0d288",
+      "bytes": 28076,
+      "sourceBytes": 153422,
+      "durationSeconds": 3.1946666666666665
+    },
+    {
+      "key": "game-letra-o-missing",
+      "filename": "adri-v1-game-letra-o-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-missing.wav",
+      "sourceSha256": "6a676312ff9823d46e989d5ca5350c417e3853e7180ee9ca69f18d9f7a3f5326",
+      "sha256": "fdf0aa94caec64db5c29d40f4843ddea6a806c503b80d9fc0451a6aa39a66899",
+      "bytes": 87428,
+      "sourceBytes": 492988,
+      "durationSeconds": 10.268958333333334
+    },
+    {
+      "key": "game-letra-o-picture-word",
+      "filename": "adri-v1-game-letra-o-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-picture-word.wav",
+      "sourceSha256": "9e0658f79de64f75a9245a9076aa565d7dd88ac83da9a52b6e5958887489f5bf",
+      "sha256": "078dc84f6f32a516c5fdf047c714dda7d423b8425cd6c455af57495d00d762d2",
+      "bytes": 49388,
+      "sourceBytes": 293960,
+      "durationSeconds": 6.122541666666667
+    },
+    {
+      "key": "game-letra-o-word",
+      "filename": "adri-v1-game-letra-o-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-word.wav",
+      "sourceSha256": "c39cdc62776994078ac3aa976be052bf5b43f1ef8801e88c2e8ec247e85ab003",
+      "sha256": "50a2852f34d0c8f91e480d7a3600c8682567addb6ab8c1300861f3d5eca72ca3",
+      "bytes": 59036,
+      "sourceBytes": 342570,
+      "durationSeconds": 7.13525
+    },
+    {
+      "key": "game-letra-o-sentence",
+      "filename": "adri-v1-game-letra-o-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-sentence.wav",
+      "sourceSha256": "04060b6426314ae21a5dc5299a91ad150fe48d41b393dfe5dceeb6f9cba9234d",
+      "sha256": "41cd695bff540bbd973bc6d748d6eedd8589a797f798d16f6b956c2dc089b9d7",
+      "bytes": 54740,
+      "sourceBytes": 303570,
+      "durationSeconds": 6.32275
+    },
+    {
+      "key": "game-letra-o-final",
+      "filename": "adri-v1-game-letra-o-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-o-final.wav",
+      "sourceSha256": "2bcc5c6014061010b4dc16a171df9c6f4de9c4547c6e27a97593c55a6b6df52a",
+      "sha256": "ec41f418361f622c715880455f9b0d25f4d4bcfc137b473c2ed1bf8968a310c3",
+      "bytes": 64052,
+      "sourceBytes": 344596,
+      "durationSeconds": 7.177958333333334
+    },
+    {
+      "key": "game-letra-p-letter",
+      "filename": "adri-v1-game-letra-p-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-letter.wav",
+      "sourceSha256": "d26b730b541c9f6de307ecf98ba79ff3e49c9cfdec128880e40a8a025e7bbf38",
+      "sha256": "3ee9fca14ff0b5b2919df24399dcf3b222db7bd646ba3aeb01f9301d4cebd155",
+      "bytes": 30284,
+      "sourceBytes": 168300,
+      "durationSeconds": 3.5059583333333335
+    },
+    {
+      "key": "game-letra-p-sound-picture",
+      "filename": "adri-v1-game-letra-p-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-sound-picture.wav",
+      "sourceSha256": "f444c7905b34ad364d1fff0db1357adeb1837045540364d4c92c06c759808cec",
+      "sha256": "1476878690e869392e6f7cf03dbc563322ee29979c5afc0bf92f4f605ecf699a",
+      "bytes": 45092,
+      "sourceBytes": 271142,
+      "durationSeconds": 5.647166666666666
+    },
+    {
+      "key": "game-letra-p-syllable-hunt",
+      "filename": "adri-v1-game-letra-p-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-syllable-hunt.wav",
+      "sourceSha256": "59fe49ec32942346c0cab597199a64a372fbd36870c1e5fc723e9514cec66ca5",
+      "sha256": "d3e4efc8833731b166f568722f2c6e0fe0e851024322cb034970d1ab7dfab593",
+      "bytes": 29228,
+      "sourceBytes": 164104,
+      "durationSeconds": 3.4172083333333334
+    },
+    {
+      "key": "game-letra-p-missing",
+      "filename": "adri-v1-game-letra-p-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-missing.wav",
+      "sourceSha256": "cbe1fd4011c4084aaf590b3563069d2bd830a77dd6b2bb904f005a6a1e1eea24",
+      "sha256": "d20abf8c745649cbab26922aea267d78884c39cc8cce1912e5297faa33d2ee83",
+      "bytes": 71084,
+      "sourceBytes": 386250,
+      "durationSeconds": 8.04525
+    },
+    {
+      "key": "game-letra-p-picture-word",
+      "filename": "adri-v1-game-letra-p-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-picture-word.wav",
+      "sourceSha256": "52c52b7579004a8642a56bf6774686f28e57c62c2ffd90601cbb63aec4fd4df3",
+      "sha256": "c47d67dc50ee42d145c03cb1d6557927fd4b55fdde8f097b34de4968e77c2165",
+      "bytes": 36020,
+      "sourceBytes": 215356,
+      "durationSeconds": 4.484958333333333
+    },
+    {
+      "key": "game-letra-p-word",
+      "filename": "adri-v1-game-letra-p-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-word.wav",
+      "sourceSha256": "5a4ecb2a84bf8c1e23be9cd53f21a17e35667fde9680b9e0e95e952ab8b8f7e0",
+      "sha256": "ea82629eacf7552030388ea4544282b1e9df3bff6d832d5b898439f2f12b80ab",
+      "bytes": 56468,
+      "sourceBytes": 313328,
+      "durationSeconds": 6.526041666666667
+    },
+    {
+      "key": "game-letra-p-sentence",
+      "filename": "adri-v1-game-letra-p-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-sentence.wav",
+      "sourceSha256": "340c06145c265c0b6bd1e1cf3541cbb9d6b93183ee2e637c2b6e95e6cc920e7a",
+      "sha256": "721f3f201c8116bfd86f0684927465910dea09b48e8c03faae256adf2cbb3a15",
+      "bytes": 58748,
+      "sourceBytes": 323254,
+      "durationSeconds": 6.732833333333334
+    },
+    {
+      "key": "game-letra-p-final",
+      "filename": "adri-v1-game-letra-p-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-p-final.wav",
+      "sourceSha256": "28f1bdbd19a692ad70d93c237a0c3274d4e3c7b9fa9bf39e30a0313c53dae01b",
+      "sha256": "82faadf5a01e34ace6afb28c901e1f09a6b6d64c22587b6bdfd9d07554a27b5b",
+      "bytes": 63668,
+      "sourceBytes": 348054,
+      "durationSeconds": 7.249958333333334
+    },
+    {
+      "key": "game-letra-q-letter",
+      "filename": "adri-v1-game-letra-q-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-letter.wav",
+      "sourceSha256": "2edee1c6ae1fa8a64c37d63296d9b642a5a2fb724f23e9a17445f237a3d574f8",
+      "sha256": "7d6387d5f89b8e96c5ca762133be8b6d09a9b556ff722df19f90cf6a5256efb8",
+      "bytes": 30668,
+      "sourceBytes": 183098,
+      "durationSeconds": 3.8129166666666667
+    },
+    {
+      "key": "game-letra-q-sound-picture",
+      "filename": "adri-v1-game-letra-q-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-sound-picture.wav",
+      "sourceSha256": "5f8bde348eced2088603d7e6bc1d68c72f762dbf976fb75110663e34141414d4",
+      "sha256": "9d427e204c3d24baa9097860fd0c923cc09a54a69f67dc2fc932dde77e265a88",
+      "bytes": 33884,
+      "sourceBytes": 208974,
+      "durationSeconds": 4.352
+    },
+    {
+      "key": "game-letra-q-syllable-hunt",
+      "filename": "adri-v1-game-letra-q-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-syllable-hunt.wav",
+      "sourceSha256": "a8f86c89d8601a7cfafb5b68e56462f7dec7e04d95391e1c8b586b654a293655",
+      "sha256": "45c626389c61874e070fe5d24b44fbf99f31e33babed416714a9561fa89db65d",
+      "bytes": 35108,
+      "sourceBytes": 202144,
+      "durationSeconds": 4.209708333333333
+    },
+    {
+      "key": "game-letra-q-missing",
+      "filename": "adri-v1-game-letra-q-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-missing.wav",
+      "sourceSha256": "58aa3af99fea1b54d8b86db1ea740ec4fd5eb1ba13e498d771644f1109fc5f50",
+      "sha256": "5f6537934a0cd3aacbf697a5aad177afe68e19265bace0ef13ed037e9ede5957",
+      "bytes": 71252,
+      "sourceBytes": 403660,
+      "durationSeconds": 8.407958333333333
+    },
+    {
+      "key": "game-letra-q-picture-word",
+      "filename": "adri-v1-game-letra-q-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-picture-word.wav",
+      "sourceSha256": "9808a3e443b07da114c312fa9c3d077feeaeee3f94739c6e693573109dfc6db3",
+      "sha256": "666f2ee115f4a6295b4d7d2ec820a82ec559c7b1313ab8df5e3507bfe1c321ed",
+      "bytes": 26204,
+      "sourceBytes": 142588,
+      "durationSeconds": 2.968958333333333
+    },
+    {
+      "key": "game-letra-q-word",
+      "filename": "adri-v1-game-letra-q-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-word.wav",
+      "sourceSha256": "36d7c84c74f1a4616cf4d8e3b6a7de696af9422dec2251e256c792ff342733b5",
+      "sha256": "94d588c70e283cde948a7b6140a7f9137994322dee6dd85d99fe8a09c4cafa43",
+      "bytes": 61196,
+      "sourceBytes": 337550,
+      "durationSeconds": 7.030666666666667
+    },
+    {
+      "key": "game-letra-q-sentence",
+      "filename": "adri-v1-game-letra-q-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-sentence.wav",
+      "sourceSha256": "58f8702024880411a443a4349d82f4c4cd9925c32a93f642970842e516d103b5",
+      "sha256": "d48cad2d72e6119bc8a7d4564c3146370af4d4a8ee33b266a6929cd900b1d7d8",
+      "bytes": 62108,
+      "sourceBytes": 344512,
+      "durationSeconds": 7.175708333333334
+    },
+    {
+      "key": "game-letra-q-final",
+      "filename": "adri-v1-game-letra-q-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-q-final.wav",
+      "sourceSha256": "d157b25be7d90e8d1e0b370e5fd3b05d82e51e1a1cdba6d028a89c0225c5fdcd",
+      "sha256": "10413e79e536821685586d62ea1f3f66a3090f0a9841160e6fbdee763154b66f",
+      "bytes": 60188,
+      "sourceBytes": 321052,
+      "durationSeconds": 6.686958333333333
+    },
+    {
+      "key": "game-letra-r-letter",
+      "filename": "adri-v1-game-letra-r-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-letter.wav",
+      "sourceSha256": "2e16290d2732d4ea03a255468678623bd8364e753a06aea3ea5113ef403e07ee",
+      "sha256": "364f665494344402ecaf09d53355b66b11824a84391aad04c0ea95f73de42697",
+      "bytes": 64628,
+      "sourceBytes": 458208,
+      "durationSeconds": 9.544375
+    },
+    {
+      "key": "game-letra-r-sound-picture",
+      "filename": "adri-v1-game-letra-r-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-sound-picture.wav",
+      "sourceSha256": "8bed9d8402564d269e5b02ea2d12b5cdd2dd1533984d0fb5b3908cef2ffa6799",
+      "sha256": "10e49920550f7af33e015f358f16501d76f592a3639caa9d74d9c3b6b9e38f95",
+      "bytes": 27020,
+      "sourceBytes": 145914,
+      "durationSeconds": 3.03825
+    },
+    {
+      "key": "game-letra-r-syllable-hunt",
+      "filename": "adri-v1-game-letra-r-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-syllable-hunt.wav",
+      "sourceSha256": "68504208fbe7758f0bb2a0f45ec6e87b2969325146abb161930f32143aa1974c",
+      "sha256": "6da45544b00202d2454cde04ade99854332cc736c7130108807ef3e6592bfdd0",
+      "bytes": 34988,
+      "sourceBytes": 209880,
+      "durationSeconds": 4.370875
+    },
+    {
+      "key": "game-letra-r-missing",
+      "filename": "adri-v1-game-letra-r-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-missing.wav",
+      "sourceSha256": "1e3bc03a0f80919eff1550024df8f09702130c99cd79d0c9f442f2207d8bd103",
+      "sha256": "03bfeb293a060d616b4b2a60367d0e20363309b9d2de12606fe0ad9034410b7b",
+      "bytes": 76820,
+      "sourceBytes": 412252,
+      "durationSeconds": 8.586958333333333
+    },
+    {
+      "key": "game-letra-r-picture-word",
+      "filename": "adri-v1-game-letra-r-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-picture-word.wav",
+      "sourceSha256": "004586a5c51c38c4058639f29c2529ff94825ee31bb8ffc98558887dcae8f2d1",
+      "sha256": "09f72482910634a3e520623cd2c8fc7a212fa9fa93541b55b543702a98b99a78",
+      "bytes": 42188,
+      "sourceBytes": 236944,
+      "durationSeconds": 4.934708333333333
+    },
+    {
+      "key": "game-letra-r-word",
+      "filename": "adri-v1-game-letra-r-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-word.wav",
+      "sourceSha256": "7d4f8e23a659075b27339ffe7e71ced2eb7db5b3085bf5730614210aa886c2ca",
+      "sha256": "976bfcb4ea5bca936026ed1eb3d50eb21c9c37bd47b80d21d4f576db6270ff3b",
+      "bytes": 59276,
+      "sourceBytes": 348246,
+      "durationSeconds": 7.2535
+    },
+    {
+      "key": "game-letra-r-sentence",
+      "filename": "adri-v1-game-letra-r-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-sentence.wav",
+      "sourceSha256": "1cd3f8024c98320ae7611c727ae0ab560fb87cfd587f19298e6b1e4fe5dccc7b",
+      "sha256": "0e73851eb7eec2d35aacae242af71015a9e07f72eda3b2241a0b033a80879e35",
+      "bytes": 66764,
+      "sourceBytes": 392680,
+      "durationSeconds": 8.179208333333333
+    },
+    {
+      "key": "game-letra-r-final",
+      "filename": "adri-v1-game-letra-r-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-r-final.wav",
+      "sourceSha256": "8fe5cbc8c20ba14fd52d573be7910a267fab31ef1fa2b8bf6f07916c4d951bbd",
+      "sha256": "b8d15989e8a788405c97963ba83d982304d1b87a892cebfe50ac4369264ffea5",
+      "bytes": 65180,
+      "sourceBytes": 358352,
+      "durationSeconds": 7.465958333333333
+    },
+    {
+      "key": "game-letra-s-letter",
+      "filename": "adri-v1-game-letra-s-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-letter.wav",
+      "sourceSha256": "5705b2bc7ad54844626e1115879bcd25515ad05414f4bc3e274a52650b7c6bad",
+      "sha256": "2d06bab19c8a993230c3a06d9ff61644f81b29b083b9671e2e9eea25c470ac39",
+      "bytes": 36716,
+      "sourceBytes": 199666,
+      "durationSeconds": 4.158083333333333
+    },
+    {
+      "key": "game-letra-s-sound-picture",
+      "filename": "adri-v1-game-letra-s-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-sound-picture.wav",
+      "sourceSha256": "8068657dc007c25a76613ec2ba29faf6ea22c01f46a37ff73da6f10e00d5eb71",
+      "sha256": "52c731c2dd2ab1bc05f7622d086c81b5a21b4e86e49987a5e50aed07b749f1f0",
+      "bytes": 28388,
+      "sourceBytes": 157162,
+      "durationSeconds": 3.2725833333333334
+    },
+    {
+      "key": "game-letra-s-syllable-hunt",
+      "filename": "adri-v1-game-letra-s-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-syllable-hunt.wav",
+      "sourceSha256": "b6aa473f71eef26c6b5ce5c023f94855f681b524fb0f27ade97a4f284d0be181",
+      "sha256": "ccd3c541c96b14c457aa3efad4968e6585fb548c8bc208a1a88ddeaca3a12ee8",
+      "bytes": 31652,
+      "sourceBytes": 183494,
+      "durationSeconds": 3.8211666666666666
+    },
+    {
+      "key": "game-letra-s-missing",
+      "filename": "adri-v1-game-letra-s-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-missing.wav",
+      "sourceSha256": "8b270a8643bfb700b023c8425163cac08f1496c961fd0c34a2449584b2c055f8",
+      "sha256": "52dd5afa127c8fc093fecd1a3898b382c93cb941e16a8b58283de6b61bcc636d",
+      "bytes": 73508,
+      "sourceBytes": 398676,
+      "durationSeconds": 8.305958333333333
+    },
+    {
+      "key": "game-letra-s-picture-word",
+      "filename": "adri-v1-game-letra-s-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-picture-word.wav",
+      "sourceSha256": "0825f8f9d4cce90609592b15c9cb6643960e09ed7dc0efba9f64888bca825b53",
+      "sha256": "a59ecedc0def098f63b915129e573af6465196f8758e853cb267e53ff0c8a07c",
+      "bytes": 76028,
+      "sourceBytes": 492684,
+      "durationSeconds": 10.262625
+    },
+    {
+      "key": "game-letra-s-word",
+      "filename": "adri-v1-game-letra-s-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-word.wav",
+      "sourceSha256": "27c7fe85d5829f072eb0b8d30937acc7a7b26124b423fe96dfdb79412e095b6a",
+      "sha256": "2fd0103931fe4213ac8855eada04f23afc804764a0745bf6409102ce2e157641",
+      "bytes": 56300,
+      "sourceBytes": 315540,
+      "durationSeconds": 6.572125
+    },
+    {
+      "key": "game-letra-s-sentence",
+      "filename": "adri-v1-game-letra-s-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-sentence.wav",
+      "sourceSha256": "1994d5d834ba49611429150df1b19b8edaf875abe257c2c6b508fda6a0d4e938",
+      "sha256": "676500edc03ecd660ae0d544951b308ba6b155dc9a5ae86fc9e1fc8920e186e1",
+      "bytes": 79460,
+      "sourceBytes": 477552,
+      "durationSeconds": 9.947375
+    },
+    {
+      "key": "game-letra-s-final",
+      "filename": "adri-v1-game-letra-s-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-s-final.wav",
+      "sourceSha256": "7d1cac5d83b01ee80775ec295487af67bc6629e2f474e8e38f972f7406922111",
+      "sha256": "bac6c50c4df628807b7c73cb2f730794ab61e8012fe64aae589e32c51e5e79e0",
+      "bytes": 67508,
+      "sourceBytes": 375736,
+      "durationSeconds": 7.826208333333334
+    },
+    {
+      "key": "game-letra-t-letter",
+      "filename": "adri-v1-game-letra-t-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-letter.wav",
+      "sourceSha256": "5900b7983d29809e941ce7757d94f047c071af8b0201f918682dcb00181d04fd",
+      "sha256": "78ccbf93bb49c02d54f958f67d19879c4f9353398f5874223ada75a2d97b798a",
+      "bytes": 36020,
+      "sourceBytes": 211522,
+      "durationSeconds": 4.405083333333334
+    },
+    {
+      "key": "game-letra-t-sound-picture",
+      "filename": "adri-v1-game-letra-t-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-sound-picture.wav",
+      "sourceSha256": "f7b964c1753c4335b50196c81df5e1c8eb0598a8b4ab04eb381c4744b80b0917",
+      "sha256": "6fcf5aa68a694938fb4036c9cdc4beb1114cb7d8011dafd048d22b3d15293580",
+      "bytes": 32660,
+      "sourceBytes": 194270,
+      "durationSeconds": 4.0456666666666665
+    },
+    {
+      "key": "game-letra-t-syllable-hunt",
+      "filename": "adri-v1-game-letra-t-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-syllable-hunt.wav",
+      "sourceSha256": "513f704e1b663739bcaebcad02c5a19002d527c6fb25dcb750f41fc797d4e23e",
+      "sha256": "9dcab885f138f7f40b2a201db476edd653e4c2f1f1e1d767fbf5971591690059",
+      "bytes": 33668,
+      "sourceBytes": 206490,
+      "durationSeconds": 4.30025
+    },
+    {
+      "key": "game-letra-t-missing",
+      "filename": "adri-v1-game-letra-t-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-missing.wav",
+      "sourceSha256": "1b80ca1aacc9d74bfa8991a0e31804c3eabc3d976d579cb2eaf368b0b7f54002",
+      "sha256": "dfd44a3fc78ec4c0e6494071419264fef2b70e7f9046251f0bfd6967e85481a3",
+      "bytes": 63812,
+      "sourceBytes": 348366,
+      "durationSeconds": 7.256
+    },
+    {
+      "key": "game-letra-t-picture-word",
+      "filename": "adri-v1-game-letra-t-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-picture-word.wav",
+      "sourceSha256": "50feb11243dd9aed005ba1cd645ca3f746cc996dff18949924a80ce70a8eec94",
+      "sha256": "2f607f2c95b60a08982f5e08c53fb6df4809fd39c4a9b08c3a559ffd87f687a9",
+      "bytes": 30092,
+      "sourceBytes": 161730,
+      "durationSeconds": 3.36775
+    },
+    {
+      "key": "game-letra-t-word",
+      "filename": "adri-v1-game-letra-t-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-word.wav",
+      "sourceSha256": "6d7f7016bd0576356bdf131e80e77be958e4aa22e1f15c59c2fd27a4b154ddea",
+      "sha256": "0519b0384651a0752d7c06425b1d938e530ec7ce94b95291efec66cd32d48c6a",
+      "bytes": 60692,
+      "sourceBytes": 345082,
+      "durationSeconds": 7.187583333333333
+    },
+    {
+      "key": "game-letra-t-sentence",
+      "filename": "adri-v1-game-letra-t-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-sentence.wav",
+      "sourceSha256": "df61c44a5b6d1de116d7fd6e62d67634793dcfb889d7459b980574fa08364929",
+      "sha256": "f9fad608497185b681910c5559dc88959edd4ed36daa150ecc230d3efc1befb6",
+      "bytes": 56708,
+      "sourceBytes": 314330,
+      "durationSeconds": 6.546916666666666
+    },
+    {
+      "key": "game-letra-t-final",
+      "filename": "adri-v1-game-letra-t-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-t-final.wav",
+      "sourceSha256": "8c554fb46a31de79ce998d5002d69a4a9e0fbcf4dd371962915b7180323bb0fb",
+      "sha256": "09b263e38d77330a53ee560d9c08f23c670e341d2cf9667805319349f827fe0f",
+      "bytes": 57812,
+      "sourceBytes": 310642,
+      "durationSeconds": 6.470083333333333
+    },
+    {
+      "key": "game-letra-u-letter",
+      "filename": "adri-v1-game-letra-u-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-letter.wav",
+      "sourceSha256": "bc4345315fe8c4f1319ce6f1b1a07ae987b895611a47feb1304bca254db21816",
+      "sha256": "17ba20de679eca019723c7c20066795a6cf75d4beb1ff6794e815027f96b7daf",
+      "bytes": 38756,
+      "sourceBytes": 210832,
+      "durationSeconds": 4.390708333333333
+    },
+    {
+      "key": "game-letra-u-sound-picture",
+      "filename": "adri-v1-game-letra-u-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-sound-picture.wav",
+      "sourceSha256": "c16e376e7e784805bcb72e6c9a22ee8c15af698e200ec05f79a70dc5b358feb9",
+      "sha256": "e14d36e5ce2548a71a6df7e5a15c62195bcfb2d811068e72d756200443b71456",
+      "bytes": 37748,
+      "sourceBytes": 219742,
+      "durationSeconds": 4.576333333333333
+    },
+    {
+      "key": "game-letra-u-syllable-hunt",
+      "filename": "adri-v1-game-letra-u-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-syllable-hunt.wav",
+      "sourceSha256": "33b795d448b9d55ad720d0fe667194d357a9237702abb64c6a5863fd9d7f20b7",
+      "sha256": "bd6d25196aaac49ac59aa0c9f403e952036957feefd1037440abe7c78fc0d288",
+      "bytes": 28076,
+      "sourceBytes": 153422,
+      "durationSeconds": 3.1946666666666665
+    },
+    {
+      "key": "game-letra-u-missing",
+      "filename": "adri-v1-game-letra-u-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-missing.wav",
+      "sourceSha256": "7f46d7ad5fce1cc2e015acc9a7ac71447470358d5483f972e525b690741ce023",
+      "sha256": "777c7f5fdcb03149bd5ed469766264155d04abc281e9d8afd72c0dd1464bfcc0",
+      "bytes": 62852,
+      "sourceBytes": 341284,
+      "durationSeconds": 7.108458333333333
+    },
+    {
+      "key": "game-letra-u-picture-word",
+      "filename": "adri-v1-game-letra-u-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-picture-word.wav",
+      "sourceSha256": "a4996f6bc3feb1329211f1ebc6fcbb2b0f16276446d52125f4cb412ec15d1166",
+      "sha256": "1fdc8d9025de535fd9882e600a84baabc6c4c753bb7d7b7a7941e75ddf34a6ba",
+      "bytes": 37220,
+      "sourceBytes": 215538,
+      "durationSeconds": 4.489958333333333
+    },
+    {
+      "key": "game-letra-u-word",
+      "filename": "adri-v1-game-letra-u-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-word.wav",
+      "sourceSha256": "ab634e9e6ca3fc677ad381e960d87a735e51d0f4e9e2fc9e02cb355a863a5880",
+      "sha256": "524ccaadd81bf91e2ece71c69683a911fdd9a2384e580658d95012ddbc4e7fb4",
+      "bytes": 89084,
+      "sourceBytes": 526684,
+      "durationSeconds": 10.970958333333334
+    },
+    {
+      "key": "game-letra-u-sentence",
+      "filename": "adri-v1-game-letra-u-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-sentence.wav",
+      "sourceSha256": "6393ca10f2192a8bcda096783289d014c468cf05fa740b3da4bd89a22e98fbe7",
+      "sha256": "0e5e38780c5588e0b519fc31eaa4b56d9633d2120b75c2cfc687325aa78314e2",
+      "bytes": 69884,
+      "sourceBytes": 396444,
+      "durationSeconds": 8.257958333333333
+    },
+    {
+      "key": "game-letra-u-final",
+      "filename": "adri-v1-game-letra-u-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-u-final.wav",
+      "sourceSha256": "95c9361b4c8ccf208a63321bf7501fc82ee2908b2431ab3f6b6f412322e667ee",
+      "sha256": "056959bf97c3d7f03f75b0b3f685432695d69a4d2f2eb2cb46855ddb6070ae97",
+      "bytes": 69284,
+      "sourceBytes": 395890,
+      "durationSeconds": 8.246083333333333
+    },
+    {
+      "key": "game-letra-v-letter",
+      "filename": "adri-v1-game-letra-v-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-letter.wav",
+      "sourceSha256": "e17beb69cf989d6592a14c7f61a2e428f4e52cd9cd724c1f7282307ff96af9ee",
+      "sha256": "a4eb668d6e38b73fa7bb34140cfd5f850145c4c26629946210074fb1304e78b6",
+      "bytes": 29564,
+      "sourceBytes": 159358,
+      "durationSeconds": 3.3183333333333334
+    },
+    {
+      "key": "game-letra-v-sound-picture",
+      "filename": "adri-v1-game-letra-v-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-sound-picture.wav",
+      "sourceSha256": "336710432283e5e8878e2364e67cbf7059da7c7e483dd1e63f112422ca97d234",
+      "sha256": "81e7ea935cee6098de20f54f65f6d3298f86de9fa3f05cb20a2e34dc55e61a7e",
+      "bytes": 34508,
+      "sourceBytes": 202740,
+      "durationSeconds": 4.222125
+    },
+    {
+      "key": "game-letra-v-syllable-hunt",
+      "filename": "adri-v1-game-letra-v-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-syllable-hunt.wav",
+      "sourceSha256": "d8b72f35415d4a157835fa8d08bceb8f2a3ab89a85b18c3708307575fc9bbaa7",
+      "sha256": "6b0f13a8b29d17cb0a5552bbba4d8c8d8d98b8a8393a12493e7c578bdf098f33",
+      "bytes": 29636,
+      "sourceBytes": 168484,
+      "durationSeconds": 3.5084583333333335
+    },
+    {
+      "key": "game-letra-v-missing",
+      "filename": "adri-v1-game-letra-v-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-missing.wav",
+      "sourceSha256": "d753c56004861cbe1290bfb1976a4ba360b3a3927d087e718d29a7f3eae4a668",
+      "sha256": "aefd2a673139559b0c145b41311a1329585b645f1a77470123038e49d58e636f",
+      "bytes": 70796,
+      "sourceBytes": 386688,
+      "durationSeconds": 8.054375
+    },
+    {
+      "key": "game-letra-v-picture-word",
+      "filename": "adri-v1-game-letra-v-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-picture-word.wav",
+      "sourceSha256": "fda16149f72a87c71b4b646d60af72f143c87d247bcbb353434e94604997149e",
+      "sha256": "72d4d617c994e9b5deefc7a981c397b495b8d68a6622c8f2a335968f768b9f4e",
+      "bytes": 42644,
+      "sourceBytes": 259314,
+      "durationSeconds": 5.401958333333333
+    },
+    {
+      "key": "game-letra-v-word",
+      "filename": "adri-v1-game-letra-v-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-word.wav",
+      "sourceSha256": "ab185c6b15890a2fb6212cad3cd415f5598ab40c7ef489ee1e8054fd8571975b",
+      "sha256": "7fd1f2e3c1f00f757d10c9976a1bc1018dabfda1388f8a5c242992b4c80c58c3",
+      "bytes": 61700,
+      "sourceBytes": 349266,
+      "durationSeconds": 7.27475
+    },
+    {
+      "key": "game-letra-v-sentence",
+      "filename": "adri-v1-game-letra-v-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-sentence.wav",
+      "sourceSha256": "d0ce3259233d09817b65f710075f1192c6eaf3ea9ee8e79453e19cdb573add58",
+      "sha256": "e305cb3c862c82899ea6125be75c5add9dbc628c124502caf81af21b029cf223",
+      "bytes": 63260,
+      "sourceBytes": 360272,
+      "durationSeconds": 7.504041666666667
+    },
+    {
+      "key": "game-letra-v-final",
+      "filename": "adri-v1-game-letra-v-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-v-final.wav",
+      "sourceSha256": "44a306977590b5cf30929ffde3afd9dc97d385d6c167de1bcac5d73605959a0a",
+      "sha256": "917b18ca086427dae016b30e3e7b85acff7b3790c2841c51f3d6588173e3d8c4",
+      "bytes": 62924,
+      "sourceBytes": 350078,
+      "durationSeconds": 7.291666666666667
+    },
+    {
+      "key": "game-letra-w-letter",
+      "filename": "adri-v1-game-letra-w-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-letter.wav",
+      "sourceSha256": "26ae91303feb570912cc889c1060ffb7588bf93e5d90029bd2b2a8722842c441",
+      "sha256": "d046cd7d03b0a24f2253ee5a66d84619f4e8f26b4789542586b3c504dc69c636",
+      "bytes": 46028,
+      "sourceBytes": 287274,
+      "durationSeconds": 5.98325
+    },
+    {
+      "key": "game-letra-w-sound-picture",
+      "filename": "adri-v1-game-letra-w-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-sound-picture.wav",
+      "sourceSha256": "cf5e7428780c6c97ce699219a63b80b9e9af08adc6c070e17a5d0c890d2af2b3",
+      "sha256": "e68d97723d70dd4af1f41f00cc6be28f52f7317428334366bf991f596c575f7e",
+      "bytes": 43484,
+      "sourceBytes": 250584,
+      "durationSeconds": 5.218875
+    },
+    {
+      "key": "game-letra-w-syllable-hunt",
+      "filename": "adri-v1-game-letra-w-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-syllable-hunt.wav",
+      "sourceSha256": "7be5c09261353c55a94f022648235b8248b3eea0dd40ee8755c00e79733ac581",
+      "sha256": "b54347d75802ed080629ab9eb1f52613a953b225b53267a616b4a0d2c460a196",
+      "bytes": 43052,
+      "sourceBytes": 269950,
+      "durationSeconds": 5.622333333333334
+    },
+    {
+      "key": "game-letra-w-missing",
+      "filename": "adri-v1-game-letra-w-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-missing.wav",
+      "sourceSha256": "eddb4328b0872bb32d2cf115ed6392c3e9349540d08e08c8da5fd5c5d9e716ec",
+      "sha256": "6847acba3ce1f7f866c9eaee2ec6cbb7ec55329d364b662d5e6a0bce833d0320",
+      "bytes": 66548,
+      "sourceBytes": 381312,
+      "durationSeconds": 7.942375
+    },
+    {
+      "key": "game-letra-w-picture-word",
+      "filename": "adri-v1-game-letra-w-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-picture-word.wav",
+      "sourceSha256": "62ae3046db2ecbefe77fceb8a332f787511e92e1f633443e3e9e3d623e008b5e",
+      "sha256": "ed62b77f385826c2da64d42e499522d471e48e4ef1a762244cc6fe320105e2e0",
+      "bytes": 42044,
+      "sourceBytes": 235564,
+      "durationSeconds": 4.905958333333333
+    },
+    {
+      "key": "game-letra-w-word",
+      "filename": "adri-v1-game-letra-w-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-word.wav",
+      "sourceSha256": "854049170c67bba16be812ed4104ee3f0a3e5facd047b35fdaecdf7f91f4d359",
+      "sha256": "5a978077403f749bb04ccdb6abd63360c6c8587cb23f60353d2b94eab9ec4b30",
+      "bytes": 62060,
+      "sourceBytes": 342970,
+      "durationSeconds": 7.143583333333333
+    },
+    {
+      "key": "game-letra-w-sentence",
+      "filename": "adri-v1-game-letra-w-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-sentence.wav",
+      "sourceSha256": "03e1e8c51feaccf67983a0ee875f499134e619332a51263aa2f296d3d1825060",
+      "sha256": "17bebbf6bad2ba4866067862db2fc148dd8ef3ed42bc1464798304a428235d5b",
+      "bytes": 60404,
+      "sourceBytes": 340034,
+      "durationSeconds": 7.082416666666667
+    },
+    {
+      "key": "game-letra-w-final",
+      "filename": "adri-v1-game-letra-w-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-w-final.wav",
+      "sourceSha256": "ea394f262621c168d8b10bb680bca010a248df8c97feb3b080f5fc13ec9bb1fe",
+      "sha256": "ce09d2b2af0173b0a5f2391a22453d2534a705c8145ee5a3e645ff1daa37e145",
+      "bytes": 63356,
+      "sourceBytes": 347170,
+      "durationSeconds": 7.231083333333333
+    },
+    {
+      "key": "game-letra-x-letter",
+      "filename": "adri-v1-game-letra-x-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-letter.wav",
+      "sourceSha256": "7023b3eeea70287b1959adf8359f8afc55601a413b859bc3a4b7b23af7f69f80",
+      "sha256": "6a70ce4fa202be99984b525b1978e2c2c61044e735502ece39345edd2f073c0e",
+      "bytes": 29060,
+      "sourceBytes": 158726,
+      "durationSeconds": 3.3051666666666666
+    },
+    {
+      "key": "game-letra-x-sound-picture",
+      "filename": "adri-v1-game-letra-x-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-sound-picture.wav",
+      "sourceSha256": "64be50021ff085c35dea795e5b557ce343eff7bb962e153c468cc3f9a20679e7",
+      "sha256": "be265d2781f8952fc208b4c4df57601f9fa577f8abc0c1827f4dbc261beb7bcd",
+      "bytes": 68516,
+      "sourceBytes": 445912,
+      "durationSeconds": 9.289958333333333
+    },
+    {
+      "key": "game-letra-x-syllable-hunt",
+      "filename": "adri-v1-game-letra-x-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-syllable-hunt.wav",
+      "sourceSha256": "784b21cb52a630c68911532d876b02df34cc903863d83dd101577816ec6c30b8",
+      "sha256": "9ee6246d54027cbf2eb5ee3072c3cbe1d9303bd001ab11e9e848a4058ea1e04a",
+      "bytes": 41468,
+      "sourceBytes": 240178,
+      "durationSeconds": 5.002083333333333
+    },
+    {
+      "key": "game-letra-x-missing",
+      "filename": "adri-v1-game-letra-x-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-missing.wav",
+      "sourceSha256": "51c385af527e0bafcee2a13c48e766799e20082bc5ff2213bf124f92a7c7fded",
+      "sha256": "ee6a923633926d91206b9322e062b1664d8556d9b58db1b9d21e100ef38d5824",
+      "bytes": 61244,
+      "sourceBytes": 342928,
+      "durationSeconds": 7.142708333333333
+    },
+    {
+      "key": "game-letra-x-picture-word",
+      "filename": "adri-v1-game-letra-x-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-picture-word.wav",
+      "sourceSha256": "d68028586750e8f70a5486600348074f89f2d5f258123a85f50d59b380f2a266",
+      "sha256": "77b0c69ebc70ec391ecad8e1bd96b94ba2990044eee0b033d6642fac6140fced",
+      "bytes": 39212,
+      "sourceBytes": 224264,
+      "durationSeconds": 4.670541666666667
+    },
+    {
+      "key": "game-letra-x-word",
+      "filename": "adri-v1-game-letra-x-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-word.wav",
+      "sourceSha256": "b02812d7949d90738cb37430be54a4574b4130691ea4700dc2dad9ebf99e104f",
+      "sha256": "ec46adfeb4cda861242227ced65d0f78b390a6d462d4cf04f0ae30101f10e32f",
+      "bytes": 60260,
+      "sourceBytes": 333234,
+      "durationSeconds": 6.94075
+    },
+    {
+      "key": "game-letra-x-sentence",
+      "filename": "adri-v1-game-letra-x-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-sentence.wav",
+      "sourceSha256": "3347951d274fb5bce4a31b34e825eceb4d51f1c51051bafd8ccab186d754d9eb",
+      "sha256": "c5f55e43513b2acd5c23e673e3690cb2cdcaa159967acee5c5ec7ba8744ce766",
+      "bytes": 57452,
+      "sourceBytes": 310778,
+      "durationSeconds": 6.472916666666666
+    },
+    {
+      "key": "game-letra-x-final",
+      "filename": "adri-v1-game-letra-x-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-x-final.wav",
+      "sourceSha256": "bb59a660d83d0122cf1e24120ab911ab937f16d16fc54a17054ea72d731dac0e",
+      "sha256": "33c0147ce9d7c55a93be6b8c2e9d92e1e4aaa1efacac73fe9da4da0e145bb584",
+      "bytes": 57668,
+      "sourceBytes": 320438,
+      "durationSeconds": 6.674166666666666
+    },
+    {
+      "key": "game-letra-y-letter",
+      "filename": "adri-v1-game-letra-y-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-letter.wav",
+      "sourceSha256": "5f957978ff813d088d8e4a3f2253a573f0c1ab1922a8fa5be39a4541708cb103",
+      "sha256": "822a2aab29cfa365e3cadbb5e63de1f02d3e32d332effcd8d9781f6a59d4bafb",
+      "bytes": 27716,
+      "sourceBytes": 147688,
+      "durationSeconds": 3.0752083333333333
+    },
+    {
+      "key": "game-letra-y-sound-picture",
+      "filename": "adri-v1-game-letra-y-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-sound-picture.wav",
+      "sourceSha256": "b26f61b0c3bb909aaca2898f74543e45a0420aff3ec930a273946b3c97cf5c2a",
+      "sha256": "b9c50a1afc1438a7a9c60444597faf24d2ffd424dc3a99593ee505ef86ebee4e",
+      "bytes": 28556,
+      "sourceBytes": 150168,
+      "durationSeconds": 3.126875
+    },
+    {
+      "key": "game-letra-y-syllable-hunt",
+      "filename": "adri-v1-game-letra-y-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-syllable-hunt.wav",
+      "sourceSha256": "1c57310a8af9a7e00daefb09f3e82a61147070eedf105e96f73f5418afcff38e",
+      "sha256": "c135c4036e1dc045132d77bd9f183075b0071efe5a5ca7c79716babaed071274",
+      "bytes": 37676,
+      "sourceBytes": 222282,
+      "durationSeconds": 4.62925
+    },
+    {
+      "key": "game-letra-y-missing",
+      "filename": "adri-v1-game-letra-y-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-missing.wav",
+      "sourceSha256": "9fb43250af9860ee61c2d626b24d1edb05dc53e7c7c3926b4d815a0cd8877787",
+      "sha256": "7448e1ba040a47e97c9457aab1d5aa2031a6cc9d0df70f55c0a69185c72ecdad",
+      "bytes": 73892,
+      "sourceBytes": 416260,
+      "durationSeconds": 8.670458333333332
+    },
+    {
+      "key": "game-letra-y-picture-word",
+      "filename": "adri-v1-game-letra-y-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-picture-word.wav",
+      "sourceSha256": "4f0cd07d1b528954933363e7b95e414d5e058d7c92afacb3ce712f205831866a",
+      "sha256": "494f4d814105ed8ce34bbde1f9c65d8adef11302b31279f926940dfb0af98295",
+      "bytes": 32780,
+      "sourceBytes": 190674,
+      "durationSeconds": 3.97075
+    },
+    {
+      "key": "game-letra-y-word",
+      "filename": "adri-v1-game-letra-y-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-word.wav",
+      "sourceSha256": "31b2300c9b74a0d9c91b367d77b82711355414c1b0884f5a8cb9299863de8a48",
+      "sha256": "aed98234e39130506d3a233e059bea1960edd5a3748a336799c029d3e3cd29bc",
+      "bytes": 61796,
+      "sourceBytes": 355610,
+      "durationSeconds": 7.406916666666667
+    },
+    {
+      "key": "game-letra-y-sentence",
+      "filename": "adri-v1-game-letra-y-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-sentence.wav",
+      "sourceSha256": "5418b6debfcf43aa3eeead46685ed92b96e765aa908bdc9860e70f6c9317b89a",
+      "sha256": "1156f9adec0cdc7c1b94fe28dfe5d21f983a118ba11114be3bad2997385533c2",
+      "bytes": 66380,
+      "sourceBytes": 389420,
+      "durationSeconds": 8.111291666666666
+    },
+    {
+      "key": "game-letra-y-final",
+      "filename": "adri-v1-game-letra-y-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-y-final.wav",
+      "sourceSha256": "0e061324497c3ae0916dc88ea971ff6ffeda1f0081c3ad6e760ed516bd8c7f59",
+      "sha256": "4bcbd4f8c8d9f14ffb241f9931d957033c093a0a3cfde4e52b6bdf1ca3a092b8",
+      "bytes": 60092,
+      "sourceBytes": 341716,
+      "durationSeconds": 7.117458333333333
+    },
+    {
+      "key": "game-letra-z-letter",
+      "filename": "adri-v1-game-letra-z-letter.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-letter.wav",
+      "sourceSha256": "07f317faf84b80780791fb336a1713b3fd587ebe31da33edb4d5e860e9cd3ca0",
+      "sha256": "0cb10f15821f4ec5d3bcade604a60e9e477d3f69b013caffa374390d35edecc9",
+      "bytes": 73652,
+      "sourceBytes": 445018,
+      "durationSeconds": 9.269583333333333
+    },
+    {
+      "key": "game-letra-z-sound-picture",
+      "filename": "adri-v1-game-letra-z-sound-picture.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-sound-picture.wav",
+      "sourceSha256": "6fcb53531605361179ed151919345544a0027cfe579a6fdd6d2dc9e8bdbb7fd8",
+      "sha256": "07f9ff43f5ca45a388c6233dd06724a7de411f7c0045f545cb901755b699adb2",
+      "bytes": 35396,
+      "sourceBytes": 212308,
+      "durationSeconds": 4.421458333333334
+    },
+    {
+      "key": "game-letra-z-syllable-hunt",
+      "filename": "adri-v1-game-letra-z-syllable-hunt.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-syllable-hunt.wav",
+      "sourceSha256": "241e6c8332e8bbe43e38136eb021a8c0692421ae65418f1585e81d9162ef2bf4",
+      "sha256": "c64b1a732584824574811ab03a0b861f191b3a47de24d3c7bfd505ed61c126c5",
+      "bytes": 37292,
+      "sourceBytes": 220184,
+      "durationSeconds": 4.585958333333333
+    },
+    {
+      "key": "game-letra-z-missing",
+      "filename": "adri-v1-game-letra-z-missing.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-missing.wav",
+      "sourceSha256": "141b3de4d2ac523c4c01832c9792cba777c9a5bdb1457c08ab8313e1c69cf3ef",
+      "sha256": "d5dc13ab70bc92e4204a31139d4d4d6eed037a5849dee2b26acb63d35c825581",
+      "bytes": 71420,
+      "sourceBytes": 393238,
+      "durationSeconds": 8.190833333333334
+    },
+    {
+      "key": "game-letra-z-picture-word",
+      "filename": "adri-v1-game-letra-z-picture-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-picture-word.wav",
+      "sourceSha256": "7cd89f1b1e9e3058fbb560bfced4e8e23645db31a6a9cfb108410a36f5dc3524",
+      "sha256": "4feec90766540961838b7b8dbb11b421b7f47a9d589e977d9d6486e92ce27e92",
+      "bytes": 33788,
+      "sourceBytes": 188626,
+      "durationSeconds": 3.9280833333333334
+    },
+    {
+      "key": "game-letra-z-word",
+      "filename": "adri-v1-game-letra-z-word.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-word.wav",
+      "sourceSha256": "ab77156c568cc550f10902a66929203a94a53d765cefb6cfaa73d010c3909fac",
+      "sha256": "0124f706591b10aa1b7ea0aea81be187d3320a63535710fb1f8e8cecbf948204",
+      "bytes": 64364,
+      "sourceBytes": 369044,
+      "durationSeconds": 7.686791666666666
+    },
+    {
+      "key": "game-letra-z-sentence",
+      "filename": "adri-v1-game-letra-z-sentence.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-sentence.wav",
+      "sourceSha256": "b208021824cafc1831f6868a7387d4273d11e8847254f31a59710c7c208cd649",
+      "sha256": "16d4a37969dca2bc6acb675948e928a748fbe7a2b5d886140c9259601316d656",
+      "bytes": 62036,
+      "sourceBytes": 347364,
+      "durationSeconds": 7.235125
+    },
+    {
+      "key": "game-letra-z-final",
+      "filename": "adri-v1-game-letra-z-final.mp3",
+      "sourceFilename": "adri-v1-game-letra-z-final.wav",
+      "sourceSha256": "2fc6fff937bedea286065c324117ceff8de82d7e0a3b9229b57d7b3dcf48a2da",
+      "sha256": "a482d0e3d4603bc03be59d1169778b775e2aa889a7d7e6b2242528d12a132943",
+      "bytes": 62684,
+      "sourceBytes": 341468,
+      "durationSeconds": 7.112291666666667
+    },
+    {
+      "key": "home-welcome",
+      "filename": "adri-v1-home-welcome.mp3",
+      "sourceFilename": "adri-v1-home-welcome.wav",
+      "sourceSha256": "72ab8c4b4dfebc8605892261c5f23c2949fb0a9944b71cf948eec5d9e5776dbd",
+      "sha256": "de44d436fd9d7923a0e0e001d5e5f1a8f2c515f8b097b80d6f3020a411052137",
+      "bytes": 82052,
+      "sourceBytes": 462806,
+      "durationSeconds": 9.640166666666667
+    },
+    {
+      "key": "primary-intro",
+      "filename": "adri-v1-primary-intro.mp3",
+      "sourceFilename": "adri-v1-primary-intro.wav",
+      "sourceSha256": "2f11f47ef11ac3c4e8d4008b6c1693ee6c622ff0fd0fe28dbb91f763c611bec7",
+      "sha256": "73edb1a022b39c54d4f7f515eb190f7e4b70d0a951f80c0de039af6db933f405",
+      "bytes": 82460,
+      "sourceBytes": 452240,
+      "durationSeconds": 9.420041666666666
+    },
+    {
+      "key": "primary-choice",
+      "filename": "adri-v1-primary-choice.mp3",
+      "sourceFilename": "adri-v1-primary-choice.wav",
+      "sourceSha256": "ccf07870670e3e3b9c1adc0d5c41bccd3905f7b5c36da9d441911e3982c80652",
+      "sha256": "debe7b9f2cdfdda2c92eab576df47a95bb1a6d396621d652d985392e95d47610",
+      "bytes": 63572,
+      "sourceBytes": 349700,
+      "durationSeconds": 7.283791666666667
+    },
+    {
+      "key": "primary-reading",
+      "filename": "adri-v1-primary-reading.mp3",
+      "sourceFilename": "adri-v1-primary-reading.wav",
+      "sourceSha256": "d003b845ee36a1b0c2ee4a0c236858886a1e8fcd03edbb898589706c712a7a72",
+      "sha256": "ca1188c3e97ca330123e028851a1c10becb22805919fcbf328c85ccb00d19c15",
+      "bytes": 67412,
+      "sourceBytes": 360682,
+      "durationSeconds": 7.513958333333333
+    },
+    {
+      "key": "primary-order",
+      "filename": "adri-v1-primary-order.mp3",
+      "sourceFilename": "adri-v1-primary-order.wav",
+      "sourceSha256": "80595aa9e709189470b4ad5b707b14fb562ea3edc38bc6d9411146f104904c32",
+      "sha256": "718b1ea006935741b409ee3205dce5f222edffce15b1843ce22ab58a152cf8cd",
+      "bytes": 64244,
+      "sourceBytes": 354004,
+      "durationSeconds": 7.373458333333334
+    },
+    {
+      "key": "primary-write",
+      "filename": "adri-v1-primary-write.mp3",
+      "sourceFilename": "adri-v1-primary-write.wav",
+      "sourceSha256": "ce4724af6c41e3e4aa623f2bdf4ae4e4deeba9f71c3011147b0debb7d1c88f27",
+      "sha256": "885114d6375906e1cd9b24e91ebf0566abb37527923e7fe3d490dcc35767587d",
+      "bytes": 52820,
+      "sourceBytes": 295122,
+      "durationSeconds": 6.14675
+    },
+    {
+      "key": "primary-math",
+      "filename": "adri-v1-primary-math.mp3",
+      "sourceFilename": "adri-v1-primary-math.wav",
+      "sourceSha256": "e4280da8e930703ac9929d14780f7ff3b6e1e352a80c05b24ba61844e637ca02",
+      "sha256": "2deb886f7fc7de9a78e93d7b9c5c1a130af56dbf4a5f836cc9c5d0e7ba6f166e",
+      "bytes": 74972,
+      "sourceBytes": 413316,
+      "durationSeconds": 8.609125
+    },
+    {
+      "key": "primary-complete",
+      "filename": "adri-v1-primary-complete.mp3",
+      "sourceFilename": "adri-v1-primary-complete.wav",
+      "sourceSha256": "c934c7e0fd589bbaefdd4f14b09b51ecc8be39163d24ce1da81f992a0d986285",
+      "sha256": "d59e7fa82340be7d259567c0fa1d40c115905b2c565813ec73c0452ae35c00e6",
+      "bytes": 90116,
+      "sourceBytes": 502186,
+      "durationSeconds": 10.460583333333334
+    },
+    {
+      "key": "primary-quantity",
+      "filename": "adri-v1-primary-quantity.mp3",
+      "sourceFilename": "adri-v1-primary-quantity.wav",
+      "sourceSha256": "b7fda82bf339c31714ec9f87e14d7056f5ff19a0cc47824a23f9af800fa4590d",
+      "sha256": "10f2a3f21abb372f91574f212171cc096d5645643d74cd51f04f1332dd71384e",
+      "bytes": 51092,
+      "sourceBytes": 310632,
+      "durationSeconds": 6.469875
+    },
+    {
+      "key": "primary-place",
+      "filename": "adri-v1-primary-place.mp3",
+      "sourceFilename": "adri-v1-primary-place.wav",
+      "sourceSha256": "5c260a5203248f87f5aca0aa9973be49e15327178a2494650e85f24e7fb7fdbd",
+      "sha256": "7197b65b8e325af31c1f98e7f5b56ca36d8654d2d9e065147c41ab97e5a7ef96",
+      "bytes": 41156,
+      "sourceBytes": 211968,
+      "durationSeconds": 4.414375
+    },
+    {
+      "key": "primary-syllables",
+      "filename": "adri-v1-primary-syllables.mp3",
+      "sourceFilename": "adri-v1-primary-syllables.wav",
+      "sourceSha256": "c1731d945f4ac41b7fb6e262f391495b2cbda09d21d2b58c72a7e679cf66c1c7",
+      "sha256": "e61733617b183c616db32b4d7947111a65f1d4b8aa9ea4ca2333c3add79758d1",
+      "bytes": 44012,
+      "sourceBytes": 251626,
+      "durationSeconds": 5.240583333333333
+    },
+    {
+      "key": "primary-story",
+      "filename": "adri-v1-primary-story.mp3",
+      "sourceFilename": "adri-v1-primary-story.wav",
+      "sourceSha256": "36fb004179dd47d00d49cffc1e33365078541159ffb6b554a9025e02f8a6c5d9",
+      "sha256": "0fdb0893d0029923baa261b46a1b140d72e31b3293d588e0629432d8682a18c5",
+      "bytes": 40628,
+      "sourceBytes": 218336,
+      "durationSeconds": 4.547041666666667
+    },
+    {
+      "key": "idea-palabras",
+      "filename": "adri-v1-idea-palabras.mp3",
+      "sourceFilename": "adri-v1-idea-palabras.wav",
+      "sourceSha256": "7269d50c08891d768a56e5215e218ee239c1aa611aa2c87dc934dba5827fb106",
+      "sha256": "f017390d60ffcdd55545d542aa26e008c14b8d0d8b390b6980e99ba1631522f8",
+      "bytes": 24236,
+      "sourceBytes": 130922,
+      "durationSeconds": 2.7259166666666665
+    },
+    {
+      "key": "idea-frases",
+      "filename": "adri-v1-idea-frases.mp3",
+      "sourceFilename": "adri-v1-idea-frases.wav",
+      "sourceSha256": "2dc9c6435311607aa1b69b0f016aa6b3efe4053f507d245ee81c7096d0751414",
+      "sha256": "dbf57924ce4f22804b165beee748a5beb841640c8978f762161237788daaf9d3",
+      "bytes": 36548,
+      "sourceBytes": 201262,
+      "durationSeconds": 4.191333333333334
+    },
+    {
+      "key": "idea-comprendo",
+      "filename": "adri-v1-idea-comprendo.mp3",
+      "sourceFilename": "adri-v1-idea-comprendo.wav",
+      "sourceSha256": "84c82936ad10394a457a13e774d08a7276d0b0b07a128572d9a9f3b2daaafdad",
+      "sha256": "cb4c087f1320c37be780a5f3710c0f7d07e5d3066354ae2f307edcbb4fa21b9d",
+      "bytes": 38684,
+      "sourceBytes": 201806,
+      "durationSeconds": 4.2026666666666666
+    },
+    {
+      "key": "idea-puntuacion",
+      "filename": "adri-v1-idea-puntuacion.mp3",
+      "sourceFilename": "adri-v1-idea-puntuacion.wav",
+      "sourceSha256": "482d2baa4042739b75013a968c604514fc552a62b1dfb058d98c8c8589c2a74b",
+      "sha256": "0a199f80391141aa249b46622de63cef7041edef71d76b346c4072cedfe5e28f",
+      "bytes": 32180,
+      "sourceBytes": 177788,
+      "durationSeconds": 3.7022916666666665
+    },
+    {
+      "key": "idea-describo",
+      "filename": "adri-v1-idea-describo.mp3",
+      "sourceFilename": "adri-v1-idea-describo.wav",
+      "sourceSha256": "6c6da5669960930e8d6c284e9838a406e1de89ec14cc0eef21886a72d2b3333b",
+      "sha256": "c527e10eeaefda4d27163c9a2defe31441113024abce22e5c7bf0ee2b2180d7f",
+      "bytes": 32180,
+      "sourceBytes": 176788,
+      "durationSeconds": 3.6814583333333335
+    },
+    {
+      "key": "idea-grupos",
+      "filename": "adri-v1-idea-grupos.mp3",
+      "sourceFilename": "adri-v1-idea-grupos.wav",
+      "sourceSha256": "a42ba24310c78e227e4b38862d1b4116b7b7cf10cc3d1aebc4a6b788d9f6d018",
+      "sha256": "af4025517e63a11e799b400f73786c1f702140333f47527c4989a1245b0d50a7",
+      "bytes": 34604,
+      "sourceBytes": 189460,
+      "durationSeconds": 3.9454583333333333
+    },
+    {
+      "key": "idea-cuentos",
+      "filename": "adri-v1-idea-cuentos.mp3",
+      "sourceFilename": "adri-v1-idea-cuentos.wav",
+      "sourceSha256": "1ec7a0e02586d7c0425676c05410b2c1c119f2e0548e8e8ce3455ba4da9cca7d",
+      "sha256": "d8ef6bfe7426620b09d2665dbeb5cdb649500f5aa70c39db6abac985ede69efb",
+      "bytes": 23900,
+      "sourceBytes": 125444,
+      "durationSeconds": 2.6117916666666665
+    },
+    {
+      "key": "idea-cotidianos",
+      "filename": "adri-v1-idea-cotidianos.mp3",
+      "sourceFilename": "adri-v1-idea-cotidianos.wav",
+      "sourceSha256": "d01c56469c1964cf867a8eb9483c635baa814a7b131fc82ec32f96c1d797add8",
+      "sha256": "f6b86b6813d939bf836143ad86ca1f086ce5e7fc9161a0c05d2dfa440565f60e",
+      "bytes": 27308,
+      "sourceBytes": 148000,
+      "durationSeconds": 3.0817083333333333
+    },
+    {
+      "key": "idea-numeros",
+      "filename": "adri-v1-idea-numeros.mp3",
+      "sourceFilename": "adri-v1-idea-numeros.wav",
+      "sourceSha256": "bae1be0d92c4283c2f8cd860836749bd097b656d747e788c6824b64410d8cccb",
+      "sha256": "f891b77c3d3a2b9503cf6401226fc13eac7b4642990f1cfd75e01ba54ef18155",
+      "bytes": 38156,
+      "sourceBytes": 234140,
+      "durationSeconds": 4.876291666666667
+    },
+    {
+      "key": "idea-sumas",
+      "filename": "adri-v1-idea-sumas.mp3",
+      "sourceFilename": "adri-v1-idea-sumas.wav",
+      "sourceSha256": "5a08b66f3e5d560006ebc1f5f763dba6c16fdea3e6b06defe921211fc7a4bc02",
+      "sha256": "a3affe85cef5cb0b85f0efc474bc046a9861d2072139dec1e3faecf6cb01a8ce",
+      "bytes": 27764,
+      "sourceBytes": 159934,
+      "durationSeconds": 3.3303333333333334
+    },
+    {
+      "key": "idea-restas",
+      "filename": "adri-v1-idea-restas.mp3",
+      "sourceFilename": "adri-v1-idea-restas.wav",
+      "sourceSha256": "52c34d0cfdaedffa4326b33a49691fd81a47a7f8b3c1ef6eac1e135fd7b86a88",
+      "sha256": "ee4f537f5a90b24b2011ef2752bc80f971f76de7ea6acb16a05f2e6bf05e58b2",
+      "bytes": 28388,
+      "sourceBytes": 170024,
+      "durationSeconds": 3.5405416666666665
+    },
+    {
+      "key": "idea-decenas",
+      "filename": "adri-v1-idea-decenas.mp3",
+      "sourceFilename": "adri-v1-idea-decenas.wav",
+      "sourceSha256": "68400fe30650f1111df6567eb615b9fe247733bc76b8e6bdce577c733d471a48",
+      "sha256": "71f5bd78ef36ffec31627105bedcb04aaba732d43254dc76d8202b4fd5a65a08",
+      "bytes": 30356,
+      "sourceBytes": 167536,
+      "durationSeconds": 3.4887083333333333
+    },
+    {
+      "key": "idea-calculo",
+      "filename": "adri-v1-idea-calculo.mp3",
+      "sourceFilename": "adri-v1-idea-calculo.wav",
+      "sourceSha256": "bfc453cdc79849dbb6c2715a43f1aaa468d650b1ff8170c11f6a00e258e9e9ac",
+      "sha256": "ecf2c2b75b46a6101903ce70417f532a17074e9aefd2eacd578e15ed67071ce4",
+      "bytes": 34100,
+      "sourceBytes": 189208,
+      "durationSeconds": 3.9402083333333335
+    },
+    {
+      "key": "idea-problemas",
+      "filename": "adri-v1-idea-problemas.mp3",
+      "sourceFilename": "adri-v1-idea-problemas.wav",
+      "sourceSha256": "e02aedd7722ed936a2c4fb05a62d0fc9783df439b222d330f9073abfe3692fc5",
+      "sha256": "78de1dd1f7437fb527f913f6cc53f249d52b94a6d3f05c896750f4c09dff73f1",
+      "bytes": 31100,
+      "sourceBytes": 169026,
+      "durationSeconds": 3.51975
+    },
+    {
+      "key": "idea-formas",
+      "filename": "adri-v1-idea-formas.mp3",
+      "sourceFilename": "adri-v1-idea-formas.wav",
+      "sourceSha256": "c744bc673ba38e0002acff5819226e639a251857d7906dee0d83797ce000acda",
+      "sha256": "25d16b5ed0840b7d4deb6cbcb82cc8db72e715cac37b054725fe24f4c168597f",
+      "bytes": 26180,
+      "sourceBytes": 144186,
+      "durationSeconds": 3.00225
+    },
+    {
+      "key": "idea-vida",
+      "filename": "adri-v1-idea-vida.mp3",
+      "sourceFilename": "adri-v1-idea-vida.wav",
+      "sourceSha256": "77882f1cf59f0687f4eb2ff37e3917c340b05e075216eab0a1d2b95c3f403eb3",
+      "sha256": "3e0795501e10d41dcc092cca55fde9d0f3d9ca894d67593144828749f9acc22d",
+      "bytes": 32492,
+      "sourceBytes": 172010,
+      "durationSeconds": 3.581916666666667
+    },
+    {
+      "key": "idea-cuerpo",
+      "filename": "adri-v1-idea-cuerpo.mp3",
+      "sourceFilename": "adri-v1-idea-cuerpo.wav",
+      "sourceSha256": "8392d53d510b3a873212a13f3dcc050b0c85ce33b7ad9dd186e7a3077524662c",
+      "sha256": "96fded1f69b22f98dcbf80dff27306352851ed8a44dc2b9626568595aa18fc4c",
+      "bytes": 24092,
+      "sourceBytes": 133982,
+      "durationSeconds": 2.7896666666666667
+    },
+    {
+      "key": "idea-habitos",
+      "filename": "adri-v1-idea-habitos.mp3",
+      "sourceFilename": "adri-v1-idea-habitos.wav",
+      "sourceSha256": "8ae8c40940868a4862903cae2d754c002071908f2de18083bc739aaba0ca8808",
+      "sha256": "fc6a49d4f152282ab638172025eaf7e28789cebe6290dd3a1a6eb48df3a19619",
+      "bytes": 61172,
+      "sourceBytes": 380692,
+      "durationSeconds": 7.929458333333334
+    },
+    {
+      "key": "idea-convivo",
+      "filename": "adri-v1-idea-convivo.mp3",
+      "sourceFilename": "adri-v1-idea-convivo.wav",
+      "sourceSha256": "b16ebf991390a5faeda8d82986e92c30e8ce0084617d65288489c08686db2bc5",
+      "sha256": "b6869dbec01f1b36fb5b0630bf7adef89fa6e7ccece0fb3db886b3f46b4637bb",
+      "bytes": 24860,
+      "sourceBytes": 137540,
+      "durationSeconds": 2.8637916666666667
+    },
+    {
+      "key": "idea-animales",
+      "filename": "adri-v1-idea-animales.mp3",
+      "sourceFilename": "adri-v1-idea-animales.wav",
+      "sourceSha256": "37a22f758eaaf81acd10147882156875004bdfee1e49e77df857a2145b16557e",
+      "sha256": "e7f108e8d98430c2d95adbc9acd146bf5749a4753775e60c4ac0bb0de80ac622",
+      "bytes": 33956,
+      "sourceBytes": 187064,
+      "durationSeconds": 3.8955416666666665
+    },
+    {
+      "key": "idea-plantas",
+      "filename": "adri-v1-idea-plantas.mp3",
+      "sourceFilename": "adri-v1-idea-plantas.wav",
+      "sourceSha256": "d057179b585abc5e58070a4ba70c457c00b4bc9fa965f9e7084add1b983e7934",
+      "sha256": "d26827560af9a9da49baf5f26664a9a9f6f816a703cdfc47b1864cc576058614",
+      "bytes": 40364,
+      "sourceBytes": 222286,
+      "durationSeconds": 4.629333333333333
+    },
+    {
+      "key": "idea-materiales",
+      "filename": "adri-v1-idea-materiales.mp3",
+      "sourceFilename": "adri-v1-idea-materiales.wav",
+      "sourceSha256": "b12b189fb340f8bcd5995ba41f398a47f7d4b3d97a71dbd5df94f8257bff0b44",
+      "sha256": "8cacfa8ff6c0d643052b55afb961abf902f8475e2323cb3b435f31bf1163e84c",
+      "bytes": 36092,
+      "sourceBytes": 188792,
+      "durationSeconds": 3.9315416666666665
+    },
+    {
+      "key": "idea-entorno",
+      "filename": "adri-v1-idea-entorno.mp3",
+      "sourceFilename": "adri-v1-idea-entorno.wav",
+      "sourceSha256": "2677bcfcc6275033a9335fd8c2e9d6275a9cd9d97e8addd8e75d41c55f0ff9cc",
+      "sha256": "024b4cd61ac2916d44b3c14ec2517bf83c74897b9637229308c994f4dc40173d",
+      "bytes": 37796,
+      "sourceBytes": 216444,
+      "durationSeconds": 4.507625
+    },
+    {
+      "key": "idea-tiempo",
+      "filename": "adri-v1-idea-tiempo.mp3",
+      "sourceFilename": "adri-v1-idea-tiempo.wav",
+      "sourceSha256": "6de035b0ca1923d1bb4b2a5f7f5f2646f4fe0560b70178f829149986cd7c4a9f",
+      "sha256": "4607668e34ca6b87b53ed2f02281dc0db1027d3f7ddb48268f4086aa2a9ed076",
+      "bytes": 40604,
+      "sourceBytes": 228808,
+      "durationSeconds": 4.765208333333334
+    },
+    {
+      "key": "word-casa",
+      "filename": "adri-v1-word-casa.mp3",
+      "sourceFilename": "adri-v1-word-casa.wav",
+      "sourceSha256": "90f2b3ea63de95fd6ea2f182a3919f41576ee90b56d5fa8e4c7c35adbf652e56",
+      "sha256": "80349144decc28843402a970fb3d0989af4a9be8b51823dbb28c0a118a64fbad",
+      "bytes": 18308,
+      "sourceBytes": 117286,
+      "durationSeconds": 2.4418333333333333
+    },
+    {
+      "key": "word-sopa",
+      "filename": "adri-v1-word-sopa.mp3",
+      "sourceFilename": "adri-v1-word-sopa.wav",
+      "sourceSha256": "3e018fb9de88d87e5e49d8c7eed8c3624f4ff32a4f2ebf4b2d9f36ceee2d3526",
+      "sha256": "953a4b7d240ed7a325ff4b2ae11a3c4294d9da8b852bdf499707b0320ce1448f",
+      "bytes": 10364,
+      "sourceBytes": 50886,
+      "durationSeconds": 1.0585
+    },
+    {
+      "key": "word-pelota",
+      "filename": "adri-v1-word-pelota.mp3",
+      "sourceFilename": "adri-v1-word-pelota.wav",
+      "sourceSha256": "b4f953c9eefd486a0c46218eb78345afc93b54160861d24a56ddcf3aca55dd44",
+      "sha256": "205521755653659eb3e416dfb657f79b0ebe40c5f03d7dc71a85d1f6efc981a6",
+      "bytes": 10844,
+      "sourceBytes": 58034,
+      "durationSeconds": 1.2074166666666666
+    },
+    {
+      "key": "word-tomate",
+      "filename": "adri-v1-word-tomate.mp3",
+      "sourceFilename": "adri-v1-word-tomate.wav",
+      "sourceSha256": "26f0a2f9e028471ffb535fb263f8460da6e116a73fbcc4342f36c15b0483e9ed",
+      "sha256": "5f0d3e0eb164edeb25220f5f77e750b66c83c8fe2a18f3ab596a587674689038",
+      "bytes": 14204,
+      "sourceBytes": 82688,
+      "durationSeconds": 1.7210416666666666
+    },
+    {
+      "key": "word-camisa",
+      "filename": "adri-v1-word-camisa.mp3",
+      "sourceFilename": "adri-v1-word-camisa.wav",
+      "sourceSha256": "ddd311afdfb7063b01f3859f748d5fdad765aec74293cea1bba4e3711b32ced7",
+      "sha256": "78966389ea8563bb04fbac74bfb67c87da68ca400266c3e8ddd71906f28ecaad",
+      "bytes": 11684,
+      "sourceBytes": 62210,
+      "durationSeconds": 1.2944166666666668
+    },
+    {
+      "key": "word-zapato",
+      "filename": "adri-v1-word-zapato.mp3",
+      "sourceFilename": "adri-v1-word-zapato.wav",
+      "sourceSha256": "ab519c15d54eea9e81d0568f48b2681a439164e26698967e2e1a85ccf40b8a10",
+      "sha256": "3f4aab6a3dc7200483546df3eecaec101871a29fb4ab3fbc891c3341fa79cac0",
+      "bytes": 15980,
+      "sourceBytes": 93006,
+      "durationSeconds": 1.936
+    },
+    {
+      "key": "math-workshop",
+      "filename": "adri-v1-math-workshop.mp3",
+      "sourceFilename": "adri-v1-math-workshop.wav",
+      "sourceSha256": "bc737024202ad7a7b7fc71d5b4942f66e1a75379aabc576599523480b1b6f729",
+      "sha256": "5c430ae926b0f5e0681c679a5caece8044c51205d672f40ffd037b56d6459514",
+      "bytes": 59156,
+      "sourceBytes": 347304,
+      "durationSeconds": 7.233875
+    },
+    {
+      "key": "math-line",
+      "filename": "adri-v1-math-line.mp3",
+      "sourceFilename": "adri-v1-math-line.wav",
+      "sourceSha256": "5a53180c322f66d432cc82bcfc1a66fa684ea196b057ac49c55ffd971ce428f0",
+      "sha256": "6eef1854ad4e23a624065382bbbad20d8564a6189fdfed6b32d4d1c7c522b204",
+      "bytes": 49268,
+      "sourceBytes": 262162,
+      "durationSeconds": 5.460083333333333
+    },
+    {
+      "key": "math-split",
+      "filename": "adri-v1-math-split.mp3",
+      "sourceFilename": "adri-v1-math-split.wav",
+      "sourceSha256": "124e2cbba7a4c0127ac063fdcca41f18aacf0111b61cd07bb94773ac4d2b8a0f",
+      "sha256": "5231883dd542ea31aa21744ac09b9aa94346db4d7e3b2d18dac63fe8897d63d1",
+      "bytes": 45380,
+      "sourceBytes": 257098,
+      "durationSeconds": 5.354583333333333
+    },
+    {
+      "key": "math-reflect",
+      "filename": "adri-v1-math-reflect.mp3",
+      "sourceFilename": "adri-v1-math-reflect.wav",
+      "sourceSha256": "301847a12b70eee6d34fa0069bbe04d4aa2abbbf067a39853cdc645f25ece3d6",
+      "sha256": "5209a74d1d98a8c550b570c1ebe055421e048492c94804f2bbdf8b61c13f2f6a",
+      "bytes": 60188,
+      "sourceBytes": 345216,
+      "durationSeconds": 7.190375
+    },
+    {
+      "key": "math-pattern-build",
+      "filename": "adri-v1-math-pattern-build.mp3",
+      "sourceFilename": "adri-v1-math-pattern-build.wav",
+      "sourceSha256": "3364bf6e2ff28d613c00b6f201bcb3585ed7d8b6cd0f3ef4ece9308eef1bb515",
+      "sha256": "b88976ce8ed3e8be4983499da2a5e9b88d918c288470c9adbbf865bf2daf679b",
+      "bytes": 82916,
+      "sourceBytes": 467202,
+      "durationSeconds": 9.73175
+    },
+    {
+      "key": "primary-workshop",
+      "filename": "adri-v1-primary-workshop.mp3",
+      "sourceFilename": "adri-v1-primary-workshop.wav",
+      "sourceSha256": "5e6690dd1a5f194b98d5ec44d95a97030f657c7e1a2e7d30d57497bb8ab28bba",
+      "sha256": "da69b209097e3845214b60a8989134d10d407dcd712216f247804b680a75b5e2",
+      "bytes": 62372,
+      "sourceBytes": 375424,
+      "durationSeconds": 7.819708333333334
+    },
+    {
+      "key": "quest-lengua",
+      "filename": "adri-v1-quest-lengua.mp3",
+      "sourceFilename": "adri-v1-quest-lengua.wav",
+      "sourceSha256": "1c759e635a84e39d787c328e60397d8ef3e01f06da2fb2ad8196aaf4ba4adc76",
+      "sha256": "b0413b095fd620450059cf3223f964b3e450c00279e020f3621236adf39dc4bb",
+      "bytes": 65036,
+      "sourceBytes": 392312,
+      "durationSeconds": 8.171541666666666
+    },
+    {
+      "key": "quest-matematicas",
+      "filename": "adri-v1-quest-matematicas.mp3",
+      "sourceFilename": "adri-v1-quest-matematicas.wav",
+      "sourceSha256": "528074639f80a0199f1da57d4c62505d3f0e625c31492b6d59a8302e0a84fddc",
+      "sha256": "ca0c6256d2e54ef71b424975c406cc609650edb4be4a6813f680ddbef09c38b1",
+      "bytes": 54044,
+      "sourceBytes": 298826,
+      "durationSeconds": 6.223916666666667
+    },
+    {
+      "key": "quest-medio",
+      "filename": "adri-v1-quest-medio.mp3",
+      "sourceFilename": "adri-v1-quest-medio.wav",
+      "sourceSha256": "c7ea651ee13582fc19b859398dfd7cd16af07df8bb371ab1661c52938ecc7e84",
+      "sha256": "8be58832c95e035ef3af211eaee600677f8631a6db3ae57eb4f74755d33cc52f",
+      "bytes": 48932,
+      "sourceBytes": 271922,
+      "durationSeconds": 5.6634166666666665
+    },
+    {
+      "key": "snack-story-1",
+      "filename": "adri-v1-snack-story-1.mp3",
+      "sourceFilename": "adri-v1-snack-story-1.wav",
+      "sourceSha256": "b0091b93de168a6650112ef29942168708b394309f06edae8aa1cf2e825d56a0",
+      "sha256": "e5a0be6da00bec5ecb6c4dcea269ef49d5f74a1a7461b89203bb32f6a7c63c14",
+      "bytes": 51476,
+      "sourceBytes": 284470,
+      "durationSeconds": 5.924833333333333
+    },
+    {
+      "key": "snack-story-2",
+      "filename": "adri-v1-snack-story-2.mp3",
+      "sourceFilename": "adri-v1-snack-story-2.wav",
+      "sourceSha256": "a01ffe4b3449e8c52a588abbb6d066bfe633aa0545f7f753e5ea5e36fc523313",
+      "sha256": "349ffa9edda0c04124fddfd06d5006f8acfc595ea4bc7ac278bac8d9fd81537d",
+      "bytes": 34556,
+      "sourceBytes": 185156,
+      "durationSeconds": 3.8557916666666667
+    },
+    {
+      "key": "snack-story-3",
+      "filename": "adri-v1-snack-story-3.mp3",
+      "sourceFilename": "adri-v1-snack-story-3.wav",
+      "sourceSha256": "c49f425bed15aac7abb39dd6be29166a124e20331ab6506f46102500cf612d81",
+      "sha256": "4c03db40c0a81cbc9049246be0a38d22c1c412514401920e3f1cf05e62f24cfd",
+      "bytes": 46004,
+      "sourceBytes": 252276,
+      "durationSeconds": 5.254125
+    },
+    {
+      "key": "snack-cesta",
+      "filename": "adri-v1-snack-cesta.mp3",
+      "sourceFilename": "adri-v1-snack-cesta.wav",
+      "sourceSha256": "0295c1b944a37ec3c1e28693acc407e7fc39972a50e328199769cdab9fbef79e",
+      "sha256": "98eeacbaa676f0807002409ff5f5a38ee5f93c2b1fb4323e812298152554996d",
+      "bytes": 74396,
+      "sourceBytes": 412828,
+      "durationSeconds": 8.598958333333334
+    },
+    {
+      "key": "snack-reparto",
+      "filename": "adri-v1-snack-reparto.mp3",
+      "sourceFilename": "adri-v1-snack-reparto.wav",
+      "sourceSha256": "7b32b02cd68ba7fa5c28a7dd74c1ffd77506f3579028ef98db3636495783060c",
+      "sha256": "461a965d747fb3a47761ef95144e0d9005a3f7c3809a233b582b952b60f574fe",
+      "bytes": 74972,
+      "sourceBytes": 423844,
+      "durationSeconds": 8.828458333333334
+    },
+    {
+      "key": "snack-cuidado",
+      "filename": "adri-v1-snack-cuidado.mp3",
+      "sourceFilename": "adri-v1-snack-cuidado.wav",
+      "sourceSha256": "cc2bd327308a36d86d58ab80654ca7e1a8f3120af78347d4522ed050cc3f0eb0",
+      "sha256": "25143722f6706ede0514ee114ed6339184ff342276234f3a7821371ef1573260",
+      "bytes": 81596,
+      "sourceBytes": 477598,
+      "durationSeconds": 9.948333333333334
+    },
+    {
+      "key": "snack-final",
+      "filename": "adri-v1-snack-final.mp3",
+      "sourceFilename": "adri-v1-snack-final.wav",
+      "sourceSha256": "9dd5aac1febe029b36a0a6908cb8b4044097bb6650f71c1abb0bf1cbc2c7ade7",
+      "sha256": "2603379acdf339b0261c0559dbd894c0342840ced6a99ffec0e56acf46395b28",
+      "bytes": 55076,
+      "sourceBytes": 310162,
+      "durationSeconds": 6.460083333333333
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-1-original",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-1-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-1-original.wav",
+      "sourceSha256": "edb5adf0b1513a708ca451647f4eb0b24d0783edcdbe993edeb37583c602fa42",
+      "sha256": "32c77098d206426ba8f5cb158ca01d0a49ca27d23de5fc0e8c22aa1a47657372",
+      "bytes": 51884,
+      "sourceBytes": 281966,
+      "durationSeconds": 5.8726666666666665
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-1-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-1-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-1-alternate.wav",
+      "sourceSha256": "2392f6a504c001cb8ccbca09027e83884bed82505624cd316f46f2278250fa8f",
+      "sha256": "4d969ee1846c30fb0c2243f2cce97ea0cbf273b9843583596269260ade9dba5c",
+      "bytes": 56732,
+      "sourceBytes": 316890,
+      "durationSeconds": 6.601958333333333
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-3-original",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-3-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-3-original.wav",
+      "sourceSha256": "154ca73d2249e633c554ecc5d53f598e12541ffbf705996b348f03d4a412138d",
+      "sha256": "5c6c681f373a666f0bb09657ad7fc2e527c96f3c333e80f2fd92fb6fcc61a5ad",
+      "bytes": 50444,
+      "sourceBytes": 279732,
+      "durationSeconds": 5.826125
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-3-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-3-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-3-alternate.wav",
+      "sourceSha256": "fc20e6c5504db3dc5b771ff7990438269c68ea1ced182eb905b4bd2ba809b935",
+      "sha256": "9e42deb261476bcc30d50d8c0d8500f39d69c930cc9b2864e1ac3650d1704b49",
+      "bytes": 58244,
+      "sourceBytes": 339952,
+      "durationSeconds": 7.081958333333334
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-5-original",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-5-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-5-original.wav",
+      "sourceSha256": "a47ba4c9e9d55341ec71b7878b53955371b2c5b737e8a453c2c89bb4612781f1",
+      "sha256": "414eff37b87bd6aaeb404d20a8c8c35e498f300921b2131726d17f35343c6449",
+      "bytes": 71108,
+      "sourceBytes": 428992,
+      "durationSeconds": 8.935708333333332
+    },
+    {
+      "key": "reading-primaria-lengua-comprendo-5-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-comprendo-5-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-comprendo-5-alternate.wav",
+      "sourceSha256": "418246eee9c476eef71e5e15117e8c6fc83bc286632bb5e29f97085585a0c59a",
+      "sha256": "ab7fc0ba1a3cd5a35d74ce955a1ad49c4e9f22ea101bfa8d08ab33b6232b9c0c",
+      "bytes": 44300,
+      "sourceBytes": 250624,
+      "durationSeconds": 5.219708333333333
+    },
+    {
+      "key": "reading-primaria-lengua-describo-4-original",
+      "filename": "adri-v1-reading-primaria-lengua-describo-4-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-describo-4-original.wav",
+      "sourceSha256": "943e2560d03825c3c0fdc6acbff8003da59ea0f2038e72bfd8b220161053070f",
+      "sha256": "b4596d0924f9f5bfddc1ee89e5069f90f496f06dff462a831b8fb573d3256376",
+      "bytes": 41852,
+      "sourceBytes": 240818,
+      "durationSeconds": 5.015416666666667
+    },
+    {
+      "key": "reading-primaria-lengua-describo-4-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-describo-4-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-describo-4-alternate.wav",
+      "sourceSha256": "459b79afd401009bde01391acac27f5bcb132ebdf66e3ecb35ffcdd8ef18687b",
+      "sha256": "22ed7f965ad19fa40431dba9e5f702bb9aa2df322b7e23d8346cdbc54a5056d0",
+      "bytes": 34268,
+      "sourceBytes": 191430,
+      "durationSeconds": 3.9865
+    },
+    {
+      "key": "reading-primaria-lengua-grupos-6-original",
+      "filename": "adri-v1-reading-primaria-lengua-grupos-6-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-grupos-6-original.wav",
+      "sourceSha256": "2a2aa6fc6870533ad47f44a3697d4730795edd861925850a9fb7630da826417e",
+      "sha256": "a1859a04510d0b0e0cba3531e5fe997a34ff01cb1ecb0c647b294297c418d2f1",
+      "bytes": 61436,
+      "sourceBytes": 398660,
+      "durationSeconds": 8.303791666666667
+    },
+    {
+      "key": "reading-primaria-lengua-grupos-6-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-grupos-6-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-grupos-6-alternate.wav",
+      "sourceSha256": "2502c719c38207b8b694e03ecb7ff0cb3ec93f09f3f9401032694fae0c6a83c7",
+      "sha256": "661a79a4a72afaab2597a396dd9973413decb54280c5d4b65ed20ac3a4b706f2",
+      "bytes": 35972,
+      "sourceBytes": 197344,
+      "durationSeconds": 4.109708333333334
+    },
+    {
+      "key": "reading-primaria-lengua-cuentos-1-original",
+      "filename": "adri-v1-reading-primaria-lengua-cuentos-1-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cuentos-1-original.wav",
+      "sourceSha256": "50f7ccc0956bb49245434b7ac152742fb759a93714a7424ee1fab2d26aa86eef",
+      "sha256": "5a89462d703a26eef618acdb7cad98b8bb0fb8866baa447a89693d2606438c64",
+      "bytes": 74252,
+      "sourceBytes": 420298,
+      "durationSeconds": 8.754583333333333
+    },
+    {
+      "key": "reading-primaria-lengua-cuentos-1-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-cuentos-1-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cuentos-1-alternate.wav",
+      "sourceSha256": "3079ee177b426b5b718fdd2a15ca608fcf2feff5ac61dc993da21aec4a9244e2",
+      "sha256": "997fda216e02c233bb4fab45dc9570c0d2f813fd813e0e9f6144ce508f2fce77",
+      "bytes": 62948,
+      "sourceBytes": 374374,
+      "durationSeconds": 7.797833333333333
+    },
+    {
+      "key": "reading-primaria-lengua-cuentos-5-original",
+      "filename": "adri-v1-reading-primaria-lengua-cuentos-5-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cuentos-5-original.wav",
+      "sourceSha256": "054fb5c5119b1e2c3e1f4f3121153fd4a4df536cd9a487fd4d468afa79f2364f",
+      "sha256": "ebb7041d1c039beeb9f5e4be946988791be02322cb93a16bd00b6794e67c6f5d",
+      "bytes": 54452,
+      "sourceBytes": 315998,
+      "durationSeconds": 6.581666666666667
+    },
+    {
+      "key": "reading-primaria-lengua-cuentos-5-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-cuentos-5-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cuentos-5-alternate.wav",
+      "sourceSha256": "d38a2fcc2e10181fd68e52a973620f9a0b101b855228ab9f4cb2e587f4b89c9a",
+      "sha256": "d306bc9ed74b439fd697bb18c15e34038221d69d9af89202e8a7f7cda9cfb0d3",
+      "bytes": 65060,
+      "sourceBytes": 382458,
+      "durationSeconds": 7.96625
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-1-original",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-1-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-1-original.wav",
+      "sourceSha256": "27dfba9f546bc1d2611f180fdc7f8143bd58b0e551242604a7162cbcf864cb17",
+      "sha256": "37f8d95cb2440d5ab648beff8c482a56e65d10c07e178107c130ba5b56283743",
+      "bytes": 66596,
+      "sourceBytes": 391682,
+      "durationSeconds": 8.158416666666668
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-1-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-1-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-1-alternate.wav",
+      "sourceSha256": "8bd6c917b40200a88c83357bbd25e74f4d8afc8006d43751b92ea77a4b3ac98b",
+      "sha256": "c157ac3b5ff82b62a54b61d77d43f7d0f9c6341217a63e06b0328c8033c384ca",
+      "bytes": 41948,
+      "sourceBytes": 237934,
+      "durationSeconds": 4.955333333333333
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-2-original",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-2-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-2-original.wav",
+      "sourceSha256": "2e872041333d1ac1984368b43ead0197ff0483f32afcdeb5bfaf4a198edcfe7b",
+      "sha256": "604e4190ad2456c977f841b97e4992ff7a68e48561d9d3f8529a784b9369934b",
+      "bytes": 49988,
+      "sourceBytes": 295518,
+      "durationSeconds": 6.155
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-2-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-2-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-2-alternate.wav",
+      "sourceSha256": "31cda1e08a6fd42ee4b0aa4bc5b3085781370193f1be41749ee8c19f0c51e1ca",
+      "sha256": "6e60e7f793ed2d243dc936d387fd38e968854b14884c919be4e6d14ef5690d1e",
+      "bytes": 30284,
+      "sourceBytes": 171970,
+      "durationSeconds": 3.5810833333333334
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-4-original",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-4-original.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-4-original.wav",
+      "sourceSha256": "df3c98a8710be28a67913ea9711a0cc8d56a01b8766710a3891f685a5c41cb46",
+      "sha256": "b83628a8a31ae3890d4b803fc904e0effec1fc1b60418e35927b284707b09e8c",
+      "bytes": 39620,
+      "sourceBytes": 227082,
+      "durationSeconds": 4.729958333333333
+    },
+    {
+      "key": "reading-primaria-lengua-cotidianos-4-alternate",
+      "filename": "adri-v1-reading-primaria-lengua-cotidianos-4-alternate.mp3",
+      "sourceFilename": "adri-v1-reading-primaria-lengua-cotidianos-4-alternate.wav",
+      "sourceSha256": "3113149a7c4e2fd5d578ee3c22c47633ff7615bec128d53fbc146bcaa45f11ea",
+      "sha256": "246d01cbfaac723dc7889c4e9cd87d56c2770af9f7bccc929d630c849b521d41",
+      "bytes": 39068,
+      "sourceBytes": 235878,
+      "durationSeconds": 4.9125
+    },
+    {
+      "key": "seed-story-1",
+      "filename": "adri-v1-seed-story-1.mp3",
+      "sourceFilename": "adri-v1-seed-story-1.wav",
+      "sourceSha256": "57e3bdf46f31ded6a794058781b98fb965f03ec3f44eb6620b42cea8ac21dc9f",
+      "sha256": "58535708e6c6b438407abb4eee250f1240dcd8075978feb48e30297292548b56",
+      "bytes": 59948,
+      "sourceBytes": 337798,
+      "durationSeconds": 7.035833333333334
+    },
+    {
+      "key": "seed-story-2",
+      "filename": "adri-v1-seed-story-2.mp3",
+      "sourceFilename": "adri-v1-seed-story-2.wav",
+      "sourceSha256": "1ec5a8fa0f21c0e82806999f28745775121878667cdfe184d05ce5b472b84388",
+      "sha256": "cca296dcc0a5d3be0a6ce39e1e0547c776d40adba52c126b4024555a04f3bcb0",
+      "bytes": 68852,
+      "sourceBytes": 368366,
+      "durationSeconds": 7.672666666666666
+    },
+    {
+      "key": "seed-story-3",
+      "filename": "adri-v1-seed-story-3.mp3",
+      "sourceFilename": "adri-v1-seed-story-3.wav",
+      "sourceSha256": "04d6135ef448fed10e24f5732f783e39b2a31a6ae2cdb377908fb5507f55262e",
+      "sha256": "b36c5ea1233cc40122e406e1099a722617ef1276b909ce479ce600a406ed11d8",
+      "bytes": 73964,
+      "sourceBytes": 417368,
+      "durationSeconds": 8.693541666666667
+    },
+    {
+      "key": "seed-question-1",
+      "filename": "adri-v1-seed-question-1.mp3",
+      "sourceFilename": "adri-v1-seed-question-1.wav",
+      "sourceSha256": "0acedfb6aa88bd4fab66c76350d9698343c2c6d41b76c78f3bdbb5ba3b2580e3",
+      "sha256": "f1d89a91ebe24a952f4c34d76d477c4dcce82b2919d05a76e053d6d5d458d3fc",
+      "bytes": 51116,
+      "sourceBytes": 328978,
+      "durationSeconds": 6.852083333333334
+    },
+    {
+      "key": "seed-question-2",
+      "filename": "adri-v1-seed-question-2.mp3",
+      "sourceFilename": "adri-v1-seed-question-2.wav",
+      "sourceSha256": "6ce2f66cdf812ecd094b811a46bd9c0c4eb610a55d887c6dee55089a2df122c4",
+      "sha256": "325ef835667a17787ac207d71532e6c48cff4cb8a63115ac30c1c905b7a5d7fb",
+      "bytes": 22196,
+      "sourceBytes": 124266,
+      "durationSeconds": 2.58725
+    },
+    {
+      "key": "seed-question-3",
+      "filename": "adri-v1-seed-question-3.mp3",
+      "sourceFilename": "adri-v1-seed-question-3.wav",
+      "sourceSha256": "8207cce388f5df530fc25163e2828f0223d68e4613bb2fbfff4491fa8689ca7a",
+      "sha256": "b194a070c629dc2589166cd01a9e147302aa886c7bb65dc39900dae4cbc7af67",
+      "bytes": 55484,
+      "sourceBytes": 335070,
+      "durationSeconds": 6.979
+    }
+  ]
+}
