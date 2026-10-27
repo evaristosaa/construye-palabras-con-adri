@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {placeAlphabetBlock} from "../data/alphabetBuilder.js";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Adri from "./Adri";
 import { Brick, Drawing, Stars } from "./Blocks";
 import { levelsById, positiveMessages } from "../data/learningData";
@@ -23,8 +24,8 @@ function MissionBuild({ step = 0 }) {
   );
 }
 
-export default function GameScreen({ progress, completeGame, completeLevel }) {
-  const { levelId } = useParams();
+export default function GameScreen(props){const {levelId}=useParams();return <AlphabetGame key={levelId} levelId={levelId} {...props}/>;}
+function AlphabetGame({ levelId, progress, completeGame, completeLevel }) {
   const navigate = useNavigate();
   const [gameIndex, setGameIndex] = useState(0);
   const [selected, setSelected] = useState("");
@@ -32,6 +33,10 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   const [feedback, setFeedback] = useState("¡Sigue así!");
   const level = levelsById[levelId] || levelsById["letra-a"];
   const game = level.games[gameIndex];
+  const locked=useRef(false),timer=useRef(null);
+  const [solved,setSolved]=useState(false);
+  const builtText=game.type==='build'?built.map(index=>game.blocks[index]).join(''):'';
+  useEffect(()=>{locked.current=false;setSolved(false);return()=>clearTimeout(timer.current);},[game.id]);
   const hasSideDrawing = game.drawing && game.type !== "imageChoice";
 
   useEffect(() => {
@@ -62,32 +67,25 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   }
 
   function handleChoice(option) {
+    if(locked.current)return;
     const value = typeof option === "string" ? option : option.label;
     setSelected(value);
     if (value === game.answer) {
-      celebrate();
-      setTimeout(() => nextGame(), 720);
+      locked.current=true;setSolved(true);celebrate();
+      timer.current=setTimeout(() => nextGame(), 720);
     } else {
       retry();
     }
   }
 
-  function handleBuild(letter) {
-    const next = [...built, letter];
-    setBuilt(next);
-    if (next.join("") === game.answer) {
-      celebrate();
-      setTimeout(() => nextGame(), 760);
-    } else if (!game.answer.startsWith(next.join(""))) {
-      setBuilt([]);
-      retry();
-    }
+  function handleBuild(index) {
+    if(locked.current)return;
+    const result=placeAlphabetBlock(game,built,index);
+    if(!result.accepted){retry();return;}
+    setBuilt(result.indices);
+    if(result.complete){locked.current=true;setSolved(true);celebrate();timer.current=setTimeout(()=>nextGame(),760);}
   }
-
-  function dropBlock(event) {
-    event.preventDefault();
-    handleBuild(event.dataTransfer.getData("text/plain"));
-  }
+  function dropBlock(event){event.preventDefault();const value=event.dataTransfer.getData('text/plain');if(/^\d+$/.test(value))handleBuild(Number(value));}
 
   function nextGame() {
     setSelected("");
@@ -107,6 +105,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
         color={brickColors[index % brickColors.length]}
         className={className}
         selected={selected === option || (selected && option === game.answer)}
+        disabled={solved}
         onClick={() => handleChoice(option)}
       >
         {option}
@@ -121,6 +120,8 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
         className={`image-option ${selected === option.label ? "is-selected" : ""} ${
           selected && option.label === game.answer ? "is-correct" : ""
         }`}
+        disabled={solved}
+        aria-label={option.label}
         onClick={() => handleChoice(option)}
       >
         <Drawing type={option.drawing} hideLabel />
@@ -130,13 +131,13 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
   }
 
   return (
-    <section className="game-screen">
-      <div className="game-header comic-panel">
+    <section className={`game-screen alphabet-game alphabet-${game.type}`}>
+      <div className="game-header comic-panel"><Link className="primary-secondary-button alphabet-back" to="/niveles">← Abecedario</Link>
         <div>
           <p className="eyebrow">{level.subtitle}</p>
           <h2>
             {gameIndex + 1}. {game.title}
-          </h2>
+          </h2><p className="alphabet-instruction">{game.prompt}</p>
         </div>
         <button
           className="round-button"
@@ -157,8 +158,8 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
           <MissionBuild step={game.progressBuild || gameIndex + 1} />
         </aside>
 
-        <div className={`activity-card ${hasSideDrawing ? "activity-with-drawing" : ""}`}>
-          {game.drawing && !["imageChoice"].includes(game.type) && <Drawing type={game.drawing} />}
+        <div className={`activity-card alphabet-activity-${game.type} ${hasSideDrawing ? "activity-with-drawing" : ""}`}>
+          {game.drawing && !["imageChoice"].includes(game.type) && <Drawing type={game.drawing} hideLabel />}
 
           {game.type === "choice" && <div className="choice-grid">{game.options.map(renderOption)}</div>}
 
@@ -202,6 +203,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
                   className={`sentence-option ${selected === option ? "is-selected" : ""} ${
                     selected && option === game.answer ? "is-correct" : ""
                   }`}
+                  disabled={solved}
                   onClick={() => handleChoice(option)}
                 >
                   {option}
@@ -213,20 +215,25 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
           {game.type === "build" && (
             <div className="build-workshop">
               <div className="drop-zone" onDragOver={(event) => event.preventDefault()} onDrop={dropBlock}>
-                {built.length ? built.join("") : "Toca los bloques en orden"}
+                <span className={builtText?undefined:"alphabet-build-placeholder"}>{builtText || "Toca los bloques en orden"}</span>
               </div>
-              <div className="choice-grid block-row">
+              <div className="choice-grid block-row alphabet-letter-bank" role="group" aria-label="Bloques de letras">
                 {game.blocks.map((letter, index) => (
                   <Brick
                     key={`${letter}-${index}`}
                     color={brickColors[index % brickColors.length]}
-                    draggable
-                    onClick={() => handleBuild(letter)}
+                    draggable={!solved&&!built.includes(index)}
+                    disabled={solved||built.includes(index)}
+                    dragValue={index}
+                    ariaLabel={`Letra ${letter.toUpperCase()}, pieza ${index+1}`}
+                    className={built.includes(index)?'alphabet-used':''}
+                    onClick={() => handleBuild(index)}
                   >
                     {letter}
                   </Brick>
                 ))}
               </div>
+              <button className="primary-secondary-button alphabet-undo" disabled={solved||!built.length} onClick={()=>{setBuilt(items=>items.slice(0,-1));setFeedback("Puedes cambiar la última letra.");}}>↶ Quitar última letra</button>
             </div>
           )}
 
@@ -240,7 +247,7 @@ export default function GameScreen({ progress, completeGame, completeLevel }) {
       </div>
 
       <div className="game-footer comic-panel">
-        <Stars count={Math.min(3, selected === game.answer || built.join("") === game.answer ? 3 : solvedCount % 4)} />
+        <Stars count={Math.min(3, selected === game.answer || builtText === game.answer ? 3 : solvedCount % 4)} />
         <strong>{feedback}</strong>
         <div className="progress-track">
           <span style={{ width: `${((gameIndex + 1) / level.games.length) * 100}%` }} />

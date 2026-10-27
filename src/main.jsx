@@ -24,3 +24,4 @@ if ("serviceWorker" in navigator && import.meta.env.PROD) {
   });
 }
 import "./styles/discovery.css";
+import "./styles/alphabetGames.css";

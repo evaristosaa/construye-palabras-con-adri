@@ -1,10 +1,12 @@
-export function Brick({ children, color = "blue", className = "", onClick, selected = false, draggable = false }) {
+export function Brick({ children, color = "blue", className = "", onClick, selected = false, draggable = false, disabled=false, ariaLabel, dragValue }) {
   return (
     <button
       className={`brick brick-${color} ${selected ? "is-selected" : ""} ${className}`}
       onClick={onClick}
+      disabled={disabled}
+      aria-label={ariaLabel}
       draggable={draggable}
-      onDragStart={(event) => event.dataTransfer.setData("text/plain", String(children))}
+      onDragStart={(event) => event.dataTransfer.setData("text/plain", String(dragValue ?? children))}
     >
       <span className="studs" aria-hidden="true" />
       {children}
@@ -29,6 +31,7 @@ const drawings = {
   baby: ["👶", "bebé"],
   bag: ["🧳", "maleta"],
   ball: ["⚽", "bola"],
+  waterpolo: ["🤽", "waterpolo"],
   bear: ["🐻", "oso"],
   bee: ["🐝", "abeja"],
   bird: ["🦤", "ñandú"],

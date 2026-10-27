@@ -331,7 +331,7 @@ const lessonCatalog = [
   ], [["La vaca pasea.", "cow"], ["La vela alumbra.", "candle"]]),
   makeLesson("W", "blue", "La W aparece en palabras nuevas como wifi, web y windsurf.", ["wa", "we", "wi", "wo", "wu"], [
     ["wifi", "wifi", "Conecta internet"], ["web", "computer", "Está en la pantalla"], ["windsurf", "surf", "Va sobre el agua"],
-    ["waterpolo", "ball", "Se juega en piscina"], ["wok", "pan", "Sirve para cocinar"],
+    ["waterpolo", "waterpolo", "Se juega en piscina"], ["wok", "pan", "Sirve para cocinar"],
   ], [["La web se abre.", "computer"], ["Wanda hace windsurf.", "surf"]]),
   makeLesson("X", "purple", "La X se oye en xilófono, taxi y examen.", ["xa", "xe", "xi", "xo", "xu"], [
     ["xilófono", "xylophone", "Instrumento de colores"], ["taxi", "taxi", "Lleva pasajeros"], ["examen", "paper", "Tiene preguntas"],

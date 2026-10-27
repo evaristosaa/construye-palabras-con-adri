@@ -23,12 +23,13 @@ export default function App() {
   const { progress, updateSettings } = progressApi;
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isAlphabetGame=location.pathname.startsWith("/juego/");
   const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || location.pathname.startsWith('/primaria/cuentos') || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda", "/primaria/explora", "/primaria/album"].includes(location.pathname);
   const isPrimaryHub = location.pathname === "/primaria";
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
   return (
-    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame} hideTopBar={isHome || isPrimaryGame} screenLayout={isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
+    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame || isAlphabetGame} hideTopBar={isHome || isPrimaryGame || isAlphabetGame} screenLayout={isAlphabetGame || isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isAlphabetGame || isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
       <Routes>
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
