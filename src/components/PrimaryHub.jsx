@@ -25,7 +25,7 @@ export default function PrimaryHub({ progress }) {
       <nav className="subject-picker world-picker" aria-label="Asignaturas">{primarySubjects.map(item => <button className={`subject-choice world-choice subject-${item.id}`} key={item.id} onClick={() => setParams({ materia: item.id })}><WorldArt subject={item.id}/><span className="world-choice-copy"><strong>{item.title}</strong><small>{learningWorlds[item.id].title}</small></span><b aria-hidden="true">→</b></button>)}</nav>
       <Link className="primary-text-link mixed-practice-link" to="/primaria/aventura">Retos de las tres materias →</Link>
     </> : <>
-      <div className="subject-back-row"><button className="primary-text-link subject-back" onClick={() => setParams({})}>← Materias</button><Link className="primary-text-link story-link" to={subject.id === "matematicas" ? "/primaria/mates" : `/primaria/taller/${subject.id}`}>🎲 Juegos variados</Link></div>
+      <div className="subject-back-row"><button className="primary-secondary-button" onClick={() => setParams({})}>← Materias</button><Link className="primary-main-button story-link" to={subject.id === "matematicas" ? "/primaria/mates" : `/primaria/taller/${subject.id}`}>🎲 Juegos variados</Link></div>
       <article className="mission-preview illustrated-mission" key={mission.id}>
         <p className="eyebrow">Misión {mission.number} de {missions.length} · {primaryStages[mission.stage]}</p>
         <WorldArt subject={subject.id} className="mission-scene"/>

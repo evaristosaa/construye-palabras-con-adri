@@ -11,6 +11,8 @@ import StoryStudio from "./components/StoryStudio";
 import MathWorkshop from "./components/MathWorkshop";
 import SubjectWorkshop from "./components/SubjectWorkshop";
 import SnackAdventure from "./components/SnackAdventure";
+import StoryLibrary from "./components/StoryLibrary";
+import SeedStory from "./components/SeedStory";
 import { PageShell } from "./components/Layout";
 import { useProgress } from "./hooks/useProgress";
 
@@ -19,7 +21,7 @@ export default function App() {
   const { progress, updateSettings } = progressApi;
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda"].includes(location.pathname);
+  const isPrimaryGame = location.pathname.startsWith("/primaria/mision/") || location.pathname.startsWith("/primaria/taller/") || location.pathname.startsWith('/primaria/cuentos') || ["/primaria/aventura", "/primaria/crea", "/primaria/mates", "/primaria/merienda"].includes(location.pathname);
   const isPrimaryHub = location.pathname === "/primaria";
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
@@ -30,6 +32,8 @@ export default function App() {
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
         <Route path="/primaria/merienda" element={<SnackAdventure progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity} saveSnackSession={progressApi.saveSnackSession}/>} />
         <Route path="/primaria/crea" element={<StoryStudio progress={progress}/>} />
+        <Route path="/primaria/cuentos" element={<StoryLibrary/>}/>
+        <Route path="/primaria/cuentos/semilla" element={<SeedStory progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>}/>
         <Route path="/primaria/taller/:subjectId" element={<SubjectWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />
         <Route path="/primaria/mates" element={<MathWorkshop progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity}/>} />
         <Route path="/primaria/aventura" element={<PrimaryAdventure progress={progress} completeGame={progressApi.completeGame} attemptPrimaryActivity={progressApi.attemptPrimaryActivity} />} />

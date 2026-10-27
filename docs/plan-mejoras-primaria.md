@@ -21,9 +21,9 @@ Criterios de aceptación: todos los objetos se pueden poner y quitar mediante to
 
 ## Entrega 2 · Más lectura y variedad de acciones
 
-- [ ] T11. Añadir un segundo cuento piloto y validar ambos con observación familiar antes de ampliar a ocho–doce cuentos.
-- [ ] T12. Separar escuchar el texto y escuchar la ayuda en las actividades de lectura existentes.
-- [ ] T13. Incorporar el puente del diez y un constructor de patrones.
+- [ ] T11. Segundo cuento piloto «La semilla de Cayetana» implementado. Pendiente observar ambos cuentos con Adri antes de ampliar a ocho–doce.
+- [x] T12. Separar escuchar el texto y escuchar la ayuda en las actividades de lectura existentes.
+- [x] T13. Incorporar el puente del diez y un constructor de patrones.
 - [ ] T14. Incorporar composición de figuras y el camino de flechas de Juan, con alternativa al arrastre.
 - [ ] T15. Incorporar la tienda con monedas y varias soluciones correctas.
 - [ ] T16. Preparar variantes matemáticas acotadas con semilla estable; verificar dibujos, solución, pistas y explicación.
@@ -67,6 +67,17 @@ Las comprobaciones y decisiones de cada entrega se anotan aquí. El análisis de
 - La medición por habilidades y apoyos en diferentes fechas queda para T18–T21. Los apoyos de este piloto se conservan en su partida; no constituyen una evaluación del aprendizaje.
 
 Siguiente bloque: T11–T17, empezando por el segundo cuento piloto y la separación entre escuchar texto y pedir ayuda. Las observaciones reales de Adri servirán para ajustar el piloto antes de multiplicar contenidos.
+
+### Entrega 2 · Primer bloque implementado · 27/10/2026
+
+- Cada toque de palmada genera un efecto corto de palmada. Respeta Sonidos positivos, admite toques rápidos y no detiene la narración. Materias y Juegos variados utilizan botones de 44 píxeles de alto en las tres asignaturas.
+- Las 26 presentaciones de lectura tienen un botón «Escuchar texto» independiente de «Escuchar ayuda». Se graban una sola vez los 20 pasajes diferentes, se conserva el texto exacto de cada variante y se permite pausar y continuar con resaltado del pasaje.
+- Biblioteca de dos cuentos en Lengua → Juegos variados → Leer cuentos. Conserva el acceso a Crear cuento. El segundo piloto, «La semilla de Cayetana», tiene tres escenas narradas seguidas, lectura manual con la voz desactivada y tres preguntas con pistas. Los premios son únicos al repetir. Falta la observación familiar para cerrar T11.
+- Matemáticas → Juegos variados incorpora el puente del diez y su variante hasta veinte: dos grupos que conservan la cantidad y dos composiciones realmente distintas. El constructor de patrones exige colocar una unidad completa de tres o cuatro figuras. Tocar una pieza la quita sin desplazar las otras; la sustitución ocupa el hueco.
+- Se añaden 27 grabaciones con la referencia aprobada: 309 en total. Las 282 anteriores mantienen sus huellas exactas. Los audios se verifican antes de conectarlos a la app. Los cuentos nuevos y los pasajes de lectura requieren conexión; el paquete offline sigue cubriendo Inicio y La merienda.
+- Comprobaciones: 89 pruebas de la app, validación de audio, partidas repetidas sin premios duplicados y recorridos de lectura, cuento, puente y patrones en móvil vertical y apaisado. Se verifican botones visibles, pistas, pausa, continuación y paso del cuento a sus preguntas.
+
+Siguiente bloque pendiente: T14–T17. La observación de los dos cuentos con Adri queda abierta; no se da por realizada mediante pruebas automatizadas.
 
 ### Ajustes tras probar la primera entrega
 

@@ -158,6 +158,39 @@ export function playRetry(enabled = true) {
   playToneSequence(enabled, [392, 330], "triangle");
 }
 
+let clapContext = null;
+let clapBuffer = null;
+export function playClap(enabled = true) {
+  if (!enabled || typeof window === "undefined") return false;
+  const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  if (!AudioCtx) return false;
+  try {
+    if (!clapContext || clapContext.state === "closed") {
+      clapContext = new AudioCtx();
+      clapBuffer = clapContext.createBuffer(1, Math.ceil(clapContext.sampleRate * .16), clapContext.sampleRate);
+      const samples = clapBuffer.getChannelData(0);
+      // Three close impacts and a short noisy tail make a handclap, without
+      // downloading an effect or interrupting the spoken instruction.
+      for (let i = 0; i < samples.length; i++) {
+        const t = i / clapContext.sampleRate;
+        const impacts = [.002,.011,.021].reduce((sum,at)=>sum + .65 * Math.exp(-Math.pow((t-at)/.0017,2)),0);
+        samples[i] = (Math.random()*2-1) * (impacts + .28*Math.exp(-t/.026)) * Math.min(1,(.16-t)/.015);
+      }
+    }
+    if (clapContext.state === "suspended") clapContext.resume().catch(()=>{});
+    const source = clapContext.createBufferSource();
+    const filter = clapContext.createBiquadFilter();
+    const gain = clapContext.createGain();
+    source.buffer = clapBuffer;
+    filter.type = "bandpass"; filter.frequency.value = 1800; filter.Q.value = .65;
+    gain.gain.value = .7;
+    source.connect(filter); filter.connect(gain); gain.connect(clapContext.destination);
+    source.onended = () => {source.disconnect();filter.disconnect();gain.disconnect();};
+    source.start();
+    return true;
+  } catch { return false; }
+}
+
 export function speakResult(kind, voiceEnabled = true, soundEnabled = true, preferredVoiceURI = "") {
   if (kind === "success") {
     playPositive(soundEnabled);

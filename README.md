@@ -115,6 +115,8 @@ El [plan de mejoras](docs/plan-mejoras-primaria.md) deriva de la [revisión de a
 
 La partida continúa después de recargar. Familia → Datos permite exportar y recuperar una copia del progreso. En producción, Familia → Sin conexión descarga Inicio y La merienda; el resto de materias necesita conexión. Las actualizaciones esperan a que se cierre la app o se apliquen explícitamente desde Familia.
 
+Lengua → Juegos variados → Leer cuentos reúne La merienda y La semilla de Cayetana. Las actividades de lectura permiten escuchar el pasaje por separado de la ayuda. Matemáticas → Juegos variados incluye el puente del diez y un constructor de patrones con piezas que se ponen y se quitan mediante toques. Las palmadas de sílabas tienen un efecto propio que respeta el ajuste de sonido.
+
 Verificación: `node --test tests/*.test.mjs`, `npm run build` y `node scripts/check-voice-assets.mjs URL_DE_LA_APP`. El build genera el manifiesto de recursos offline con sus tamaños y huellas; no se deben editar manualmente los archivos de `dist`.
 
 ## Recursos visuales

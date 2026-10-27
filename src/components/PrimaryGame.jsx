@@ -6,6 +6,7 @@ import CountingBoard from "./CountingBoard";
 import PictureSort from "./PictureSort";
 import ReadingSupport from "./ReadingSupport";
 import PrimaryReflection from "./PrimaryReflection";
+import PrimaryReadingPanel from "./PrimaryReadingPanel";
 import {worldAsset,worldFor} from "../data/learningWorlds.js";
 
 import { choicePictures } from "../data/choicePictures.js";
@@ -129,7 +130,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
         <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><img src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.png`} alt="" draggable="false"/></div>
       <div className="primary-exercise mission-task-card">
         <div className="primary-exercise-top"><FriendAvatar name={friend.name} className="quest-buddy"/><p className="eyebrow">{subject.icon} {subject.title}</p><div className="primary-tool-buttons">{subject.id === "matematicas" && !["quantity","place-value"].includes(activity.type) && <button ref={boardButton} className="primary-help-button" onClick={() => setShowBoard(true)}>Fichas</button>}<button ref={readingButton} className="primary-help-button" onClick={() => setShowReading(true)} aria-label="Leer paso a paso">Aa</button><button className="primary-help-button" onClick={() => { setFeedback(activity.hint); }} aria-label="Ver una pista">💡</button><button className="primary-help-button" onClick={() => speak(primaryVoiceTexts[audioKey], progress.voice, progress.voiceURI, { audioKey })} aria-label="Escuchar ayuda">🔊</button></div></div>
-        {activity.passage && reading ? <div className="primary-reading-step"><h1 ref={heading} tabIndex={-1}>Lee con calma</h1><div className="primary-reading"><p>{activity.passage}</p></div><button className="primary-main-button" onClick={() => { setReading(false); }}>Ya lo he leído →</button></div> : <>
+        {activity.passage && reading ? <PrimaryReadingPanel key={activity.passage} activity={activity} progress={progress} heading={heading} onContinue={()=>setReading(false)}/> : <>
         {activity.passage && <button className="primary-text-link" onClick={() => setReading(true)}>📖 Volver al texto</button>}
         {activity.visual && <div className="primary-visual" aria-label="Apoyo visual para contar">{activity.visual}</div>}
         <h1 ref={heading} tabIndex={-1}>{activity.question}</h1>

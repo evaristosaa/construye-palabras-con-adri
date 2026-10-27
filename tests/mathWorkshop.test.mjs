@@ -21,8 +21,8 @@ test('all twelve short sessions have unique ids, three stages and feasible quant
 
 test('central tasks rotate through number, composition, pattern, measurement, data and space',()=>{
  const central=workshopThemes.map((_,s)=>buildMathWorkshop(10,s)[1]);
- assert.deepEqual(central.map(a=>a.type),['line','split','choice','choice','choice','shape']);
- assert.ok(central[2].pattern);assert.ok(central[3].measure);assert.ok(central[4].chart);
+ assert.deepEqual(central.map(a=>a.type),['line','split','pattern-build','choice','choice','shape']);
+ assert.deepEqual(central[2].unit,['circle','triangle','triangle']);assert.ok(central[3].measure);assert.ok(central[4].chart);
  const most=central[4].chart.reduce((a,b)=>a.value>b.value?a:b);assert.equal(most.label,central[4].answer);
  assert.equal(central[3].measure,Number(central[3].answer));
 });
