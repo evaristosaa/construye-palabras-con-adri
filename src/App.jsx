@@ -20,7 +20,8 @@ import { useProgress } from "./hooks/useProgress";
 
 export default function App() {
   const progressApi = useProgress();
-  const { progress, updateSettings } = progressApi;
+  const { progress:storedProgress, updateSettings } = progressApi;
+  const progress={...storedProgress,voice:storedProgress.voice&&!storedProgress.muted,sound:storedProgress.sound&&!storedProgress.muted};
   const location = useLocation();
   const isHome = location.pathname === "/";
   const isAlphabetGame=location.pathname.startsWith("/juego/");
@@ -30,7 +31,7 @@ export default function App() {
   const isCompactPage = ["/logros", "/ajustes"].includes(location.pathname);
 
   return (
-    <PageShell progress={progress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame || isAlphabetGame} hideTopBar={isClub || isHome || isPrimaryGame || isAlphabetGame} screenLayout={isClub || isAlphabetGame || isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isAlphabetGame || isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
+    <PageShell progress={storedProgress} updateSettings={updateSettings} hideNav={isHome || isPrimaryGame || isAlphabetGame} hideTopBar={isClub || isHome || isPrimaryGame || isAlphabetGame} screenLayout={isClub || isAlphabetGame || isPrimaryGame || isPrimaryHub || isCompactPage} primaryLayout={isAlphabetGame || isHome || location.pathname.startsWith("/primaria") || isCompactPage}>
       <Routes>
         <Route path="/" element={<Home progress={progress} />} />
         <Route path="/primaria" element={<PrimaryHub progress={progress} />} />
@@ -64,7 +65,7 @@ export default function App() {
           path="/ajustes"
           element={
             <Settings
-              progress={progress}
+              progress={storedProgress}
               updateSettings={updateSettings}
               resetProgress={progressApi.resetProgress}
               restoreProgress={progressApi.restoreProgress}

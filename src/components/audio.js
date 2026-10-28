@@ -4,6 +4,17 @@ import { retryFeedback, successFeedback } from "../data/voiceScripts.js";
 import { localVoiceFiles } from "../data/localVoiceFiles.js";
 
 let activeRecording = null;
+let audioMuted=false;
+let speechGeneration=0;
+let browserSpeechTimer=null;
+const effectStops=new Set();
+export function stopSoundEffects(){for(const stop of [...effectStops])stop();}
+export function setAudioMuted(muted){
+  const next=!!muted;
+  if(next===audioMuted)return;
+  audioMuted=next;
+  if(next){cancelSpeech();stopSoundEffects();}
+}
 
 function getVoices() {
   if (!("speechSynthesis" in window)) return [];
@@ -49,6 +60,7 @@ export function getRecordedAudioSrc(audioKey, baseUrl = "/") {
 }
 
 function speakNow(text, preferredVoiceURI, { rate = 0.98, pitch = 1.45 } = {}) {
+  if(audioMuted)return;
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "es-ES";
   utterance.rate = rate;
@@ -59,12 +71,15 @@ function speakNow(text, preferredVoiceURI, { rate = 0.98, pitch = 1.45 } = {}) {
 }
 
 function cancelSpeech() {
+  speechGeneration++;
+  clearTimeout(browserSpeechTimer);browserSpeechTimer=null;
   if (activeRecording) {
     activeRecording.pause();
     activeRecording.currentTime = 0;
     activeRecording = null;
   }
   if ("speechSynthesis" in window) {
+    window.speechSynthesis.onvoiceschanged=null;
     window.speechSynthesis.cancel();
   }
 }
@@ -75,26 +90,15 @@ export function stopSpeaking(recording) {
 
 function speakWithBrowser(text, preferredVoiceURI, options) {
   if (!("speechSynthesis" in window)) return;
-
-  if (getVoices().length) {
-    speakNow(text, preferredVoiceURI, options);
-    return;
-  }
-
-  window.speechSynthesis.onvoiceschanged = () => {
-    window.speechSynthesis.onvoiceschanged = null;
-    speakNow(text, preferredVoiceURI, options);
-  };
-
-  window.setTimeout(() => {
-    if (!window.speechSynthesis.speaking) {
-      speakNow(text, preferredVoiceURI, options);
-    }
-  }, 250);
+  const generation=speechGeneration;let started=false;
+  const start=()=>{if(started||audioMuted||generation!==speechGeneration)return;started=true;clearTimeout(browserSpeechTimer);window.speechSynthesis.onvoiceschanged=null;speakNow(text,preferredVoiceURI,options);};
+  if(getVoices().length){start();return;}
+  window.speechSynthesis.onvoiceschanged=start;
+  browserSpeechTimer=setTimeout(start,250);
 }
 
 export function speak(text, enabled = true, preferredVoiceURI = "", options = {}) {
-  if (!enabled) return;
+  if (!enabled || audioMuted) return;
   cancelSpeech();
 
   if (options.audioKey && "Audio" in window) {
@@ -109,15 +113,17 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
       speakWithBrowser(text, preferredVoiceURI, options);
     };
     recording.onerror = fallback;
-    recording.onplaying = () => options.onPlaybackChange?.("playing");
+    recording.onplaying = () => {if(audioMuted||activeRecording!==recording){recording.pause();return;}options.onPlaybackChange?.("playing");};
     recording.onpause = () => options.onPlaybackChange?.("paused");
     recording.onended = () => {
-      if (activeRecording === recording) activeRecording = null;
+      if(activeRecording!==recording||audioMuted)return;
+      activeRecording = null;
       options.onPlaybackChange?.("ended");
     };
     activeRecording = recording;
     const playing = recording.play();
     if (playing?.catch) playing.catch(error => {
+      if(activeRecording!==recording)return;
       // A browser autoplay restriction needs a tap, not a different synthetic voice.
       if (error?.name === "NotAllowedError") {
         if (activeRecording === recording) activeRecording = null;
@@ -134,15 +140,19 @@ export function speak(text, enabled = true, preferredVoiceURI = "", options = {}
 }
 
 function playToneSequence(enabled, notes, type = "sine") {
-  if (!enabled || !("AudioContext" in window || "webkitAudioContext" in window)) return;
+  if (!enabled || audioMuted || !("AudioContext" in window || "webkitAudioContext" in window)) return;
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
   const context = new AudioCtx();
+  let stopped=false;
+  const stop=()=>{if(stopped)return;stopped=true;effectStops.delete(stop);const closing=context.close?.();closing?.catch?.(()=>{});};
+  effectStops.add(stop);
 
   notes.forEach((frequency, index) => {
     const oscillator = context.createOscillator();
     const gain = context.createGain();
     oscillator.frequency.value = frequency;
     oscillator.type = type;
+    if(index===notes.length-1)oscillator.onended=stop;
     gain.gain.setValueAtTime(0.001, context.currentTime + index * 0.09);
     gain.gain.exponentialRampToValueAtTime(0.12, context.currentTime + index * 0.09 + 0.02);
     gain.gain.exponentialRampToValueAtTime(0.001, context.currentTime + index * 0.09 + 0.18);
@@ -163,7 +173,7 @@ export function playRetry(enabled = true) {
 let clapContext = null;
 let clapBuffer = null;
 export function playClap(enabled = true) {
-  if (!enabled || typeof window === "undefined") return false;
+  if (!enabled || audioMuted || typeof window === "undefined") return false;
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
   if (!AudioCtx) return false;
   try {
@@ -187,7 +197,11 @@ export function playClap(enabled = true) {
     filter.type = "bandpass"; filter.frequency.value = 1800; filter.Q.value = .65;
     gain.gain.value = .7;
     source.connect(filter); filter.connect(gain); gain.connect(clapContext.destination);
-    source.onended = () => {source.disconnect();filter.disconnect();gain.disconnect();};
+    let cleaned=false;
+    const cleanup=()=>{if(cleaned)return;cleaned=true;effectStops.delete(stop);source.disconnect();filter.disconnect();gain.disconnect();};
+    const stop=()=>{try{source.stop();}catch{}cleanup();};
+    effectStops.add(stop);
+    source.onended = cleanup;
     source.start();
     return true;
   } catch { return false; }

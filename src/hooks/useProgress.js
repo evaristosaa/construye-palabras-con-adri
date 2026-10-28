@@ -1,3 +1,4 @@
+import {setAudioMuted,stopSpeaking,stopSoundEffects} from "../components/audio.js";
 import {collectSessionDrafts,replaceSessionDrafts} from "../storage/sessionArchive.js";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { characters, rewards } from "../data/learningData";
@@ -8,8 +9,9 @@ import { loadStoredProgress, saveStoredProgress, clearStoredProgress, validatePr
 
 function readProgress() {
   try {
-    return loadStoredProgress(localStorage);
+    const loaded=loadStoredProgress(localStorage);setAudioMuted(!!loaded.progress.muted);return loaded;
   } catch {
+    setAudioMuted(false);
     return { progress: normalizeProgress(defaultProgress), issue: "El navegador no permite guardar. Puedes exportar una copia desde Familia." };
   }
 }
@@ -52,12 +54,16 @@ export function useProgress() {
   }
 
   function updateSettings(settings) {
+    if(settings.muted!==undefined)setAudioMuted(settings.muted);
+    if(settings.voice===false)stopSpeaking();
+    if(settings.sound===false)stopSoundEffects();
     setProgress((current) => ({ ...current, ...settings }));
   }
 
   function resetProgress() {
     let issue="";
     try { clearStoredProgress(localStorage); } catch { issue="El navegador no permite borrar los datos guardados. El reinicio solo afecta a esta sesión."; }
+    setAudioMuted(false);
     setProgress(normalizeProgress(defaultProgress));
     setStorageIssue(issue);
   }
@@ -72,7 +78,7 @@ export function useProgress() {
     replaceSessionDrafts(localStorage,sessions);
     const result=saveStoredProgress(localStorage,clean);
     if(!result.ok){replaceSessionDrafts(localStorage,previous);throw Error(result.issue);}
-    setProgress(clean);setStorageIssue("");
+    setAudioMuted(!!clean.muted);setProgress(clean);setStorageIssue("");
   }
 
   return {

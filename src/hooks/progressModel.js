@@ -9,6 +9,7 @@ export const defaultProgress = {
   primaryAttempts: {},
   adventures: {},
   learningEvents: [],
+  muted: false,
   sound: true,
   voice: true,
   streak: 1,

@@ -7,17 +7,9 @@ export function TopBar({ progress, onSoundToggle }) {
       <Link className="round-button home-link" to="/" aria-label="Inicio">
         ⌂
       </Link>
-      <button className="round-button" onClick={onSoundToggle} aria-label="Activar o desactivar sonido">
-        {progress.sound ? "🔊" : "🔇"}
+      <button className="round-button" onClick={onSoundToggle} aria-label={progress.muted||(!progress.sound&&!progress.voice)?"Activar audio":"Silenciar audio"} aria-pressed={!!progress.muted||(!progress.sound&&!progress.voice)} title={progress.muted||(!progress.sound&&!progress.voice)?"Activar audio":"Silenciar voz y efectos"}>
+        {progress.muted||(!progress.sound&&!progress.voice) ? "🔇" : "🔊"}
       </button>
-      <div className="score-pill">
-        <span>★</span>
-        <strong>{progress.stars}</strong>
-      </div>
-      <div className="score-pill brick-score">
-        <span className="tiny-brick" />
-        <strong>{progress.pieces}</strong>
-      </div>
     </header>
   );
 }
@@ -49,7 +41,7 @@ export function PageShell({ children, progress, updateSettings, hideNav = false,
   }, [screenLayout]);
   return (
     <main ref={main} data-reading-font={progress.readingFont || "print"} data-reading-size={progress.readingSize || "normal"} className={`app-shell ${primaryLayout ? "primary-layout" : ""} ${screenLayout ? "screen-layout" : ""} ${hideNav ? "without-nav" : ""}`}>
-      {!hideTopBar && <TopBar progress={progress} onSoundToggle={() => updateSettings({ sound: !progress.sound })} />}
+      {!hideTopBar && <TopBar progress={progress} onSoundToggle={() => updateSettings(progress.muted||(!progress.sound&&!progress.voice)?{muted:false,...(!progress.sound&&!progress.voice?{sound:true,voice:true}:{})}:{muted:true})} />}
       {children}
       {!hideNav && <BottomNav />}
     </main>

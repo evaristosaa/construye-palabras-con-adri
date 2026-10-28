@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-export default function LocalRecorder({audio,onChange}){
+export default function LocalRecorder({audio,onChange,muted=false}){
   const [recording,setRecording]=useState(false),[message,setMessage]=useState(''),[url,setUrl]=useState('');
   const recorder=useRef(null),stream=useRef(null),timer=useRef(null),mounted=useRef(true);
   useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;clearTimeout(timer.current);if(recorder.current?.state==='recording')recorder.current.stop();stream.current?.getTracks().forEach(t=>t.stop());};},[]);
@@ -14,5 +14,5 @@ export default function LocalRecorder({audio,onChange}){
       r.start();setRecording(true);setMessage('Te escuchamos. Máximo un minuto.');timer.current=setTimeout(()=>{if(r.state==='recording')r.stop();},60000);
     }catch{stream.current?.getTracks().forEach(t=>t.stop());setRecording(false);setMessage('No se ha activado el micrófono. El resto del taller sigue disponible.');}
   }
-  return <div className="local-recorder"><p>🎙️ Cuenta tu historia. La grabación se guarda solo aquí.</p><div className="piece-tool">{recording?<button className="primary-main-button" onClick={()=>recorder.current?.stop()}>■ Terminar</button>:<button className="primary-secondary-button" onClick={start}>{audio?'Grabar otra vez':'Grabar mi voz'}</button>}{audio&&!recording&&<button className="primary-secondary-button" onClick={()=>{onChange(undefined);setMessage('Grabación quitada. Guarda la obra para confirmar el cambio.');}}>Quitar grabación</button>}</div>{url&&<audio controls src={url}/>}<small role="status">{message}</small></div>;
+  return <div className="local-recorder"><p>🎙️ Cuenta tu historia. La grabación se guarda solo aquí.</p><div className="piece-tool">{recording?<button className="primary-main-button" onClick={()=>recorder.current?.stop()}>■ Terminar</button>:<button className="primary-secondary-button" onClick={start}>{audio?'Grabar otra vez':'Grabar mi voz'}</button>}{audio&&!recording&&<button className="primary-secondary-button" onClick={()=>{onChange(undefined);setMessage('Grabación quitada. Guarda la obra para confirmar el cambio.');}}>Quitar grabación</button>}</div>{url&&<audio controls src={url} muted={muted}/>}<small role="status">{message}</small></div>;
 }
