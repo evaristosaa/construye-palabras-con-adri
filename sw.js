@@ -1,5 +1,5 @@
 /* The build substitutes the version. Updates wait for closed games or an explicit Family action. */
-const RELEASE = '2b82393f35bc02a4';
+const RELEASE = '0f82d56a1055c229';
 const CORE = `adri-primaria-core-${RELEASE}`;
 const PACK = `adri-primaria-pack-${RELEASE}`;
 const STAGING = `${PACK}-staging`;
