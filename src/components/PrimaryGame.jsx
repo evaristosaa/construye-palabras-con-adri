@@ -1,3 +1,5 @@
+import {missionFriendScene} from "../data/friendScenes.js";
+import FriendScene from "./FriendScene";
 import {useSessionState,readSession,writeSession,clearSession} from "../storage/sessionDrafts.js";
 import { useEffect, useRef, useState } from "react";
 import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
@@ -139,7 +141,7 @@ export function MissionPlayer({ mission, progress, completeGame, completePrimary
     <div inert={feedback || showBoard || showReading || showConstruction ? true : undefined} className="primary-play-layout">
       <aside className="primary-companion comic-panel"><ConstructionScene project={project} count={constructionWins.length} total={mission.activities.length}/><FriendCompanion name={friend.name} variant={solved ? "celebrating" : subject.id === "medio" ? "detective" : "reader"}/><strong className="companion-name">{friend.name} te acompaña</strong><p>{project.task}</p><span>{constructionWins.length} de {mission.activities.length} retos de esta obra</span></aside>
       <div className={`mission-stage comic-panel activity-${activity.type}`}>
-        <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><img src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt="" draggable="false"/></div>
+        <div className="mission-scenery" aria-hidden="true"><span>{worldFor(subject.id).title}</span><FriendScene scene={missionFriendScene(subject.id,index)}/></div>
       <div className="primary-exercise mission-task-card">
         <div className="primary-exercise-top"><FriendAvatar name={friend.name} className="quest-buddy"/><p className="eyebrow">{subject.icon} {subject.title}</p><div className="primary-tool-buttons">{subject.id === "matematicas" && !["quantity","place-value"].includes(activity.type) && <button ref={boardButton} className="primary-help-button" onClick={() => (supported.current=true,setShowBoard(true))}>Fichas</button>}<button ref={readingButton} className="primary-help-button" onClick={() => (supported.current=true,setShowReading(true))} aria-label="Leer paso a paso">Aa</button><button className="primary-help-button" onClick={() => { supported.current=true;setFeedback(activity.hint); }} aria-label="Ver una pista">💡</button><button className="primary-help-button" onClick={() => speak(primaryVoiceTexts[audioKey], progress.voice, progress.voiceURI, { audioKey })} aria-label="Escuchar ayuda">🔊</button></div></div>
         {activity.passage && reading ? <PrimaryReadingPanel key={activity.passage} activity={activity} progress={progress} heading={heading} onContinue={()=>setReading(false)}/> : <>

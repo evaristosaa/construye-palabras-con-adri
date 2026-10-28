@@ -13,8 +13,8 @@ import {voiceLines} from '../src/data/adriAudioCatalog.js';
 export function offlinePackagePlugin(){let outDir;return {name:'adri-offline-package',apply:'build',configResolved(config){outDir=resolve(config.root,config.build.outDir);},async closeBundle(){
   const bundleNames=(await readdir(resolve(outDir,'assets'))).filter(n=>/\.(js|css)$/.test(n));
   const audio=key=>{if(!distributionVoiceFiles[key])throw Error(`Falta la voz: ${key}`);return 'audio/adri-distribution/'+distributionVoiceFiles[key];};
-  const corePaths=['index.html','manifest.webmanifest','assets/icons/app-192.png','assets/icons/app-512.png','assets/worlds/reading-village.webp','assets/characters/amigos-comic-unificado-v1.webp',audio('home-welcome'),...bundleNames.map(n=>'assets/'+n)];
-  const characters=['adri-clean','adri-reader','adri-detective','adri-builder','adri-audio','adri-celebrating'].map(n=>'assets/'+n+'.webp').concat(['juan-comic-v1','cayetana-comic-v2','amigos-expresiones-v1'].map(n=>'assets/characters/'+n+'.webp'));
+  const corePaths=['index.html','manifest.webmanifest','assets/icons/app-192.png','assets/icons/app-512.png','assets/worlds/reading-village.webp','assets/characters/amigos-bienvenida-v2.webp',audio('home-welcome'),...bundleNames.map(n=>'assets/'+n)];
+  const characters=['adri-clean','adri-reader','adri-detective','adri-builder','adri-audio','adri-celebrating'].map(n=>'assets/'+n+'.webp').concat(['juan-comic-v1','cayetana-colegio-v3','amigos-expresiones-v2','amigos-actividades-v2'].map(n=>'assets/characters/'+n+'.webp'));
   const shared=primaryVoiceLines.map(v=>v.key).concat(['result-success','result-retry','screen-settings','screen-collection','screen-progress','screen-reward','primary-workshop']);
   const packs={merienda:{label:'Inicio y La merienda',resources:[...characters,'assets/worlds/discovery-garden.webp',...[...snackVoiceLines.map(v=>v.key),'result-success','result-retry'].map(audio)]}};
   for(const [subject,label,world] of [['lengua','Lengua y cuentos','reading-village'],['matematicas','Matemáticas y juegos','number-island'],['medio','Conocimiento del Medio','discovery-garden']]){

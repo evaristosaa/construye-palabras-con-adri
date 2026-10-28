@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import VoiceGuide from "./VoiceGuide";
-import { classmates } from "../data/classmates.js";
+import FriendScene from "./FriendScene";
+import { friendScenes } from "../data/friendScenes.js";
 import { worldAsset } from "../data/learningWorlds.js";
 import { primaryVoiceTexts } from "../data/primaryVoiceLines.js";
 
@@ -15,8 +16,8 @@ export default function Home({ progress }) {
       />
       <div className="home-hero">
         <div className="home-character home-friends" aria-label="Adri, Juan y Cayetana">
-          <img className="home-friends-illustration" src={`${import.meta.env.BASE_URL}assets/characters/amigos-comic-unificado-v1.webp`} alt="" draggable="false" />
-          <div className="home-friend-names">{classmates.map(friend => <span key={friend.id}>{friend.name}</span>)}</div>
+          <FriendScene scene="welcome" className="home-friends-illustration"/>
+          <div className="home-friend-names">{friendScenes.welcome.order.map(name => <span key={name}>{name}</span>)}</div>
         </div>
         <div className="home-menu">
           <div className="title-stack">

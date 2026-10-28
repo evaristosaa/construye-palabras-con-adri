@@ -60,3 +60,14 @@
   .illustrated-story .friend-options button > .friend-portrait {width:100%;height:auto;max-height:none;flex:1;min-height:0;border-radius:12px;}
   .illustrated-story .friend-options button > strong {font-size:.95rem;}
 }
+
+/* One clipped cell per scene; no timers or moving targets during a game. */
+.friend-scene {display:block;object-fit:contain;min-width:0;min-height:0;}
+.friend-scene-atlas {position:relative;overflow:hidden;aspect-ratio:3/2;}
+
+.mission-scenery>.friend-scene {height:100%;max-height:250px;width:55%;align-self:flex-end;}
+.club-card-picture>.friend-scene-atlas {position:absolute;right:8%;bottom:0;height:88%;width:auto;max-width:84%;}
+.seed-scene>.friend-scene {height:100%;width:auto;max-width:65%;max-height:290px;}
+.snack-world>.friend-scene-atlas {width:auto;max-width:90%;height:100%;max-height:330px;flex-shrink:1;}
+@media(max-width:760px){.mission-scenery>.friend-scene{max-height:150px;}}
+@media(orientation:landscape) and (max-height:500px){.mission-scenery>.friend-scene{max-height:70px;}}
